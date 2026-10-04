@@ -46,7 +46,7 @@ async function run({ step, stage, level, seed, useModel, sentence }) {
   const letters = [...known].join(' ');
   if (step === 'check') {
     return { step, letters, words: checkSentence(sentence, known, DEFAULT_TRICKY)
-      .map((w) => ({ word: w.word, ok: w.ok, how: w.tricky ? 'sight word' : w.graphemes ? w.graphemes.join(' - ') : 'uses a sound she has not met' })) };
+      .map((w) => ({ word: w.word, ok: w.ok, how: w.tricky ? 'sight word' : w.graphemes ? w.graphemes.join(' - ') : 'uses a sound not taught yet' })) };
   }
   if (step === 'ear') {
     const items = earScript(level, { seed, count: 8 });

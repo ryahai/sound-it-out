@@ -182,7 +182,7 @@ body[data-theme="space"] .stars-bg { display: block; }
 .go{display:flex;align-items:center;gap:20px;background:var(--green);color:#fff;border:0;border-radius:40px;padding:20px 40px;font-size:1.7rem;font-weight:700;box-shadow:0 9px 0 rgba(0,0,0,.14);cursor:pointer;text-align:left;transition:transform .12s}
 .go:hover{transform:translateY(-3px)}.go:active{transform:translateY(4px);box-shadow:0 4px 0 rgba(0,0,0,.14)}
 .goem{font-size:4.2rem;line-height:1}.gotx small{display:block;font-size:1rem;font-weight:600;opacity:.9}.goarrow{font-size:2rem;margin-left:8px}
-.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px;width:100%;max-width:900px}
+.home .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px;width:100%;max-width:900px}
 .block.tile{flex-direction:column;gap:8px;padding:18px 8px;text-align:center;position:relative;justify-content:center}
 .block.tile .em{font-size:3.3rem;width:auto;line-height:1.1}.block.tile b{font-size:1.02rem}.block.tile .tick{position:absolute;top:8px;right:12px;margin:0}
 .mini{display:flex;gap:26px;margin:6px 0 20px}
@@ -199,3 +199,10 @@ body[data-theme="space"] .stars-bg { display: block; }
 .goem{animation:bob 1.8s ease-in-out infinite}@keyframes bob{50%{transform:translateY(-7px)}}
 @media (prefers-reduced-motion:reduce){.goem{animation:none}}
 @media (max-width:640px){.dock,.dock>div{flex-wrap:nowrap}.dock>div{display:flex;gap:6px}.dock-btn{padding:8px 9px;font-size:.74rem;white-space:nowrap}}
+
+/* activity screens */
+.acthead{display:flex;align-items:center;justify-content:center;gap:14px;margin:4px 0 10px}
+.acthead span{font-size:3.4rem;line-height:1}.acthead b{font-size:1.5rem;background:#fff;border-radius:999px;padding:6px 22px;box-shadow:var(--shadow)}
+.progress-dots.big{justify-content:center;display:flex;gap:10px;margin-bottom:14px}.progress-dots.big span{width:18px;height:18px}
+.stage .prompt{font-size:1.15rem;font-weight:600;background:rgba(255,255,255,.7);border-radius:16px;padding:8px 18px}
+@media (max-width:640px){.acthead span{font-size:2.6rem}.acthead b{font-size:1.15rem}}

@@ -291,11 +291,11 @@ async function lesson(block, useModel = Boolean(block.model)) {
     await message_('🧱', 'Not enough sounds yet', 'Nothing can be made from these letter-sounds yet. Choose a later set.');
     return false;
   }
-  const badge = block.model ? `<span class="badge ${data.ranked ? '' : 'plain'}">${data.ranked ? '✨ Ready to read' : 'Ready to read'}</span>` : '';
+  const badge = `<div class="acthead"><span>${block.em}</span><b>${esc(block.title)}</b></div>`;
   let got = 0;
   for (let at = 0; at < data.items.length; at++) {
     const dots = data.items.map((_, i) => `<span class="${i < at ? 'got' : i === at ? 'on' : ''}"></span>`).join('');
-    render(`<div class="row"><div class="progress-dots">${dots}</div><span class="grow"></span>${badge}</div><div class="stage" id="stage"></div>`);
+    render(`${badge}<div class="progress-dots big">${dots}</div><div class="stage" id="stage"></div>`);
     const earned = await item(block, data, data.items[at], at);
     if (earned === null) return false;      // stopped from the pause screen or the home button
     if (earned) { got += 1; await reward(); await new Promise((r) => setTimeout(r, 850)); }
@@ -340,7 +340,7 @@ function item(block, data, it, at) {
       const extra = [...graphemesUpTo(S.stage)].filter((g) => !it.sounds.includes(g)).slice(at, at + 2);
       const tiles = [...it.sounds, ...extra].sort(() => Math.random() - 0.5);
       let built = [];
-      stage.innerHTML = `<div class="prompt">Grown-up, say the sounds. She builds the word.</div>
+      stage.innerHTML = `<div class="prompt">Grown-up, say the sounds. Your child builds the word.</div>
         <div class="say">${it.sounds.map(esc).join(' &nbsp;…&nbsp; ')}</div><div class="answer-box" id="box">&nbsp;</div>
         <div class="tiles">${tiles.map((g) => `<button class="tile" data-g="${esc(g)}">${esc(g)}</button>`).join('')}</div>
         <div class="row" style="justify-content:center"><button class="big-btn soft" id="clear">Start again</button><button class="big-btn soft" id="skip">Try another</button></div>

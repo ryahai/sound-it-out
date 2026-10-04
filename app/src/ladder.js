@@ -21,15 +21,15 @@ import { WORDS } from './words.js';
 export const STEPS = ['ear', 'two', 'words', 'chain', 'phrases', 'sentences', 'story'];
 
 export const ABOUT = {
-  ear: 'Say it together. No letters. You say the parts with a gap, she says the whole word.',
-  two: 'Two-sound words. Point under each sound, she says each sound, then the word.',
+  ear: 'Say it together. No letters. You say the parts with a gap, your child says the whole word.',
+  two: 'Two-sound words. Point under each sound. Your child says each sound, then the word.',
   words: 'Three-sound words. Stretch the first sound, then say the word. Stretchy starts come first.',
-  chain: 'One sound changes each time. Ask: "What changed?" before she reads the new word.',
-  phrases: 'Short phrases. She reads each word, then says the phrase again smoothly.',
-  sentences: 'One sentence at a time. She reads it, then tells you what happened.',
-  story: 'A short story about one person. She reads it through, then tells it back in her own words.',
+  chain: 'One sound changes each time. Ask: "What changed?" before your child reads the new word.',
+  phrases: 'Short phrases. Your child reads each word, then says the phrase again smoothly.',
+  sentences: 'One sentence at a time. Your child reads it, then tells you what happened.',
+  story: 'A short story about one person. Your child reads it through, then tells it back in their own words.',
 };
-export const MOVE_UP = 'Move up when she gets four out of five without help, on two different days. You decide.';
+export const MOVE_UP = 'Move up when your child gets four out of five without help, on two different days. You decide.';
 
 // Listening steps, biggest pieces first. Each item: the parts you say, and the word she should say.
 export const EAR_LEVELS = {
