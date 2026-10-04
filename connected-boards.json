@@ -1,4 +1,9 @@
 {
- "boards": ["Kindergarten Math Worksheets", "Alphabet and Handwriting Worksheets", "Preschool Printables"],
+ "boards": [
+  "Kindergarten Math Worksheets",
+  "Alphabet and Handwriting Worksheets",
+  "Preschool Printables",
+  "Learn to Read: Phonics and Decodable Printables"
+ ],
  "fallback": "Preschool Printables"
 }
