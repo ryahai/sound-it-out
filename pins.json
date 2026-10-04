@@ -42,6 +42,20 @@
   "release": "2026-10-04"
  },
  {
+  "file": "addition-to-5-pin-1.png",
+  "title": "Addition within 5 Worksheets for Preschool and Kindergarten (Printable, No Prep)",
+  "description": "Printable addition within 5 worksheets for preschool and kindergarten. Ten picture pages to count, then ten pages of sums with a number line to help, plus an answer key. No prep, print and go. Comes in colour and in black and white to save ink.",
+  "alt": "Printable addition within 5 worksheets for preschool and kindergarten.",
+  "board": "Kindergarten Math Worksheets",
+  "topics": [
+   "kindergarten math",
+   "addition and subtraction",
+   "number line"
+  ],
+  "link": "https://ryahai.github.io/sound-it-out/addition-to-5/?p=addition-to-5-1",
+  "release": "2026-10-05"
+ },
+ {
   "file": "addition-to-10-pin-1.png",
   "title": "Addition Within 10 Worksheets with Pictures for Kindergarten and 1st Grade",
   "description": "Printable addition within 10 worksheets for kindergarten and first grade. Ten picture pages where children count two groups, then ten pages of sums with a number line to help, plus an answer key. Comes in colour and in black and white to save ink.",
@@ -54,6 +68,20 @@
   ],
   "link": "https://ryahai.github.io/sound-it-out/addition-within-10-worksheets/?p=addition-to-10-1",
   "release": "2026-10-07"
+ },
+ {
+  "file": "addition-to-5-pin-2.png",
+  "title": "Number Line Addition Practice Within 5: Printable Worksheets",
+  "description": "No prep number line practice for adding within 5. Each printable page has a number line at the top and twelve sums, with an answer key so a child can check their own work. For preschool and kindergarten, homeschool maths, morning work and maths centres.",
+  "alt": "No prep number line practice for adding within 5.",
+  "board": "Kindergarten Math Worksheets",
+  "topics": [
+   "kindergarten math",
+   "addition and subtraction",
+   "number line"
+  ],
+  "link": "https://ryahai.github.io/sound-it-out/addition-to-5/?p=addition-to-5-2",
+  "release": "2026-10-08"
  },
  {
   "file": "numbers-1-20-pin-2.png",
