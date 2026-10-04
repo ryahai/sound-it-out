@@ -154,6 +154,20 @@
   "release": "2026-10-12"
  },
  {
+  "file": "subtraction-to-5-pin-1.png",
+  "title": "Subtraction within 5 Worksheets for Preschool and Kindergarten (Printable, No Prep)",
+  "description": "Printable subtraction within 5 worksheets for preschool and kindergarten. Ten picture pages to count, then ten pages of sums with a number line to help, plus an answer key. No prep, print and go. Comes in colour and in black and white to save ink.",
+  "alt": "Printable subtraction within 5 worksheets for preschool and kindergarten.",
+  "board": "Kindergarten Math Worksheets",
+  "topics": [
+   "kindergarten math",
+   "addition and subtraction",
+   "number line"
+  ],
+  "link": "https://ryahai.github.io/sound-it-out/subtraction-to-5/?p=subtraction-to-5-1",
+  "release": "2026-10-13"
+ },
+ {
   "file": "subtraction-to-10-pin-2.png",
   "title": "Beginner Subtraction Practice: Cross Out Pictures and Number Line Worksheets",
   "description": "Beginner subtraction practice that makes taking away easy to see. Children cross out pictures and count what is left, then practise hopping back on a number line from 10. 160 sums with an answer key. For kindergarten, first grade and homeschool maths.",
@@ -166,5 +180,19 @@
   ],
   "link": "https://ryahai.github.io/sound-it-out/subtraction-within-10-worksheets/?p=subtraction-to-10-2",
   "release": "2026-10-14"
+ },
+ {
+  "file": "subtraction-to-5-pin-2.png",
+  "title": "Number Line Subtraction Practice Within 5: Printable Worksheets",
+  "description": "No prep number line practice for taking away within 5. Each printable page has a number line at the top and twelve sums, with an answer key so a child can check their own work. For preschool and kindergarten, homeschool maths, morning work and maths centres.",
+  "alt": "No prep number line practice for taking away within 5.",
+  "board": "Kindergarten Math Worksheets",
+  "topics": [
+   "kindergarten math",
+   "addition and subtraction",
+   "number line"
+  ],
+  "link": "https://ryahai.github.io/sound-it-out/subtraction-to-5/?p=subtraction-to-5-2",
+  "release": "2026-10-16"
  }
 ]
