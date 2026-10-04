@@ -1,0 +1,23 @@
+name: Release today's pins
+on:
+  schedule:
+    - cron: "5 11 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  feed:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node build-feed.mjs
+      - run: |
+          git config user.name "sound-it-out feed"
+          git config user.email "feed@users.noreply.github.com"
+          git add feeds
+          git diff --cached --quiet || git commit -m "Release today's pins"
+          git push origin HEAD:main
+          git push origin HEAD:gh-pages
