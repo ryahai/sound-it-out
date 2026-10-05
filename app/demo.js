@@ -315,6 +315,7 @@ function note_(block) {
   keep();
 }
 function grownTop() {
+  setTimeout(fillPaper, 0);
   const sets = S.sets || {}, days = Object.keys(S.days || {}).length, acts = Object.values(S.days || {}).reduce((x, y) => x + y, 0);
   const times = (n) => (n === 1 ? '1 activity' : `${n} activities`);
   const row = (g, i) => { const n = i + 1, c = sets[n] || 0, cls = n < S.stage ? 'was' : n === S.stage ? 'now' : 'later';
@@ -329,7 +330,20 @@ function grownTop() {
     <p class="muted small" style="margin:10px 0 0">“Practiced” counts the activities finished in this app on this device. The app cannot hear your child read, so you decide when to move up: when your child gets four out of five without help, on two different days.</p></div>
   <div class="card paper" style="margin:16px 0"><b>🖨️ Practice Set ${Math.max(2, S.stage)} on paper</b><p class="muted small" style="margin:4px 0 12px">${paper}</p>
     <a class="big-btn green" href="../free-decodable-reading-sampler/" target="_blank" rel="noopener">Print free pages</a>
-    <a class="big-btn soft" href="../sound-it-out-decodable-phonics-practice/" target="_blank" rel="noopener">See the full workbook</a></div>`;
+    <a class="big-btn soft" href="../sound-it-out-decodable-phonics-practice/" target="_blank" rel="noopener">See the full workbook</a><div id="paperMore"></div></div>`;
+}
+// Reading and sight-word pages now on the website, read from the site's own list (free ones first).
+function fillPaper() {
+  const box = document.getElementById('paperMore');
+  if (!box) return;
+  fetch('../search.json').then((r) => r.json()).then((all) => {
+    const shown = ['free-decodable-reading-sampler/', 'sound-it-out-decodable-phonics-practice/'];
+    const items = all.filter((x) => (x.c === 'Learn to Read' || x.c === 'Sight Words') && (x.k === 'Pack' || x.k === 'Free') && !shown.includes(x.u))
+      .sort((x, y) => (y.k === 'Free') - (x.k === 'Free')).slice(0, 8);
+    if (!items.length || !document.body.contains(box)) return;
+    box.innerHTML = '<p class="muted small" style="margin:14px 0 8px"><b>More reading pages to print</b></p>' + items.map((x) =>
+      `<a class="morelink" href="../${esc(x.u)}" target="_blank" rel="noopener"><span>${esc(x.t)}</span><small>${x.k === 'Free' ? 'FREE' : esc(x.p || '')}</small></a>`).join('');
+  }).catch(() => { /* the list is a bonus; the two links above always work */ });
 }
 function message_(emoji, title, text) {
   return new Promise((res) => {
