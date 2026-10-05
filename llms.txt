@@ -5,6 +5,12 @@
 ## Free
 - [All free worksheets](https://ryahai.github.io/sound-it-out/free-printable-worksheets/): free sample pages from every pack, plus a free reading app
 - [Free reading app](https://ryahai.github.io/sound-it-out/app/): reading games in the browser where every word can be sounded out
+- [Free Blending Game](https://ryahai.github.io/sound-it-out/free-blending-game/): You say the sounds slowly, your child says the whole word. No letters to look at, so it trains the ear first.
+- [Free Word Building Game](https://ryahai.github.io/sound-it-out/free-word-building-game/): Your child hears a word and taps the letter tiles in the right order to build it.
+- [Free CVC Word Reading Game](https://ryahai.github.io/sound-it-out/free-cvc-word-reading-game/): One short word at a time, such as sat, pin or dog. Every word uses only the sounds of the level you choose.
+- [Free Word Chains Game](https://ryahai.github.io/sound-it-out/free-word-chains-game/): One sound changes each time: map, mad, mud. Your child spots what changed and reads the new word.
+- [Free Sentence Reading Game](https://ryahai.github.io/sound-it-out/free-sentence-reading-game/): One short sentence at a time, built only from words your child can sound out.
+- [Free Decodable Story Game](https://ryahai.github.io/sound-it-out/free-decodable-story-game/): Five sentences about one person, one sentence at a time. Real reading, with every word decodable.
 - [Free Alphabet Tracing Worksheets](https://ryahai.github.io/sound-it-out/free-alphabet-tracing-worksheets/): 3 free printable pages. A to Z letter tracing worksheets with beginning sounds
 - [Free Numbers 1 to 20 Worksheets](https://ryahai.github.io/sound-it-out/free-number-tracing-and-counting-1-to-20/): 3 free printable pages. Number tracing and counting worksheets with ten frames
 - [Free Addition to 10 Worksheets](https://ryahai.github.io/sound-it-out/free-addition-within-10-worksheets/): 3 free printable pages. Addition within 10 worksheets with pictures and a number line
