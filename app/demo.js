@@ -190,10 +190,6 @@ function today() {
   $('#shop').onclick = shop;
   $('#switch').onclick = () => { hush(); pickFace(); };
   grownOpen_ = false;
-  if ($('#helloRec')) $('#helloRec').onclick = helloRecord_;
-  if ($('#helloPlay')) $('#helloPlay').onclick = () => helloPlay_(true);
-  if ($('#helloDel')) $('#helloDel').onclick = () => { try { localStorage.removeItem(HELLO_KEY); } catch { /* nothing to remove */ } grownOpen_ = true; today(); };
-  helloPlay_(false);
   if ($('#nameSave')) $('#nameSave').onclick = () => { grownOpen_ = true; S.name = $('#nameIn').value.replace(/[<>]/g, '').trim().slice(0, 20); keep(); today(); };
   if ($('#nudgeYes')) $('#nudgeYes').onclick = () => { const n = nudge_(); if (n) { S.stage = n.to; S.nudgeOff = null; keep(); today(); } };
   if ($('#nudgeNo')) $('#nudgeNo').onclick = () => { const d = new Date(); d.setDate(d.getDate() + 3); S.nudgeOff = { stage: S.stage, until: d.toLocaleDateString('en-CA') }; keep(); today(); };
@@ -358,10 +354,7 @@ function grownTop() {
     <p class="muted small" style="margin:10px 0 0">“Practiced” counts the activities finished in this app on this device. The app cannot hear your child read, so you decide when to move up: when your child gets four out of five without help, on two different days.</p></div>
   <div class="card" style="margin:16px 0"><b>🏷️ Your child’s name (optional)</b>
     <p class="muted small" style="margin:4px 0 10px">A first name or nickname. It is shown on the home screen and on practice sheets. It stays on this device and is never sent anywhere.</p>
-    <div class="check-row"><input id="nameIn" maxlength="20" value="${esc(S.name || '')}" placeholder="For example: Sam" aria-label="Your child’s name"><button class="big-btn soft" id="nameSave">Save</button></div>
-    <div class="hello">${helloGet_() ? '<button class="big-btn soft" id="helloPlay">▶ Play the hello</button><button class="big-btn soft" id="helloRec">Record again</button><button class="big-btn soft" id="helloDel">Delete it</button>'
-      : `<button class="big-btn soft" id="helloRec">🎙️ Record “Hello, ${esc(S.name || 'reader')}!” in your own voice</button>`}
-      <p class="muted small" id="helloMsg" style="margin:8px 0 0">${helloGet_() ? 'Your recording plays when the app opens. It is kept on this device only.' : 'Optional. The app plays your recording when it opens. It is kept on this device only and is never sent anywhere.'}</p></div></div>
+    <div class="check-row"><input id="nameIn" maxlength="20" value="${esc(S.name || '')}" placeholder="For example: Sam" aria-label="Your child’s name"><button class="big-btn soft" id="nameSave">Save</button></div></div>
   <div class="card" style="margin:16px 0"><b>🎯 Words to practice</b>
     ${hardWords.length ? `<p class="muted small" style="margin:4px 0 10px">Words your child needed help with in this app. A word leaves the list when it is read without help.</p>
       <div class="hardwords">${hardWords.map((w) => `<span>${esc(w)}</span>`).join('')}</div><button class="big-btn green" id="sheetBtn" style="margin-top:12px;font-size:1.05rem;padding:12px 24px">Print a practice sheet for these words</button>`
@@ -376,38 +369,8 @@ function grownTop() {
 }
 // ---- what the child needed help with, the streak, the practice sheet and the quick check (all kept on this device)
 const wordsOf = (t) => String(t).toLowerCase().replace(/[^a-z ]/g, ' ').split(/\s+/).filter((w) => w.length > 1 && w !== 'the');
-let lastHelped_ = false, hardRun_ = 0, grownOpen_ = false, helloPlayed_ = false;
-const HELLO_KEY = 'sio-hello';
-const helloGet_ = () => { try { return localStorage.getItem(HELLO_KEY); } catch { return null; } };
-// Plays the grown-up's recorded hello once per visit. Browsers only allow sound after a tap, so when the first try is
-// refused it plays on the first tap instead. "Read aloud off" keeps it quiet.
-function helloPlay_(force) {
-  const src = helloGet_();
-  if (!src || (!force && (!S.voice || helloPlayed_))) return;
-  new Audio(src).play().then(() => { helloPlayed_ = true; }).catch(() => {
-    if (!force) document.addEventListener('pointerdown', () => { if (!helloPlayed_ && S.voice) { helloPlayed_ = true; new Audio(src).play().catch(() => { /* still not allowed: stay quiet */ }); } }, { once: true });
-  });
-}
-async function helloRecord_() {
-  const out = $('#helloMsg');
-  try {
-    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-    const rec = new MediaRecorder(stream), parts = [];
-    rec.ondataavailable = (e) => { if (e.data && e.data.size) parts.push(e.data); };
-    rec.onstop = () => {
-      stream.getTracks().forEach((t) => t.stop());
-      const reader = new FileReader();
-      reader.onload = () => { try { localStorage.setItem(HELLO_KEY, reader.result); } catch { /* storage is full or blocked */ } helloPlayed_ = true; grownOpen_ = true; today(); };
-      reader.readAsDataURL(new Blob(parts, { type: rec.mimeType || 'audio/webm' }));
-    };
-    rec.start();
-    out.textContent = `Recording now. Say “Hello, ${S.name || 'reader'}!” It stops by itself in 4 seconds.`;
-    $('#helloRec').disabled = true;
-    setTimeout(() => { if (rec.state !== 'inactive') rec.stop(); }, 4000);
-  } catch (e) {
-    out.textContent = 'The microphone could not be used. Allow this page to use the microphone, then try again.';
-  }
-}
+let lastHelped_ = false, hardRun_ = 0, grownOpen_ = false;
+try { localStorage.removeItem('sio-hello'); } catch { /* nothing stored */ }
 // What was read today at the current set: without help, and with help or skipped. Kept for two weeks, on this device.
 function stat_(ok) {
   const day = dayKey_(); S.stat = S.stat || {};
