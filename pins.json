@@ -98,20 +98,6 @@
   "release": "2026-10-05"
  },
  {
-  "file": "addition-to-5-pin-3.png",
-  "title": "Free Addition to 5 Worksheets: 3 Printable Pages",
-  "description": "Free printable Addition to 5 worksheets to try with your child. Download 3 sample pages and print them at home or in class, in full color or in ink-saving black and white, US Letter or A4. No sign-up needed. The full pack has 24 pages.",
-  "alt": "Free sample pages from Addition to 5",
-  "board": "Kindergarten Math Worksheets",
-  "topics": [
-   "kindergarten math",
-   "addition and subtraction",
-   "number line"
-  ],
-  "link": "https://ryahai.github.io/sound-it-out/free-addition-to-5/?p=addition-to-5-3",
-  "release": "2026-10-06"
- },
- {
   "file": "sight-words-set-1-pin-3.png",
   "title": "Free Sight Words Set 1 Worksheets: 3 Printable Pages",
   "description": "Free printable Sight Words Set 1 worksheets to try with your child. Download 3 sample pages and print them at home or in class, in full color or in ink-saving black and white, US Letter or A4. No sign-up needed. The full pack has 22 pages.",
@@ -151,6 +137,20 @@
    "letter recognition"
   ],
   "link": "https://ryahai.github.io/sound-it-out/free-alphabet-tracing-worksheets/?p=alphabet-tracing-3",
+  "release": "2026-10-06"
+ },
+ {
+  "file": "addition-to-5-pin-3.png",
+  "title": "Free Addition to 5 Worksheets: 3 Printable Pages",
+  "description": "Free printable Addition to 5 worksheets to try with your child. Download 3 sample pages and print them at home or in class, in full color or in ink-saving black and white, US Letter or A4. No sign-up needed. The full pack has 24 pages.",
+  "alt": "Free sample pages from Addition to 5",
+  "board": "Kindergarten Math Worksheets",
+  "topics": [
+   "kindergarten math",
+   "addition and subtraction",
+   "number line"
+  ],
+  "link": "https://ryahai.github.io/sound-it-out/free-addition-to-5/?p=addition-to-5-3",
   "release": "2026-10-06"
  },
  {
