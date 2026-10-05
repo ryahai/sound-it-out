@@ -1,6 +1,6 @@
 # Sound It Out
 
-> Printable PDF worksheets for children aged 3 to 8 (preschool, kindergarten and first grade): phonics and decodable reading, sight words, alphabet tracing, numbers, addition and subtraction. Every pack comes in full colour and in black and white, in US Letter and A4. Free sample pages can be downloaded without signing up.
+> Printable PDF worksheets for children aged 3 to 8 (preschool, kindergarten and first grade): phonics and decodable reading, sight words, alphabet tracing, numbers, addition and subtraction. Every pack comes in full color and in black and white, in US Letter and A4. Free sample pages can be downloaded without signing up.
 
 ## Free
 - [All free worksheets](https://ryahai.github.io/sound-it-out/free-printable-worksheets/): free sample pages from every pack, plus a free reading app
@@ -12,6 +12,13 @@
 - [Free Addition to 5 Worksheets](https://ryahai.github.io/sound-it-out/free-addition-to-5/): 3 free printable pages. Addition within 5 worksheets with pictures and a number line
 - [Free Sight Words Set 1 Worksheets](https://ryahai.github.io/sound-it-out/free-sight-words-set-1/): 3 free printable pages. Sight word practice worksheets, one word per page
 - [Free Subtraction to 5 Worksheets](https://ryahai.github.io/sound-it-out/free-subtraction-to-5/): 3 free printable pages. Subtraction within 5 worksheets with pictures and a number line
+
+## Guides
+- [How to Teach a Child to Hold a Pencil](https://ryahai.github.io/sound-it-out/guide-how-to-teach-pencil-grip/): See what age children are ready to learn a proper pencil grip, with easy activities that build hand strength for handwriting.
+- [How to Teach a Child to Tell Time](https://ryahai.github.io/sound-it-out/guide-how-to-teach-a-child-to-tell-time/): Find out when children usually learn to tell time, and get simple steps for teaching whole hours, half hours, and minutes on a clock.
+- [What Is a Sight Word?](https://ryahai.github.io/sound-it-out/guide-what-is-a-sight-word/): A clear explanation of what sight words are, why children need to memorize them, and how they differ from words you sound out.
+- [When Should a Child Know All Their Letters?](https://ryahai.github.io/sound-it-out/guide-when-should-a-child-know-all-letters/): Learn the typical age range for learning all 26 letters, uppercase and lowercase, and what to do if your child needs more practice.
+- [When Should a Child Learn to Count to 100?](https://ryahai.github.io/sound-it-out/guide-when-do-kids-count-to-100/): Learn when children typically count to 100, and simple ways to help your child master counting by tens and ones at home.
 
 ## Categories
 - [Learn to Read](https://ryahai.github.io/sound-it-out/learn-to-read-printables/): Printable phonics and decodable reading practice for kindergarten and first grade, where every word can be sounded out.
