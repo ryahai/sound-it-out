@@ -20,6 +20,16 @@
 - [When Should a Child Know All Their Letters?](https://ryahai.github.io/sound-it-out/guide-when-should-a-child-know-all-letters/): Learn the typical age range for learning all 26 letters, uppercase and lowercase, and what to do if your child needs more practice.
 - [When Should a Child Learn to Count to 100?](https://ryahai.github.io/sound-it-out/guide-when-do-kids-count-to-100/): Learn when children typically count to 100, and simple ways to help your child master counting by tens and ones at home.
 
+## By grade
+- [Preschool Worksheets](https://ryahai.github.io/sound-it-out/preschool-worksheets/): 4 printable packs for ages 3 to 5
+- [Kindergarten Worksheets](https://ryahai.github.io/sound-it-out/kindergarten-worksheets/): 10 printable packs for ages 5 to 6
+- [First Grade Worksheets](https://ryahai.github.io/sound-it-out/first-grade-worksheets/): 5 printable packs for ages 6 to 7
+- [Preschool Addition and Subtraction Worksheets](https://ryahai.github.io/sound-it-out/preschool-addition-and-subtraction-worksheets/): 2 packs
+- [Kindergarten Learn to Read Worksheets](https://ryahai.github.io/sound-it-out/kindergarten-learn-to-read-worksheets/): 3 packs
+- [Kindergarten Addition and Subtraction Worksheets](https://ryahai.github.io/sound-it-out/kindergarten-addition-and-subtraction-worksheets/): 4 packs
+- [First Grade Learn to Read Worksheets](https://ryahai.github.io/sound-it-out/first-grade-learn-to-read-worksheets/): 2 packs
+- [First Grade Addition and Subtraction Worksheets](https://ryahai.github.io/sound-it-out/first-grade-addition-and-subtraction-worksheets/): 2 packs
+
 ## Categories
 - [Addition Worksheets](https://ryahai.github.io/sound-it-out/addition-worksheets/): 2 printable packs
 - [Subtraction Worksheets](https://ryahai.github.io/sound-it-out/subtraction-worksheets/): 2 printable packs
