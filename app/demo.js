@@ -132,7 +132,7 @@ function pickFace() {
   $('#dock').hidden = true;
   render(`<div class="stage"><h1>📖 Sound It Out</h1><p class="lesson-text">Who is reading today? Pick your face.</p>
     <div class="kids" style="width:100%;max-width:820px">${FACES.map((f) => `<button class="kid" data-v="${f}"><span class="face">${f}</span>That's me</button>`).join('')}</div>
-    <p class="muted small" style="max-width:760px">No names, no sign-up. Stars and coins are kept only on this device.<br>
+    <p class="muted small" style="max-width:760px">No sign-up. A name is optional, and it stays on this device with the stars and coins.<br>
       Every word here is built from the letter-sounds your child has been taught.</p></div>`);
   waitClick('.kid').then((face) => { S.face = face; keep(); today(); });
 }
@@ -165,7 +165,7 @@ function today() {
   const lvNow = level();
   render(`<div class="home">
     <div class="hi"><div class="avatar"><span class="face">${S.face}</span><span class="pet">${friend().emoji}</span></div>
-      <h1>Hello, reader!</h1><div class="starline"><span class="level-badge">⭐ Level ${lvNow}</span> ⭐ ${S.stars} stars${streak_() > 1 ? ` · 🔥 ${streak_()} days in a row` : ''}</div></div>
+      <h1>Hello, ${S.name ? esc(S.name) : 'reader'}!</h1><div class="starline"><span class="level-badge">⭐ Level ${lvNow}</span> ⭐ ${S.stars} stars${streak_() > 1 ? ` · 🔥 ${streak_()} days in a row` : ''}</div></div>
     ${next ? `<button class="go" id="start"><span class="goem">${next.em}</span><span class="gotx"><small>Play next</small>${esc(next.title)}</span><span class="goarrow">▶</span></button>` : '<p class="lesson-text">All done for today. Well done! 🎉</p>'}
     <div class="tiles">${PLAN.map((b) => `<button class="block tile ${b === next ? 'next' : ''} ${done.has(b.id) ? 'done' : ''}" data-v="${b.id}">
         <span class="em">${b.em}</span><b>${esc(b.title)}</b>${done.has(b.id) ? '<span class="tick">✔</span>' : ''}</button>`).join('')}</div>
@@ -189,6 +189,7 @@ function today() {
   $('#collection').onclick = () => collection();
   $('#shop').onclick = shop;
   $('#switch').onclick = () => { hush(); pickFace(); };
+  if ($('#nameSave')) $('#nameSave').onclick = () => { S.name = $('#nameIn').value.replace(/[<>]/g, '').trim().slice(0, 20); keep(); today(); };
   if ($('#nudgeYes')) $('#nudgeYes').onclick = () => { const n = nudge_(); if (n) { S.stage = n.to; S.nudgeOff = null; keep(); today(); } };
   if ($('#nudgeNo')) $('#nudgeNo').onclick = () => { const d = new Date(); d.setDate(d.getDate() + 3); S.nudgeOff = { stage: S.stage, until: d.toLocaleDateString('en-CA') }; keep(); today(); };
   if ($('#checkStart')) $('#checkStart').onclick = quickCheck;
@@ -350,6 +351,9 @@ function grownTop() {
     <p class="muted small" style="margin:4px 0 10px">Your child is on <b>Set ${S.stage}</b>. Practiced on ${days === 1 ? '1 day' : `${days} days`}, ${times(acts)} in all, ${S.stars} stars.</p>
     <ol class="path">${STAGES.map(row).join('')}</ol>
     <p class="muted small" style="margin:10px 0 0">“Practiced” counts the activities finished in this app on this device. The app cannot hear your child read, so you decide when to move up: when your child gets four out of five without help, on two different days.</p></div>
+  <div class="card" style="margin:16px 0"><b>🏷️ Your child’s name (optional)</b>
+    <p class="muted small" style="margin:4px 0 10px">A first name or nickname. It is shown on the home screen and on practice sheets. It stays on this device and is never sent anywhere.</p>
+    <div class="check-row"><input id="nameIn" maxlength="20" value="${esc(S.name || '')}" placeholder="For example: Sam" aria-label="Your child’s name"><button class="big-btn soft" id="nameSave">Save</button></div></div>
   <div class="card" style="margin:16px 0"><b>🎯 Words to practice</b>
     ${hardWords.length ? `<p class="muted small" style="margin:4px 0 10px">Words your child needed help with in this app. A word leaves the list when it is read without help.</p>
       <div class="hardwords">${hardWords.map((w) => `<span>${esc(w)}</span>`).join('')}</div><button class="big-btn green" id="sheetBtn" style="margin-top:12px;font-size:1.05rem;padding:12px 24px">Print a practice sheet for these words</button>`
@@ -416,9 +420,9 @@ h1{font-size:26pt;margin:0 0 2mm}p{margin:0 0 6mm;font-size:12pt}.row{display:gr
 .write{border-bottom:2pt solid #1f2a44;height:16mm;position:relative}.write:before{content:"";position:absolute;left:0;right:0;top:50%;border-top:1pt dashed #9aa3b2}
 .stars{font-size:16pt;letter-spacing:4pt}.foot{font-size:10pt;color:#55617a;margin-top:6mm;display:flex;justify-content:space-between}button{font:inherit;font-size:13pt;padding:8px 20px;border-radius:99px;border:2px solid #1f2a44;background:#ffe066;cursor:pointer;margin-bottom:6mm}
 @media print{button{display:none}}</style></head><body><button onclick="print()">Print this page</button>
-<h1>My practice words</h1><p>Point under each sound and say it. Say the word. Trace it. Write it. Color a star each time you read it.</p>
+<h1>${S.name ? `${esc(S.name)}’s practice words` : 'My practice words'}</h1><p>Point under each sound and say it. Say the word. Trace it. Write it. Color a star each time you read it.</p>
 ${ws.map((x) => `<div class="row"><div class="say">${esc(x)}<small>Read it</small><span class="stars">☆☆☆</span></div><div class="trace">${esc(x)}</div><div class="write"></div></div>`).join('')}
-<div class="foot"><span>Name ______________________</span><span>Sound It Out · ryahai.github.io/sound-it-out</span></div></body></html>`);
+<div class="foot"><span>${S.name ? `Name: ${esc(S.name)}` : 'Name ______________________'}</span><span>Sound It Out · ryahai.github.io/sound-it-out</span></div></body></html>`);
   w.document.close();
 }
 // The quick check: a picture and three words; the child taps the word. Words of each set use only that set's sounds,
