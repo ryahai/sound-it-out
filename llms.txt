@@ -53,6 +53,7 @@
 
 ## About
 - [About](https://ryahai.github.io/sound-it-out/about/): who makes these printables and why
+- [The learning path](https://ryahai.github.io/sound-it-out/learning-path/): what to teach in reading and math, level by level, with the packs for each level
 - [What should my child learn next?](https://ryahai.github.io/sound-it-out/what-next/): a free plan for today from a few plain questions
 - [Skills we cover](https://ryahai.github.io/sound-it-out/skills/): every skill by subject, ready now and being made next
 - [How we make our worksheets](https://ryahai.github.io/sound-it-out/how-we-make-worksheets/): how pages are planned, built and checked
