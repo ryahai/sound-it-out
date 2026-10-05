@@ -2,7 +2,7 @@
 // Pinterest reads each feed about once a day and publishes any new item as a pin, so releasing one item a day
 // here posts one pin a day there, with nobody at a keyboard. Run daily by .github/workflows/feed.yml.
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
-const BASE = 'https://ryahai.github.io/sound-it-out';
+const BASE = 'https://sounditoutreading.com';
 const today = new Date().toISOString().slice(0, 10);
 const pins = JSON.parse(readFileSync('pins.json', 'utf8'));
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
