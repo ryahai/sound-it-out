@@ -2,7 +2,7 @@
 // split, left to right, into letter-sounds (graphemes) the child has been
 // taught. "duck" needs d, u and ck; knowing c and k separately is not enough.
 
-// The order most UK synthetic-phonics programmes teach first sounds in
+// The order most UK synthetic-phonics programs teach first sounds in
 // (Letters and Sounds, Phase 2 sets 1-5 and Phase 3 sets 6-7).
 export const STAGES = [
   ['s', 'a', 't', 'p'],

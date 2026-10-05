@@ -3,7 +3,7 @@
 export const WORDS = {
   // Who can do things.
   who: ['cat', 'dog', 'pig', 'hen', 'fox', 'bug', 'rat', 'bat', 'ant', 'cub', 'pup', 'kid', 'man', 'duck', 'vet',
-    'yak', 'dad', 'mum', 'nan'],
+    'yak', 'dad', 'mom', 'nan'],
   // Things you can have, get or hit.
   thing: ['map', 'pan', 'pot', 'pin', 'tin', 'cup', 'mug', 'jug', 'bag', 'hat', 'cap', 'net', 'pen', 'peg', 'jam',
     'bun', 'nut', 'fan', 'sock', 'lid', 'bell', 'doll', 'jet', 'wig', 'zip', 'gum', 'pad', 'kit', 'bat', 'bug'],
@@ -22,7 +22,7 @@ export const WORDS = {
     'spin', 'stand'],
   where: ['on', 'in', 'at'],
   name: ['Sam', 'Pat', 'Tim', 'Nan', 'Dan', 'Pam', 'Sid', 'Kim', 'Meg', 'Ben', 'Tom', 'Ned', 'Jen', 'Max', 'Zak',
-    'Viv', 'Bob', 'Gus', 'Dad', 'Mum'],
+    'Viv', 'Bob', 'Gus', 'Dad', 'Mom'],
   determiner: ['a', 'the'],
 };
 

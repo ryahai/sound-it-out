@@ -82,8 +82,8 @@ function overlay(html, cls = '') {
   return ov;
 }
 function confetti() {
-  const colours = ['#f2b705', '#3f7cc4', '#3c9a6a', '#f2a65a', '#8a6cc7', '#e86a92'];
-  return `<div class="confetti">${Array.from({ length: 40 }, (_, i) => `<i style="left:${(i * 37) % 100}%;background:${colours[i % 6]};
+  const colors = ['#f2b705', '#3f7cc4', '#3c9a6a', '#f2a65a', '#8a6cc7', '#e86a92'];
+  return `<div class="confetti">${Array.from({ length: 40 }, (_, i) => `<i style="left:${(i * 37) % 100}%;background:${colors[i % 6]};
     animation-duration:${3 + (i % 5) * 0.6}s;animation-delay:${-(i % 7) * 0.5}s"></i>`).join('')}</div>`;
 }
 function celebrate(emoji, title, text, button = 'Keep going', line = '') {

@@ -45,7 +45,7 @@ function fill(shapeIndex, bank, known, tricky, random, shapes, sentence) {
   const content = words.filter((w) => !['a', 'the', 'can', 'is'].includes(w));
   if (new Set(content.map((w) => w.toLowerCase())).size !== content.length) return null;
   const text = words.join(' ');
-  // A sentence gets a capital and a full stop; a phrase is left as it is.
+  // A sentence gets a capital and a period; a phrase is left as it is.
   return { text: sentence ? text[0].toUpperCase() + text.slice(1) + '.' : text, words, shape: shapeIndex };
 }
 
