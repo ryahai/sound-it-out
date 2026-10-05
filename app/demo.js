@@ -86,10 +86,10 @@ function confetti() {
   return `<div class="confetti">${Array.from({ length: 40 }, (_, i) => `<i style="left:${(i * 37) % 100}%;background:${colors[i % 6]};
     animation-duration:${3 + (i % 5) * 0.6}s;animation-delay:${-(i % 7) * 0.5}s"></i>`).join('')}</div>`;
 }
-function celebrate(emoji, title, text, button = 'Keep going', line = '') {
+function celebrate(emoji, title, text, button = 'Keep going', line = '', extra = '') {
   return new Promise((res) => {
     const ov = overlay(`${confetti()}<div class="celebrate-emoji">${emoji}</div><h1>${esc(title)}</h1>
-      <p class="lesson-text">${esc(text)}</p><button class="big-btn green">${esc(button)}</button>`, 'celebrate');
+      <p class="lesson-text">${esc(text)}</p>${extra}<button class="big-btn green">${esc(button)}</button>`, 'celebrate');
     speak(line);
     ov.querySelector('button').onclick = () => { ov.remove(); hush(); res(); };
   });
@@ -166,7 +166,7 @@ function today() {
     <div class="mini"><button class="round" id="collection" aria-label="My collection">🎒<small>Collection</small></button>
       <button class="round" id="shop" aria-label="Rewards">🎁<small>🪙 ${S.coins}</small></button>
       <button class="round" id="switch" aria-label="Change face">🙂<small>Change</small></button></div>
-    <details class="grown"><summary>For grown-ups</summary>
+    <details class="grown"><summary>For grown-ups</summary>${grownTop()}
       <div class="card"><b>Which sounds has your child been taught?</b>
         <div class="sets">${STAGES.map((_, i) => `<button data-v="${i + 1}" class="${S.stage === i + 1 ? 'on' : ''}">Set ${i + 1}</button>`).join('')}</div>
         <div>Sounds in use: <span class="letters">${esc([...graphemesUpTo(S.stage)].join(' '))}</span> <span class="muted small">and the sight word “the”</span></div></div>
@@ -198,7 +198,7 @@ async function startBlock(block) {
   else if (block.kind === 'break') await breakTime(block);
   else if (block.kind === 'closing') await closing();
   else if (!(await lesson(block))) return today();
-  done.add(block.id);
+  done.add(block.id); note_(block);
   today();
 }
 
@@ -301,8 +301,35 @@ async function lesson(block, useModel = Boolean(block.model)) {
     if (earned) { got += 1; await reward(); await new Promise((r) => setTimeout(r, 850)); }
   }
   await celebrate(got >= 4 ? '🏆' : '🌟', `${got} of ${data.items.length} stars`,
-    `${got >= 4 ? 'Brilliant reading!' : 'Good trying!'} Grown-up: ${data.rule}`, 'Back to today', got >= 4 ? LINES.great : LINES.trying);
+    `${got >= 4 ? 'Brilliant reading!' : 'Good trying!'} Grown-up: ${data.rule}`, 'Back to today', got >= 4 ? LINES.great : LINES.trying, PAPER);
   return true;
+}
+const PAPER = '<p class="paperline">Grown-ups: <a href="../free-decodable-reading-sampler/" target="_blank" rel="noopener">practice this on paper. Print free pages</a></p>';
+// what was practiced, kept on this device only: activities per day and per sound set
+function note_(block) {
+  if (['checkin', 'break', 'closing'].includes(block.id)) return;
+  const day = new Date().toISOString().slice(0, 10);
+  S.days = S.days || {}; S.days[day] = (S.days[day] || 0) + 1;
+  S.sets = S.sets || {}; S.sets[S.stage] = (S.sets[S.stage] || 0) + 1;
+  const keys = Object.keys(S.days).sort(); while (keys.length > 120) delete S.days[keys.shift()];
+  keep();
+}
+function grownTop() {
+  const sets = S.sets || {}, days = Object.keys(S.days || {}).length, acts = Object.values(S.days || {}).reduce((x, y) => x + y, 0);
+  const times = (n) => (n === 1 ? '1 activity' : `${n} activities`);
+  const row = (g, i) => { const n = i + 1, c = sets[n] || 0, cls = n < S.stage ? 'was' : n === S.stage ? 'now' : 'later';
+    const label = n < S.stage ? (c ? `practiced: ${times(c)}` : 'taught before') : n === S.stage ? `learning now${c ? ` · practiced: ${times(c)}` : ''}` : n === S.stage + 1 ? 'next' : 'later';
+    return `<li class="${cls}"><span>Set ${n}</span><b>${esc(g.join(' '))}</b><i>${label}</i></li>`; };
+  const paper = S.stage <= 2
+    ? 'The free sampler has the whole of Set 2 on paper: words, sentences and stories that use only s a t p i n m d.'
+    : `The Sound It Out workbook has words, word chains, sentences and stories for Set ${S.stage}, using only the sounds your child has been taught. Sets 2 to 7 are in one pack. You can try Set 2 free first.`;
+  return `<div class="card prog"><b>📈 Progress</b>
+    <p class="muted small" style="margin:4px 0 10px">Your child is on <b>Set ${S.stage}</b>. Practiced on ${days === 1 ? '1 day' : `${days} days`}, ${times(acts)} in all, ${S.stars} stars.</p>
+    <ol class="path">${STAGES.map(row).join('')}</ol>
+    <p class="muted small" style="margin:10px 0 0">“Practiced” counts the activities finished in this app on this device. The app cannot hear your child read, so you decide when to move up: when your child gets four out of five without help, on two different days.</p></div>
+  <div class="card paper" style="margin:16px 0"><b>🖨️ Practice Set ${Math.max(2, S.stage)} on paper</b><p class="muted small" style="margin:4px 0 12px">${paper}</p>
+    <a class="big-btn green" href="../free-decodable-reading-sampler/" target="_blank" rel="noopener">Print free pages</a>
+    <a class="big-btn soft" href="../sound-it-out-decodable-phonics-practice/" target="_blank" rel="noopener">See the full workbook</a></div>`;
 }
 function message_(emoji, title, text) {
   return new Promise((res) => {

@@ -206,3 +206,12 @@ body[data-theme="space"] .stars-bg { display: block; }
 .progress-dots.big{justify-content:center;display:flex;gap:10px;margin-bottom:14px}.progress-dots.big span{width:18px;height:18px}
 .stage .prompt{font-size:1.15rem;font-weight:600;background:rgba(255,255,255,.7);border-radius:16px;padding:8px 18px}
 @media (max-width:640px){.acthead span{font-size:2.6rem}.acthead b{font-size:1.15rem}}
+
+/* progress and paper practice, for the grown-up */
+.path{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.path li{display:grid;grid-template-columns:64px 1fr auto;align-items:center;gap:12px;border-radius:14px;padding:9px 14px;background:#f3f4f6;color:#23303b}
+.path li span{font-weight:700;font-size:.9rem}.path li b{font-size:1.25rem;letter-spacing:.12em}.path li i{font-style:normal;font-size:.85rem;font-weight:600;text-align:right}
+.path li.was{background:#e4f7e4}.path li.was i{color:#1c7a4a}.path li.now{background:#fff3c9;box-shadow:0 0 0 3px #f2b705 inset}.path li.later{opacity:.7}
+.card.paper .big-btn{display:inline-block;text-decoration:none;font-size:1.05rem;padding:12px 24px;margin:0 8px 8px 0}
+.paperline{font-size:1rem;margin:0 0 18px;background:rgba(255,255,255,.85);color:#23303b;border-radius:14px;padding:8px 16px}.paperline a{color:inherit;font-weight:700}
+@media (max-width:560px){.path li{grid-template-columns:52px 1fr;}.path li i{grid-column:1/3;text-align:left}}
