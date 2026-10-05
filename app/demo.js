@@ -330,7 +330,8 @@ function grownTop() {
     <p class="muted small" style="margin:10px 0 0">“Practiced” counts the activities finished in this app on this device. The app cannot hear your child read, so you decide when to move up: when your child gets four out of five without help, on two different days.</p></div>
   <div class="card paper" style="margin:16px 0"><b>🖨️ Practice Set ${Math.max(2, S.stage)} on paper</b><p class="muted small" style="margin:4px 0 12px">${paper}</p>
     <a class="big-btn green" href="../free-decodable-reading-sampler/" target="_blank" rel="noopener">Print free pages</a>
-    <a class="big-btn soft" href="../sound-it-out-decodable-phonics-practice/" target="_blank" rel="noopener">See the full workbook</a><div id="paperMore"></div></div>`;
+    <a class="big-btn soft" href="../sound-it-out-decodable-phonics-practice/" target="_blank" rel="noopener">See the full workbook</a>
+    <a class="big-btn soft" href="../what-next/" target="_blank" rel="noopener">Get a plan for today</a><div id="paperMore"></div></div>`;
 }
 // Reading and sight-word pages now on the website, read from the site's own list (free ones first).
 function fillPaper() {
