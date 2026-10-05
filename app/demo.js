@@ -172,7 +172,7 @@ function today() {
     <div class="mini"><button class="round" id="collection" aria-label="My collection">🎒<small>Collection</small></button>
       <button class="round" id="shop" aria-label="Rewards">🎁<small>🪙 ${S.coins}</small></button>
       <button class="round" id="switch" aria-label="Change face">🙂<small>Change</small></button></div>
-    <details class="grown"><summary>For grown-ups</summary>${grownTop()}
+    <details class="grown"${nudge_() ? ' open' : ''}><summary>For grown-ups</summary>${nudgeHtml_()}${grownTop()}
       <div class="card"><b>Which sounds has your child been taught?</b>
         <div class="sets">${STAGES.map((_, i) => `<button data-v="${i + 1}" class="${S.stage === i + 1 ? 'on' : ''}">Set ${i + 1}</button>`).join('')}</div>
         <div>Sounds in use: <span class="letters">${esc([...graphemesUpTo(S.stage)].join(' '))}</span> <span class="muted small">and the sight word “the”</span></div></div>
@@ -189,6 +189,8 @@ function today() {
   $('#collection').onclick = () => collection();
   $('#shop').onclick = shop;
   $('#switch').onclick = () => { hush(); pickFace(); };
+  if ($('#nudgeYes')) $('#nudgeYes').onclick = () => { const n = nudge_(); if (n) { S.stage = n.to; S.nudgeOff = null; keep(); today(); } };
+  if ($('#nudgeNo')) $('#nudgeNo').onclick = () => { const d = new Date(); d.setDate(d.getDate() + 3); S.nudgeOff = { stage: S.stage, until: d.toLocaleDateString('en-CA') }; keep(); today(); };
   if ($('#checkStart')) $('#checkStart').onclick = quickCheck;
   if ($('#sheetBtn')) $('#sheetBtn').onclick = practiceSheet;
   $('#checkBtn').onclick = async () => {
@@ -304,11 +306,17 @@ async function lesson(block, useModel = Boolean(block.model)) {
     if (back.length) data.items = [...back, ...data.items.filter((x) => !back.some((b) => b.word === x.word))].slice(0, Math.max(5, data.items.length));
   }
   const badge = `<div class="acthead"><span>${block.em}</span><b>${esc(block.title)}</b></div>`;
-  let got = 0;
+  let got = 0; hardRun_ = 0;
   for (let at = 0; at < data.items.length; at++) {
     const dots = data.items.map((_, i) => `<span class="${i < at ? 'got' : i === at ? 'on' : ''}"></span>`).join('');
     render(`${badge}<div class="progress-dots big">${dots}</div><div class="stage" id="stage"></div>`);
+    lastHelped_ = false;
     const earned = await item(block, data, data.items[at], at);
+    if (['words', 'phrases', 'sentences'].includes(block.id)) {      // two in a row needed help: the shorter ones come next
+      hardRun_ = lastHelped_ ? hardRun_ + 1 : 0;
+      if (hardRun_ >= 2) { const size = (x) => (Array.isArray(x.sounds) ? x.sounds.length : String(x.text || x.word || '').length);
+        const rest = data.items.slice(at + 1).sort((x, y) => size(x) - size(y)); data.items.splice(at + 1, rest.length, ...rest); hardRun_ = 0; }
+    }
     if (earned === null) return false;      // stopped from the pause screen or the home button
     if (earned) { got += 1; await reward(); await new Promise((r) => setTimeout(r, 850)); }
   }
@@ -356,6 +364,32 @@ function grownTop() {
 }
 // ---- what the child needed help with, the streak, the practice sheet and the quick check (all kept on this device)
 const wordsOf = (t) => String(t).toLowerCase().replace(/[^a-z ]/g, ' ').split(/\s+/).filter((w) => w.length > 1 && w !== 'the');
+let lastHelped_ = false, hardRun_ = 0;
+// What was read today at the current set: without help, and with help or skipped. Kept for two weeks, on this device.
+function stat_(ok) {
+  const day = dayKey_(); S.stat = S.stat || {};
+  if (!S.stat[day] || S.stat[day].set !== S.stage) S.stat[day] = { set: S.stage, ok: 0, help: 0 };
+  S.stat[day][ok ? 'ok' : 'help'] += 1;
+  const ks = Object.keys(S.stat).sort(); while (ks.length > 14) delete S.stat[ks.shift()];
+  keep();
+}
+// A suggestion for the grown-up, never a change made by the app: move up after two days with most items read without
+// help; offer to go back after two days in a row where most items needed help. A day counts only with 5 or more items.
+function nudge_() {
+  if (S.nudgeOff && S.nudgeOff.stage === S.stage && dayKey_() < S.nudgeOff.until) return null;
+  const days = Object.entries(S.stat || {}).filter(([, d]) => d.set === S.stage && d.ok + d.help >= 5).sort((x, y) => (x[0] < y[0] ? -1 : 1));
+  const good = days.filter(([, d]) => d.ok / (d.ok + d.help) >= 0.8), last2 = days.slice(-2);
+  if (good.length >= 2 && S.stage < STAGES.length) { const d = good[good.length - 1][1]; return { kind: 'up', to: S.stage + 1, text: `Your child read ${d.ok} of ${d.ok + d.help} without help, and did as well on ${good.length === 2 ? 'one other day' : `${good.length - 1} other days`}. Ready to try Set ${S.stage + 1}?` }; }
+  if (last2.length === 2 && last2.every(([, d]) => d.ok / (d.ok + d.help) <= 0.5) && S.stage > 1) { const d = last2[1][1]; return { kind: 'down', to: S.stage - 1, text: `Set ${S.stage} looks hard right now: your child needed help with ${d.help} of ${d.ok + d.help} last time. You can stay here, or go back to Set ${S.stage - 1} for a while.` }; }
+  return null;
+}
+function nudgeHtml_() {
+  const n = nudge_(); if (!n) return '';
+  return `<div class="card nudge ${n.kind}"><b>${n.kind === 'up' ? '🌟 Ready for the next set?' : '🫶 A hard patch'}</b><p style="margin:6px 0 12px">${esc(n.text)}</p>
+    <button class="big-btn green" id="nudgeYes" style="font-size:1.05rem;padding:12px 24px">${n.kind === 'up' ? `Move to Set ${n.to}` : `Go back to Set ${n.to}`}</button>
+    <button class="big-btn soft" id="nudgeNo" style="font-size:1.05rem;padding:12px 24px">${n.kind === 'up' ? 'Not yet' : `Stay on Set ${S.stage}`}</button>
+    <p class="muted small" style="margin:10px 0 0">This is only a suggestion from the buttons pressed in this app. It cannot hear your child read. You decide.</p></div>`;
+}
 function backWords_() {
   const known = [...graphemesUpTo(S.stage)].sort((x, y) => y.length - x.length), out = [];
   for (const [w] of Object.entries(S.hard || {}).sort((x, y) => y[1] - x[1])) {
@@ -449,9 +483,9 @@ function item(block, data, it, at) {
         <button class="big-btn soft" id="hint">Show the sounds</button><button class="big-btn soft" id="skip">Try another</button></div>
         <div class="feedback help">${tell ? esc(tell) : ''}</div>`;
       if (say) speak(say);
-      $('#yes').onclick = () => { $('#yes').disabled = true; if (!$('#snd').textContent) easy_(stage.querySelector('.read').textContent); speak('Well done!'); res(true); };
-      $('#hint').onclick = () => { $('#snd').textContent = soundsText; hard_(stage.querySelector('.read').textContent); };
-      $('#skip').onclick = () => { hard_(stage.querySelector('.read').textContent); res(false); };
+      $('#yes').onclick = () => { $('#yes').disabled = true; if (!$('#snd').textContent) easy_(stage.querySelector('.read').textContent); stat_(!$('#snd').textContent); speak('Well done!'); res(true); };
+      $('#hint').onclick = () => { $('#snd').textContent = soundsText; lastHelped_ = true; hard_(stage.querySelector('.read').textContent); };
+      $('#skip').onclick = () => { lastHelped_ = true; stat_(false); hard_(stage.querySelector('.read').textContent); res(false); };
     };
     if (block.id === 'ear') {
       const options = [...new Set(it.options)].sort(() => Math.random() - 0.5);
