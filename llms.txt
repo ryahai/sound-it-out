@@ -41,6 +41,9 @@
 
 ## About
 - [About](https://ryahai.github.io/sound-it-out/about/): who makes these printables and why
+- [Skills we cover](https://ryahai.github.io/sound-it-out/skills/): every skill by subject, ready now and being made next
+- [How we make our worksheets](https://ryahai.github.io/sound-it-out/how-we-make-worksheets/): how pages are planned, built and checked
+- [Glossary](https://ryahai.github.io/sound-it-out/glossary/): plain meanings of early reading and math words
 - [How it works](https://ryahai.github.io/sound-it-out/how-it-works/): buying, downloading and printing
 - [Help](https://ryahai.github.io/sound-it-out/help/): answers about downloading and printing
 - [Terms of use](https://ryahai.github.io/sound-it-out/terms-of-use/)
