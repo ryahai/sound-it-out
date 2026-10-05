@@ -38,7 +38,13 @@ const PLAN = [
 let S = { face: null, stars: 0, coins: 0, stage: 3, friend: 'turtle', world: 'savannah', voice: true, goal: null };
 try { S = { ...S, ...JSON.parse(localStorage.getItem('readable-for-her') || '{}') }; } catch { /* storage may be blocked */ }
 const keep = () => { try { localStorage.setItem('readable-for-her', JSON.stringify(S)); } catch { /* fine without it */ } };
-const done = new Set();
+const dayKey_ = () => new Date().toLocaleDateString('en-CA');      // the date where the child is, so a day ends at their midnight
+const done = new Set(S.doneDay && S.doneDay.date === dayKey_() ? S.doneDay.ids : []);
+{ // three orders for the reading activities, one per day in turn; the check-in stays first, the break in the middle, the closing last
+  const order = [['ear', 'build', 'words', 'chain', 'phrases', 'sentences', 'story'], ['ear', 'chain', 'words', 'build', 'sentences', 'phrases', 'story'], ['build', 'ear', 'chain', 'words', 'phrases', 'story', 'sentences']][Math.floor((Date.now() - new Date().getTimezoneOffset() * 60000) / 864e5) % 3];
+  const by = Object.fromEntries(PLAN.map((b) => [b.id, b]));
+  PLAN.splice(0, PLAN.length, by.checkin, ...order.slice(0, 3).map((k) => by[k]), by.break, ...order.slice(3).map((k) => by[k]), by.closing);
+}
 let greeted = false;
 const level = () => Math.min(LEVELS.length, Math.floor(S.stars / PER_LEVEL) + 1);
 const friend = () => FRIENDS.find((f) => f.id === S.friend) ?? FRIENDS[0];
@@ -200,7 +206,7 @@ async function startBlock(block) {
   else if (block.kind === 'break') await breakTime(block);
   else if (block.kind === 'closing') await closing();
   else if (!(await lesson(block))) return today();
-  done.add(block.id); note_(block);
+  done.add(block.id); S.doneDay = { date: dayKey_(), ids: [...done] }; keep(); note_(block);
   today();
 }
 
@@ -293,6 +299,10 @@ async function lesson(block, useModel = Boolean(block.model)) {
     await message_('🧱', 'Not enough sounds yet', 'Nothing can be made from these letter-sounds yet. Choose a later set.');
     return false;
   }
+  if (block.id === 'words') {      // up to three words the child needed help with come first
+    const back = backWords_();
+    if (back.length) data.items = [...back, ...data.items.filter((x) => !back.some((b) => b.word === x.word))].slice(0, Math.max(5, data.items.length));
+  }
   const badge = `<div class="acthead"><span>${block.em}</span><b>${esc(block.title)}</b></div>`;
   let got = 0;
   for (let at = 0; at < data.items.length; at++) {
@@ -346,6 +356,16 @@ function grownTop() {
 }
 // ---- what the child needed help with, the streak, the practice sheet and the quick check (all kept on this device)
 const wordsOf = (t) => String(t).toLowerCase().replace(/[^a-z ]/g, ' ').split(/\s+/).filter((w) => w.length > 1 && w !== 'the');
+function backWords_() {
+  const known = [...graphemesUpTo(S.stage)].sort((x, y) => y.length - x.length), out = [];
+  for (const [w] of Object.entries(S.hard || {}).sort((x, y) => y[1] - x[1])) {
+    const sounds = []; let rest = w;
+    while (rest) { const g = known.find((k) => rest.startsWith(k)); if (!g) break; sounds.push(g); rest = rest.slice(g.length); }
+    if (!rest && sounds.length >= 2) out.push({ word: w, sounds });      // only words that can be sounded out with the child's set
+    if (out.length === 3) break;
+  }
+  return out;
+}
 function hard_(t) { const ws = wordsOf(t); if (ws.length !== 1) return; S.hard = S.hard || {}; S.hard[ws[0]] = Math.min(5, (S.hard[ws[0]] || 0) + 1);
   const ks = Object.keys(S.hard); if (ks.length > 40) delete S.hard[ks[0]]; keep(); }
 function easy_(t) { const ws = wordsOf(t); if (ws.length !== 1 || !S.hard || !S.hard[ws[0]]) return; S.hard[ws[0]] -= 1; if (S.hard[ws[0]] <= 0) delete S.hard[ws[0]]; keep(); }
