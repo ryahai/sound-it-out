@@ -50,4 +50,4 @@ User-agent: CCBot
 Allow: /
 Disallow: /review/
 
-Sitemap: https://ryahai.github.io/sound-it-out/sitemap.xml
+Sitemap: https://sounditoutreading.com/sitemap.xml

@@ -424,7 +424,7 @@ h1{font-size:26pt;margin:0 0 2mm}p{margin:0 0 6mm;font-size:12pt}.row{display:gr
 @media print{button{display:none}}</style></head><body><button onclick="print()">Print this page</button>
 <h1>${S.name ? `${esc(S.name)}’s practice words` : 'My practice words'}</h1><p>Point under each sound and say it. Say the word. Trace it. Write it. Color a star each time you read it.</p>
 ${ws.map((x) => `<div class="row"><div class="say">${esc(x)}<small>Read it</small><span class="stars">☆☆☆</span></div><div class="trace">${esc(x)}</div><div class="write"></div></div>`).join('')}
-<div class="foot"><span>${S.name ? `Name: ${esc(S.name)}` : 'Name ______________________'}</span><span>Sound It Out · ryahai.github.io/sound-it-out</span></div></body></html>`);
+<div class="foot"><span>${S.name ? `Name: ${esc(S.name)}` : 'Name ______________________'}</span><span>Sound It Out · sounditoutreading.com</span></div></body></html>`);
   w.document.close();
 }
 // The quick check: a picture and three words; the child taps the word. Words of each set use only that set's sounds,
