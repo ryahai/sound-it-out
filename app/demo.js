@@ -159,7 +159,7 @@ function today() {
   const lvNow = level();
   render(`<div class="home">
     <div class="hi"><div class="avatar"><span class="face">${S.face}</span><span class="pet">${friend().emoji}</span></div>
-      <h1>Hello, reader!</h1><div class="starline"><span class="level-badge">⭐ Level ${lvNow}</span> ⭐ ${S.stars} stars</div></div>
+      <h1>Hello, reader!</h1><div class="starline"><span class="level-badge">⭐ Level ${lvNow}</span> ⭐ ${S.stars} stars${streak_() > 1 ? ` · 🔥 ${streak_()} days in a row` : ''}</div></div>
     ${next ? `<button class="go" id="start"><span class="goem">${next.em}</span><span class="gotx"><small>Play next</small>${esc(next.title)}</span><span class="goarrow">▶</span></button>` : '<p class="lesson-text">All done for today. Well done! 🎉</p>'}
     <div class="tiles">${PLAN.map((b) => `<button class="block tile ${b === next ? 'next' : ''} ${done.has(b.id) ? 'done' : ''}" data-v="${b.id}">
         <span class="em">${b.em}</span><b>${esc(b.title)}</b>${done.has(b.id) ? '<span class="tick">✔</span>' : ''}</button>`).join('')}</div>
@@ -183,6 +183,8 @@ function today() {
   $('#collection').onclick = () => collection();
   $('#shop').onclick = shop;
   $('#switch').onclick = () => { hush(); pickFace(); };
+  if ($('#checkStart')) $('#checkStart').onclick = quickCheck;
+  if ($('#sheetBtn')) $('#sheetBtn').onclick = practiceSheet;
   $('#checkBtn').onclick = async () => {
     const data = await ask({ step: 'check', stage: S.stage, sentence: $('#checkText').value });
     $('#checkOut').innerHTML = data.words.map((w) => `<span class="word ${w.ok ? '' : 'no'}"><b>${esc(w.word)}</b><small>${esc(w.how)}</small></span>`).join('');
@@ -324,14 +326,79 @@ function grownTop() {
   const paper = S.stage <= 2
     ? 'The free sampler has the whole of Set 2 on paper: words, sentences and stories that use only s a t p i n m d.'
     : `The Sound It Out workbook has words, word chains, sentences and stories for Set ${S.stage}, using only the sounds your child has been taught. Sets 2 to 7 are in one pack. You can try Set 2 free first.`;
+  const hardWords = Object.entries(S.hard || {}).sort((x, y) => y[1] - x[1]).slice(0, 6).map((x) => x[0]);
+  const chk = S.check;
   return `<div class="card prog"><b>📈 Progress</b>
     <p class="muted small" style="margin:4px 0 10px">Your child is on <b>Set ${S.stage}</b>. Practiced on ${days === 1 ? '1 day' : `${days} days`}, ${times(acts)} in all, ${S.stars} stars.</p>
     <ol class="path">${STAGES.map(row).join('')}</ol>
     <p class="muted small" style="margin:10px 0 0">“Practiced” counts the activities finished in this app on this device. The app cannot hear your child read, so you decide when to move up: when your child gets four out of five without help, on two different days.</p></div>
+  <div class="card" style="margin:16px 0"><b>🎯 Words to practice</b>
+    ${hardWords.length ? `<p class="muted small" style="margin:4px 0 10px">Words your child needed help with in this app. A word leaves the list when it is read without help.</p>
+      <div class="hardwords">${hardWords.map((w) => `<span>${esc(w)}</span>`).join('')}</div><button class="big-btn green" id="sheetBtn" style="margin-top:12px;font-size:1.05rem;padding:12px 24px">Print a practice sheet for these words</button>`
+      : '<p class="muted small" style="margin:4px 0 0">No tricky words yet. When your child presses “Show the sounds” or skips a word, it is listed here so you can practice it.</p>'}</div>
+  <div class="card" style="margin:16px 0"><b>🔎 Quick reading check</b>
+    <p class="muted small" style="margin:4px 0 12px">About 3 minutes. Your child sees a picture and taps the word that matches. It shows which set of sounds your child can read words from. It cannot hear your child read, so treat it as a guide.${chk ? ` Last check, ${esc(chk.date)}: Set ${chk.suggest} looked like the right place to practice.` : ''}</p>
+    <button class="big-btn soft" id="checkStart" style="font-size:1.05rem;padding:12px 24px">Start the check</button></div>
   <div class="card paper" style="margin:16px 0"><b>🖨️ Practice Set ${Math.max(2, S.stage)} on paper</b><p class="muted small" style="margin:4px 0 12px">${paper}</p>
     <a class="big-btn green" href="../free-decodable-reading-sampler/" target="_blank" rel="noopener">Print free pages</a>
     <a class="big-btn soft" href="../sound-it-out-decodable-phonics-practice/" target="_blank" rel="noopener">See the full workbook</a>
     <a class="big-btn soft" href="../what-next/" target="_blank" rel="noopener">Get a plan for today</a><div id="paperMore"></div></div>`;
+}
+// ---- what the child needed help with, the streak, the practice sheet and the quick check (all kept on this device)
+const wordsOf = (t) => String(t).toLowerCase().replace(/[^a-z ]/g, ' ').split(/\s+/).filter((w) => w.length > 1 && w !== 'the');
+function hard_(t) { const ws = wordsOf(t); if (ws.length !== 1) return; S.hard = S.hard || {}; S.hard[ws[0]] = Math.min(5, (S.hard[ws[0]] || 0) + 1);
+  const ks = Object.keys(S.hard); if (ks.length > 40) delete S.hard[ks[0]]; keep(); }
+function easy_(t) { const ws = wordsOf(t); if (ws.length !== 1 || !S.hard || !S.hard[ws[0]]) return; S.hard[ws[0]] -= 1; if (S.hard[ws[0]] <= 0) delete S.hard[ws[0]]; keep(); }
+function streak_() { const d = S.days || {}, day = new Date(); let n = 0; if (!d[day.toISOString().slice(0, 10)]) day.setUTCDate(day.getUTCDate() - 1);
+  while (d[day.toISOString().slice(0, 10)]) { n += 1; day.setUTCDate(day.getUTCDate() - 1); } return n; }
+function practiceSheet() {
+  const ws = Object.entries(S.hard || {}).sort((x, y) => y[1] - x[1]).slice(0, 6).map((x) => x[0]);
+  if (!ws.length) return;
+  const w = window.open('', '_blank'); if (!w) return;
+  w.document.write(`<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Practice words</title><style>
+@page{margin:14mm}*{box-sizing:border-box}body{font-family:"Comic Sans MS","Trebuchet MS",Arial,sans-serif;color:#1f2a44;margin:0;padding:10px}
+h1{font-size:26pt;margin:0 0 2mm}p{margin:0 0 6mm;font-size:12pt}.row{display:grid;grid-template-columns:1fr 1fr 1.2fr;gap:6mm;align-items:center;border:2pt solid #1f2a44;border-radius:6mm;padding:5mm 6mm;margin-bottom:5mm;break-inside:avoid}
+.say{font-size:34pt;font-weight:700;letter-spacing:3pt}.say small{display:block;font-size:10pt;letter-spacing:0;font-weight:400}.trace{font-size:34pt;font-weight:700;letter-spacing:3pt;color:transparent;-webkit-text-stroke:1.2pt #9aa3b2}
+.write{border-bottom:2pt solid #1f2a44;height:16mm;position:relative}.write:before{content:"";position:absolute;left:0;right:0;top:50%;border-top:1pt dashed #9aa3b2}
+.stars{font-size:16pt;letter-spacing:4pt}.foot{font-size:10pt;color:#55617a;margin-top:6mm;display:flex;justify-content:space-between}button{font:inherit;font-size:13pt;padding:8px 20px;border-radius:99px;border:2px solid #1f2a44;background:#ffe066;cursor:pointer;margin-bottom:6mm}
+@media print{button{display:none}}</style></head><body><button onclick="print()">Print this page</button>
+<h1>My practice words</h1><p>Point under each sound and say it. Say the word. Trace it. Write it. Color a star each time you read it.</p>
+${ws.map((x) => `<div class="row"><div class="say">${esc(x)}<small>Read it</small><span class="stars">☆☆☆</span></div><div class="trace">${esc(x)}</div><div class="write"></div></div>`).join('')}
+<div class="foot"><span>Name ______________________</span><span>Sound It Out · ryahai.github.io/sound-it-out</span></div></body></html>`);
+  w.document.close();
+}
+// The quick check: a picture and three words; the child taps the word. Words of each set use only that set's sounds,
+// and the wrong words start with the same letter, so the first letter alone is not enough.
+const CHECK = { 2: [['📌', 'pin', 'pan', 'pit'], ['🍳', 'pan', 'pin', 'pat'], ['🗺️', 'map', 'mat', 'man'], ['🐜', 'ant', 'and', 'at']],
+  3: [['🐱', 'cat', 'cot', 'can'], ['🐶', 'dog', 'dig', 'dot'], ['🐷', 'pig', 'pin', 'pit'], ['🥫', 'can', 'cat', 'cap']],
+  4: [['☀️', 'sun', 'sum', 'sit'], ['🖊️', 'pen', 'pin', 'peg'], ['🐀', 'rat', 'ran', 'rag'], ['🦆', 'duck', 'dock', 'deck']],
+  5: [['🎩', 'hat', 'hit', 'ham'], ['🚌', 'bus', 'bug', 'but'], ['🛏️', 'bed', 'bad', 'beg'], ['🔔', 'bell', 'bill', 'beg']],
+  6: [['🦊', 'fox', 'fix', 'fog'], ['📦', 'box', 'bog', 'bit'], ['🚐', 'van', 'vat', 'vet'], ['🕸️', 'web', 'wet', 'wed']] };
+async function quickCheck() {
+  hush(); $('#dock').hidden = false;
+  const scores = {}; let top = 1, stop = false;
+  for (const set of [2, 3, 4, 5, 6]) {
+    if (stop) break;
+    let right = 0;
+    for (const [pic, word, w1, w2] of CHECK[set]) {
+      const options = [word, w1, w2].sort(() => Math.random() - 0.5);
+      render(`<div class="acthead"><span>🔎</span><b>Quick check</b></div><div class="stage"><div class="prompt">Tap the word that matches the picture.</div>
+        <div style="font-size:7rem;line-height:1.1;margin:10px 0">${pic}</div><div class="options">${options.map((o) => `<button class="opt" data-w="${esc(o)}">${esc(o)}</button>`).join('')}</div></div>`);
+      const picked = await new Promise((res) => { document.querySelectorAll('.opt').forEach((b) => { b.onclick = () => res(b.dataset.w); }); });
+      if (picked === word) right += 1;
+    }
+    scores[set] = right;
+    if (right >= 3) top = set; else stop = true;
+  }
+  const suggest = Math.min(7, stop ? Math.max(1, top + (scores[top + 1] === undefined ? 0 : 1)) : 7);
+  S.check = { date: new Date().toISOString().slice(0, 10), scores, suggest }; keep();
+  render(`<div class="card" style="max-width:720px;margin:20px auto;text-align:left"><h1 style="margin-top:0">🔎 Check finished</h1>
+    <p>For the grown-up. Your child matched pictures to words:</p><ul>${Object.entries(scores).map(([k, v]) => `<li>Set ${k} words: ${v} of 4</li>`).join('')}</ul>
+    <p><b>Set ${suggest}</b> looks like the right place to practice now.</p>
+    <p class="muted small">This check only shows matching a picture to a word. It cannot hear your child read, and a child can guess. You know your child best.</p>
+    <div class="row" style="gap:10px;flex-wrap:wrap"><button class="big-btn green" id="useSet">Use Set ${suggest}</button><button class="big-btn soft" id="noSet">Keep Set ${S.stage}</button></div></div>`);
+  $('#useSet').onclick = () => { S.stage = suggest; keep(); today(); };
+  $('#noSet').onclick = () => today();
 }
 // Reading and sight-word pages now on the website, read from the site's own list (free ones first).
 function fillPaper() {
@@ -362,9 +429,9 @@ function item(block, data, it, at) {
         <button class="big-btn soft" id="hint">Show the sounds</button><button class="big-btn soft" id="skip">Try another</button></div>
         <div class="feedback help">${tell ? esc(tell) : ''}</div>`;
       if (say) speak(say);
-      $('#yes').onclick = () => { $('#yes').disabled = true; speak('Well done!'); res(true); };
-      $('#hint').onclick = () => { $('#snd').textContent = soundsText; };
-      $('#skip').onclick = () => res(false);
+      $('#yes').onclick = () => { $('#yes').disabled = true; if (!$('#snd').textContent) easy_(stage.querySelector('.read').textContent); speak('Well done!'); res(true); };
+      $('#hint').onclick = () => { $('#snd').textContent = soundsText; hard_(stage.querySelector('.read').textContent); };
+      $('#skip').onclick = () => { hard_(stage.querySelector('.read').textContent); res(false); };
     };
     if (block.id === 'ear') {
       const options = [...new Set(it.options)].sort(() => Math.random() - 0.5);
