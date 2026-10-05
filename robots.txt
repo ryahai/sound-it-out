@@ -1,3 +1,53 @@
 User-agent: *
 Allow: /
+Disallow: /review/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /review/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /review/
+
+User-agent: GPTBot
+Allow: /
+Disallow: /review/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /review/
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /review/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /review/
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /review/
+
+User-agent: Claude-User
+Allow: /
+Disallow: /review/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /review/
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /review/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /review/
+
+User-agent: CCBot
+Allow: /
+Disallow: /review/
+
 Sitemap: https://ryahai.github.io/sound-it-out/sitemap.xml
