@@ -1,19 +1,5 @@
 [
  {
-  "file": "alphabet-tracing-pin-1.png",
-  "title": "Alphabet Tracing Worksheets for Preschool and Kindergarten (A to Z Printables)",
-  "description": "Printable alphabet tracing worksheets for preschool and kindergarten. One page per letter, A to Z: trace the uppercase and lowercase letter, write your own, circle the letter, and learn two beginning sound pictures. Comes in colour and in black and white.",
-  "alt": "Printable alphabet tracing worksheets showing the letter A page and the letter C page, with tracing boxes and beginning sound pictures.",
-  "board": "Alphabet and Handwriting Worksheets",
-  "topics": [
-   "alphabet tracing",
-   "preschool worksheets",
-   "letter recognition"
-  ],
-  "link": "https://ryahai.github.io/sound-it-out/alphabet-tracing-worksheets/?p=alphabet-tracing-1",
-  "release": "2026-10-04"
- },
- {
   "file": "numbers-1-20-pin-1.png",
   "title": "Number Tracing Worksheets 1 to 20 for Preschool and Kindergarten (Printable)",
   "description": "Printable number tracing and counting worksheets for preschool and kindergarten. One page for every number from 1 to 20: a ten frame, things to count, number tracing, writing practice and a missing number row. Comes in colour and in black and white.",
@@ -25,34 +11,6 @@
    "kindergarten math"
   ],
   "link": "https://ryahai.github.io/sound-it-out/number-tracing-and-counting-1-to-20/?p=numbers-1-20-1",
-  "release": "2026-10-04"
- },
- {
-  "file": "alphabet-tracing-pin-2.png",
-  "title": "Letter Tracing Practice for Ages 3 to 6: Uppercase and Lowercase Printable Pages",
-  "description": "Letter tracing practice pages for children ages 3 to 6. Each printable worksheet has uppercase and lowercase tracing, space to write the letter alone, a find-the-letter row and beginning sound pictures. Great for homeschool, morning work and literacy centres.",
-  "alt": "A printable letter P tracing worksheet with uppercase and lowercase tracing boxes, a pig and a pizza picture, and a row of letters to circle.",
-  "board": "Preschool Printables",
-  "topics": [
-   "letter tracing",
-   "kindergarten literacy",
-   "homeschool preschool"
-  ],
-  "link": "https://ryahai.github.io/sound-it-out/alphabet-tracing-worksheets/?p=alphabet-tracing-2",
-  "release": "2026-10-04"
- },
- {
-  "file": "alphabet-tracing-pin-2.png",
-  "title": "Letter Tracing Practice for Ages 3 to 6: Uppercase and Lowercase Printable Pages",
-  "description": "Letter tracing practice pages for children ages 3 to 6. Each printable worksheet has uppercase and lowercase tracing, space to write the letter alone, a find-the-letter row and beginning sound pictures. Great for homeschool, morning work and literacy centres.",
-  "alt": "A printable letter P tracing worksheet with uppercase and lowercase tracing boxes, a pig and a pizza picture, and a row of letters to circle.",
-  "board": "Handwriting and Tracing Worksheets",
-  "topics": [
-   "letter tracing",
-   "kindergarten literacy",
-   "homeschool preschool"
-  ],
-  "link": "https://ryahai.github.io/sound-it-out/alphabet-tracing-worksheets/?p=alphabet-tracing-pin-2-b",
   "release": "2026-10-04"
  },
  {
@@ -95,6 +53,34 @@
    "learn to read"
   ],
   "link": "https://ryahai.github.io/sound-it-out/sight-words-set-1/?p=sight-words-set-1-1",
+  "release": "2026-10-04"
+ },
+ {
+  "file": "alphabet-tracing-pin-1.png",
+  "title": "Alphabet Tracing Worksheets for Preschool and Kindergarten (A to Z Printables)",
+  "description": "Printable alphabet tracing worksheets for preschool and kindergarten. One page per letter, A to Z: trace the uppercase and lowercase letter, write your own, circle the letter, and learn two beginning sound pictures. Comes in colour and in black and white.",
+  "alt": "Printable alphabet tracing worksheets showing the letter A page and the letter C page, with tracing boxes and beginning sound pictures.",
+  "board": "Alphabet and Handwriting Worksheets",
+  "topics": [
+   "alphabet tracing",
+   "preschool worksheets",
+   "letter recognition"
+  ],
+  "link": "https://ryahai.github.io/sound-it-out/alphabet-tracing-worksheets/?p=alphabet-tracing-1",
+  "release": "2026-10-04"
+ },
+ {
+  "file": "alphabet-tracing-pin-2.png",
+  "title": "Letter Tracing Practice for Ages 3 to 6: Uppercase and Lowercase Printable Pages",
+  "description": "Letter tracing practice pages for children ages 3 to 6. Each printable worksheet has uppercase and lowercase tracing, space to write the letter alone, a find-the-letter row and beginning sound pictures. Great for homeschool, morning work and literacy centres.",
+  "alt": "A printable letter P tracing worksheet with uppercase and lowercase tracing boxes, a pig and a pizza picture, and a row of letters to circle.",
+  "board": "Preschool Printables",
+  "topics": [
+   "letter tracing",
+   "kindergarten literacy",
+   "homeschool preschool"
+  ],
+  "link": "https://ryahai.github.io/sound-it-out/alphabet-tracing-worksheets/?p=alphabet-tracing-2",
   "release": "2026-10-04"
  },
  {
@@ -151,6 +137,20 @@
    "number line"
   ],
   "link": "https://ryahai.github.io/sound-it-out/free-subtraction-to-5/?p=subtraction-to-5-3",
+  "release": "2026-10-06"
+ },
+ {
+  "file": "alphabet-tracing-pin-3.png",
+  "title": "Free Alphabet Tracing Worksheets: 3 Printable Pages",
+  "description": "Free printable Alphabet Tracing worksheets to try with your child. Download 3 sample pages and print them at home or in class, in full colour or in ink-saving black and white, US Letter or A4. No sign-up needed. The full pack has 28 pages.",
+  "alt": "Free sample pages from Alphabet Tracing",
+  "board": "Alphabet and Handwriting Worksheets",
+  "topics": [
+   "alphabet tracing",
+   "preschool worksheets",
+   "letter recognition"
+  ],
+  "link": "https://ryahai.github.io/sound-it-out/free-alphabet-tracing-worksheets/?p=alphabet-tracing-3",
   "release": "2026-10-06"
  },
  {
