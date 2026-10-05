@@ -544,4 +544,9 @@ voiceBtn.onclick = () => { S.voice = !S.voice; keep(); if (!S.voice) hush(); sho
 showVoice();
 
 document.body.dataset.theme = S.world;
-if (S.face) today(); else pickFace();
+const Q = new URLSearchParams(location.search), playId = Q.get('play'), playSet = Number(Q.get('set'));
+if (playId && PLAN.some((b) => b.id === playId && b.kind === 'read')) {
+  if (!S.face) { S.face = '🦁'; if (!(playSet >= 1 && playSet <= STAGES.length)) S.stage = 2; }      // a first-time visitor starts with eight sounds
+  if (playSet >= 1 && playSet <= STAGES.length) S.stage = playSet;
+  keep(); $('#dock').hidden = false; startBlock(PLAN.find((b) => b.id === playId));
+} else if (S.face) today(); else pickFace();
