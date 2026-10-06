@@ -88,7 +88,7 @@
   "title": "Addition within 5 Worksheets for Preschool and Kindergarten (Printable, No Prep)",
   "description": "Printable addition within 5 worksheets for preschool and kindergarten. Ten picture pages to count, then ten pages of problems with a number line to help, plus an answer key. No prep, print and go. Comes in color and in black and white to save ink.",
   "alt": "Printable addition within 5 worksheets for preschool and kindergarten.",
-  "board": "Kindergarten Math Worksheets",
+  "board": "Addition and Subtraction Worksheets",
   "topics": [
    "kindergarten math",
    "addition and subtraction",
@@ -96,20 +96,6 @@
   ],
   "link": "https://sounditoutreading.com/addition-to-5/?p=addition-to-5-1",
   "release": "2026-10-05"
- },
- {
-  "file": "addition-to-5-pin-3.png",
-  "title": "Free Addition to 5 Worksheets: 3 Printable Pages",
-  "description": "Free printable Addition to 5 worksheets to try with your child. Download 3 sample pages and print them at home or in class, in full color or in ink-saving black and white, US Letter or A4. No sign-up needed. The full pack has 24 pages.",
-  "alt": "Free sample pages from Addition to 5",
-  "board": "Kindergarten Math Worksheets",
-  "topics": [
-   "kindergarten math",
-   "addition and subtraction",
-   "number line"
-  ],
-  "link": "https://sounditoutreading.com/free-addition-to-5/?p=addition-to-5-3",
-  "release": "2026-10-06"
  },
  {
   "file": "sight-words-set-1-pin-3.png",
@@ -151,6 +137,20 @@
    "letter recognition"
   ],
   "link": "https://sounditoutreading.com/free-alphabet-tracing-worksheets/?p=alphabet-tracing-3",
+  "release": "2026-10-06"
+ },
+ {
+  "file": "addition-to-5-pin-3.png",
+  "title": "Free Addition to 5 Worksheets: 3 Printable Pages",
+  "description": "Free printable Addition to 5 worksheets to try with your child. Download 3 sample pages and print them at home or in class, in full color or in ink-saving black and white, US Letter or A4. No sign-up needed. The full pack has 24 pages.",
+  "alt": "Free sample pages from Addition to 5",
+  "board": "Addition and Subtraction Worksheets",
+  "topics": [
+   "kindergarten math",
+   "addition and subtraction",
+   "number line"
+  ],
+  "link": "https://sounditoutreading.com/free-addition-to-5/?p=addition-to-5-3",
   "release": "2026-10-06"
  },
  {
