@@ -619,3 +619,28 @@ if (playId && PLAN.some((b) => b.id === playId && b.kind === 'read')) {
   if (playSet >= 1 && playSet <= STAGES.length) S.stage = playSet;
   keep(); $('#dock').hidden = false; startBlock(PLAN.find((b) => b.id === playId));
 } else if (S.face) today(); else pickFace();
+
+
+// ---- crayon pictures in place of emoji (the pictures live in the website's img/ico folder)
+{
+  const ICO = {"⭐": "star", "🌟": "star", "🪙": "coin", "🔎": "search", "🎒": "bag", "🎁": "gift", "🦁": "lion", "📚": "books", "🧃": "juice", "📖": "storybook", "🌈": "rainbow", "🎉": "party", "🐸": "frog", "🐵": "monkey", "🐰": "rabbit", "🐢": "friend-turtle", "🐥": "friend-chick", "🦊": "friend-fox", "🐬": "friend-dolphin", "🦉": "friend-owl", "🦄": "friend-unicorn", "🍪": "cookie", "👂": "ear", "🧩": "puzzle", "🔤": "abc", "🔗": "chain", "🗣": "mouth", "🏠": "house", "🧱": "block", "🏆": "trophy", "🎯": "target", "🖨": "printer", "📌": "pin", "🍳": "pan", "🗺": "map", "🐜": "ant", "🐱": "cat", "🐶": "dog", "🐷": "pig", "🥫": "can", "☀": "sun", "🖊": "pen", "🐀": "rat", "🦆": "duck", "🎩": "hat", "🚌": "bus", "🛏": "bed", "🔔": "bell", "📦": "box", "🚐": "van", "🕸": "web", "🔒": "lock", "🔊": "speaker", "🫧": "bubbles"};
+  const RX = new RegExp('(' + Object.keys(ICO).join('|') + ')\uFE0F?', 'u');
+  const style = document.createElement('style');
+  style.textContent = 'img.ico{height:1.25em;width:auto;display:inline-block;vertical-align:-0.26em;pointer-events:none}';
+  document.head.append(style);
+  const swap = (root) => {
+    const walk = document.createTreeWalker(root, NodeFilter.SHOW_TEXT), found = [];
+    while (walk.nextNode()) if (RX.test(walk.currentNode.nodeValue) && !walk.currentNode.parentNode.closest('script,style,textarea,input')) found.push(walk.currentNode);
+    for (const node of found) {
+      const frag = document.createDocumentFragment(); let rest = node.nodeValue, m;
+      while ((m = RX.exec(rest))) {
+        frag.append(rest.slice(0, m.index));
+        const img = new Image(); img.className = 'ico'; img.alt = ''; img.src = '../img/ico/' + ICO[m[1]] + '.webp'; frag.append(img);
+        rest = rest.slice(m.index + m[0].length);
+      }
+      frag.append(rest); node.replaceWith(frag);
+    }
+  };
+  new MutationObserver(() => swap(document.body)).observe(document.body, { childList: true, subtree: true, characterData: true });
+  swap(document.body);
+}
