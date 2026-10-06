@@ -612,6 +612,7 @@ try {
   const want = inLink >= 1 && inLink <= STAGES.length ? inLink : saved >= 1 ? Math.min(saved, STAGES.length) : 0;
   if (want && S.siteLevel !== want) { S.stage = want; S.siteLevel = want; keep(); }
 } catch { /* storage may be blocked */ }
+try { if (location.protocol === 'https:' && !navigator.webdriver) new Image().src = 'https://abacus.jasoncameron.dev/hit/sounditout1/app-open'; } catch { /* counting is never worth an error */ }      // one more opening of the app; nothing about the visitor is kept
 const Q = new URLSearchParams(location.search), playId = Q.get('play'), playSet = Number(Q.get('set'));
 if (playId && PLAN.some((b) => b.id === playId && b.kind === 'read')) {
   if (!S.face) { S.face = '🦁'; if (!(playSet >= 1 && playSet <= STAGES.length)) S.stage = 2; }      // a first-time visitor starts with eight sounds
