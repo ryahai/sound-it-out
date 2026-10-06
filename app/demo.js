@@ -37,7 +37,8 @@ const PLAN = [
 // ---------- what is remembered (on this device only) ----------
 let S = { face: null, stars: 0, coins: 0, stage: 3, friend: 'turtle', world: 'savannah', voice: true, goal: null };
 try { S = { ...S, ...JSON.parse(localStorage.getItem('readable-for-her') || '{}') }; } catch { /* storage may be blocked */ }
-const keep = () => { try { localStorage.setItem('readable-for-her', JSON.stringify(S)); } catch { /* fine without it */ } };
+const keep = () => { try { if (S.siteLevel) { S.siteLevel = S.stage; localStorage.setItem('sio-level', String(S.stage)); }      // the website plan follows the app
+  localStorage.setItem('readable-for-her', JSON.stringify(S)); } catch { /* fine without it */ } };
 const dayKey_ = () => new Date().toLocaleDateString('en-CA');      // the date where the child is, so a day ends at their midnight
 const done = new Set(S.doneDay && S.doneDay.date === dayKey_() ? S.doneDay.ids : []);
 { // three orders for the reading activities, one per day in turn; the check-in stays first, the break in the middle, the closing last
@@ -122,7 +123,7 @@ async function reward() {
     const lv = level();
     const pal = FRIENDS.find((f) => f.level === lv);
     const world = WORLDS.find((w) => w.level === lv);
-    await celebrate('🎉', `Level ${lv}: ${LEVELS[lv - 1]}!`,
+    await celebrate('🎉', `New badge: ${LEVELS[lv - 1]}!`,
       `You unlocked a new friend, ${pal.emoji} ${pal.name}, and a new world, ${world.name}. Find them in My collection.`, 'Keep going', LINES.levelup);
   }
 }
@@ -146,9 +147,9 @@ function heroHtml() {
     <div class="avatar"><span class="face">${S.face}</span><span class="pet">${friend().emoji}</span></div>
     <div class="grow" style="min-width:240px">
       <h1 style="margin:0">Hello, reader!</h1>
-      <div><span class="level-badge">⭐ Level ${lv}</span><b>${LEVELS[lv - 1]}</b></div>
+      <div><span class="level-badge">⭐ Badge ${lv}</span><b>${LEVELS[lv - 1]}</b></div>
       <div class="xp-bar"><span style="width:${top ? 100 : Math.min(100, (inLevel / PER_LEVEL) * 100)}%"></span></div>
-      <div class="muted small">${top ? 'You reached the top level! Keep collecting stars.' : `${inLevel} of ${PER_LEVEL} stars to Level ${lv + 1}`}${
+      <div class="muted small">${top ? 'You have every badge! Keep collecting stars.' : `${inLevel} of ${PER_LEVEL} stars to Badge ${lv + 1}`}${
         next ? ` · next prize: ${next.emoji} ${next.name}` : ''} · ⭐ ${S.stars} stars</div>
     </div>
     <div class="hero-buttons">
@@ -165,7 +166,7 @@ function today() {
   const lvNow = level();
   render(`<div class="home">
     <div class="hi"><div class="avatar"><span class="face">${S.face}</span><span class="pet">${friend().emoji}</span></div>
-      <h1>Hello, ${S.name ? esc(S.name) : 'reader'}!</h1><div class="starline"><span class="level-badge">⭐ Level ${lvNow}</span> ⭐ ${S.stars} stars${streak_() > 1 ? ` · 🔥 ${streak_()} days in a row` : ''}</div></div>
+      <h1>Hello, ${S.name ? esc(S.name) : 'reader'}!</h1><div class="starline"><span class="level-badge">⭐ Badge ${lvNow}</span> ⭐ ${S.stars} stars${streak_() > 1 ? ` · 🔥 ${streak_()} days in a row` : ''}</div></div>
     ${next ? `<button class="go" id="start"><span class="goem">${next.em}</span><span class="gotx"><small>Play next</small>${esc(next.title)}</span><span class="goarrow">▶</span></button>` : '<p class="lesson-text">All done for today. Well done! 🎉</p>'}
     <div class="tiles">${PLAN.map((b) => `<button class="block tile ${b === next ? 'next' : ''} ${done.has(b.id) ? 'done' : ''}" data-v="${b.id}">
         <span class="em">${b.em}</span><b>${esc(b.title)}</b>${done.has(b.id) ? '<span class="tick">✔</span>' : ''}</button>`).join('')}</div>
@@ -174,14 +175,14 @@ function today() {
       <button class="round" id="switch" aria-label="Change face">🙂<small>Change</small></button></div>
     <details class="grown"${nudge_() || grownOpen_ ? ' open' : ''}><summary>For grown-ups</summary>${nudgeHtml_()}${grownTop()}
       <div class="card"><b>Which sounds has your child been taught?</b>
-        <div class="sets">${STAGES.map((_, i) => `<button data-v="${i + 1}" class="${S.stage === i + 1 ? 'on' : ''}">Set ${i + 1}</button>`).join('')}</div>
+        <div class="sets">${STAGES.map((_, i) => `<button data-v="${i + 1}" class="${S.stage === i + 1 ? 'on' : ''}">Level ${i + 1}</button>`).join('')}</div>
         <div>Sounds in use: <span class="letters">${esc([...graphemesUpTo(S.stage)].join(' '))}</span> <span class="muted small">and the sight word “the”</span></div></div>
       <div class="card" style="margin-top:16px"><b>🔎 Check a sentence</b>
         <p class="muted small" style="margin:4px 0 0">Type any sentence from a book. It shows the words your child cannot sound out yet.</p>
         <div class="check-row"><input id="checkText" value="The duck is in the pond" aria-label="Sentence to check"><button class="big-btn soft" id="checkBtn">Check</button></div>
         <div class="words" id="checkOut"></div><p class="muted" id="checkSum" style="margin:.6em 0 0"></p></div>
       <p class="muted small center" style="margin-top:16px">Nothing your child does here is sent anywhere. Stars are kept only on this device.<br>
-        Want pages to print as well? <a href="../">See the Sound It Out printables</a>.</p>
+        Want to know what to do this week? <a href="../#start">See your child’s reading plan</a>. Pages to print: <a href="../printables/">Sound It Out printables</a>.</p>
     </details></div>`);
   document.querySelectorAll('.sets button').forEach((b) => { b.onclick = () => { S.stage = Number(b.dataset.v); keep(); today(); }; });
   document.querySelectorAll('.block').forEach((b) => { b.onclick = () => startBlock(PLAN.find((x) => x.id === b.dataset.v)); });
@@ -199,7 +200,7 @@ function today() {
     const data = await ask({ step: 'check', stage: S.stage, sentence: $('#checkText').value });
     $('#checkOut').innerHTML = data.words.map((w) => `<span class="word ${w.ok ? '' : 'no'}"><b>${esc(w.word)}</b><small>${esc(w.how)}</small></span>`).join('');
     const stuck = data.words.filter((w) => !w.ok).length;
-    $('#checkSum').textContent = stuck ? `${stuck} word(s) your child cannot sound out yet with set ${S.stage}.` : 'Your child can read every word.';
+    $('#checkSum').textContent = stuck ? `${stuck} word(s) your child cannot sound out yet at Level ${S.stage}.` : 'Your child can read every word.';
   };
   $('#checkText').onkeydown = (e) => { if (e.key === 'Enter') $('#checkBtn').click(); };
   if (!greeted) { greeted = true; speak(LINES.hello); }
@@ -300,7 +301,7 @@ async function lesson(block, useModel = Boolean(block.model)) {
   }
   wait?.remove();
   if (!data.items.length) {
-    await message_('🧱', 'Not enough sounds yet', 'Nothing can be made from these letter-sounds yet. Choose a later set.');
+    await message_('🧱', 'Not enough sounds yet', 'Nothing can be made from these letter-sounds yet. Choose a later level.');
     return false;
   }
   if (block.id === 'words') {      // up to three words the child needed help with come first
@@ -342,14 +343,14 @@ function grownTop() {
   const times = (n) => (n === 1 ? '1 activity' : `${n} activities`);
   const row = (g, i) => { const n = i + 1, c = sets[n] || 0, cls = n < S.stage ? 'was' : n === S.stage ? 'now' : 'later';
     const label = n < S.stage ? (c ? `practiced: ${times(c)}` : 'taught before') : n === S.stage ? `learning now${c ? ` · practiced: ${times(c)}` : ''}` : n === S.stage + 1 ? 'next' : 'later';
-    return `<li class="${cls}"><span>Set ${n}</span><b>${esc(g.join(' '))}</b><i>${label}</i></li>`; };
+    return `<li class="${cls}"><span>Level ${n}</span><b>${esc(g.join(' '))}</b><i>${label}</i></li>`; };
   const paper = S.stage <= 2
-    ? 'The free sampler has the whole of Set 2 on paper: words, sentences and stories that use only s a t p i n m d.'
-    : `The Sound It Out workbook has words, word chains, sentences and stories for Set ${S.stage}, using only the sounds your child has been taught. Sets 2 to 7 are in one pack. You can try Set 2 free first.`;
+    ? 'The free sampler has the whole of Level 2 on paper: words, sentences and stories that use only s a t p i n m d.'
+    : `The Sound It Out workbook has words, word chains, sentences and stories for Level ${S.stage}, using only the sounds your child has been taught. Levels 2 to 7 are in one pack. You can try Level 2 free first.`;
   const hardWords = Object.entries(S.hard || {}).sort((x, y) => y[1] - x[1]).slice(0, 6).map((x) => x[0]);
   const chk = S.check;
   return `<div class="card prog"><b>📈 Progress</b>
-    <p class="muted small" style="margin:4px 0 10px">Your child is on <b>Set ${S.stage}</b>. Practiced on ${days === 1 ? '1 day' : `${days} days`}, ${times(acts)} in all, ${S.stars} stars.</p>
+    <p class="muted small" style="margin:4px 0 10px">Your child is on <b>Level ${S.stage}</b>. Practiced on ${days === 1 ? '1 day' : `${days} days`}, ${times(acts)} in all, ${S.stars} stars.</p>
     <ol class="path">${STAGES.map(row).join('')}</ol>
     <p class="muted small" style="margin:10px 0 0">“Practiced” counts the activities finished in this app on this device. The app cannot hear your child read, so you decide when to move up: when your child gets four out of five without help, on two different days.</p></div>
   <div class="card" style="margin:16px 0"><b>🏷️ Your child’s name (optional)</b>
@@ -360,9 +361,9 @@ function grownTop() {
       <div class="hardwords">${hardWords.map((w) => `<span>${esc(w)}</span>`).join('')}</div><button class="big-btn green" id="sheetBtn" style="margin-top:12px;font-size:1.05rem;padding:12px 24px">Print a practice sheet for these words</button>`
       : '<p class="muted small" style="margin:4px 0 0">No tricky words yet. When your child presses “Show the sounds” or skips a word, it is listed here so you can practice it.</p>'}</div>
   <div class="card" style="margin:16px 0"><b>🔎 Quick reading check</b>
-    <p class="muted small" style="margin:4px 0 12px">About 3 minutes. Your child sees a picture and taps the word that matches. It shows which set of sounds your child can read words from. It cannot hear your child read, so treat it as a guide.${chk ? ` Last check, ${esc(chk.date)}: Set ${chk.suggest} looked like the right place to practice.` : ''}</p>
+    <p class="muted small" style="margin:4px 0 12px">About 3 minutes. Your child sees a picture and taps the word that matches. It shows which level your child can read words from. It cannot hear your child read, so treat it as a guide.${chk ? ` Last check, ${esc(chk.date)}: Level ${chk.suggest} looked like the right place to practice.` : ''}</p>
     <button class="big-btn soft" id="checkStart" style="font-size:1.05rem;padding:12px 24px">Start the check</button></div>
-  <div class="card paper" style="margin:16px 0"><b>🖨️ Practice Set ${Math.max(2, S.stage)} on paper</b><p class="muted small" style="margin:4px 0 12px">${paper}</p>
+  <div class="card paper" style="margin:16px 0"><b>🖨️ Practice Level ${Math.max(2, S.stage)} on paper</b><p class="muted small" style="margin:4px 0 12px">${paper}</p>
     <a class="big-btn green" href="../free-decodable-reading-sampler/" target="_blank" rel="noopener">Print free pages</a>
     <a class="big-btn soft" href="../sound-it-out-decodable-phonics-practice/" target="_blank" rel="noopener">See the full workbook</a>
     <a class="big-btn soft" href="../what-next/" target="_blank" rel="noopener">Get a plan for today</a><div id="paperMore"></div></div>`;
@@ -385,15 +386,15 @@ function nudge_() {
   if (S.nudgeOff && S.nudgeOff.stage === S.stage && dayKey_() < S.nudgeOff.until) return null;
   const days = Object.entries(S.stat || {}).filter(([, d]) => d.set === S.stage && d.ok + d.help >= 5).sort((x, y) => (x[0] < y[0] ? -1 : 1));
   const good = days.filter(([, d]) => d.ok / (d.ok + d.help) >= 0.8), last2 = days.slice(-2);
-  if (good.length >= 2 && S.stage < STAGES.length) { const d = good[good.length - 1][1]; return { kind: 'up', to: S.stage + 1, text: `Your child read ${d.ok} of ${d.ok + d.help} without help, and did as well on ${good.length === 2 ? 'one other day' : `${good.length - 1} other days`}. Ready to try Set ${S.stage + 1}?` }; }
-  if (last2.length === 2 && last2.every(([, d]) => d.ok / (d.ok + d.help) <= 0.5) && S.stage > 1) { const d = last2[1][1]; return { kind: 'down', to: S.stage - 1, text: `Set ${S.stage} looks hard right now: your child needed help with ${d.help} of ${d.ok + d.help} last time. You can stay here, or go back to Set ${S.stage - 1} for a while.` }; }
+  if (good.length >= 2 && S.stage < STAGES.length) { const d = good[good.length - 1][1]; return { kind: 'up', to: S.stage + 1, text: `Your child read ${d.ok} of ${d.ok + d.help} without help, and did as well on ${good.length === 2 ? 'one other day' : `${good.length - 1} other days`}. Ready to try Level ${S.stage + 1}?` }; }
+  if (last2.length === 2 && last2.every(([, d]) => d.ok / (d.ok + d.help) <= 0.5) && S.stage > 1) { const d = last2[1][1]; return { kind: 'down', to: S.stage - 1, text: `Level ${S.stage} looks hard right now: your child needed help with ${d.help} of ${d.ok + d.help} last time. You can stay here, or go back to Level ${S.stage - 1} for a while.` }; }
   return null;
 }
 function nudgeHtml_() {
   const n = nudge_(); if (!n) return '';
-  return `<div class="card nudge ${n.kind}"><b>${n.kind === 'up' ? '🌟 Ready for the next set?' : '🫶 A hard patch'}</b><p style="margin:6px 0 12px">${esc(n.text)}</p>
-    <button class="big-btn green" id="nudgeYes" style="font-size:1.05rem;padding:12px 24px">${n.kind === 'up' ? `Move to Set ${n.to}` : `Go back to Set ${n.to}`}</button>
-    <button class="big-btn soft" id="nudgeNo" style="font-size:1.05rem;padding:12px 24px">${n.kind === 'up' ? 'Not yet' : `Stay on Set ${S.stage}`}</button>
+  return `<div class="card nudge ${n.kind}"><b>${n.kind === 'up' ? '🌟 Ready for the next level?' : '🫶 A hard patch'}</b><p style="margin:6px 0 12px">${esc(n.text)}</p>
+    <button class="big-btn green" id="nudgeYes" style="font-size:1.05rem;padding:12px 24px">${n.kind === 'up' ? `Move to Level ${n.to}` : `Go back to Level ${n.to}`}</button>
+    <button class="big-btn soft" id="nudgeNo" style="font-size:1.05rem;padding:12px 24px">${n.kind === 'up' ? 'Not yet' : `Stay on Level ${S.stage}`}</button>
     <p class="muted small" style="margin:10px 0 0">This is only a suggestion from the buttons pressed in this app. It cannot hear your child read. You decide.</p></div>`;
 }
 function backWords_() {
@@ -453,10 +454,10 @@ async function quickCheck() {
   const suggest = Math.min(7, stop ? Math.max(1, top + (scores[top + 1] === undefined ? 0 : 1)) : 7);
   S.check = { date: new Date().toISOString().slice(0, 10), scores, suggest }; keep();
   render(`<div class="card" style="max-width:720px;margin:20px auto;text-align:left"><h1 style="margin-top:0">🔎 Check finished</h1>
-    <p>For the grown-up. Your child matched pictures to words:</p><ul>${Object.entries(scores).map(([k, v]) => `<li>Set ${k} words: ${v} of 4</li>`).join('')}</ul>
-    <p><b>Set ${suggest}</b> looks like the right place to practice now.</p>
+    <p>For the grown-up. Your child matched pictures to words:</p><ul>${Object.entries(scores).map(([k, v]) => `<li>Level ${k} words: ${v} of 4</li>`).join('')}</ul>
+    <p><b>Level ${suggest}</b> looks like the right place to practice now.</p>
     <p class="muted small">This check only shows matching a picture to a word. It cannot hear your child read, and a child can guess. You know your child best.</p>
-    <div class="row" style="gap:10px;flex-wrap:wrap"><button class="big-btn green" id="useSet">Use Set ${suggest}</button><button class="big-btn soft" id="noSet">Keep Set ${S.stage}</button></div></div>`);
+    <div class="row" style="gap:10px;flex-wrap:wrap"><button class="big-btn green" id="useSet">Use Level ${suggest}</button><button class="big-btn soft" id="noSet">Keep Level ${S.stage}</button></div></div>`);
   $('#useSet').onclick = () => { S.stage = suggest; keep(); today(); };
   $('#noSet').onclick = () => today();
 }
@@ -556,10 +557,10 @@ function collection(tab = 'friend') {
     const using = (tab === 'friend' ? S.friend : S.world) === u.id;
     const look = tab === 'friend' ? `<div class="big">${u.emoji}</div>` : `<div class="theme-swatch" data-theme="${u.id}"></div>`;
     return `<div class="collect ${open ? '' : 'locked'}">${look}<b>${esc(u.name)}</b>${
-      !open ? `<div class="muted">🔒 Level ${u.level}</div>` : using ? '<div class="using">✓ Using</div>' : `<button data-v="${u.id}">Use this</button>`}</div>`;
+      !open ? `<div class="muted">🔒 Badge ${u.level}</div>` : using ? '<div class="using">✓ Using</div>' : `<button data-v="${u.id}">Use this</button>`}</div>`;
   }).join('');
   render(`<div class="row"><h1 class="grow">🎒 My collection</h1><button class="big-btn soft" id="back">Back</button></div>
-    <p class="muted">⭐ Level ${lv} ${LEVELS[lv - 1]} · every 10 stars is a new level, with a new friend and a new world.</p>
+    <p class="muted">⭐ Badge ${lv} ${LEVELS[lv - 1]} · every 10 stars is a new badge, with a new friend and a new world.</p>
     <div class="collection-tabs"><button class="${tab === 'friend' ? 'on' : ''}" data-tab="friend">🐾 Friends</button>
       <button class="${tab === 'world' ? 'on' : ''}" data-tab="world">🎨 Worlds</button></div>
     <div class="collection">${cards}</div>`);
@@ -604,6 +605,13 @@ voiceBtn.onclick = () => { S.voice = !S.voice; keep(); if (!S.voice) hush(); sho
 showVoice();
 
 document.body.dataset.theme = S.world;
+// The level the grown-up found with the level check on the website, or the level in the link (/app/?level=3). It is
+// used when it is new or has changed; after that the app's own "ready for the next level?" and the level buttons decide.
+try {
+  const inLink = Number(new URLSearchParams(location.search).get('level')), saved = Number(localStorage.getItem('sio-level'));
+  const want = inLink >= 1 && inLink <= STAGES.length ? inLink : saved >= 1 ? Math.min(saved, STAGES.length) : 0;
+  if (want && S.siteLevel !== want) { S.stage = want; S.siteLevel = want; keep(); }
+} catch { /* storage may be blocked */ }
 const Q = new URLSearchParams(location.search), playId = Q.get('play'), playSet = Number(Q.get('set'));
 if (playId && PLAN.some((b) => b.id === playId && b.kind === 'read')) {
   if (!S.face) { S.face = '🦁'; if (!(playSet >= 1 && playSet <= STAGES.length)) S.stage = 2; }      // a first-time visitor starts with eight sounds
