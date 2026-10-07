@@ -1,0 +1,159 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive"><title>From Sounds to Words: your companion</title>
+<style>
+:root{--ink:#1f2a44;--soft:#5b6680;--bg:#fff8e7;--card:#fff;--sun:#f2b705;--pink:#e0527a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:18px;line-height:1.5}
+main{max-width:760px;margin:0 auto;padding:22px 16px 60px}
+header{text-align:center;padding:10px 0 6px}header small{display:block;font-weight:800;letter-spacing:.06em;color:var(--pink);text-transform:uppercase;font-size:14px}
+h1{font-family:"Comic Sans MS","Chalkboard SE","Trebuchet MS",sans-serif;font-size:clamp(30px,7vw,44px);line-height:1.08;margin:6px 0 8px}
+header p{margin:0 auto;max-width:560px;color:var(--soft)}
+nav{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:20px 0 6px}
+nav a{display:inline-flex;align-items:center;justify-content:center;min-width:46px;height:46px;padding:0 12px;border-radius:999px;background:var(--card);border:3px solid var(--ink);color:var(--ink);font-weight:800;text-decoration:none}
+nav a.s{background:var(--sun)}
+.day,.box{background:var(--card);border:4px solid var(--ink);border-radius:24px;padding:18px 18px 14px;margin:22px 0;scroll-margin-top:12px}
+.day:target{border-color:var(--pink);box-shadow:0 0 0 6px #ffe3ee}
+.tag{display:inline-block;background:var(--sun);border-radius:999px;padding:2px 14px;font-weight:800;font-size:15px}
+h2{font-family:"Comic Sans MS","Chalkboard SE","Trebuchet MS",sans-serif;font-size:26px;line-height:1.15;margin:8px 0 2px}
+.sub{margin:0 0 12px;color:var(--soft)}.sub span{white-space:nowrap;font-weight:700;color:var(--ink)}
+video{width:100%;height:auto;aspect-ratio:16/9;border-radius:14px;background:#1f2a44;display:block}
+ul{margin:12px 0 2px;padding-left:22px}li{margin:3px 0}
+.snd{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px}
+.snd button{font:800 34px "Comic Sans MS","Chalkboard SE","Trebuchet MS",sans-serif;color:var(--ink);background:#fff3c9;border:3px solid var(--ink);border-radius:18px;padding:12px 0;cursor:pointer}
+.snd button:active,.snd button.on{background:var(--sun)}
+.box h2{margin-top:0}.box p{margin:8px 0}
+
+.rp h3{font-size:19px;margin:22px 0 6px}.rp .hint{color:var(--soft);font-size:15px;margin:0 0 8px}
+.tg{display:flex;flex-wrap:wrap;gap:8px}
+.tg button{font:800 22px "Comic Sans MS","Chalkboard SE","Trebuchet MS",sans-serif;color:var(--ink);background:#fff;border:3px solid #c9d2d9;border-radius:14px;padding:8px 14px;min-width:54px;cursor:pointer}
+.tg button.on{background:#dff5e6;border-color:#2f9e63}
+.tg.w button{min-width:76px}
+.tri{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.tri>div{display:flex;align-items:center;justify-content:space-between;gap:8px;background:#fff;border:3px solid #c9d2d9;border-radius:14px;padding:6px 8px 6px 14px}
+.tri b{font:800 22px "Comic Sans MS","Chalkboard SE","Trebuchet MS",sans-serif}
+.tri span{display:flex;gap:4px}.tri span button{font:700 12px system-ui,sans-serif;color:var(--ink);background:#f3f5f7;border:2px solid #c9d2d9;border-radius:10px;padding:7px 6px;cursor:pointer;line-height:1.1}
+.tri span button.on[data-v="2"]{background:#dff5e6;border-color:#2f9e63}.tri span button.on[data-v="1"]{background:#fff3c9;border-color:#f2b705}.tri span button.on[data-v="0"]{background:#ffe3ee;border-color:#e0527a}
+.go{display:block;width:100%;margin:22px 0 4px;font:800 21px system-ui,sans-serif;color:#fff;background:var(--pink);border:0;border-radius:999px;padding:15px;cursor:pointer}
+#rpout{display:none;margin-top:18px}#rpout.show{display:block}
+.tn{display:grid;grid-template-columns:1fr 1fr;gap:10px}.tn>div{border:3px solid var(--ink);border-radius:18px;padding:12px 14px;background:#fff}.tn>div.now{background:#fff3c9}
+.tn small{display:block;font-weight:800;text-transform:uppercase;letter-spacing:.05em;font-size:13px;color:var(--pink)}.tn p{margin:4px 0;font-size:16px}.tn p b{font-size:22px}
+.verdict{border:4px solid var(--ink);border-radius:20px;padding:14px 16px;margin:14px 0;background:#e4f7e4}.verdict.mid{background:#fff3c9}.verdict.low{background:#ffe3ee}.verdict h3{margin:0 0 6px;font-size:21px}.verdict p{margin:6px 0}
+.code{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}.code i{font:800 18px "Comic Sans MS","Chalkboard SE","Trebuchet MS",sans-serif;font-style:normal;min-width:38px;text-align:center;border:3px solid #c9d2d9;border-radius:10px;padding:4px 6px;color:#9aa5b1;background:#fff}
+.code i.k{background:#dff5e6;border-color:#2f9e63;color:var(--ink)}.code i.m{background:#ffe3ee;border-color:#e0527a;color:var(--ink)}
+.lists{margin:6px 0;padding-left:20px}.lists li{margin:4px 0}
+.path{list-style:none;margin:10px 0 0;padding:0;counter-reset:st}.path li{counter-increment:st;position:relative;border:3px solid #c9d2d9;border-radius:16px;padding:10px 12px 10px 52px;margin:8px 0;background:#fff;color:var(--soft)}
+.path li:before{content:counter(st);position:absolute;left:12px;top:10px;width:28px;height:28px;border-radius:50%;background:#c9d2d9;color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center}
+.path li b{display:block;color:var(--ink)}.path li.done{background:#f1faf3;border-color:#2f9e63}.path li.done:before{background:#2f9e63;content:"\2713"}
+.path li.here{border-color:var(--pink);background:#fff;box-shadow:0 0 0 5px #ffe3ee;color:var(--ink)}.path li.here:before{background:var(--pink)}
+.path li.here em{display:inline-block;font-style:normal;font-weight:800;font-size:13px;background:var(--pink);color:#fff;border-radius:99px;padding:1px 10px;margin-bottom:4px}
+.next{border:4px dashed var(--ink);border-radius:20px;padding:14px 16px;margin:16px 0 4px;background:#eef6ff}.next h3{margin:0 0 6px}
+.offer{border:4px solid var(--ink);border-radius:22px;padding:18px 18px 14px;margin:22px 0 4px;background:linear-gradient(135deg,#fff3c9,#ffe3ee)}
+.offer small{display:block;font-weight:800;text-transform:uppercase;letter-spacing:.06em;font-size:13px;color:var(--pink)}.offer h3{font-family:"Comic Sans MS","Chalkboard SE","Trebuchet MS",sans-serif;font-size:30px;margin:2px 0 6px}
+.offer .big{font-size:20px;font-weight:700;margin:0 0 8px}.offer .soon{display:inline-block;background:var(--ink);color:#fff;font-weight:800;border-radius:999px;padding:8px 18px;margin:8px 0 4px}
+@media(max-width:520px){.tri{grid-template-columns:1fr}.tn{grid-template-columns:1fr}}
+footer{margin-top:34px;color:var(--soft);font-size:14px;text-align:center}
+</style></head><body><main>
+<header><small>Sound It Out · your companion</small><h1>From Sounds to Words</h1><p>One short video for you for each day of the plan. Watch it first, then do the page together.</p></header>
+<nav aria-label="Days"><a class="s" href="#d0">Start</a><a href="#d1">1</a><a href="#d2">2</a><a href="#d3">3</a><a href="#d4">4</a><a href="#d5">5</a><a href="#d6">6</a><a href="#d7">7</a><a href="#d8">8</a><a href="#d9">9</a><a href="#d10">10</a><a href="#sounds">Sounds</a><a class="s" href="#report">Report</a></nav>
+<section class="day" id="d0"><div class="tag">Start here</div><h2>Welcome: what to expect</h2><p class="sub">What this plan is, what is inside, and how to use it. <span>2:28 min</span></p>
+<video controls playsinline preload="none" poster="start.jpg"><source src="start.mp4" type="video/mp4"><track kind="captions" src="start.vtt" srclang="en" label="English"></video>
+<ul><li>What the plan is and who it is for.</li><li>What is inside, what to expect, and how each day works.</li><li>Watch this before day 1.</li></ul></section>
+<section class="day" id="d1"><div class="tag">Day 1</div><h2>The Starting Check</h2><p class="sub">About three minutes. Listen and tick. <span>0:56 min</span></p>
+<video controls playsinline preload="none" poster="day01.jpg"><source src="day01.mp4" type="video/mp4"><track kind="captions" src="day01.vtt" srclang="en" label="English"></video>
+<ul><li>A check, not a lesson: listen and tick.</li><li>Sounds, then words by ear, then four words to read.</li><li>Keep the page for day 10.</li></ul></section>
+<section class="day" id="d2"><div class="tag">Day 2</div><h2>Say It Slow, Say It Fast</h2><p class="sub">No reading today. Ears only. <span>1:04 min</span></p>
+<video controls playsinline preload="none" poster="day02.jpg"><source src="day02.mp4" type="video/mp4"><track kind="captions" src="day02.vtt" srclang="en" label="English"></video>
+<ul><li>No letters today.</li><li>You say the sounds slowly; your child touches the picture and says the word.</li><li>Stuck? Say the sounds closer together.</li></ul></section>
+<section class="day" id="d3"><div class="tag">Day 3</div><h2>Slide Two Sounds Together</h2><p class="sub">Hold the first sound. No gap. <span>0:44 min</span></p>
+<video controls playsinline preload="none" poster="day03.jpg"><source src="day03.mp4" type="video/mp4"><track kind="captions" src="day03.vtt" srclang="en" label="English"></video>
+<ul><li>Words with two sounds.</li><li>Hold the first sound until you reach the second. No gap.</li><li>Finger on the dot, slide along the arrow.</li></ul></section>
+<section class="day" id="d4"><div class="tag">Day 4</div><h2>Add One Sound at a Time</h2><p class="sub">Two sounds first. Then the last one. <span>0:50 min</span></p>
+<video controls playsinline preload="none" poster="day04.jpg"><source src="day04.mp4" type="video/mp4"><track kind="captions" src="day04.vtt" srclang="en" label="English"></video>
+<ul><li>Words with three sounds, built in two moves.</li><li>Slide the first two sounds together, then add the last.</li><li>Do the first row together.</li></ul></section>
+<section class="day" id="d5"><div class="tag">Day 5</div><h2>The Half-Way Check</h2><p class="sub">Eight words. Two are new. <span>0:30 min</span></p>
+<video controls playsinline preload="none" poster="day05.jpg"><source src="day05.mp4" type="video/mp4"><track kind="captions" src="day05.vtt" srclang="en" label="English"></video>
+<ul><li>Eight words, two of them new. Do not help.</li><li>Six or more: go on. Fewer: do days 3 and 4 again.</li><li>Then the game.</li></ul></section>
+<section class="day" id="d6"><div class="tag">Day 6</div><h2>Quick Sounds at the Start</h2><p class="sub">Some sounds cannot be stretched. <span>0:41 min</span></p>
+<video controls playsinline preload="none" poster="day06.jpg"><source src="day06.mp4" type="video/mp4"><track kind="captions" src="day06.vtt" srclang="en" label="English"></video>
+<ul><li>Words that start with a quick sound.</li><li>Keep the quick sound tiny and go straight into the next one.</li><li>Then your child spells two picture words.</li></ul></section>
+<section class="day" id="d7"><div class="tag">Day 7</div><h2>One Letter Changes</h2><p class="sub">Look at every letter. <span>0:42 min</span></p>
+<video controls playsinline preload="none" poster="day07.jpg"><source src="day07.mp4" type="video/mp4"><track kind="captions" src="day07.vtt" srclang="en" label="English"></video>
+<ul><li>One letter changes each time.</li><li>Cover the word and show one letter at a time.</li><li>Guessing will not work here, and that is the point.</li></ul></section>
+<section class="day" id="d8"><div class="tag">Day 8</div><h2>Four More Sounds</h2><p class="sub">Twelve sounds now. <span>0:33 min</span></p>
+<video controls playsinline preload="none" poster="day08.jpg"><source src="day08.mp4" type="video/mp4"><track kind="captions" src="day08.vtt" srclang="en" label="English"></video>
+<ul><li>Four more sounds.</li><li>Ask for each sound; tell once if needed, and move on.</li><li>Then read and match.</li></ul></section>
+<section class="day" id="d9"><div class="tag">Day 9</div><h2>First Sentences</h2><p class="sub">Sentences, then a story. <span>0:35 min</span></p>
+<video controls playsinline preload="none" poster="day09.jpg"><source src="day09.mp4" type="video/mp4"><track kind="captions" src="day09.vtt" srclang="en" label="English"></video>
+<ul><li>Two small words you simply tell your child.</li><li>Read each sentence, then read it again smoothly.</li><li>Then the story.</li></ul></section>
+<section class="day" id="d10"><div class="tag">Day 10</div><h2>The Final Check</h2><p class="sub">About three minutes. Do not help. <span>0:31 min</span></p>
+<video controls playsinline preload="none" poster="day10.jpg"><source src="day10.mp4" type="video/mp4"><track kind="captions" src="day10.vtt" srclang="en" label="English"></video>
+<ul><li>The final check. Do not help.</li><li>The eight new words matter most.</li><li>Your page says what the result means and what to do next.</li></ul></section>
+<section class="box" id="sounds"><h2>Hear the twelve sounds</h2><p>Tap a letter to hear its sound. Short and clean, with no extra sound on the end.</p>
+<div class="snd"><button type="button" data-s="s" aria-label="Play the sound of the letter s">s</button><button type="button" data-s="a" aria-label="Play the sound of the letter a">a</button><button type="button" data-s="t" aria-label="Play the sound of the letter t">t</button><button type="button" data-s="p" aria-label="Play the sound of the letter p">p</button><button type="button" data-s="i" aria-label="Play the sound of the letter i">i</button><button type="button" data-s="n" aria-label="Play the sound of the letter n">n</button><button type="button" data-s="m" aria-label="Play the sound of the letter m">m</button><button type="button" data-s="d" aria-label="Play the sound of the letter d">d</button><button type="button" data-s="g" aria-label="Play the sound of the letter g">g</button><button type="button" data-s="o" aria-label="Play the sound of the letter o">o</button><button type="button" data-s="c" aria-label="Play the sound of the letter c">c</button><button type="button" data-s="k" aria-label="Play the sound of the letter k">k</button></div></section>
+<section class="box rp" id="report"><h2>Your child&rsquo;s reading report</h2>
+<p>After day 10, tap in the ticks from your two check pages. You will see where your child started, where they are now, and what comes next for them.</p>
+<p class="hint">Nothing you tap here is sent anywhere. It stays in this browser, on this phone or computer.</p>
+<h3>From your day 1 page</h3>
+<p class="hint">A. Tap each sound your child knew.</p><div class="tg" id="r1s"><button type="button" data-k="s">s</button><button type="button" data-k="a">a</button><button type="button" data-k="t">t</button><button type="button" data-k="p">p</button><button type="button" data-k="i">i</button><button type="button" data-k="n">n</button><button type="button" data-k="m">m</button><button type="button" data-k="d">d</button><button type="button" data-k="g">g</button><button type="button" data-k="o">o</button><button type="button" data-k="c">c</button><button type="button" data-k="k">k</button></div>
+<p class="hint" style="margin-top:12px">B. Tap each word your child got by ear.</p><div class="tg w" id="r1e"><button type="button" data-k="at">at</button><button type="button" data-k="sun">sun</button><button type="button" data-k="map">map</button><button type="button" data-k="pig">pig</button></div>
+<p class="hint" style="margin-top:12px">C. Tap each word your child read.</p><div class="tg w" id="r1w"><button type="button" data-k="at">at</button><button type="button" data-k="in">in</button><button type="button" data-k="sat">sat</button><button type="button" data-k="map">map</button></div>
+<h3>From your day 10 page</h3>
+<p class="hint">Words your child practised.</p><div class="tri" id="r10o"><div data-w="sat"><b>sat</b><span><button type="button" data-v="2">Straight away</button><button type="button" data-v="1">Sounded it out</button><button type="button" data-v="0">Not yet</button></span></div><div data-w="pin"><b>pin</b><span><button type="button" data-v="2">Straight away</button><button type="button" data-v="1">Sounded it out</button><button type="button" data-v="0">Not yet</button></span></div><div data-w="dog"><b>dog</b><span><button type="button" data-v="2">Straight away</button><button type="button" data-v="1">Sounded it out</button><button type="button" data-v="0">Not yet</button></span></div><div data-w="cap"><b>cap</b><span><button type="button" data-v="2">Straight away</button><button type="button" data-v="1">Sounded it out</button><button type="button" data-v="0">Not yet</button></span></div></div>
+<p class="hint" style="margin-top:12px">Words your child had never seen.</p><div class="tri" id="r10n"><div data-w="tag"><b>tag</b><span><button type="button" data-v="2">Straight away</button><button type="button" data-v="1">Sounded it out</button><button type="button" data-v="0">Not yet</button></span></div><div data-w="gap"><b>gap</b><span><button type="button" data-v="2">Straight away</button><button type="button" data-v="1">Sounded it out</button><button type="button" data-v="0">Not yet</button></span></div><div data-w="kit"><b>kit</b><span><button type="button" data-v="2">Straight away</button><button type="button" data-v="1">Sounded it out</button><button type="button" data-v="0">Not yet</button></span></div><div data-w="pop"><b>pop</b><span><button type="button" data-v="2">Straight away</button><button type="button" data-v="1">Sounded it out</button><button type="button" data-v="0">Not yet</button></span></div><div data-w="dot"><b>dot</b><span><button type="button" data-v="2">Straight away</button><button type="button" data-v="1">Sounded it out</button><button type="button" data-v="0">Not yet</button></span></div><div data-w="nod"><b>nod</b><span><button type="button" data-v="2">Straight away</button><button type="button" data-v="1">Sounded it out</button><button type="button" data-v="0">Not yet</button></span></div><div data-w="mom"><b>mom</b><span><button type="button" data-v="2">Straight away</button><button type="button" data-v="1">Sounded it out</button><button type="button" data-v="0">Not yet</button></span></div><div data-w="cot"><b>cot</b><span><button type="button" data-v="2">Straight away</button><button type="button" data-v="1">Sounded it out</button><button type="button" data-v="0">Not yet</button></span></div></div>
+<button type="button" class="go" id="rpgo">Show the report</button>
+<div id="rpout" aria-live="polite"></div></section>
+<footer>This page belongs to your copy of the plan. Please do not share the link.<br>Letter sounds: Kitkit School, © 2018 Enuma, Inc., CC BY 4.0 (level adjusted), and Feed the Monster by Curious Learning, used under their open licenses. Not endorsed by them.</footer>
+</main><script>
+var a=null;document.querySelectorAll('.snd button').forEach(function(b){b.addEventListener('click',function(){if(a)a.pause();a=new Audio('sounds/'+b.dataset.s+'.mp3');b.classList.add('on');a.onended=function(){b.classList.remove('on')};a.play().catch(function(){b.classList.remove('on')})})});
+document.querySelectorAll('video').forEach(function(v){v.addEventListener('play',function(){document.querySelectorAll('video').forEach(function(o){if(o!==v)o.pause()})})});
+
+(function(){
+var PATH=[["Hearing the sounds in a word","Before any letters: hearing that \"map\" is three sounds, and pushing three sounds back into \"map\"."],["The letter sounds","Seeing a letter and saying its sound straight away."],["Short words with three sounds","Blending words such as sat, pin and dog. This plan."],["Words with four sounds","Two consonants together, as in stop, hand and frog."],["Letter teams","Two letters that make one sound: sh, ch, th, ck, ng."],["Long vowels","Silent e, and vowel teams such as ee, ai and oa."],["Longer words","Words of two and three beats, word endings, and the trickier spellings."],["Reading books with ease","Reading smoothly and understanding it, in real books."]],TWELVE=["s","a","t","p","i","n","m","d","g","o","c","k"],NEWN=8,OLDN=4,QUICK=['t','p','d','g','c','k'];
+var KEY='fstw-report-v1',st={};try{st=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){st={}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}}
+function $(q,r){return (r||document).querySelector(q)}function $$(q,r){return [].slice.call((r||document).querySelectorAll(q))}
+['r1s','r1e','r1w'].forEach(function(id){st[id]=st[id]||{};$$('#'+id+' button').forEach(function(b){if(st[id][b.dataset.k])b.classList.add('on');b.addEventListener('click',function(){st[id][b.dataset.k]=!st[id][b.dataset.k];b.classList.toggle('on',!!st[id][b.dataset.k]);save()})})});
+['r10o','r10n'].forEach(function(id){st[id]=st[id]||{};$$('#'+id+' > div').forEach(function(row){var w=row.dataset.w;function paint(){$$('button',row).forEach(function(b){b.classList.toggle('on',st[id][w]===+b.dataset.v)})}paint();$$('button',row).forEach(function(b){b.addEventListener('click',function(){st[id][w]=+b.dataset.v;paint();save()})})})});
+function count(o){var n=0;for(var k in o)if(o[k])n++;return n}
+function e(t){return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+$('#rpgo').addEventListener('click',function(){
+ var out=$('#rpout'),newDone=Object.keys(st.r10n).length,oldDone=Object.keys(st.r10o).length;
+ if(newDone<NEWN||oldDone<OLDN){out.className='show';out.innerHTML='<div class="verdict low"><h3>A few ticks are missing</h3><p>Tap one box for every word from the day 10 page, then tap the button again.</p></div>';return}
+ var s1=count(st.r1s),e1=count(st.r1e),w1=count(st.r1w),vals=function(o){var a=[];for(var k in o)a.push(o[k]);return a};
+ var nRead=vals(st.r10n).filter(function(v){return v>0}).length,nFast=vals(st.r10n).filter(function(v){return v===2}).length;
+ var oRead=vals(st.r10o).filter(function(v){return v>0}).length,missedNew=Object.keys(st.r10n).filter(function(w){return st.r10n[w]===0});
+ var missedSounds=TWELVE.filter(function(s){return !st.r1s[s]});
+ var band=nRead>=6?'hi':nRead>=3?'mid':'low',h='';
+ h+='<div class="tn"><div><small>Day 1</small><p><b>'+s1+'</b> of 12 sounds</p><p><b>'+e1+'</b> of 4 words by ear</p><p><b>'+w1+'</b> of 4 words read</p></div>';
+ h+='<div class="now"><small>Day 10</small><p><b>'+oRead+'</b> of '+OLDN+' practised words read</p><p><b>'+nRead+'</b> of '+NEWN+' never-seen words read</p><p><b>'+nFast+'</b> of those straight away</p></div></div>';
+ if(band==='hi')h+='<div class="verdict"><h3>Your child can blend.</h3><p>They read '+nRead+' of the '+NEWN+' words they had never seen. Those words could not be remembered or guessed, so this is real blending.</p></div>';
+ if(band==='mid')h+='<div class="verdict mid"><h3>It is coming. More of the same.</h3><p>They read '+nRead+' of the '+NEWN+' never-seen words. Blending has started and is not steady yet. Many children need two rounds.</p></div>';
+ if(band==='low')h+='<div class="verdict low"><h3>Something earlier needs attention first.</h3><p>They read '+nRead+' of the '+NEWN+' never-seen words. More of this plan is not the answer yet. The lines below show where to look.</p></div>';
+ var good=[],work=[];
+ if(s1>=10)good.push('Knows the letter sounds: '+s1+' of the 12 on day 1.');else work.push('Letter sounds: '+s1+' of 12 on day 1. Still to learn: '+missedSounds.join(', ')+'.');
+ if(e1>=3)good.push('Can hear a word in its sounds: '+e1+' of 4 by ear on day 1.');else work.push('Hearing a word in its sounds: '+e1+' of 4 by ear on day 1. The day 2 listening game, for a few minutes every day, is the practice for this.');
+ if(nFast>=4)good.push('Reads some new words straight away, without sounding out: '+nFast+' of '+NEWN+'.');
+ else if(nRead>=3)work.push('Still sounds out most words. That is the right way at this stage; speed comes from reading the same words again on later days.');
+ if(oRead===OLDN)good.push('Read all '+OLDN+' practised words.');else work.push('Practised words: '+oRead+' of '+OLDN+'. Go back over the pages those words came from.');
+ if(missedNew.length&&band!=='low'){var q=missedNew.filter(function(w){return QUICK.indexOf(w.charAt(0))>=0});work.push('Never-seen words not read yet: '+missedNew.join(', ')+'.'+(q.length>=2&&q.length>=missedNew.length/2?' Most of these start with a quick sound, so day 6 is the page to repeat.':''))}
+ h+='<h3>What is solid</h3>'+(good.length?'<ul class="lists">'+good.map(function(x){return '<li>'+e(x)+'</li>'}).join('')+'</ul>':'<p class="hint">Nothing is steady yet. That is information, not a verdict.</p>');
+ if(work.length)h+='<h3>What needs more</h3><ul class="lists">'+work.map(function(x){return '<li>'+e(x)+'</li>'}).join('')+'</ul>';
+ h+='<h3>Their sounds so far</h3><p class="hint">Green: knew it on day 1. Pink: still to learn. Only these twelve were checked.</p><div class="code">'+TWELVE.map(function(s){return '<i class="'+(st.r1s[s]?'k':'m')+'">'+s+'</i>'}).join('')+'</div>';
+ var here=band==='hi'?3:band==='mid'?2:(e1<3?0:s1<10?1:2);
+ h+='<h3>The path from here</h3><p class="hint">Every child takes this path in this order. How long each step takes is different for every child.</p><ol class="path">'+PATH.map(function(p,i){return '<li class="'+(i<here?'done':i===here?'here':'')+'">'+(i===here?'<em>Your child is here</em>':'')+'<b>'+e(p[0])+'</b>'+e(p[1])+'</li>'}).join('')+'</ol>';
+ var next=band==='hi'?'Put the day 10 page beside the day 1 page and show your child. Next comes words with four sounds, such as stop and hand, and then letter teams such as sh and ch.'
+  :band==='mid'?'Do days 6 to 9 again, using the extra words on the last page of the plan. Then do the day 10 check again and come back to this report.'
+  :e1<3?'Play the day 2 listening game every day for two weeks, with no letters. Then start the plan again from day 3.'
+  :s1<10?'Work on the letter sounds still to learn, a few at a time. The Sounds buttons on this page play each one. Then start the plan again.'
+  :'If your child is six or older, tell their teacher what you have seen in these two checks and ask what the school has noticed. Keep playing the day 2 listening game.';
+ h+='<div class="next"><h3>What to do next</h3><p>'+e(next)+'</p></div>';
+ // the membership: the flagship. The offer is shaped by the result; no price and no promise of a result is printed.
+ var from=PATH[here][0].toLowerCase(),lead=band==='hi'?'Your child has the hardest step behind them. What they need now is the next page, every day, at exactly their level.'
+  :band==='mid'?'Your child is close. What they need is steady daily practice at exactly their level, and nothing harder until this is firm.'
+  :'Your child needs to start one step earlier, and to move on only when that step is firm.';
+ h+='<div class="offer"><small>The next step: the membership</small><h3>The One Sheet</h3><p class="big">One page a day, made for your child. From &ldquo;'+e(from)+'&rdquo; to reading books with ease.</p><p>'+e(lead)+'</p>'
+  +'<ul class="lists"><li><b>It starts where this report says your child is.</b> Not at page one of somebody else&rsquo;s program.</li><li><b>Tomorrow&rsquo;s page is built from today&rsquo;s.</b> You tick easy, just right or hard. That is all the planning you do.</li><li><b>Every story uses only words your child has already learned,</b> so they can read every word of it.</li><li><b>Hearing, reading, writing and understanding,</b> all four on one sheet, every day.</li><li><b>Paper and pencil.</b> No screen for your child, and nothing that watches or listens to them.</li></ul>'
+  +'<p>A few minutes from you. The rest your child does.</p><p class="soon">Opening soon. Keep this page: the way to join will be here.</p></div>';
+ out.className='show';out.innerHTML=h;out.scrollIntoView({behavior:'smooth',block:'start'});
+});
+})();
+</script></body></html>
