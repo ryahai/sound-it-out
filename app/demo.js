@@ -181,7 +181,7 @@ function today() {
         <p class="muted small" style="margin:4px 0 0">Type any sentence from a book. It shows the words your child cannot sound out yet.</p>
         <div class="check-row"><input id="checkText" value="The duck is in the pond" aria-label="Sentence to check"><button class="big-btn soft" id="checkBtn">Check</button></div>
         <div class="words" id="checkOut"></div><p class="muted" id="checkSum" style="margin:.6em 0 0"></p></div>
-      <p class="muted small center" style="margin-top:16px">Nothing your child does here is sent anywhere. Stars are kept only on this device.<br>
+      <p class="muted small center" style="margin-top:16px">Nothing your child does here is sent anywhere. We only count that the app was opened. Stars are kept only on this device.<br>
         Want to know what to do this week? <a href="../#start">See your child’s reading plan</a>. Pages to print: <a href="../printables/">Sound It Out printables</a>.</p>
     </details></div>`);
   document.querySelectorAll('.sets button').forEach((b) => { b.onclick = () => { S.stage = Number(b.dataset.v); keep(); today(); }; });
@@ -360,7 +360,7 @@ function grownTop() {
   <div class="card" style="margin:16px 0"><b>🎯 Words to practice</b>
     ${hardWords.length ? `<p class="muted small" style="margin:4px 0 10px">Words your child needed help with in this app. A word leaves the list when it is read without help.</p>
       <div class="hardwords">${hardWords.map((w) => `<span>${esc(w)}</span>`).join('')}</div><button class="big-btn green" id="sheetBtn" style="margin-top:12px;font-size:1.05rem;padding:12px 24px">Print a practice sheet for these words</button>`
-      : '<p class="muted small" style="margin:4px 0 0">No tricky words yet. When your child presses “Show the sounds” or skips a word, it is listed here so you can practice it.</p>'}</div>
+      : '<p class="muted small" style="margin:4px 0 0">No hard words yet. When your child presses “Show the sounds” or skips a word, it is listed here so you can practice it.</p>'}</div>
   <div class="card" style="margin:16px 0"><b>🔎 Quick reading check</b>
     <p class="muted small" style="margin:4px 0 12px">About 3 minutes. Your child sees a picture and taps the word that matches. It shows which level your child can read words from. It cannot hear your child read, so treat it as a guide.${chk ? ` Last check, ${esc(chk.date)}: Level ${chk.suggest} looked like the right place to practice.` : ''}</p>
     <button class="big-btn soft" id="checkStart" style="font-size:1.05rem;padding:12px 24px">Start the check</button></div>
