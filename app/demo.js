@@ -353,6 +353,7 @@ function grownTop() {
     <p class="muted small" style="margin:4px 0 10px">Your child is on <b>Level ${S.stage}</b>. Practiced on ${days === 1 ? '1 day' : `${days} days`}, ${times(acts)} in all, ${S.stars} stars.</p>
     <ol class="path">${STAGES.map(row).join('')}</ol>
     <p class="muted small" style="margin:10px 0 0">“Practiced” counts the activities finished in this app on this device. The app cannot hear your child read, so you decide when to move up: when your child gets four out of five without help, on two different days.</p></div>
+  ${nextStep()}
   <div class="card" style="margin:16px 0"><b>🏷️ Your child’s name (optional)</b>
     <p class="muted small" style="margin:4px 0 10px">A first name or nickname. It is shown on the home screen and on practice sheets. It stays on this device and is never sent anywhere.</p>
     <div class="check-row"><input id="nameIn" maxlength="20" value="${esc(S.name || '')}" placeholder="For example: Sam" aria-label="Your child’s name"><button class="big-btn soft" id="nameSave">Save</button></div></div>
@@ -644,3 +645,11 @@ if (playId && PLAN.some((b) => b.id === playId && b.kind === 'read')) {
   new MutationObserver(() => swap(document.body)).observe(document.body, { childList: true, subtree: true, characterData: true });
   swap(document.body);
 }
+
+// For the grown-up only: the next step for this child, from the level they are on. The plans on sale are listed in next.js.
+function nextStep() { const L = window.SIO_NEXT || {}, pick = S.stage <= 2 ? (L.ltrs || L.fstw) : S.stage <= 4 ? (L.fstw || L.gues) : (L.flue || L.gues), f = L.finder;
+  if (!pick && !f) return '';
+  const why = S.stage <= 2 ? 'Your child is on the first sounds.' : S.stage <= 4 ? 'Your child is at the step where sounds are put together into words.' : 'Your child is reading short words.';
+  return `<div class="card" style="margin:16px 0;border-color:#e0527a"><b>👉 For the grown-up: the next step</b>
+    <p class="muted small" style="margin:4px 0 10px">${why} The app gives practice. ${pick ? `If your child is stuck, <b>${esc(pick.name)}</b> is a 10-day plan on paper, with a short video that shows you each day. Start with its free 3-minute check.` : 'If reading is hard and you are not sure why, the free 2-minute finder shows the one thing to work on first.'}</p>
+    <div class="row" style="gap:10px;flex-wrap:wrap">${pick ? `<a class="big-btn green" style="text-decoration:none" href="../${pick.check}/">Do the free check</a><a class="big-btn soft" style="text-decoration:none" href="../${pick.plan}/">See the plan</a>` : `<a class="big-btn green" style="text-decoration:none" href="../${f}/">Find where to start</a>`}</div></div>`; }
