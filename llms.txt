@@ -74,7 +74,7 @@
 - [Sentence Writing Paper Generator](https://sounditoutreading.com/sentence-writing-paper-generator/): free tool. Lines to write on and a checklist for a good sentence. Made in the browser; nothing typed is sent or stored.
 - [Scissor Skills Worksheet Generator](https://sounditoutreading.com/scissor-skills-worksheet-generator/): free tool. Dashed lines to cut along, from the scissors to a picture. Made in the browser; nothing typed is sent or stored.
 - [Pre-Writing Worksheet Generator](https://sounditoutreading.com/pre-writing-worksheet-generator/): free tool. Dotted lines to trace, from a green dot to a picture. Made in the browser; nothing typed is sent or stored.
-- [Morning Work Generator](https://sounditoutreading.com/morning-work-generator/): free tool. The date, a letter, a number and a word on one page. Made in the browser; nothing typed is sent or stored.
+- [Morning Work Generator](https://sounditoutreading.com/morning-work-generator/): free tool. The date, a letter, a letter hunt and a word on one page. Made in the browser; nothing typed is sent or stored.
 - [Letter Sound Checklist Maker](https://sounditoutreading.com/letter-sound-checklist-maker/): free tool. A page for the child to point at, a record sheet for you. Made in the browser; nothing typed is sent or stored.
 - [Sight Word Checklist Maker](https://sounditoutreading.com/sight-word-checklist-maker/): free tool. Every word with three boxes: check it on three days. Made in the browser; nothing typed is sent or stored.
 - [Reading Log Maker](https://sounditoutreading.com/reading-log-maker/): free tool. Date, book, minutes and a star to color. Made in the browser; nothing typed is sent or stored.
@@ -83,6 +83,35 @@
 - [Alphabet Chart Maker](https://sounditoutreading.com/alphabet-chart-maker/): free tool. All 26 letters, each with a picture for its sound. Made in the browser; nothing typed is sent or stored.
 - [Task Card Maker](https://sounditoutreading.com/task-card-maker/): free tool. Numbered cards for the wall and a recording sheet. Made in the browser; nothing typed is sent or stored.
 - [I Spy Worksheet Generator](https://sounditoutreading.com/i-spy-worksheet-generator/): free tool. Find them, count them, write how many. Made in the browser; nothing typed is sent or stored.
+- [Word Family Flip Book Maker](https://sounditoutreading.com/word-family-flip-book-maker/): free tool. The ending stays, the first letter flips. Made in the browser; nothing typed is sent or stored.
+- [Write the Room Maker](https://sounditoutreading.com/write-the-room-maker/): free tool. Numbered cards for the walls, a recording sheet for the clipboard. Made in the browser; nothing typed is sent or stored.
+- [Read the Room Maker](https://sounditoutreading.com/read-the-room-maker/): free tool. Find the card, read the word, color the star. Made in the browser; nothing typed is sent or stored.
+- [Sentence Building Cards Maker](https://sounditoutreading.com/sentence-building-cards-maker/): free tool. Who, did what, where: three cards make a sentence. Made in the browser; nothing typed is sent or stored.
+- [Phonics Poster Maker](https://sounditoutreading.com/phonics-poster-maker/): free tool. One sound pattern, a key picture and a word list. Made in the browser; nothing typed is sent or stored.
+- [Letter Crown Maker](https://sounditoutreading.com/letter-crown-maker/): free tool. A crown to color, cut out and wear. Made in the browser; nothing typed is sent or stored.
+- [Interactive Notebook Page Maker](https://sounditoutreading.com/interactive-notebook-page-maker/): free tool. Flaps to cut, glue and lift. Made in the browser; nothing typed is sent or stored.
+- [Phonemic Awareness Card Maker](https://sounditoutreading.com/phonemic-awareness-card-maker/): free tool. Picture cards for first sounds, rhymes and syllables. Made in the browser; nothing typed is sent or stored.
+- [Letter Scavenger Hunt Maker](https://sounditoutreading.com/letter-scavenger-hunt-maker/): free tool. Find it, say it, check the box. Made in the browser; nothing typed is sent or stored.
+- [Make the Letter Task Card Maker](https://sounditoutreading.com/make-the-letter-task-card-maker/): free tool. One letter and one way to build it on every card. Made in the browser; nothing typed is sent or stored.
+- [Zap! Word Game Maker](https://sounditoutreading.com/zap-word-game-maker/): free tool. Pull a card, read it, keep it. Zap! Put them all back. Made in the browser; nothing typed is sent or stored.
+- [Story Map Maker](https://sounditoutreading.com/story-map-maker/): free tool. Who, where, first, next, last. Made in the browser; nothing typed is sent or stored.
+- [Beginning Sound Mat Maker](https://sounditoutreading.com/beginning-sound-mat-maker/): free tool. A mat for each letter and picture cards to sort. Made in the browser; nothing typed is sent or stored.
+- [Bubble Letter Template Maker](https://sounditoutreading.com/bubble-letter-template-maker/): free tool. Big hollow letters to color, decorate or cut out. Made in the browser; nothing typed is sent or stored.
+- [Alphabet Matching Worksheet Maker](https://sounditoutreading.com/alphabet-matching-worksheet-maker/): free tool. Cut out the small letters, stick them under the capitals. Made in the browser; nothing typed is sent or stored.
+- [Picture Sort Maker](https://sounditoutreading.com/picture-sort-maker/): free tool. Cut out the pictures, glue each one where it belongs. Made in the browser; nothing typed is sent or stored.
+- [Calendar Page Maker](https://sounditoutreading.com/calendar-page-maker/): free tool. One month, with a letter or a word for every day. Made in the browser; nothing typed is sent or stored.
+- [Spelling List Maker](https://sounditoutreading.com/spelling-list-maker/): free tool. This week’s words, a line to write each one, a box for each day. Made in the browser; nothing typed is sent or stored.
+- [Picture Crossword Maker](https://sounditoutreading.com/picture-crossword-maker/): free tool. The clues are pictures, the answers are short words. Made in the browser; nothing typed is sent or stored.
+- [Name Tag Maker](https://sounditoutreading.com/name-tag-maker/): free tool. Desk name plates with the alphabet, or eight name tags. Made in the browser; nothing typed is sent or stored.
+- [Reading Certificate Maker](https://sounditoutreading.com/reading-certificate-maker/): free tool. An award for every step of learning to read. Made in the browser; nothing typed is sent or stored.
+- [Go Fish Word Card Maker](https://sounditoutreading.com/go-fish-word-card-maker/): free tool. Ask for a word, make a pair, read it out loud. Made in the browser; nothing typed is sent or stored.
+- [Memory Match Game Maker](https://sounditoutreading.com/memory-match-game-maker/): free tool. Turn over two cards, read them, find the pair. Made in the browser; nothing typed is sent or stored.
+- [Old Maid Word Card Maker](https://sounditoutreading.com/old-maid-word-card-maker/): free tool. Make pairs, read them, and do not keep the odd card. Made in the browser; nothing typed is sent or stored.
+- [I Have Who Has Game Maker](https://sounditoutreading.com/i-have-who-has-game-maker/): free tool. A chain of cards: each one calls the next. Made in the browser; nothing typed is sent or stored.
+- [Word Dominoes Maker](https://sounditoutreading.com/word-dominoes-maker/): free tool. Match a word to its picture, end to end. Made in the browser; nothing typed is sent or stored.
+- [Word Family Spoons Card Game](https://sounditoutreading.com/word-family-spoons-card-game/): free tool. Collect four words of one family, then grab a spoon. Made in the browser; nothing typed is sent or stored.
+- [Tumbling Tower Word Labels](https://sounditoutreading.com/tumbling-tower-word-labels/): free tool. Pull a block, read its word, put it on top. Made in the browser; nothing typed is sent or stored.
+- [Cup Stacking Word Labels](https://sounditoutreading.com/cup-stacking-word-labels/): free tool. Read the word on a cup, then stack it. Made in the browser; nothing typed is sent or stored.
 - [What Works in Teaching Reading? What the Research Says](https://sounditoutreading.com/research-what-works-in-teaching-reading/): research summary. Two large U.S. reviews point the same way. Here is what they found and how strong the evidence is. Every finding names its source.
 - [Does Phonics Work? What the Research Says](https://sounditoutreading.com/research-does-phonics-work/): research summary. Eighteen studies met the standards of a U.S. review. Here is what they showed, and what they did not test. Every finding names its source.
 - [Hearing Sounds in Words: What the Research Says](https://sounditoutreading.com/research-hearing-the-sounds-in-words/): research summary. Seventeen studies met the standards of a U.S. review, and all seventeen found positive effects. Every finding names its source.
