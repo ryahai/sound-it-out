@@ -287,6 +287,35 @@
 - [Two-Piece Matching Game Maker](https://sounditoutreading.com/two-piece-matching-game-maker/): free tool. Two pieces that belong together, a letter or word on each. Made in the browser; nothing typed is sent or stored.
 - [Who What Where Question Cards Maker](https://sounditoutreading.com/who-what-where-question-card-maker/): free tool. A picture and three questions to talk about. Made in the browser; nothing typed is sent or stored.
 - [Look, Talk and Write Page Maker](https://sounditoutreading.com/look-talk-and-write-page-maker/): free tool. Talk about the picture, then write one sentence. Made in the browser; nothing typed is sent or stored.
+- [Kids Calendar Card Maker](https://sounditoutreading.com/kids-calendar-card-maker/): free tool. Day, month, date and weather cards for a morning board. Made in the browser; nothing typed is sent or stored.
+- [Weather Chart Maker](https://sounditoutreading.com/weather-word-chart-maker/): free tool. Look outside, circle the weather, read the word. Made in the browser; nothing typed is sent or stored.
+- [Rhyme Card Maker](https://sounditoutreading.com/nursery-rhyme-card-maker/): free tool. Short rhymes a beginner can read alone. Made in the browser; nothing typed is sent or stored.
+- [Toy Bin Label Maker](https://sounditoutreading.com/toy-bin-label-maker/): free tool. A picture and a word on every bin and shelf. Made in the browser; nothing typed is sent or stored.
+- [Shape Poster Maker](https://sounditoutreading.com/shape-name-poster-maker/): free tool. Eight shapes, each with its name. Made in the browser; nothing typed is sent or stored.
+- [Color Poster Maker](https://sounditoutreading.com/color-name-poster-maker/): free tool. Eleven colors, each with its word. Made in the browser; nothing typed is sent or stored.
+- [Position Word Card Maker](https://sounditoutreading.com/position-word-card-maker/): free tool. Read the word, then do it with a toy. Made in the browser; nothing typed is sent or stored.
+- [100th Day Writing Page Maker](https://sounditoutreading.com/100th-day-writing-page-maker/): free tool. Trace the start, finish the sentence, draw it. Made in the browser; nothing typed is sent or stored.
+- [Conversation Card Maker for Kids](https://sounditoutreading.com/conversation-card-maker/): free tool. A word to read, then a question to talk about. Made in the browser; nothing typed is sent or stored.
+- [Question of the Day Card Maker](https://sounditoutreading.com/question-of-the-day-card-maker/): free tool. Two pictures, two words: which do you like best?. Made in the browser; nothing typed is sent or stored.
+- [ABC Countdown Maker](https://sounditoutreading.com/abc-countdown-chart-maker/): free tool. 26 days, one letter and one small idea each day. Made in the browser; nothing typed is sent or stored.
+- [Exit Ticket Maker](https://sounditoutreading.com/quick-check-slip-maker/): free tool. Four small slips on a page, filled in before going home. Made in the browser; nothing typed is sent or stored.
+- [School Year Memory Book Maker](https://sounditoutreading.com/school-year-memory-book-maker/): free tool. Eight half pages to trace, write and draw. Made in the browser; nothing typed is sent or stored.
+- [Coupon Book Maker for Kids](https://sounditoutreading.com/kids-coupon-book-maker/): free tool. A gift a child can read, write and give. Made in the browser; nothing typed is sent or stored.
+- [Pennant Banner Maker](https://sounditoutreading.com/pennant-banner-maker/): free tool. Type a name or a word: one flag for each letter. Made in the browser; nothing typed is sent or stored.
+- [Alphabet Bunting Maker](https://sounditoutreading.com/alphabet-bunting-maker/): free tool. A flag for each letter, with a picture for its sound. Made in the browser; nothing typed is sent or stored.
+- [Shopping List Game Maker](https://sounditoutreading.com/shopping-list-game-maker/): free tool. Read the list, find the food, mark the box. Made in the browser; nothing typed is sent or stored.
+- [Star of the Week Poster Maker](https://sounditoutreading.com/star-of-the-week-poster-maker/): free tool. A poster the star fills in, and a note page from the class. Made in the browser; nothing typed is sent or stored.
+- [Fact File Page Maker](https://sounditoutreading.com/fact-file-page-maker/): free tool. A first report: can, has, is. Made in the browser; nothing typed is sent or stored.
+- [Name Sign-In Sheet Maker](https://sounditoutreading.com/name-sign-in-sheet-maker/): free tool. Write your name every morning. Made in the browser; nothing typed is sent or stored.
+- [Blank Recording Sheet Maker](https://sounditoutreading.com/blank-recording-sheet-maker/): free tool. Numbered boxes with real writing lines. Made in the browser; nothing typed is sent or stored.
+- [Same or Different Letter Cards](https://sounditoutreading.com/same-or-different-letter-card-maker/): free tool. Four letters or words: which one is not the same?. Made in the browser; nothing typed is sent or stored.
+- [Monthly Name Writing Sample Page](https://sounditoutreading.com/monthly-name-writing-sample-page/): free tool. Draw yourself and write your name, once a month. Made in the browser; nothing typed is sent or stored.
+- [Birthday Chart Maker](https://sounditoutreading.com/birthday-chart-maker/): free tool. Twelve months, lines for every name. Made in the browser; nothing typed is sent or stored.
+- [Classroom Job Chart Maker](https://sounditoutreading.com/classroom-job-chart-maker/): free tool. A picture, a job and a line for the name. Made in the browser; nothing typed is sent or stored.
+- [Early Finisher Activity Pack](https://sounditoutreading.com/early-finisher-activity-pack/): free tool. I am done. Now I can pick one. Made in the browser; nothing typed is sent or stored.
+- [Story Problem Worksheet Maker](https://sounditoutreading.com/story-problem-worksheet-maker/): free tool. A tiny story to read, draw and solve. Made in the browser; nothing typed is sent or stored.
+- [Glyph Maker](https://sounditoutreading.com/read-and-color-glyph-maker/): free tool. Read two sentences, pick the true one, color the shape. Made in the browser; nothing typed is sent or stored.
+- [Pretend Play Printables Maker](https://sounditoutreading.com/pretend-play-printable-maker/): free tool. Signs, price cards and order pads to read while playing. Made in the browser; nothing typed is sent or stored.
 - [What Works in Teaching Reading? What the Research Says](https://sounditoutreading.com/research-what-works-in-teaching-reading/): research summary. Two large U.S. reviews point the same way. Here is what they found and how strong the evidence is. Every finding names its source.
 - [Does Phonics Work? What the Research Says](https://sounditoutreading.com/research-does-phonics-work/): research summary. Eighteen studies met the standards of a U.S. review. Here is what they showed, and what they did not test. Every finding names its source.
 - [Hearing Sounds in Words: What the Research Says](https://sounditoutreading.com/research-hearing-the-sounds-in-words/): research summary. Seventeen studies met the standards of a U.S. review, and all seventeen found positive effects. Every finding names its source.
@@ -366,11 +395,12 @@
 - [Free Dab and Blend Level 4 Worksheets](https://sounditoutreading.com/free-dab-and-blend-level-4/): 3 free printable pages. Dab and blend worksheets: dot the sounds, read the word, Reading Path Level 4
 - [Free Dab and Blend Level 5 Worksheets](https://sounditoutreading.com/free-dab-and-blend-level-5/): 3 free printable pages. Dab and blend worksheets: dot the sounds, read the word, Reading Path Level 5
 - [Free Dab and Blend Level 6 Worksheets](https://sounditoutreading.com/free-dab-and-blend-level-6/): 3 free printable pages. Dab and blend worksheets: dot the sounds, read the word, Reading Path Level 6
-- [Free Dab and Blend Level 7 Worksheets](https://sounditoutreading.com/free-dab-and-blend-level-7/): 3 free printable pages. Dab and blend worksheets: dot the sounds, read the word, Reading Path Level 7
 - [Free Decodable Mini Books Level 3 Worksheets](https://sounditoutreading.com/free-decodable-mini-books-level-3/): 3 free printable pages. Decodable mini books: three little CVC readers to print, cut and staple, Reading Path Level 3
 - [Free Decodable Mini Books Level 4 Worksheets](https://sounditoutreading.com/free-decodable-mini-books-level-4/): 3 free printable pages. Decodable mini books: three little CVC readers to print, cut and staple, Reading Path Level 4
 - [Free Decodable Mini Books Level 5 Worksheets](https://sounditoutreading.com/free-decodable-mini-books-level-5/): 3 free printable pages. Decodable mini books: three little CVC readers to print, cut and staple, Reading Path Level 5
 - [Free Decodable Mini Books Level 6 Worksheets](https://sounditoutreading.com/free-decodable-mini-books-level-6/): 3 free printable pages. Decodable mini books: three little CVC readers to print, cut and staple, Reading Path Level 6
+- [Free Roll and Read Level 2 Worksheets](https://sounditoutreading.com/free-roll-and-read-level-2/): 3 free printable pages. Roll and read games: decodable words with a die, Reading Path Level 2
+- [Free Dab and Blend Level 7 Worksheets](https://sounditoutreading.com/free-dab-and-blend-level-7/): 3 free printable pages. Dab and blend worksheets: dot the sounds, read the word, Reading Path Level 7
 
 ## Guides
 - [What Age Can a Child Cut Shapes and Glue Accurately](https://sounditoutreading.com/guide-cutting-and-gluing-skills-by-age/): Learn the ages children usually cut shapes and glue accurately, with step-by-step practice, common problems, and signs they are ready to move on.
@@ -388,11 +418,11 @@
 
 ## By grade
 - [Preschool Worksheets](https://sounditoutreading.com/preschool-worksheets/): 9 printable packs for ages 3 to 5
-- [Kindergarten Worksheets](https://sounditoutreading.com/kindergarten-worksheets/): 62 printable packs for ages 5 to 6
+- [Kindergarten Worksheets](https://sounditoutreading.com/kindergarten-worksheets/): 63 printable packs for ages 5 to 6
 - [First Grade Worksheets](https://sounditoutreading.com/first-grade-worksheets/): 39 printable packs for ages 6 to 7
 - [Preschool Learn to Read Worksheets](https://sounditoutreading.com/preschool-learn-to-read-worksheets/): 4 packs
 - [Preschool Addition and Subtraction Worksheets](https://sounditoutreading.com/preschool-addition-and-subtraction-worksheets/): 3 packs
-- [Kindergarten Learn to Read Worksheets](https://sounditoutreading.com/kindergarten-learn-to-read-worksheets/): 39 packs
+- [Kindergarten Learn to Read Worksheets](https://sounditoutreading.com/kindergarten-learn-to-read-worksheets/): 40 packs
 - [Kindergarten Sight Words Worksheets](https://sounditoutreading.com/kindergarten-sight-words-worksheets/): 2 packs
 - [Kindergarten Addition and Subtraction Worksheets](https://sounditoutreading.com/kindergarten-addition-and-subtraction-worksheets/): 5 packs
 - [Kindergarten Games, Charts and Activities Worksheets](https://sounditoutreading.com/kindergarten-games-charts-and-activities-worksheets/): 14 packs
@@ -478,11 +508,12 @@
 - [Dab and Blend Level Bundle](https://sounditoutreading.com/dab-and-blend-level-bundle/): All 4 dab and blend level worksheet packs in one download. 52 pages, Ages 4 to 6 · Kindergarten, $3
 - [Free Learn to Read Starter Pack](https://sounditoutreading.com/free-learn-to-read-starter-pack/): Free learn to read worksheets: 3 pages from each of 24 packs. 72 pages, Ages 4 to 7 · Kindergarten and 1st grade, free
 - [Free Games, Charts and Activities Starter Pack](https://sounditoutreading.com/free-games-charts-and-activities-starter-pack/): Free games, charts and activities worksheets: 3 pages from each of 10 packs. 30 pages, Ages 4 to 6 · Kindergarten, free
-- [Dab and Blend Level 7](https://sounditoutreading.com/dab-and-blend-level-7/): Dab and blend worksheets: dot the sounds, read the word, Reading Path Level 7. 13 pages, Ages 5 to 7 · Kindergarten and 1st grade, $0
 - [Decodable Mini Books Level 3](https://sounditoutreading.com/decodable-mini-books-level-3/): Decodable mini books: three little CVC readers to print, cut and staple, Reading Path Level 3. 14 pages, Ages 4 to 6 · Kindergarten, $0
 - [Decodable Mini Books Level 4](https://sounditoutreading.com/decodable-mini-books-level-4/): Decodable mini books: three little CVC readers to print, cut and staple, Reading Path Level 4. 14 pages, Ages 5 to 7 · Kindergarten and 1st grade, $0
 - [Decodable Mini Books Level 5](https://sounditoutreading.com/decodable-mini-books-level-5/): Decodable mini books: three little CVC readers to print, cut and staple, Reading Path Level 5. 14 pages, Ages 5 to 7 · Kindergarten and 1st grade, $0
 - [Decodable Mini Books Level 6](https://sounditoutreading.com/decodable-mini-books-level-6/): Decodable mini books: three little CVC readers to print, cut and staple, Reading Path Level 6. 14 pages, Ages 5 to 7 · Kindergarten and 1st grade, $0
+- [Roll and Read Level 2](https://sounditoutreading.com/roll-and-read-level-2/): Roll and read games: decodable words with a die, Reading Path Level 2. 13 pages, Ages 4 to 6 · Kindergarten, $0
+- [Dab and Blend Level 7](https://sounditoutreading.com/dab-and-blend-level-7/): Dab and blend worksheets: dot the sounds, read the word, Reading Path Level 7. 13 pages, Ages 5 to 7 · Kindergarten and 1st grade, $0
 
 ## About
 - [About](https://sounditoutreading.com/about/): who makes these printables and why
