@@ -16,7 +16,7 @@ table{border-collapse:collapse;width:100%}td,th{text-align:left;padding:9px 8px;
 .tile.ok{background:#e9f8ee}.tile.ok i{background:#2e9e62}.tile.ok span{color:#1d7a48}.tile.bad{background:#ffe9ec}.tile.bad i{background:#d92d4a}.tile.bad span{color:#b01f38}.tile.late{background:#fff3df}.tile.late i{background:#e08a00}.tile.run{background:#e6f2ff}.tile.run i{background:#2f80d8}
 details{margin:12px 0 0}summary{cursor:pointer;font-weight:800;background:#eef2f6;border:3px solid #1f2a44;border-radius:999px;padding:6px 14px;display:inline-block}details[open] summary{margin-bottom:10px}pre{white-space:pre-wrap;background:#f7fbff;border:2px solid #c9d2d9;border-radius:12px;padding:12px;font-size:13px}
 @media(max-width:560px){body{font-size:16px}.hero b{font-size:23px}.card{padding:14px}.num b{font-size:30px}td,th{font-size:14.5px;padding:8px 5px}}</style></head>
-<body><h1>Sound It Out <i>dashboard</i></h1><div class="when">Checked Sat Oct 10, 05:28 PM Eastern. Remade every hour.</div>
+<body><h1>Sound It Out <i>dashboard</i></h1><div class="when">Checked Sat Oct 10, 05:42 PM Eastern. Remade every hour.</div>
 <div class="tabs" id="tabs"><button data-t="home" class="on">Home</button><button data-t="visitors">Visitors</button><button data-t="orders">Downloads and sales</button><button data-t="jobs">Today’s jobs</button><button data-t="packs">Packs</button><button data-t="videos">Videos and posts</button></div>
 <div class="panel on" id="p-home"><div class="hero bad"><b>Something needs a look</b><span>It is for me to fix. You do not need to do anything.</span></div>
 <div class="card"><h2>What needs a look</h2><ul><li>1 job(s) did not produce their output even after being started again.</li></ul></div>
@@ -38,10 +38,10 @@ details{margin:12px 0 0}summary{cursor:pointer;font-weight:800;background:#eef2f
 <details><summary>Last quality note</summary><pre>2026-10-09 14:30  NEEDS A PERSON
 the checker&#x27;s answer could not be read; nothing was marked as checked</pre></details></div></div>
 <script>(function(){var T={
- "made": "2026-10-10T21:07Z",
+ "made": "2026-10-10T21:41Z",
  "orders_note": null,
  "summary": [
-  "TRAFFIC (counter made 2026-10-10 21:07 UTC)",
+  "TRAFFIC (counter made 2026-10-10 21:41 UTC)",
   "Today: 0 visits, 0 page views. Last 7 days: 0 visits, 0 page views.",
   "Top sources, 7 days: none yet.",
   "Top content pieces, 7 days: none yet.",
@@ -64,6 +64,8 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
    "by_source_and_piece": [],
    "visits_with_a_source_but_no_piece": 0,
    "by_landing_page": [],
+   "by_source_and_landing_page": [],
+   "makers_printed_by_source": [],
    "funnel": [
     {
      "source": "unknown",
@@ -112,6 +114,8 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
    "by_source_and_piece": [],
    "visits_with_a_source_but_no_piece": 0,
    "by_landing_page": [],
+   "by_source_and_landing_page": [],
+   "makers_printed_by_source": [],
    "funnel": [
     {
      "source": "unknown",
@@ -192,6 +196,8 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
    "by_source_and_piece": [],
    "visits_with_a_source_but_no_piece": 0,
    "by_landing_page": [],
+   "by_source_and_landing_page": [],
+   "makers_printed_by_source": [],
    "funnel": [
     {
      "source": "unknown",
@@ -320,6 +326,8 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
    "by_source_and_piece": [],
    "visits_with_a_source_but_no_piece": 0,
    "by_landing_page": [],
+   "by_source_and_landing_page": [],
+   "makers_printed_by_source": [],
    "funnel": [
     {
      "source": "unknown",
@@ -461,6 +469,10 @@ function drawV(){if(!per.length){$('vbody').innerHTML='<div class="empty">No rep
  else h+='<div class="lbl">Kinds of link</div>'+table(['Kind','Visits','Pages'],bs.map(function(r){return'<tr><td>'+esc(nm(r.source))+'<div class="bar" style="width:'+Math.round(100*r.visits/mx)+'%"></div></td><td class="n">'+r.visits+'</td><td class="n">'+r.views+'</td></tr>'}));
  var pc=(p.by_source_and_piece||[]).filter(function(r){return sp==='all'||plat(r.source)===sp});
  h+='<div class="lbl">Which piece of content sent them</div>'+(pc.length?table(['Content piece','Visits'],pc.map(function(r){return'<tr><td><b>'+esc(r.piece)+'</b><br><span style="color:#5b6680;font-size:14px">'+esc(nm(r.source))+'</span></td><td class="n">'+r.visits+'</td></tr>'})):'<div class="empty">No named content piece yet. Only links made after 10 October carry a name.</div>');
+ var sl=(p.by_source_and_landing_page||[]).filter(function(r){return plat(r.source)===sp}),lg={};sl.forEach(function(r){lg[r.page]=(lg[r.page]||0)+r.visits});var lk=Object.keys(lg).sort(function(x,y){return lg[y]-lg[x]}).slice(0,30);
+ if(sp!=='all')h+='<div class="lbl">First page they landed on</div>'+(lk.length?table(['Page','Visits'],lk.map(function(k){return'<tr><td>'+esc(k)+'</td><td class="n">'+lg[k]+'</td></tr>'})):'<div class="empty">None yet.</div>');
+ var sm=(p.makers_printed_by_source||[]).filter(function(r){return plat(r.source)===sp}),mg={};sm.forEach(function(r){mg[r.page]=(mg[r.page]||0)+r.prints});var mk=Object.keys(mg).sort(function(x,y){return mg[y]-mg[x]}).slice(0,30);
+ if(sp!=='all'&&mk.length)h+='<div class="lbl">Makers they printed from</div>'+table(['Maker','Times'],mk.map(function(k){return'<tr><td>'+esc(k)+'</td><td class="n">'+mg[k]+'</td></tr>'}));
  if(sp==='all'&&(p.by_landing_page||[]).length)h+='<details><summary>First page they landed on</summary>'+table(['Page','Visits'],p.by_landing_page.map(function(r){return'<tr><td>'+esc(r.page||r.landing||r[0])+'</td><td class="n">'+(r.visits||r[1]||0)+'</td></tr>'}))+'</details>';
  if(sp==='all'&&(p.makers_printed||[]).length)h+='<details><summary>Makers printed most</summary>'+table(['Maker','Times'],p.makers_printed.map(function(r){return'<tr><td>'+esc(r.page||r.maker||r[0])+'</td><td class="n">'+(r.prints||r.times||0)+'</td></tr>'}))+'</details>';
  $('vbody').innerHTML=h}
