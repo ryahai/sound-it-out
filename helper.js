@@ -327,9 +327,14 @@ var SIOH_DATA = {
   var CSS = '.sioh,.sioh *{box-sizing:border-box}' +
     '.sioh{font-family:"Trebuchet MS","Segoe UI",system-ui,Arial,sans-serif;font-size:16px;line-height:1.45;color:#1f2a44;text-align:left}' +
     '.sioh button{font:inherit;color:inherit;cursor:pointer;margin:0}' +
-    '.sioh-btn{position:fixed;right:16px;bottom:16px;z-index:60;display:flex;align-items:center;gap:8px;background:#ffd84d;border:4px solid #1f2a44;border-radius:999px;padding:5px 16px 5px 5px;font-weight:800!important;font-size:16px!important;box-shadow:0 5px 0 #1f2a44}' +
-    '.sioh-btn:hover{background:#ffe27a}.sioh-btn:active{transform:translateY(3px);box-shadow:0 2px 0 #1f2a44}' +
-    '.sioh-q{flex:none;width:38px;height:38px;border-radius:50%;background:#e0527a;color:#fff;border:3px solid #1f2a44;display:flex;align-items:center;justify-content:center;font:800 22px "Comic Sans MS","Chalkboard SE","Trebuchet MS",sans-serif}' +
+    '.sioh-btn{position:fixed;right:16px;bottom:16px;z-index:60;display:flex;align-items:center;gap:0;background:none;border:0;padding:0;font-weight:800!important;font-size:17px!important}' +
+    '.sioh-lbl{order:1;position:relative;margin-right:12px;background:#fff;border:4px solid #1f2a44;border-radius:22px;padding:9px 16px;box-shadow:0 5px 0 #e0527a;font-family:"Comic Sans MS","Chalkboard SE","Trebuchet MS",sans-serif;white-space:nowrap;transform-origin:100% 60%}' +
+    '.sioh-lbl:after{content:"";position:absolute;right:-13px;top:50%;margin-top:-9px;border:9px solid transparent;border-left:11px solid #1f2a44;border-right:0}' +
+    '.sioh-lbl:before{content:"";position:absolute;right:-7px;top:50%;margin-top:-6px;border:6px solid transparent;border-left:8px solid #fff;border-right:0;z-index:1}' +
+    '.sioh-q{order:2}.sioh-btn:hover .sioh-lbl{background:#fff3c9}.sioh-btn:hover .sioh-q{transform:scale(1.08) rotate(-4deg)}.sioh-btn:active .sioh-q{transform:scale(.96)}' +
+    '.sioh-q{position:relative;flex:none;width:82px;height:82px;border-radius:50%;padding:5px;background:conic-gradient(#e0527a,#ffd84d,#2f9e63,#2f80d0,#8a5fd1,#e0527a);border:4px solid #1f2a44;box-shadow:0 6px 0 #1f2a44;transition:transform .15s}' +
+    '.sioh-q img{display:block;width:100%;height:100%;border-radius:50%;background:#fff;object-fit:contain}' +
+    '.sioh-q b{position:absolute;right:-6px;top:-6px;width:30px;height:30px;border-radius:50%;background:#e0527a;color:#fff;border:3px solid #1f2a44;font:800 18px/24px "Comic Sans MS","Trebuchet MS",sans-serif;text-align:center}' +
     '.sioh-btn[aria-expanded=true]{display:none}' +
     '.sioh :focus-visible{outline:4px solid #2b6fd6;outline-offset:2px}' +
     '.sioh-panel{position:fixed;right:16px;bottom:16px;z-index:70;width:390px;max-width:calc(100vw - 32px);max-height:calc(100vh - 32px);max-height:min(660px,calc(100dvh - 32px));display:flex;flex-direction:column;background:#fffaf0;border:5px solid #1f2a44;border-radius:26px;box-shadow:0 8px 0 #e0527a,0 18px 40px rgba(31,42,68,.3);overflow:hidden}' +
@@ -365,8 +370,12 @@ var SIOH_DATA = {
     '.sioh-link{background:none;border:0;padding:4px 0;font-weight:800!important;text-decoration:underline;font-size:15px!important}' +
     '.sioh-foot{flex:none;display:flex;justify-content:space-between;gap:10px;padding:6px 14px 8px;border-top:3px solid #1f2a44;background:#fff}' +
     '.sioh-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}' +
-    '@media(max-width:600px){.sioh-btn{right:12px;bottom:12px;padding:5px}.sioh-btn .sioh-lbl{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}' +
+    '@media(max-width:600px){.sioh-btn{right:10px;bottom:10px;font-size:14px!important}.sioh-q{width:64px;height:64px;padding:4px}.sioh-q b{width:26px;height:26px;font-size:15px;line-height:20px}.sioh-lbl{padding:6px 11px;margin-right:10px;border-width:3px;border-radius:18px}.sioh-btn.sioh-quiet .sioh-lbl{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);margin:0;padding:0;border:0}' +
     '.sioh-panel{left:0;right:0;bottom:0;width:auto;max-width:none;max-height:78vh;max-height:78dvh;border-radius:24px 24px 0 0;border-width:5px 0 0;box-shadow:0 -10px 30px rgba(31,42,68,.3)}}' +
+    '@media(prefers-reduced-motion:no-preference){.sioh-q{animation:sioh-bob 2.6s ease-in-out infinite}.sioh-lbl{animation:sioh-pop .5s cubic-bezier(.3,1.6,.5,1) 1.2s both,sioh-wig 7s ease-in-out 4s infinite}.sioh-q b{animation:sioh-ping 2.6s ease-in-out infinite}' +
+    '@keyframes sioh-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}@keyframes sioh-pop{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}' +
+    '@keyframes sioh-wig{0%,88%,100%{transform:rotate(0)}91%{transform:rotate(-4deg)}94%{transform:rotate(4deg)}97%{transform:rotate(-2deg)}}@keyframes sioh-ping{0%,100%{transform:scale(1)}50%{transform:scale(1.18)}}' +
+    '.sioh-btn:hover .sioh-q{animation:none}}' +
     '@media(prefers-reduced-motion:no-preference){.sioh-panel{animation:sioh-up .18s ease-out}@keyframes sioh-up{from{transform:translateY(16px);opacity:0}to{transform:none;opacity:1}}}' +
     '@media print{.sioh{display:none!important}}';
 
@@ -483,9 +492,10 @@ var SIOH_DATA = {
     if (document.getElementById('sioh')) return;
     var style = document.createElement('style'); style.appendChild(document.createTextNode(CSS)); document.head.appendChild(style);
     root = document.createElement('div'); root.className = 'sioh'; root.id = 'sioh';
-    root.innerHTML = '<button type="button" class="sioh-btn" aria-haspopup="dialog" aria-expanded="false" aria-controls="sioh-panel"><span class="sioh-q" aria-hidden="true">?</span><span class="sioh-lbl">' + esc(T.button) + '</span></button>' +
+    root.innerHTML = '<button type="button" class="sioh-btn" aria-haspopup="dialog" aria-expanded="false" aria-controls="sioh-panel"><span class="sioh-q" aria-hidden="true"><img src="' + BASE + 'img/pals/owl.webp" alt="" width="72" height="72"><b>?</b></span><span class="sioh-lbl">' + esc(T.button) + '</span></button>' +
       '<div class="sioh-panel" id="sioh-panel" role="dialog" aria-modal="true" aria-labelledby="sioh-title" hidden>' +
       '<div class="sioh-head"><h2 id="sioh-title">' + esc(T.title) + '</h2><button type="button" class="sioh-x" data-act="close" aria-label="' + esc(T.close) + '"><span aria-hidden="true">&times;</span></button></div>' +
+    setTimeout(function () { var bq = root.querySelector('.sioh-btn'); if (bq) bq.className += ' sioh-quiet'; }, 9000);
       '<div class="sioh-body" id="sioh-body"></div>' +
       '<div class="sioh-foot"><button type="button" class="sioh-link" data-act="back" id="sioh-back">' + esc(T.back) + '</button><button type="button" class="sioh-link" data-act="hide" style="font-weight:400!important;color:#55617a">' + esc(T.hide) + '</button></div></div>';
     document.body.appendChild(root);
