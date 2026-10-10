@@ -495,9 +495,9 @@ var SIOH_DATA = {
     root.innerHTML = '<button type="button" class="sioh-btn" aria-haspopup="dialog" aria-expanded="false" aria-controls="sioh-panel"><span class="sioh-q" aria-hidden="true"><img src="' + BASE + 'img/pals/owl.webp" alt="" width="72" height="72"><b>?</b></span><span class="sioh-lbl">' + esc(T.button) + '</span></button>' +
       '<div class="sioh-panel" id="sioh-panel" role="dialog" aria-modal="true" aria-labelledby="sioh-title" hidden>' +
       '<div class="sioh-head"><h2 id="sioh-title">' + esc(T.title) + '</h2><button type="button" class="sioh-x" data-act="close" aria-label="' + esc(T.close) + '"><span aria-hidden="true">&times;</span></button></div>' +
-    setTimeout(function () { var bq = root.querySelector('.sioh-btn'); if (bq) bq.className += ' sioh-quiet'; }, 9000);
       '<div class="sioh-body" id="sioh-body"></div>' +
       '<div class="sioh-foot"><button type="button" class="sioh-link" data-act="back" id="sioh-back">' + esc(T.back) + '</button><button type="button" class="sioh-link" data-act="hide" style="font-weight:400!important;color:#55617a">' + esc(T.hide) + '</button></div></div>';
+    setTimeout(function () { var bq = root.querySelector('.sioh-btn'); if (bq) bq.className += ' sioh-quiet'; }, 9000);
     document.body.appendChild(root);
     btn = root.firstChild; panel = document.getElementById('sioh-panel'); body = document.getElementById('sioh-body'); backBtn = document.getElementById('sioh-back');
     btn.onclick = open;
