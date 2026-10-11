@@ -16,17 +16,17 @@ table{border-collapse:collapse;width:100%}td,th{text-align:left;padding:9px 8px;
 .tile.ok{background:#e9f8ee}.tile.ok i{background:#2e9e62}.tile.ok span{color:#1d7a48}.tile.bad{background:#ffe9ec}.tile.bad i{background:#d92d4a}.tile.bad span{color:#b01f38}.tile.late{background:#fff3df}.tile.late i{background:#e08a00}.tile.run{background:#e6f2ff}.tile.run i{background:#2f80d8}
 details{margin:12px 0 0}summary{cursor:pointer;font-weight:800;background:#eef2f6;border:3px solid #1f2a44;border-radius:999px;padding:6px 14px;display:inline-block}details[open] summary{margin-bottom:10px}pre{white-space:pre-wrap;background:#f7fbff;border:2px solid #c9d2d9;border-radius:12px;padding:12px;font-size:13px}
 @media(max-width:560px){body{font-size:16px}.hero b{font-size:23px}.card{padding:14px}.num b{font-size:30px}td,th{font-size:14.5px;padding:8px 5px}}</style></head>
-<body><h1>Sound It Out <i>dashboard</i></h1><div class="when">Checked Sat Oct 10, 11:50 PM Eastern. Remade every hour.</div>
+<body><h1>Sound It Out <i>dashboard</i></h1><div class="when">Checked Sun Oct 11, 12:50 AM Eastern. Remade every hour.</div>
 <div class="tabs" id="tabs"><button data-t="home" class="on">Home</button><button data-t="visitors">Visitors</button><button data-t="orders">Downloads and sales</button><button data-t="jobs">Today’s jobs</button><button data-t="packs">Packs</button><button data-t="videos">Videos and posts</button></div>
 <div class="panel on" id="p-home"><div class="hero bad"><b>Something did not finish</b><span>Claude is dealing with it. Anything for you is in the yellow box.</span></div>
-<div class="card you"><h2>For you to do</h2><p>Nothing right now.</p></div>
+<div class="card you"><h2>For you to do</h2><ul><li>A new long video is on YouTube as private. Watch it, and make it public when you are happy with it.</li></ul></div>
 <div class="card"><h2>Claude is handling</h2><ul><li><b>New packs put on sale</b> did not finish today. I am looking at it.</li><li>17 new kind(s) of pack are waiting for Claude to check before they can go on sale. Nothing wrong is on sale.</li></ul></div>
-<div class="card"><h2>Still to come today</h2><ul><li><b>Daily video and shorts are made</b>: not due yet</li><li><b>YouTube uploads</b>: late, started again</li></ul></div>
+<div class="card"><h2>Still to come today</h2><ul><li><b>YouTube uploads</b>: not due yet</li></ul></div>
 <div class="nums" id="homenums"></div>
 <div class="go"><button data-go="visitors">See visitors</button><button data-go="orders">See downloads and sales</button><button data-go="jobs">See today’s jobs</button></div></div>
 <div class="panel" id="p-visitors"><div class="card"><h2>Visitors</h2><div class="lbl">When</div><div class="pills" id="when"></div><div class="lbl">From where</div><div class="pills src" id="src"></div><div id="vbody"></div></div></div>
 <div class="panel" id="p-orders"><div class="card"><h2>Downloads and sales</h2><div class="lbl">When</div><div class="pills" id="owhen"></div><div id="obody"></div></div></div>
-<div class="panel" id="p-jobs"><div class="card"><h2>Today’s jobs <small>7 of 10 done</small></h2><div class="tiles"><div class="tile wait"><i></i><b>Daily video and shorts are made</b><span>Not due yet</span></div><div class="tile late"><i></i><b>YouTube uploads</b><span>Late, started again</span></div><div class="tile ok"><i></i><b>New guide for the website</b><span>Done</span></div><div class="tile ok"><i></i><b>One old guide rewritten</b><span>Done</span></div><div class="tile ok"><i></i><b>New pack designs</b><span>Done</span></div><div class="tile bad"><i></i><b>New packs put on sale</b><span>Did not finish</span><em>I will look at this one.</em></div><div class="tile ok"><i></i><b>Daily quality check</b><span>Done</span></div><div class="tile ok"><i></i><b>Morning reel (Facebook and Instagram)</b><span>Done</span></div><div class="tile ok"><i></i><b>Picture post (Facebook and Instagram)</b><span>Done</span></div><div class="tile ok"><i></i><b>Evening reel (Facebook and Instagram)</b><span>Done</span></div></div>
+<div class="panel" id="p-jobs"><div class="card"><h2>Today’s jobs <small>8 of 10 done</small></h2><div class="tiles"><div class="tile ok"><i></i><b>Daily video and shorts are made</b><span>Done</span></div><div class="tile wait"><i></i><b>YouTube uploads</b><span>Not due yet</span></div><div class="tile ok"><i></i><b>New guide for the website</b><span>Done</span></div><div class="tile ok"><i></i><b>One old guide rewritten</b><span>Done</span></div><div class="tile ok"><i></i><b>New pack designs</b><span>Done</span></div><div class="tile bad"><i></i><b>New packs put on sale</b><span>Did not finish</span><em>I will look at this one.</em></div><div class="tile ok"><i></i><b>Daily quality check</b><span>Done</span></div><div class="tile ok"><i></i><b>Morning reel (Facebook and Instagram)</b><span>Done</span></div><div class="tile ok"><i></i><b>Picture post (Facebook and Instagram)</b><span>Done</span></div><div class="tile ok"><i></i><b>Evening reel (Facebook and Instagram)</b><span>Done</span></div></div>
 <p class="hint">Green = done. Blue = running now. Gray = not due yet. Orange = late, started again. Red = did not finish.</p></div></div><div class="panel" id="p-packs"><div class="card"><h2>Packs</h2><div class="nums"><div class="num"><b>0</b><span>put on sale today</span></div><div class="num"><b>143</b><span>waiting to go on sale</span></div><div class="num"><b>0</b><span>could not be put on sale</span></div><div class="num"><b>0</b><span>on hold</span></div></div>
 <p><b>Put on sale today:</b> none yet</p>
 <details><summary>More about packs</summary><p><b>Waiting:</b> add-and-subtract-to-10, subtraction-to-20, number-bonds-to-5, number-bonds-to-10, number-bonds-of-10, number-bonds-to-20, number-bonds-missing-whole, ten-frames-1-to-5, ten-frames-1-to-10, ten-frames-11-to-20, ten-frames-1-to-20, ten-frames-draw-the-dots, count-and-color-1-to-5, count-and-color-1-to-10, count-and-color-6-to-10, count-and-color-11-to-20, count-and-color-mixed-1-to-20, number-recognition-1-to-5, number-recognition-1-to-10, number-recognition-11-to-20, number-recognition-21-to-50, number-recognition-51-to-100, numbers-1-to-30, numbers-1-to-50, numbers-51-to-100, numbers-1-to-100, count-back-from-100, color-by-code-addition-to-10, color-by-code-subtraction-to-10, color-by-code-addition-to-20, roll-and-color-numbers-1-to-6, roll-and-color-addition-to-12, roll-and-read-level-3, roll-and-read-level-6, roll-and-read-level-7, comparing-numbers-pictures-1-to-5, comparing-numbers-pictures-1-to-10, comparing-numbers-numerals-1-to-10, comparing-numbers-numerals-1-to-20, comparing-numbers-numerals-1-to-100 ...</p>
@@ -34,64 +34,412 @@ details{margin:12px 0 0}summary{cursor:pointer;font-weight:800;background:#eef2f
 <p><b>On hold after a quality problem:</b> none</p>
 <p><b>Kinds of pack waiting for a person to check them first:</b> beginning-sounds, color-words, comparing-numbers, count-and-color, count-and-match, cvc-read-and-match, cvc-sentence-reading, cvc-word-building, days-and-months, doubles, number-words, numbers-to-100, patterns, rhyming-words, shapes, skip-counting, word-family-houses</p></details></div></div><div class="panel" id="p-videos"><div class="card"><h2>Videos and posts</h2>
 <p><b>Last video made:</b> how to teach sight words (2026-10-11 04:56) , made</p>
-<p><b>On YouTube:</b> long video not uploaded yet; shorts uploaded: 0 of 2</p>
+<p><b>On YouTube:</b> long video uploaded, private, waiting for you; shorts uploaded: 1 of 2</p>
 <p><b>Facebook and Instagram, last day:</b> 8 posted, 0 did not post</p>
 <p><b>Last guide run:</b> 2026-10-10 10:52 , added: when-do-kids-count-to-100</p>
 <details><summary>Last quality note</summary><pre>2026-10-09 14:30  NEEDS A PERSON
 the checker&#x27;s answer could not be read; nothing was marked as checked</pre></details></div></div>
 <script>(function(){var T={
- "made": "2026-10-11T03:40Z",
+ "made": "2026-10-11T04:40Z",
  "orders_note": null,
  "summary": [
-  "TRAFFIC (counter made 2026-10-11 03:40 UTC)",
-  "Today: 2 visits, 32 page views. Last 7 days: 6 visits, 46 page views.",
-  "Top sources, 7 days: direct 4, bing 1, site 1.",
-  "Top content pieces, 7 days: none yet.",
-  "Top landing pages, 7 days: / 6.",
-  "Of 6 visits: 1 printed from a maker or opened a check, 1 looked at a plan or bundle, 0 clicked through to checkout.",
+  "TRAFFIC (counter made 2026-10-11 04:40 UTC)",
+  "Today: 118 visits, 192 page views. Last 7 days: 122 visits, 206 page views.",
+  "Top sources, 7 days: yt 86, facebook 27, direct 4, site 2, yt-short 2.",
+  "Top content pieces, 7 days: easy-way-to-teach-any-child-to-read (yt) 8, how-to-pronounce-phonics-sounds (yt) 8, how-to-teach-phonics-for-kindergarten (yt) 8.",
+  "Top landing pages, 7 days: /why-cant-my-child-blend-sounds/ 48, /free-blending-game/ 14, /free-printable-worksheets/ 14.",
+  "Of 122 visits: 86 printed from a maker or opened a check, 46 looked at a plan or bundle, 0 clicked through to checkout.",
   "Most printed maker, 7 days: none yet.",
-  "Orders, 7 days: 19 free, 0 paid ($0.00).",
-  "Orders with a known source: 0 of 19.",
-  "Unknown source: 5 of 6 visits in 7 days. Last hit counted: 2026-10-11 03:10 UTC."
+  "Orders, 7 days: 22 free, 0 paid ($0.00).",
+  "Orders with a known source: 0 of 22.",
+  "Unknown source: 6 of 122 visits in 7 days. Last hit counted: 2026-10-11 04:37 UTC."
  ],
  "periods": [
   {
    "name": "TODAY",
    "from": "2026-10-11",
    "to": "2026-10-11",
-   "visits": 2,
-   "views": 32,
+   "visits": 118,
+   "views": 192,
    "screens": {
-    "desktop": 2
+    "desktop": 108,
+    "phone": 10
    },
    "by_source": [
+    {
+     "source": "yt",
+     "visits": 86,
+     "views": 129
+    },
+    {
+     "source": "facebook",
+     "visits": 27,
+     "views": 27
+    },
     {
      "source": "direct",
      "visits": 2,
      "views": 32
+    },
+    {
+     "source": "yt-short",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "site",
+     "visits": 1,
+     "views": 1
     }
    ],
-   "by_source_and_piece": [],
+   "by_source_and_piece": [
+    {
+     "source": "yt",
+     "piece": "easy-way-to-teach-any-child-to-read",
+     "visits": 8,
+     "views": 12
+    },
+    {
+     "source": "yt",
+     "piece": "how-to-pronounce-phonics-sounds",
+     "visits": 8,
+     "views": 12
+    },
+    {
+     "source": "yt",
+     "piece": "how-to-teach-phonics-for-kindergarten",
+     "visits": 8,
+     "views": 12
+    },
+    {
+     "source": "yt",
+     "piece": "how-to-teach-phonics-step-by-step",
+     "visits": 8,
+     "views": 12
+    },
+    {
+     "source": "yt",
+     "piece": "how-to-teach-phonics-to-4-year-old",
+     "visits": 8,
+     "views": 12
+    },
+    {
+     "source": "yt",
+     "piece": "teach-my-child-to-read-before-kindergarten",
+     "visits": 8,
+     "views": 12
+    },
+    {
+     "source": "yt",
+     "piece": "why-isnt-phonics-working-for-homeschool",
+     "visits": 8,
+     "views": 12
+    },
+    {
+     "source": "facebook",
+     "piece": "teach-my-child-to-read-before-kindergarten-reel",
+     "visits": 4,
+     "views": 4
+    },
+    {
+     "source": "facebook",
+     "piece": "easy-way-to-teach-any-child-to-read-reel",
+     "visits": 3,
+     "views": 3
+    },
+    {
+     "source": "facebook",
+     "piece": "how-to-pronounce-phonics-sounds-reel",
+     "visits": 3,
+     "views": 3
+    },
+    {
+     "source": "facebook",
+     "piece": "how-to-teach-phonics-step-by-step-reel",
+     "visits": 3,
+     "views": 3
+    },
+    {
+     "source": "facebook",
+     "piece": "how-to-teach-phonics-to-4-year-old-reel",
+     "visits": 3,
+     "views": 3
+    },
+    {
+     "source": "facebook",
+     "piece": "why-isnt-phonics-working-for-homeschool-reel",
+     "visits": 3,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "easy-way-to-teach-any-child-to-read-short-game",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "easy-way-to-teach-any-child-to-read-short-mistake",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "how-to-pronounce-phonics-sounds-short-game",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "how-to-pronounce-phonics-sounds-short-mistake",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "how-to-teach-phonics-for-kindergarten-short-game",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "how-to-teach-phonics-for-kindergarten-short-mistake",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "how-to-teach-phonics-step-by-step-short-game",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "how-to-teach-phonics-step-by-step-short-mistake",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "how-to-teach-phonics-to-4-year-old-short-game",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "how-to-teach-phonics-to-4-year-old-short-mistake",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "how-to-teach-sight-words-short-game",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "teach-my-child-to-read-before-kindergarten-short-game",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "teach-my-child-to-read-before-kindergarten-short-mistake",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "tutorial-build-your-own",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "why-isnt-phonics-working-for-homeschool-short-game",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt-short",
+     "piece": "how-to-teach-sight-words-short-game",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "facebook",
+     "piece": "easy-way-to-teach-any-child-to-read-post",
+     "visits": 2,
+     "views": 2
+    }
+   ],
    "visits_with_a_source_but_no_piece": 0,
    "by_landing_page": [
+    {
+     "page": "/why-cant-my-child-blend-sounds/",
+     "visits": 48,
+     "views": 63
+    },
+    {
+     "page": "/free-blending-game/",
+     "visits": 14,
+     "views": 21
+    },
+    {
+     "page": "/free-printable-worksheets/",
+     "visits": 14,
+     "views": 21
+    },
+    {
+     "page": "/what-next/",
+     "visits": 14,
+     "views": 21
+    },
+    {
+     "page": "/why-cant-my-child-remember-letter-sounds/",
+     "visits": 11,
+     "views": 14
+    },
+    {
+     "page": "/my-child-is-behind-in-reading/",
+     "visits": 8,
+     "views": 10
+    },
+    {
+     "page": "/why-cant-my-child-remember-sight-words/",
+     "visits": 4,
+     "views": 6
+    },
     {
      "page": "/",
      "visits": 2,
      "views": 32
+    },
+    {
+     "page": "/worksheet-generator/",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "page": "/eight-sounds-that-stay-10-day-plan/",
+     "visits": 1,
+     "views": 1
     }
    ],
    "by_source_and_landing_page": [
     {
+     "source": "yt",
+     "page": "/why-cant-my-child-blend-sounds/",
+     "visits": 30
+    },
+    {
+     "source": "facebook",
+     "page": "/why-cant-my-child-blend-sounds/",
+     "visits": 18
+    },
+    {
+     "source": "yt",
+     "page": "/free-blending-game/",
+     "visits": 14
+    },
+    {
+     "source": "yt",
+     "page": "/free-printable-worksheets/",
+     "visits": 14
+    },
+    {
+     "source": "yt",
+     "page": "/what-next/",
+     "visits": 14
+    },
+    {
+     "source": "yt",
+     "page": "/why-cant-my-child-remember-letter-sounds/",
+     "visits": 6
+    },
+    {
+     "source": "facebook",
+     "page": "/why-cant-my-child-remember-letter-sounds/",
+     "visits": 5
+    },
+    {
+     "source": "yt",
+     "page": "/my-child-is-behind-in-reading/",
+     "visits": 4
+    },
+    {
+     "source": "facebook",
+     "page": "/my-child-is-behind-in-reading/",
+     "visits": 4
+    },
+    {
      "source": "direct",
      "page": "/",
      "visits": 2
+    },
+    {
+     "source": "yt",
+     "page": "/why-cant-my-child-remember-sight-words/",
+     "visits": 2
+    },
+    {
+     "source": "yt",
+     "page": "/worksheet-generator/",
+     "visits": 2
+    },
+    {
+     "source": "yt-short",
+     "page": "/why-cant-my-child-remember-sight-words/",
+     "visits": 2
+    },
+    {
+     "source": "site",
+     "page": "/eight-sounds-that-stay-10-day-plan/",
+     "visits": 1
     }
    ],
    "makers_printed_by_source": [],
    "funnel": [
     {
+     "source": "yt",
+     "visits": 86,
+     "engaged": 56,
+     "offer": 43,
+     "checkout": 0,
+     "free_orders": 0,
+     "paid_orders": 0
+    },
+    {
+     "source": "facebook",
+     "visits": 27,
+     "engaged": 27,
+     "offer": 0,
+     "checkout": 0,
+     "free_orders": 0,
+     "paid_orders": 0
+    },
+    {
      "source": "direct",
      "visits": 2,
+     "engaged": 0,
+     "offer": 1,
+     "checkout": 0,
+     "free_orders": 0,
+     "paid_orders": 0
+    },
+    {
+     "source": "yt-short",
+     "visits": 2,
+     "engaged": 2,
+     "offer": 1,
+     "checkout": 0,
+     "free_orders": 0,
+     "paid_orders": 0
+    },
+    {
+     "source": "site",
+     "visits": 1,
      "engaged": 0,
      "offer": 1,
      "checkout": 0,
@@ -104,12 +452,36 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "engaged": 0,
      "offer": 0,
      "checkout": 0,
-     "free_orders": 7,
+     "free_orders": 10,
      "paid_orders": 0
     }
    ],
    "makers_printed": [],
    "orders": [
+    {
+     "at": "2026-10-11T03:52Z",
+     "product": "Letter Sound Worksheets Level 1",
+     "price": "free",
+     "source": "not recorded",
+     "piece": "",
+     "landing": ""
+    },
+    {
+     "at": "2026-10-11T03:50Z",
+     "product": "Letter Sound Worksheets Level 1",
+     "price": "free",
+     "source": "not recorded",
+     "piece": "",
+     "landing": ""
+    },
+    {
+     "at": "2026-10-11T03:49Z",
+     "product": "Letter Sound Worksheets Level 1",
+     "price": "free",
+     "source": "not recorded",
+     "piece": "",
+     "landing": ""
+    },
     {
      "at": "2026-10-11T03:14Z",
      "product": "Roll and Read CVC Word Games Level 2",
@@ -168,10 +540,10 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     }
    ],
    "unknown": {
-    "visits": 2,
-    "of_visits": 2,
-    "orders_without_a_source": 7,
-    "of_orders": 7
+    "visits": 3,
+    "of_visits": 118,
+    "orders_without_a_source": 10,
+    "of_orders": 10
    }
   },
   {
@@ -295,44 +667,346 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
    "name": "LAST 7 DAYS",
    "from": "2026-10-05",
    "to": "2026-10-11",
-   "visits": 6,
-   "views": 46,
+   "visits": 122,
+   "views": 206,
    "screens": {
-    "desktop": 6
+    "desktop": 112,
+    "phone": 10
    },
    "by_source": [
+    {
+     "source": "yt",
+     "visits": 86,
+     "views": 129
+    },
+    {
+     "source": "facebook",
+     "visits": 27,
+     "views": 27
+    },
     {
      "source": "direct",
      "visits": 4,
      "views": 34
     },
     {
-     "source": "bing",
-     "visits": 1,
-     "views": 6
+     "source": "site",
+     "visits": 2,
+     "views": 7
     },
     {
-     "source": "site",
+     "source": "yt-short",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "bing",
      "visits": 1,
      "views": 6
     }
    ],
-   "by_source_and_piece": [],
+   "by_source_and_piece": [
+    {
+     "source": "yt",
+     "piece": "easy-way-to-teach-any-child-to-read",
+     "visits": 8,
+     "views": 12
+    },
+    {
+     "source": "yt",
+     "piece": "how-to-pronounce-phonics-sounds",
+     "visits": 8,
+     "views": 12
+    },
+    {
+     "source": "yt",
+     "piece": "how-to-teach-phonics-for-kindergarten",
+     "visits": 8,
+     "views": 12
+    },
+    {
+     "source": "yt",
+     "piece": "how-to-teach-phonics-step-by-step",
+     "visits": 8,
+     "views": 12
+    },
+    {
+     "source": "yt",
+     "piece": "how-to-teach-phonics-to-4-year-old",
+     "visits": 8,
+     "views": 12
+    },
+    {
+     "source": "yt",
+     "piece": "teach-my-child-to-read-before-kindergarten",
+     "visits": 8,
+     "views": 12
+    },
+    {
+     "source": "yt",
+     "piece": "why-isnt-phonics-working-for-homeschool",
+     "visits": 8,
+     "views": 12
+    },
+    {
+     "source": "facebook",
+     "piece": "teach-my-child-to-read-before-kindergarten-reel",
+     "visits": 4,
+     "views": 4
+    },
+    {
+     "source": "facebook",
+     "piece": "easy-way-to-teach-any-child-to-read-reel",
+     "visits": 3,
+     "views": 3
+    },
+    {
+     "source": "facebook",
+     "piece": "how-to-pronounce-phonics-sounds-reel",
+     "visits": 3,
+     "views": 3
+    },
+    {
+     "source": "facebook",
+     "piece": "how-to-teach-phonics-step-by-step-reel",
+     "visits": 3,
+     "views": 3
+    },
+    {
+     "source": "facebook",
+     "piece": "how-to-teach-phonics-to-4-year-old-reel",
+     "visits": 3,
+     "views": 3
+    },
+    {
+     "source": "facebook",
+     "piece": "why-isnt-phonics-working-for-homeschool-reel",
+     "visits": 3,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "easy-way-to-teach-any-child-to-read-short-game",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "easy-way-to-teach-any-child-to-read-short-mistake",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "how-to-pronounce-phonics-sounds-short-game",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "how-to-pronounce-phonics-sounds-short-mistake",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "how-to-teach-phonics-for-kindergarten-short-game",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "how-to-teach-phonics-for-kindergarten-short-mistake",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "how-to-teach-phonics-step-by-step-short-game",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "how-to-teach-phonics-step-by-step-short-mistake",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "how-to-teach-phonics-to-4-year-old-short-game",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "how-to-teach-phonics-to-4-year-old-short-mistake",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "how-to-teach-sight-words-short-game",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "teach-my-child-to-read-before-kindergarten-short-game",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "teach-my-child-to-read-before-kindergarten-short-mistake",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "tutorial-build-your-own",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "why-isnt-phonics-working-for-homeschool-short-game",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt-short",
+     "piece": "how-to-teach-sight-words-short-game",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "facebook",
+     "piece": "easy-way-to-teach-any-child-to-read-post",
+     "visits": 2,
+     "views": 2
+    }
+   ],
    "visits_with_a_source_but_no_piece": 1,
    "by_landing_page": [
+    {
+     "page": "/why-cant-my-child-blend-sounds/",
+     "visits": 48,
+     "views": 63
+    },
+    {
+     "page": "/free-blending-game/",
+     "visits": 14,
+     "views": 21
+    },
+    {
+     "page": "/free-printable-worksheets/",
+     "visits": 14,
+     "views": 21
+    },
+    {
+     "page": "/what-next/",
+     "visits": 14,
+     "views": 21
+    },
+    {
+     "page": "/why-cant-my-child-remember-letter-sounds/",
+     "visits": 11,
+     "views": 14
+    },
+    {
+     "page": "/my-child-is-behind-in-reading/",
+     "visits": 8,
+     "views": 10
+    },
     {
      "page": "/",
      "visits": 6,
      "views": 46
+    },
+    {
+     "page": "/why-cant-my-child-remember-sight-words/",
+     "visits": 4,
+     "views": 6
+    },
+    {
+     "page": "/worksheet-generator/",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "page": "/eight-sounds-that-stay-10-day-plan/",
+     "visits": 1,
+     "views": 1
     }
    ],
    "by_source_and_landing_page": [
+    {
+     "source": "yt",
+     "page": "/why-cant-my-child-blend-sounds/",
+     "visits": 30
+    },
+    {
+     "source": "facebook",
+     "page": "/why-cant-my-child-blend-sounds/",
+     "visits": 18
+    },
+    {
+     "source": "yt",
+     "page": "/free-blending-game/",
+     "visits": 14
+    },
+    {
+     "source": "yt",
+     "page": "/free-printable-worksheets/",
+     "visits": 14
+    },
+    {
+     "source": "yt",
+     "page": "/what-next/",
+     "visits": 14
+    },
+    {
+     "source": "yt",
+     "page": "/why-cant-my-child-remember-letter-sounds/",
+     "visits": 6
+    },
+    {
+     "source": "facebook",
+     "page": "/why-cant-my-child-remember-letter-sounds/",
+     "visits": 5
+    },
     {
      "source": "direct",
      "page": "/",
      "visits": 4
     },
     {
+     "source": "yt",
+     "page": "/my-child-is-behind-in-reading/",
+     "visits": 4
+    },
+    {
+     "source": "facebook",
+     "page": "/my-child-is-behind-in-reading/",
+     "visits": 4
+    },
+    {
+     "source": "yt",
+     "page": "/why-cant-my-child-remember-sight-words/",
+     "visits": 2
+    },
+    {
+     "source": "yt",
+     "page": "/worksheet-generator/",
+     "visits": 2
+    },
+    {
+     "source": "yt-short",
+     "page": "/why-cant-my-child-remember-sight-words/",
+     "visits": 2
+    },
+    {
      "source": "bing",
      "page": "/",
      "visits": 1
@@ -341,14 +1015,55 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "source": "site",
      "page": "/",
      "visits": 1
+    },
+    {
+     "source": "site",
+     "page": "/eight-sounds-that-stay-10-day-plan/",
+     "visits": 1
     }
    ],
    "makers_printed_by_source": [],
    "funnel": [
     {
+     "source": "yt",
+     "visits": 86,
+     "engaged": 56,
+     "offer": 43,
+     "checkout": 0,
+     "free_orders": 0,
+     "paid_orders": 0
+    },
+    {
+     "source": "facebook",
+     "visits": 27,
+     "engaged": 27,
+     "offer": 0,
+     "checkout": 0,
+     "free_orders": 0,
+     "paid_orders": 0
+    },
+    {
      "source": "direct",
      "visits": 4,
      "engaged": 0,
+     "offer": 1,
+     "checkout": 0,
+     "free_orders": 0,
+     "paid_orders": 0
+    },
+    {
+     "source": "site",
+     "visits": 2,
+     "engaged": 1,
+     "offer": 1,
+     "checkout": 0,
+     "free_orders": 0,
+     "paid_orders": 0
+    },
+    {
+     "source": "yt-short",
+     "visits": 2,
+     "engaged": 2,
      "offer": 1,
      "checkout": 0,
      "free_orders": 0,
@@ -364,26 +1079,41 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "paid_orders": 0
     },
     {
-     "source": "site",
-     "visits": 1,
-     "engaged": 1,
-     "offer": 0,
-     "checkout": 0,
-     "free_orders": 0,
-     "paid_orders": 0
-    },
-    {
      "source": "unknown",
      "visits": 0,
      "engaged": 0,
      "offer": 0,
      "checkout": 0,
-     "free_orders": 19,
+     "free_orders": 22,
      "paid_orders": 0
     }
    ],
    "makers_printed": [],
    "orders": [
+    {
+     "at": "2026-10-11T03:52Z",
+     "product": "Letter Sound Worksheets Level 1",
+     "price": "free",
+     "source": "not recorded",
+     "piece": "",
+     "landing": ""
+    },
+    {
+     "at": "2026-10-11T03:50Z",
+     "product": "Letter Sound Worksheets Level 1",
+     "price": "free",
+     "source": "not recorded",
+     "piece": "",
+     "landing": ""
+    },
+    {
+     "at": "2026-10-11T03:49Z",
+     "product": "Letter Sound Worksheets Level 1",
+     "price": "free",
+     "source": "not recorded",
+     "piece": "",
+     "landing": ""
+    },
     {
      "at": "2026-10-11T03:14Z",
      "product": "Roll and Read CVC Word Games Level 2",
@@ -538,54 +1268,356 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     }
    ],
    "unknown": {
-    "visits": 5,
-    "of_visits": 6,
-    "orders_without_a_source": 19,
-    "of_orders": 19
+    "visits": 6,
+    "of_visits": 122,
+    "orders_without_a_source": 22,
+    "of_orders": 22
    }
   },
   {
    "name": "LAST 30 DAYS",
    "from": "2026-09-12",
    "to": "2026-10-11",
-   "visits": 6,
-   "views": 46,
+   "visits": 122,
+   "views": 206,
    "screens": {
-    "desktop": 6
+    "desktop": 112,
+    "phone": 10
    },
    "by_source": [
+    {
+     "source": "yt",
+     "visits": 86,
+     "views": 129
+    },
+    {
+     "source": "facebook",
+     "visits": 27,
+     "views": 27
+    },
     {
      "source": "direct",
      "visits": 4,
      "views": 34
     },
     {
-     "source": "bing",
-     "visits": 1,
-     "views": 6
+     "source": "site",
+     "visits": 2,
+     "views": 7
     },
     {
-     "source": "site",
+     "source": "yt-short",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "bing",
      "visits": 1,
      "views": 6
     }
    ],
-   "by_source_and_piece": [],
+   "by_source_and_piece": [
+    {
+     "source": "yt",
+     "piece": "easy-way-to-teach-any-child-to-read",
+     "visits": 8,
+     "views": 12
+    },
+    {
+     "source": "yt",
+     "piece": "how-to-pronounce-phonics-sounds",
+     "visits": 8,
+     "views": 12
+    },
+    {
+     "source": "yt",
+     "piece": "how-to-teach-phonics-for-kindergarten",
+     "visits": 8,
+     "views": 12
+    },
+    {
+     "source": "yt",
+     "piece": "how-to-teach-phonics-step-by-step",
+     "visits": 8,
+     "views": 12
+    },
+    {
+     "source": "yt",
+     "piece": "how-to-teach-phonics-to-4-year-old",
+     "visits": 8,
+     "views": 12
+    },
+    {
+     "source": "yt",
+     "piece": "teach-my-child-to-read-before-kindergarten",
+     "visits": 8,
+     "views": 12
+    },
+    {
+     "source": "yt",
+     "piece": "why-isnt-phonics-working-for-homeschool",
+     "visits": 8,
+     "views": 12
+    },
+    {
+     "source": "facebook",
+     "piece": "teach-my-child-to-read-before-kindergarten-reel",
+     "visits": 4,
+     "views": 4
+    },
+    {
+     "source": "facebook",
+     "piece": "easy-way-to-teach-any-child-to-read-reel",
+     "visits": 3,
+     "views": 3
+    },
+    {
+     "source": "facebook",
+     "piece": "how-to-pronounce-phonics-sounds-reel",
+     "visits": 3,
+     "views": 3
+    },
+    {
+     "source": "facebook",
+     "piece": "how-to-teach-phonics-step-by-step-reel",
+     "visits": 3,
+     "views": 3
+    },
+    {
+     "source": "facebook",
+     "piece": "how-to-teach-phonics-to-4-year-old-reel",
+     "visits": 3,
+     "views": 3
+    },
+    {
+     "source": "facebook",
+     "piece": "why-isnt-phonics-working-for-homeschool-reel",
+     "visits": 3,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "easy-way-to-teach-any-child-to-read-short-game",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "easy-way-to-teach-any-child-to-read-short-mistake",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "how-to-pronounce-phonics-sounds-short-game",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "how-to-pronounce-phonics-sounds-short-mistake",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "how-to-teach-phonics-for-kindergarten-short-game",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "how-to-teach-phonics-for-kindergarten-short-mistake",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "how-to-teach-phonics-step-by-step-short-game",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "how-to-teach-phonics-step-by-step-short-mistake",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "how-to-teach-phonics-to-4-year-old-short-game",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "how-to-teach-phonics-to-4-year-old-short-mistake",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "how-to-teach-sight-words-short-game",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "teach-my-child-to-read-before-kindergarten-short-game",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "teach-my-child-to-read-before-kindergarten-short-mistake",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "tutorial-build-your-own",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt",
+     "piece": "why-isnt-phonics-working-for-homeschool-short-game",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt-short",
+     "piece": "how-to-teach-sight-words-short-game",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "facebook",
+     "piece": "easy-way-to-teach-any-child-to-read-post",
+     "visits": 2,
+     "views": 2
+    }
+   ],
    "visits_with_a_source_but_no_piece": 1,
    "by_landing_page": [
+    {
+     "page": "/why-cant-my-child-blend-sounds/",
+     "visits": 48,
+     "views": 63
+    },
+    {
+     "page": "/free-blending-game/",
+     "visits": 14,
+     "views": 21
+    },
+    {
+     "page": "/free-printable-worksheets/",
+     "visits": 14,
+     "views": 21
+    },
+    {
+     "page": "/what-next/",
+     "visits": 14,
+     "views": 21
+    },
+    {
+     "page": "/why-cant-my-child-remember-letter-sounds/",
+     "visits": 11,
+     "views": 14
+    },
+    {
+     "page": "/my-child-is-behind-in-reading/",
+     "visits": 8,
+     "views": 10
+    },
     {
      "page": "/",
      "visits": 6,
      "views": 46
+    },
+    {
+     "page": "/why-cant-my-child-remember-sight-words/",
+     "visits": 4,
+     "views": 6
+    },
+    {
+     "page": "/worksheet-generator/",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "page": "/eight-sounds-that-stay-10-day-plan/",
+     "visits": 1,
+     "views": 1
     }
    ],
    "by_source_and_landing_page": [
+    {
+     "source": "yt",
+     "page": "/why-cant-my-child-blend-sounds/",
+     "visits": 30
+    },
+    {
+     "source": "facebook",
+     "page": "/why-cant-my-child-blend-sounds/",
+     "visits": 18
+    },
+    {
+     "source": "yt",
+     "page": "/free-blending-game/",
+     "visits": 14
+    },
+    {
+     "source": "yt",
+     "page": "/free-printable-worksheets/",
+     "visits": 14
+    },
+    {
+     "source": "yt",
+     "page": "/what-next/",
+     "visits": 14
+    },
+    {
+     "source": "yt",
+     "page": "/why-cant-my-child-remember-letter-sounds/",
+     "visits": 6
+    },
+    {
+     "source": "facebook",
+     "page": "/why-cant-my-child-remember-letter-sounds/",
+     "visits": 5
+    },
     {
      "source": "direct",
      "page": "/",
      "visits": 4
     },
     {
+     "source": "yt",
+     "page": "/my-child-is-behind-in-reading/",
+     "visits": 4
+    },
+    {
+     "source": "facebook",
+     "page": "/my-child-is-behind-in-reading/",
+     "visits": 4
+    },
+    {
+     "source": "yt",
+     "page": "/why-cant-my-child-remember-sight-words/",
+     "visits": 2
+    },
+    {
+     "source": "yt",
+     "page": "/worksheet-generator/",
+     "visits": 2
+    },
+    {
+     "source": "yt-short",
+     "page": "/why-cant-my-child-remember-sight-words/",
+     "visits": 2
+    },
+    {
      "source": "bing",
      "page": "/",
      "visits": 1
@@ -594,14 +1626,55 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "source": "site",
      "page": "/",
      "visits": 1
+    },
+    {
+     "source": "site",
+     "page": "/eight-sounds-that-stay-10-day-plan/",
+     "visits": 1
     }
    ],
    "makers_printed_by_source": [],
    "funnel": [
     {
+     "source": "yt",
+     "visits": 86,
+     "engaged": 56,
+     "offer": 43,
+     "checkout": 0,
+     "free_orders": 0,
+     "paid_orders": 0
+    },
+    {
+     "source": "facebook",
+     "visits": 27,
+     "engaged": 27,
+     "offer": 0,
+     "checkout": 0,
+     "free_orders": 0,
+     "paid_orders": 0
+    },
+    {
      "source": "direct",
      "visits": 4,
      "engaged": 0,
+     "offer": 1,
+     "checkout": 0,
+     "free_orders": 0,
+     "paid_orders": 0
+    },
+    {
+     "source": "site",
+     "visits": 2,
+     "engaged": 1,
+     "offer": 1,
+     "checkout": 0,
+     "free_orders": 0,
+     "paid_orders": 0
+    },
+    {
+     "source": "yt-short",
+     "visits": 2,
+     "engaged": 2,
      "offer": 1,
      "checkout": 0,
      "free_orders": 0,
@@ -617,26 +1690,41 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "paid_orders": 0
     },
     {
-     "source": "site",
-     "visits": 1,
-     "engaged": 1,
-     "offer": 0,
-     "checkout": 0,
-     "free_orders": 0,
-     "paid_orders": 0
-    },
-    {
      "source": "unknown",
      "visits": 0,
      "engaged": 0,
      "offer": 0,
      "checkout": 0,
-     "free_orders": 19,
+     "free_orders": 22,
      "paid_orders": 0
     }
    ],
    "makers_printed": [],
    "orders": [
+    {
+     "at": "2026-10-11T03:52Z",
+     "product": "Letter Sound Worksheets Level 1",
+     "price": "free",
+     "source": "not recorded",
+     "piece": "",
+     "landing": ""
+    },
+    {
+     "at": "2026-10-11T03:50Z",
+     "product": "Letter Sound Worksheets Level 1",
+     "price": "free",
+     "source": "not recorded",
+     "piece": "",
+     "landing": ""
+    },
+    {
+     "at": "2026-10-11T03:49Z",
+     "product": "Letter Sound Worksheets Level 1",
+     "price": "free",
+     "source": "not recorded",
+     "piece": "",
+     "landing": ""
+    },
     {
      "at": "2026-10-11T03:14Z",
      "product": "Roll and Read CVC Word Games Level 2",
@@ -791,14 +1879,14 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     }
    ],
    "unknown": {
-    "visits": 5,
-    "of_visits": 6,
-    "orders_without_a_source": 19,
-    "of_orders": 19
+    "visits": 6,
+    "of_visits": 122,
+    "orders_without_a_source": 22,
+    "of_orders": 22
    }
   }
  ]
-},JOBS="7 of 10";
+},JOBS="8 of 10";
 function $(i){return document.getElementById(i)}function esc(x){return String(x==null?'':x).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 function show(t){[].forEach.call(document.querySelectorAll('.panel'),function(p){p.className='panel'+(p.id==='p-'+t?' on':'')});[].forEach.call($('tabs').children,function(b){b.className=b.getAttribute('data-t')===t?'on':''});try{history.replaceState(null,'','#'+t)}catch(e){}window.scrollTo(0,0)}
 $('tabs').addEventListener('click',function(e){var t=e.target.getAttribute('data-t');if(t)show(t)});document.addEventListener('click',function(e){var g=e.target.getAttribute&&e.target.getAttribute('data-go');if(g)show(g)});
