@@ -409,6 +409,7 @@
 ## Guides
 - [My Child Cannot Hear the First Sound in a Word](https://sounditoutreading.com/guide-child-cannot-hear-first-sound-in-word/): Explains why your child cannot hear a word’s first sound and gives four daily steps to build this key reading readiness skill.
 - [My Child Does Not Understand Subtraction: What to Do](https://sounditoutreading.com/guide-my-child-does-not-understand-subtraction/): Find out why subtraction confuses many young children, and try hands-on steps this week using objects, a number line, and addition facts.
+- [My Child Knows Sounds but Cannot Blend: What to Do](https://sounditoutreading.com/guide-my-child-knows-sounds-but-cannot-blend/): Your child knows the letter sounds but cannot blend them into words. Here is why this happens and exactly what to do this week.
 - [What Age Can a Child Cut Shapes and Glue Accurately](https://sounditoutreading.com/guide-cutting-and-gluing-skills-by-age/): Learn the ages children usually cut shapes and glue accurately, with step-by-step practice, common problems, and signs they are ready to move on.
 - [When Should a Child Learn to Count to 100?](https://sounditoutreading.com/guide-when-do-kids-count-to-100/): Learn when many children count to 100, why the tens pattern matters, and four clear steps to practice counting by ones at home.
 - [My Child Cannot Remember Sight Words: What to Do](https://sounditoutreading.com/guide-my-child-cannot-remember-sight-words/): Here is why your child forgets sight words right after learning them, and four simple things to try this week to help it stick.
@@ -418,7 +419,6 @@
 - [My Child Reads Slowly, One Sound at a Time: What to Do](https://sounditoutreading.com/guide-child-reads-slowly-one-sound-at-a-time/): Learn why your child reads one sound at a time instead of smoothly, and simple steps to make reading smoother, with no timing.
 - [What Is a Sight Word?](https://sounditoutreading.com/guide-what-is-a-sight-word/): Learn what a sight word is, why a few common words do not fully follow the sounds, and simple steps to teach them without guessing.
 - [When Should a Child Know All Their Letters?](https://sounditoutreading.com/guide-when-should-a-child-know-all-letters/): Learn the typical age range for learning all 26 letters, uppercase and lowercase, and what to do if your child needs more practice.
-- [My Child Knows Sounds but Cannot Blend: What to Do](https://sounditoutreading.com/guide-my-child-knows-sounds-but-cannot-blend/): Your child knows the letter sounds but cannot blend them into words. Learn why this happens and what to try this week.
 - [My Child Mixes Up B and D: What to Do](https://sounditoutreading.com/guide-my-child-mixes-up-b-and-d/): Your child’s b and d confusion is common. Learn why it happens, what to try at home this week, and when to tell the teacher.
 
 ## By grade
@@ -488,8 +488,8 @@
 - [Read and Match Level 4](https://sounditoutreading.com/read-and-match-level-4/): Read and match worksheets: decodable words to pictures, Reading Path Level 4. 13 pages, Ages 5 to 7 · Kindergarten and 1st grade, free
 - [Read and Match Level 6](https://sounditoutreading.com/read-and-match-level-6/): Read and match worksheets: decodable words to pictures, Reading Path Level 6. 13 pages, Ages 5 to 7 · Kindergarten and 1st grade, free
 - [Read and Match Level 7](https://sounditoutreading.com/read-and-match-level-7/): Read and match worksheets: decodable words to pictures, Reading Path Level 7. 13 pages, Ages 5 to 7 · Kindergarten and 1st grade, free
-- [Complete Learn to Read Bundle](https://sounditoutreading.com/learn-to-read-complete-bundle/): All 18 learn to read worksheet packs in one download. 236 pages, Ages 4 to 7 · Kindergarten and 1st grade, $3
-- [Complete Kindergarten Bundle](https://sounditoutreading.com/complete-kindergarten-bundle/): All 26 kindergarten worksheet packs in one download. 426 pages, Ages 4 to 6 · Preschool and Kindergarten, $3
+- [Complete Learn to Read Bundle](https://sounditoutreading.com/learn-to-read-complete-bundle/): 18 learn to read worksheet packs in one download. 236 pages, Ages 4 to 7 · Kindergarten and 1st grade, $3
+- [Complete Kindergarten Bundle](https://sounditoutreading.com/complete-kindergarten-bundle/): 26 kindergarten worksheet packs in one download. 426 pages, Ages 4 to 6 · Preschool and Kindergarten, $3
 - [Read and Match Level 3](https://sounditoutreading.com/read-and-match-level-3/): Read and match worksheets: decodable words to pictures, Reading Path Level 3. 13 pages, Ages 4 to 6 · Kindergarten, free
 - [Read and Match Level 5](https://sounditoutreading.com/read-and-match-level-5/): Read and match worksheets: decodable words to pictures, Reading Path Level 5. 13 pages, Ages 5 to 7 · Kindergarten and 1st grade, free
 - [Color by Word Level 2](https://sounditoutreading.com/color-by-word-level-2/): Color by code CVC words: read the word, color the square, find the picture, Reading Path Level 2. 14 pages, Ages 4 to 6 · Kindergarten, free
@@ -499,7 +499,7 @@
 - [Color by Word Level 7](https://sounditoutreading.com/color-by-word-level-7/): Color by code CVC words: read the word, color the square, find the picture, Reading Path Level 7. 14 pages, Ages 5 to 7 · Kindergarten and 1st grade, free
 - [CVC Word Cards Set 2](https://sounditoutreading.com/cvc-word-cards-set-2/): CVC word cards with pictures: Memory, Go Fish and two more games, Set 2. 12 pages, Ages 5 to 7 · Kindergarten and 1st grade, free
 - [Color By Word Level Bundle](https://sounditoutreading.com/color-by-word-level-bundle/): All 6 color by word level worksheet packs in one download. 84 pages, Ages 4 to 6 · Kindergarten, $3
-- [Complete First Grade Bundle](https://sounditoutreading.com/complete-first-grade-bundle/): All 21 first grade worksheet packs in one download. 328 pages, Ages 5 to 7 · Kindergarten and 1st grade, $3
+- [Complete First Grade Bundle](https://sounditoutreading.com/complete-first-grade-bundle/): 21 first grade worksheet packs in one download. 328 pages, Ages 5 to 7 · Kindergarten and 1st grade, $3
 - [CVC Word Cards Set 1](https://sounditoutreading.com/cvc-word-cards-set-1/): CVC word cards with pictures: Memory, Go Fish and two more games, Set 1. 12 pages, Ages 5 to 7 · Kindergarten and 1st grade, free
 - [Color by Word Level 5](https://sounditoutreading.com/color-by-word-level-5/): Color by code CVC words: read the word, color the square, find the picture, Reading Path Level 5. 14 pages, Ages 5 to 7 · Kindergarten and 1st grade, free
 - [CVC Word Search Level 4](https://sounditoutreading.com/cvc-word-search-level-4/): Easy CVC word search puzzles with pictures, Reading Path Level 4. 14 pages, Ages 5 to 7 · Kindergarten and 1st grade, free
@@ -511,7 +511,7 @@
 - [Dab and Blend Level 5](https://sounditoutreading.com/dab-and-blend-level-5/): Dab and blend worksheets: dot the sounds, read the word, Reading Path Level 5. 13 pages, Ages 5 to 7 · Kindergarten and 1st grade, free
 - [Dab and Blend Level 6](https://sounditoutreading.com/dab-and-blend-level-6/): Dab and blend worksheets: dot the sounds, read the word, Reading Path Level 6. 13 pages, Ages 5 to 7 · Kindergarten and 1st grade, free
 - [CVC Word Search Level Bundle](https://sounditoutreading.com/cvc-word-search-level-bundle/): All 4 cvc word search level worksheet packs in one download. 56 pages, Ages 5 to 7 · Kindergarten and 1st grade, $3
-- [Dab and Blend Level Bundle](https://sounditoutreading.com/dab-and-blend-level-bundle/): All 4 dab and blend level worksheet packs in one download. 52 pages, Ages 4 to 6 · Kindergarten, $3
+- [Dab and Blend Level Bundle](https://sounditoutreading.com/dab-and-blend-level-bundle/): 4 dab and blend level worksheet packs in one download. 52 pages, Ages 4 to 6 · Kindergarten, $3
 - [Free Learn to Read Starter Pack](https://sounditoutreading.com/free-learn-to-read-starter-pack/): Free learn to read worksheets: 3 pages from each of 24 packs. 72 pages, Ages 4 to 7 · Kindergarten and 1st grade, free
 - [Free Games, Charts and Activities Starter Pack](https://sounditoutreading.com/free-games-charts-and-activities-starter-pack/): Free games, charts and activities worksheets: 3 pages from each of 10 packs. 30 pages, Ages 4 to 6 · Kindergarten, free
 - [Decodable Mini Books Level 3](https://sounditoutreading.com/decodable-mini-books-level-3/): Decodable mini books: three little CVC readers to print, cut and staple, Reading Path Level 3. 14 pages, Ages 4 to 6 · Kindergarten, $0
