@@ -195,7 +195,7 @@ $('#rpgo').addEventListener('click',function(){
   :e1<3?'Play the day 2 listening game every day for two weeks, with no letters. Then start the plan again from day 3.'
   :s1<10?'Work on the letter sounds still to learn, a few at a time. The Sounds buttons on this page play each one. Then start the plan again.'
   :'If your child is six or older, tell their teacher what you have seen in these two checks and ask what the school has noticed. Keep playing the day 2 listening game.';
- h+='<div class="next"><h3>What to do next</h3><p>'+e(next)+'</p></div>';
+ h+='<div class="next"><h3>What to do next</h3><p>'+e(next)+'</p><p><b><a href="https://sounditoutreading.com/what-next/?src=plan&amp;m=report&amp;c='+location.pathname.split('/').filter(Boolean).pop()+'">See what comes next for your child</a></b></p></div>';
  out.className='show';out.innerHTML=h;out.scrollIntoView({behavior:'smooth',block:'start'});
 });
 })();
