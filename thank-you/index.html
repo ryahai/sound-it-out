@@ -153,6 +153,7 @@ function $(i){return document.getElementById(i)}
 function img(f){return '<img src="../img/'+f+'" alt="" width="760" height="984">'}
 var q={};location.search.replace(/^\?/,'').split('&').forEach(function(p){var k=p.split('=');if(k[0])try{q[decodeURIComponent(k[0])]=decodeURIComponent(k.slice(1).join('='))}catch(x){}});
 var keep=null;try{keep=JSON.parse(sessionStorage.getItem('sio_ty'))}catch(x){}
+var MSG0=document.getElementById('tyMsg')?document.getElementById('tyMsg').textContent:'';
 var item=q.item||(keep&&keep.item)||'',tok=q.customer_session_token||(keep&&keep.item===item&&keep.tok)||'';
 try{sessionStorage.setItem('sio_ty',JSON.stringify({item:item,tok:tok}))}catch(x){}
 /* the key to the files leaves the address bar at once, so it cannot be copied, shared or bookmarked by accident */
@@ -179,7 +180,7 @@ if(d){
  if(h)$('tyNext').innerHTML=side?'<div class="tyg"><div>'+h+'</div>'+side+'</div>':h;
 }
 var mo=MORE[item];if(mo&&mo.length){$('tyMore').innerHTML='<span class="tyk">While you are here</span><h2>More free packs</h2><p>Free to download, like the one you just got.</p><div class="tymg">'+mo.map(function(x){return '<a href="../'+x[0]+'/">'+img(x[0]+'-1.jpg')+'<b>'+e(x[1])+'</b><span>Free</span></a>'}).join('')+'</div><p class="tys"><a href="../free-printable-worksheets/">See all the free packs</a></p>';$('tyMore').hidden=false}
-if(!tok)return;
+if(!tok){if(q.checkout_id&&/^[0-9a-f-]{36}$/.test(q.checkout_id)){$('tyMsg').textContent='Getting your files...';fetch('https://my.sounditoutreading.com/session?checkout_id='+q.checkout_id).then(function(r){return r.ok?r.json():null}).then(function(j){if(j&&j.token){try{sessionStorage.setItem('sio_ty',JSON.stringify({item:item,tok:j.token}));location.reload()}catch(x){}}else{$('tyMsg').textContent=MSG0}}).catch(function(){$('tyMsg').textContent=MSG0})}return}
 var WAIT=$('tyMsg').textContent,BTN=$('tyList').innerHTML;$('tyMsg').textContent='Getting your files...';$('tyList').innerHTML='';
 fetch('https://api.polar.sh/v1/customer-portal/downloadables/?limit=100',{headers:{Authorization:'Bearer '+tok,Accept:'application/json'}}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){
  var all=(j.items||[]).filter(function(x){return x.file&&x.file.download&&x.file.download.url}),mine=d&&d[2]?all.filter(function(x){return x.benefit_id===d[2]}):[];
