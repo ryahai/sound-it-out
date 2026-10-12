@@ -16,17 +16,17 @@ table{border-collapse:collapse;width:100%}td,th{text-align:left;padding:9px 8px;
 .tile.ok{background:#e9f8ee}.tile.ok i{background:#2e9e62}.tile.ok span{color:#1d7a48}.tile.bad{background:#ffe9ec}.tile.bad i{background:#d92d4a}.tile.bad span{color:#b01f38}.tile.late{background:#fff3df}.tile.late i{background:#e08a00}.tile.run{background:#e6f2ff}.tile.run i{background:#2f80d8}
 details{margin:12px 0 0}summary{cursor:pointer;font-weight:800;background:#eef2f6;border:3px solid #1f2a44;border-radius:999px;padding:6px 14px;display:inline-block}details[open] summary{margin-bottom:10px}pre{white-space:pre-wrap;background:#f7fbff;border:2px solid #c9d2d9;border-radius:12px;padding:12px;font-size:13px}
 @media(max-width:560px){body{font-size:16px}.hero b{font-size:23px}.card{padding:14px}.num b{font-size:30px}td,th{font-size:14.5px;padding:8px 5px}}</style></head>
-<body><h1>Sound It Out <i>dashboard</i></h1><div class="when">Checked Sun Oct 11, 09:50 PM Eastern. Remade every hour.</div>
+<body><h1>Sound It Out <i>dashboard</i></h1><div class="when">Checked Sun Oct 11, 10:50 PM Eastern. Remade every hour.</div>
 <div class="tabs" id="tabs"><button data-t="home" class="on">Home</button><button data-t="visitors">Visitors</button><button data-t="orders">Downloads and sales</button><button data-t="jobs">Today’s jobs</button><button data-t="packs">Packs</button><button data-t="videos">Videos and posts</button></div>
 <div class="panel on" id="p-home"><div class="hero bad"><b>Something did not finish</b><span>Claude is dealing with it. Anything for you is in the yellow box.</span></div>
 <div class="card you"><h2>For you to do</h2><ul><li>A new long video is on YouTube as private. Watch it, and make it public when you are happy with it.</li></ul></div>
 <div class="card"><h2>Claude is handling</h2><ul><li><b>One old guide rewritten</b> did not finish today. I am looking at it.</li><li>21 new kind(s) of pack are waiting for Claude to check before they can go on sale. Nothing wrong is on sale.</li></ul></div>
-
+<div class="card"><h2>Still to come today</h2><ul><li><b>Daily video and shorts are made</b>: not due yet</li></ul></div>
 <div class="nums" id="homenums"></div>
 <div class="go"><button data-go="visitors">See visitors</button><button data-go="orders">See downloads and sales</button><button data-go="jobs">See today’s jobs</button></div></div>
 <div class="panel" id="p-visitors"><div class="card"><h2>Visitors</h2><div class="lbl">When</div><div class="pills" id="when"></div><div class="lbl">From where</div><div class="pills src" id="src"></div><div id="vbody"></div></div></div>
 <div class="panel" id="p-orders"><div class="card"><h2>Downloads and sales</h2><div class="lbl">When</div><div class="pills" id="owhen"></div><div id="obody"></div></div></div>
-<div class="panel" id="p-jobs"><div class="card"><h2>Today’s jobs <small>9 of 10 done</small></h2><div class="tiles"><div class="tile ok"><i></i><b>Daily video and shorts are made</b><span>Done</span></div><div class="tile ok"><i></i><b>YouTube uploads</b><span>Done</span></div><div class="tile ok"><i></i><b>New guide for the website</b><span>Done</span></div><div class="tile bad"><i></i><b>One old guide rewritten</b><span>Did not finish</span><em>I will look at this one.</em></div><div class="tile ok"><i></i><b>New pack designs</b><span>Done</span></div><div class="tile ok"><i></i><b>New packs put on sale</b><span>Done</span></div><div class="tile ok"><i></i><b>Daily quality check</b><span>Done</span></div><div class="tile ok"><i></i><b>Morning reel (Facebook and Instagram)</b><span>Done</span></div><div class="tile ok"><i></i><b>Picture post (Facebook and Instagram)</b><span>Done</span></div><div class="tile ok"><i></i><b>Evening reel (Facebook and Instagram)</b><span>Done</span></div></div>
+<div class="panel" id="p-jobs"><div class="card"><h2>Today’s jobs <small>8 of 10 done</small></h2><div class="tiles"><div class="tile wait"><i></i><b>Daily video and shorts are made</b><span>Not due yet</span></div><div class="tile ok"><i></i><b>YouTube uploads</b><span>Done</span></div><div class="tile ok"><i></i><b>New guide for the website</b><span>Done</span></div><div class="tile bad"><i></i><b>One old guide rewritten</b><span>Did not finish</span><em>I will look at this one.</em></div><div class="tile ok"><i></i><b>New pack designs</b><span>Done</span></div><div class="tile ok"><i></i><b>New packs put on sale</b><span>Done</span></div><div class="tile ok"><i></i><b>Daily quality check</b><span>Done</span></div><div class="tile ok"><i></i><b>Morning reel (Facebook and Instagram)</b><span>Done</span></div><div class="tile ok"><i></i><b>Picture post (Facebook and Instagram)</b><span>Done</span></div><div class="tile ok"><i></i><b>Evening reel (Facebook and Instagram)</b><span>Done</span></div></div>
 <p class="hint">Green = done. Blue = running now. Gray = not due yet. Orange = late, started again. Red = did not finish.</p></div></div><div class="panel" id="p-packs"><div class="card"><h2>Packs</h2><div class="nums"><div class="num"><b>0</b><span>put on sale today</span></div><div class="num"><b>159</b><span>waiting to go on sale</span></div><div class="num"><b>0</b><span>could not be put on sale</span></div><div class="num"><b>0</b><span>on hold</span></div></div>
 <p><b>Put on sale today:</b> none yet</p>
 <details><summary>More about packs</summary><p><b>Waiting:</b> subtraction-to-20, number-bonds-to-5, number-bonds-to-10, number-bonds-of-10, number-bonds-to-20, number-bonds-missing-whole, ten-frames-1-to-5, ten-frames-1-to-10, ten-frames-11-to-20, ten-frames-1-to-20, ten-frames-draw-the-dots, count-and-color-1-to-5, count-and-color-1-to-10, count-and-color-6-to-10, count-and-color-11-to-20, count-and-color-mixed-1-to-20, number-recognition-1-to-5, number-recognition-1-to-10, number-recognition-11-to-20, number-recognition-21-to-50, number-recognition-51-to-100, numbers-1-to-30, numbers-1-to-50, numbers-51-to-100, numbers-1-to-100, count-back-from-100, color-by-code-addition-to-10, color-by-code-subtraction-to-10, color-by-code-addition-to-20, roll-and-color-numbers-1-to-6, roll-and-color-addition-to-12, comparing-numbers-pictures-1-to-5, comparing-numbers-pictures-1-to-10, comparing-numbers-numerals-1-to-10, comparing-numbers-numerals-1-to-20, comparing-numbers-numerals-1-to-100, count-and-match-1-to-5, count-and-match-1-to-10, count-and-match-6-to-10, count-and-match-11-to-20 ...</p>
@@ -40,62 +40,129 @@ details{margin:12px 0 0}summary{cursor:pointer;font-weight:800;background:#eef2f
 <details><summary>Last quality note</summary><pre>2026-10-09 14:30  NEEDS A PERSON
 the checker&#x27;s answer could not be read; nothing was marked as checked</pre></details></div></div>
 <script>(function(){var T={
- "made": "2026-10-12T01:40Z",
+ "made": "2026-10-12T02:40Z",
  "orders_note": null,
  "summary": [
-  "TRAFFIC (counter made 2026-10-12 01:40 UTC)",
-  "Today: 282 visits, 282 page views. Last 7 days: 453 visits, 638 page views.",
-  "Top sources, 7 days: direct 309, yt 88, facebook 43, yt-short 4, site 3.",
+  "TRAFFIC (counter made 2026-10-12 02:40 UTC)",
+  "Today: 293 visits, 296 page views. Last 7 days: 464 visits, 652 page views.",
+  "Top sources, 7 days: direct 313, yt 88, facebook 43, yt-short 10, site 4.",
   "Top content pieces, 7 days: easy-way-to-teach-any-child-to-read (yt) 8, how-to-pronounce-phonics-sounds (yt) 8, how-to-teach-phonics-for-kindergarten (yt) 8.",
-  "Top landing pages, 7 days: / 297, /why-cant-my-child-blend-sounds/ 48, /why-cant-my-child-remember-sight-words/ 16.",
-  "Of 453 visits: 102 printed from a maker or opened a check, 53 looked at a plan or bundle, 9 clicked through to checkout.",
+  "Top landing pages, 7 days: / 301, /why-cant-my-child-blend-sounds/ 54, /why-cant-my-child-remember-sight-words/ 16.",
+  "Of 464 visits: 108 printed from a maker or opened a check, 57 looked at a plan or bundle, 9 clicked through to checkout.",
   "Most printed maker, 7 days: /find-the-letter-worksheet-generator/ 1.",
   "Orders, 7 days: 24 free, 0 paid ($0.00).",
   "Orders with a known source: 2 of 24 (direct, direct).",
-  "Unknown source: 312 of 453 visits in 7 days. Last hit counted: 2026-10-12 01:31 UTC."
+  "Unknown source: 317 of 464 visits in 7 days. Last hit counted: 2026-10-12 02:38 UTC."
  ],
  "periods": [
   {
    "name": "TODAY",
    "from": "2026-10-12",
    "to": "2026-10-12",
-   "visits": 282,
-   "views": 282,
+   "visits": 293,
+   "views": 296,
    "screens": {
     "tablet": 146,
-    "desktop": 69,
-    "phone": 67
+    "desktop": 78,
+    "phone": 69
    },
    "by_source": [
     {
      "source": "direct",
-     "visits": 282,
-     "views": 282
+     "visits": 286,
+     "views": 286
+    },
+    {
+     "source": "yt-short",
+     "visits": 6,
+     "views": 9
+    },
+    {
+     "source": "site",
+     "visits": 1,
+     "views": 1
     }
    ],
-   "by_source_and_piece": [],
+   "by_source_and_piece": [
+    {
+     "source": "yt-short",
+     "piece": "easy-way-to-teach-any-child-to-read-short-game",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt-short",
+     "piece": "teach-my-child-to-read-before-kindergarten-short-game",
+     "visits": 2,
+     "views": 3
+    },
+    {
+     "source": "yt-short",
+     "piece": "teach-my-child-to-read-before-kindergarten-short-mistake",
+     "visits": 2,
+     "views": 3
+    }
+   ],
    "visits_with_a_source_but_no_piece": 0,
    "by_landing_page": [
     {
      "page": "/",
-     "visits": 282,
-     "views": 282
+     "visits": 286,
+     "views": 286
+    },
+    {
+     "page": "/why-cant-my-child-blend-sounds/",
+     "visits": 6,
+     "views": 9
+    },
+    {
+     "page": "/eight-sounds-that-stay-10-day-plan/",
+     "visits": 1,
+     "views": 1
     }
    ],
    "by_source_and_landing_page": [
     {
      "source": "direct",
      "page": "/",
-     "visits": 282
+     "visits": 286
+    },
+    {
+     "source": "yt-short",
+     "page": "/why-cant-my-child-blend-sounds/",
+     "visits": 6
+    },
+    {
+     "source": "site",
+     "page": "/eight-sounds-that-stay-10-day-plan/",
+     "visits": 1
     }
    ],
    "makers_printed_by_source": [],
    "funnel": [
     {
      "source": "direct",
-     "visits": 282,
+     "visits": 286,
      "engaged": 0,
      "offer": 0,
+     "checkout": 0,
+     "free_orders": 0,
+     "paid_orders": 0
+    },
+    {
+     "source": "yt-short",
+     "visits": 6,
+     "engaged": 6,
+     "offer": 3,
+     "checkout": 0,
+     "free_orders": 0,
+     "paid_orders": 0
+    },
+    {
+     "source": "site",
+     "visits": 1,
+     "engaged": 0,
+     "offer": 1,
      "checkout": 0,
      "free_orders": 0,
      "paid_orders": 0
@@ -104,8 +171,8 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
    "makers_printed": [],
    "orders": [],
    "unknown": {
-    "visits": 282,
-    "of_visits": 282,
+    "visits": 287,
+    "of_visits": 293,
     "orders_without_a_source": 0,
     "of_orders": 0
    }
@@ -734,18 +801,18 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
    "name": "LAST 7 DAYS",
    "from": "2026-10-06",
    "to": "2026-10-12",
-   "visits": 453,
-   "views": 638,
+   "visits": 464,
+   "views": 652,
    "screens": {
-    "desktop": 208,
-    "phone": 99,
+    "desktop": 217,
+    "phone": 101,
     "tablet": 146
    },
    "by_source": [
     {
      "source": "direct",
-     "visits": 309,
-     "views": 438
+     "visits": 313,
+     "views": 442
     },
     {
      "source": "yt",
@@ -759,13 +826,13 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     },
     {
      "source": "yt-short",
-     "visits": 4,
-     "views": 6
+     "visits": 10,
+     "views": 15
     },
     {
      "source": "site",
-     "visits": 3,
-     "views": 8
+     "visits": 4,
+     "views": 9
     },
     {
      "source": "pdf",
@@ -974,13 +1041,13 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
    "by_landing_page": [
     {
      "page": "/",
-     "visits": 297,
-     "views": 432
+     "visits": 301,
+     "views": 436
     },
     {
      "page": "/why-cant-my-child-blend-sounds/",
-     "visits": 48,
-     "views": 63
+     "visits": 54,
+     "views": 72
     },
     {
      "page": "/why-cant-my-child-remember-sight-words/",
@@ -1023,6 +1090,11 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "views": 6
     },
     {
+     "page": "/eight-sounds-that-stay-10-day-plan/",
+     "visits": 3,
+     "views": 3
+    },
+    {
      "page": "/from-sounds-to-words-blending-plan/",
      "visits": 3,
      "views": 3
@@ -1031,11 +1103,6 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "page": "/worksheet-generator/",
      "visits": 2,
      "views": 3
-    },
-    {
-     "page": "/eight-sounds-that-stay-10-day-plan/",
-     "visits": 2,
-     "views": 2
     },
     {
      "page": "/about/",
@@ -1052,7 +1119,7 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     {
      "source": "direct",
      "page": "/",
-     "visits": 294
+     "visits": 298
     },
     {
      "source": "yt",
@@ -1100,6 +1167,11 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "visits": 6
     },
     {
+     "source": "yt-short",
+     "page": "/why-cant-my-child-blend-sounds/",
+     "visits": 6
+    },
+    {
      "source": "facebook",
      "page": "/printables/",
      "visits": 6
@@ -1125,6 +1197,11 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "visits": 3
     },
     {
+     "source": "site",
+     "page": "/eight-sounds-that-stay-10-day-plan/",
+     "visits": 3
+    },
+    {
      "source": "yt",
      "page": "/why-cant-my-child-remember-sight-words/",
      "visits": 2
@@ -1132,11 +1209,6 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     {
      "source": "yt",
      "page": "/worksheet-generator/",
-     "visits": 2
-    },
-    {
-     "source": "site",
-     "page": "/eight-sounds-that-stay-10-day-plan/",
      "visits": 2
     },
     {
@@ -1175,7 +1247,7 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
    "funnel": [
     {
      "source": "direct",
-     "visits": 309,
+     "visits": 313,
      "engaged": 2,
      "offer": 2,
      "checkout": 9,
@@ -1202,18 +1274,18 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     },
     {
      "source": "yt-short",
-     "visits": 4,
-     "engaged": 4,
-     "offer": 2,
+     "visits": 10,
+     "engaged": 10,
+     "offer": 5,
      "checkout": 0,
      "free_orders": 0,
      "paid_orders": 0
     },
     {
      "source": "site",
-     "visits": 3,
+     "visits": 4,
      "engaged": 1,
-     "offer": 2,
+     "offer": 3,
      "checkout": 0,
      "free_orders": 0,
      "paid_orders": 0
@@ -1465,8 +1537,8 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     }
    ],
    "unknown": {
-    "visits": 312,
-    "of_visits": 453,
+    "visits": 317,
+    "of_visits": 464,
     "orders_without_a_source": 22,
     "of_orders": 24
    }
@@ -1475,18 +1547,18 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
    "name": "LAST 30 DAYS",
    "from": "2026-09-13",
    "to": "2026-10-12",
-   "visits": 453,
-   "views": 638,
+   "visits": 464,
+   "views": 652,
    "screens": {
-    "desktop": 208,
-    "phone": 99,
+    "desktop": 217,
+    "phone": 101,
     "tablet": 146
    },
    "by_source": [
     {
      "source": "direct",
-     "visits": 309,
-     "views": 438
+     "visits": 313,
+     "views": 442
     },
     {
      "source": "yt",
@@ -1500,13 +1572,13 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     },
     {
      "source": "yt-short",
-     "visits": 4,
-     "views": 6
+     "visits": 10,
+     "views": 15
     },
     {
      "source": "site",
-     "visits": 3,
-     "views": 8
+     "visits": 4,
+     "views": 9
     },
     {
      "source": "pdf",
@@ -1715,13 +1787,13 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
    "by_landing_page": [
     {
      "page": "/",
-     "visits": 297,
-     "views": 432
+     "visits": 301,
+     "views": 436
     },
     {
      "page": "/why-cant-my-child-blend-sounds/",
-     "visits": 48,
-     "views": 63
+     "visits": 54,
+     "views": 72
     },
     {
      "page": "/why-cant-my-child-remember-sight-words/",
@@ -1764,6 +1836,11 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "views": 6
     },
     {
+     "page": "/eight-sounds-that-stay-10-day-plan/",
+     "visits": 3,
+     "views": 3
+    },
+    {
      "page": "/from-sounds-to-words-blending-plan/",
      "visits": 3,
      "views": 3
@@ -1772,11 +1849,6 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "page": "/worksheet-generator/",
      "visits": 2,
      "views": 3
-    },
-    {
-     "page": "/eight-sounds-that-stay-10-day-plan/",
-     "visits": 2,
-     "views": 2
     },
     {
      "page": "/about/",
@@ -1793,7 +1865,7 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     {
      "source": "direct",
      "page": "/",
-     "visits": 294
+     "visits": 298
     },
     {
      "source": "yt",
@@ -1841,6 +1913,11 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "visits": 6
     },
     {
+     "source": "yt-short",
+     "page": "/why-cant-my-child-blend-sounds/",
+     "visits": 6
+    },
+    {
      "source": "facebook",
      "page": "/printables/",
      "visits": 6
@@ -1866,6 +1943,11 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "visits": 3
     },
     {
+     "source": "site",
+     "page": "/eight-sounds-that-stay-10-day-plan/",
+     "visits": 3
+    },
+    {
      "source": "yt",
      "page": "/why-cant-my-child-remember-sight-words/",
      "visits": 2
@@ -1873,11 +1955,6 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     {
      "source": "yt",
      "page": "/worksheet-generator/",
-     "visits": 2
-    },
-    {
-     "source": "site",
-     "page": "/eight-sounds-that-stay-10-day-plan/",
      "visits": 2
     },
     {
@@ -1916,7 +1993,7 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
    "funnel": [
     {
      "source": "direct",
-     "visits": 309,
+     "visits": 313,
      "engaged": 2,
      "offer": 2,
      "checkout": 9,
@@ -1943,18 +2020,18 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     },
     {
      "source": "yt-short",
-     "visits": 4,
-     "engaged": 4,
-     "offer": 2,
+     "visits": 10,
+     "engaged": 10,
+     "offer": 5,
      "checkout": 0,
      "free_orders": 0,
      "paid_orders": 0
     },
     {
      "source": "site",
-     "visits": 3,
+     "visits": 4,
      "engaged": 1,
-     "offer": 2,
+     "offer": 3,
      "checkout": 0,
      "free_orders": 0,
      "paid_orders": 0
@@ -2206,14 +2283,14 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     }
    ],
    "unknown": {
-    "visits": 312,
-    "of_visits": 453,
+    "visits": 317,
+    "of_visits": 464,
     "orders_without_a_source": 22,
     "of_orders": 24
    }
   }
  ]
-},JOBS="9 of 10";
+},JOBS="8 of 10";
 function $(i){return document.getElementById(i)}function esc(x){return String(x==null?'':x).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 function show(t){[].forEach.call(document.querySelectorAll('.panel'),function(p){p.className='panel'+(p.id==='p-'+t?' on':'')});[].forEach.call($('tabs').children,function(b){b.className=b.getAttribute('data-t')===t?'on':''});try{history.replaceState(null,'','#'+t)}catch(e){}window.scrollTo(0,0)}
 $('tabs').addEventListener('click',function(e){var t=e.target.getAttribute('data-t');if(t)show(t)});document.addEventListener('click',function(e){var g=e.target.getAttribute&&e.target.getAttribute('data-go');if(g)show(g)});
