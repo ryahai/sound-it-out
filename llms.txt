@@ -413,9 +413,6 @@
 - [Free Roll and Read Level 12 Worksheets](https://sounditoutreading.com/free-roll-and-read-level-12/): 3 free printable pages. Roll and read games: decodable words with a die, Reading Path Level 12
 - [Free Roll and Read Level 13 Worksheets](https://sounditoutreading.com/free-roll-and-read-level-13/): 3 free printable pages. Roll and read games: decodable words with a die, Reading Path Level 13
 - [Free Add and Subtract to 10 Worksheets](https://sounditoutreading.com/free-add-and-subtract-to-10/): 3 free printable pages. Addition and subtraction within 10 worksheets with pictures and a number line
-- [Free Number Bonds to 20 Worksheets](https://sounditoutreading.com/free-number-bonds-to-20/): 3 free printable pages. Number bond worksheets, bonds 2 to 20
-- [Free Number Bonds Missing Whole Worksheets](https://sounditoutreading.com/free-number-bonds-missing-whole/): 3 free printable pages. Number bond worksheets, finding the missing whole
-- [Free Ten Frames 1 to 5 Worksheets](https://sounditoutreading.com/free-ten-frames-1-to-5/): 3 free printable pages. Ten frame worksheets, counting 1 to 5
 - [Free Ten Frames 1 to 10 Worksheets](https://sounditoutreading.com/free-ten-frames-1-to-10/): 3 free printable pages. Ten frame worksheets, counting 1 to 10
 - [Free Ten Frames 11 to 20 Worksheets](https://sounditoutreading.com/free-ten-frames-11-to-20/): 3 free printable pages. Ten frame worksheets, counting 11 to 20
 - [Free Ten Frames 1 to 20 Worksheets](https://sounditoutreading.com/free-ten-frames-1-to-20/): 3 free printable pages. Ten frame worksheets, counting 1 to 20
@@ -423,6 +420,9 @@
 - [Free Number Bonds to 5 Worksheets](https://sounditoutreading.com/free-number-bonds-to-5/): 3 free printable pages. Number bond worksheets, bonds 2 to 5
 - [Free Number Bonds to 10 Worksheets](https://sounditoutreading.com/free-number-bonds-to-10/): 3 free printable pages. Number bond worksheets, bonds 2 to 10
 - [Free Number Bonds of 10 Worksheets](https://sounditoutreading.com/free-number-bonds-of-10/): 3 free printable pages. Number bond worksheets, bonds of 10
+- [Free Number Bonds to 20 Worksheets](https://sounditoutreading.com/free-number-bonds-to-20/): 3 free printable pages. Number bond worksheets, bonds 2 to 20
+- [Free Number Bonds Missing Whole Worksheets](https://sounditoutreading.com/free-number-bonds-missing-whole/): 3 free printable pages. Number bond worksheets, finding the missing whole
+- [Free Ten Frames 1 to 5 Worksheets](https://sounditoutreading.com/free-ten-frames-1-to-5/): 3 free printable pages. Ten frame worksheets, counting 1 to 5
 
 ## Guides
 - [My Child Cannot Hear the First Sound in a Word](https://sounditoutreading.com/guide-child-cannot-hear-first-sound-in-word/): Explains why your child cannot hear a word’s first sound and gives four daily steps to build this key reading readiness skill.
@@ -440,11 +440,11 @@
 - [My Child Mixes Up B and D: What to Do](https://sounditoutreading.com/guide-my-child-mixes-up-b-and-d/): Your child’s b and d confusion is common. Learn why it happens, what to try at home this week, and when to tell the teacher.
 
 ## By grade
-- [Preschool Worksheets](https://sounditoutreading.com/preschool-worksheets/): 13 printable packs for ages 3 to 5
+- [Preschool Worksheets](https://sounditoutreading.com/preschool-worksheets/): 14 printable packs for ages 3 to 5
 - [Kindergarten Worksheets](https://sounditoutreading.com/kindergarten-worksheets/): 81 printable packs for ages 5 to 6
 - [First Grade Worksheets](https://sounditoutreading.com/first-grade-worksheets/): 55 printable packs for ages 6 to 7
 - [Preschool Learn to Read Worksheets](https://sounditoutreading.com/preschool-learn-to-read-worksheets/): 4 packs
-- [Preschool Numbers and Counting Worksheets](https://sounditoutreading.com/preschool-numbers-and-counting-worksheets/): 4 packs
+- [Preschool Numbers and Counting Worksheets](https://sounditoutreading.com/preschool-numbers-and-counting-worksheets/): 5 packs
 - [Preschool Addition and Subtraction Worksheets](https://sounditoutreading.com/preschool-addition-and-subtraction-worksheets/): 4 packs
 - [Kindergarten Learn to Read Worksheets](https://sounditoutreading.com/kindergarten-learn-to-read-worksheets/): 49 packs
 - [Kindergarten Sight Words Worksheets](https://sounditoutreading.com/kindergarten-sight-words-worksheets/): 2 packs
@@ -468,8 +468,8 @@
 - [Dab and Blend Level Worksheets](https://sounditoutreading.com/dab-and-blend-level-worksheets/): 6 printable packs
 - [Decodable Mini Books Level Worksheets](https://sounditoutreading.com/decodable-mini-books-level-worksheets/): 5 printable packs
 - [Roll and Read Level Worksheets](https://sounditoutreading.com/roll-and-read-level-worksheets/): 13 printable packs
-- [Number Bonds Worksheets](https://sounditoutreading.com/number-bonds-worksheets/): 5 printable packs
 - [Ten Frames Worksheets](https://sounditoutreading.com/ten-frames-worksheets/): 5 printable packs
+- [Number Bonds Worksheets](https://sounditoutreading.com/number-bonds-worksheets/): 5 printable packs
 - [Learn to Read](https://sounditoutreading.com/learn-to-read-printables/): Printable phonics and decodable reading practice for kindergarten and first grade, where every word can be sounded out.
 - [Sight Words](https://sounditoutreading.com/sight-words-worksheets/): Printable sight word worksheets for kindergarten and first grade: read, trace, write, find and build each word.
 - [Alphabet and Handwriting](https://sounditoutreading.com/alphabet-and-handwriting-worksheets/): Printable alphabet tracing, letter formation and handwriting worksheets for preschool and kindergarten, from A to Z.
@@ -556,9 +556,6 @@
 - [Roll and Read Level 12](https://sounditoutreading.com/roll-and-read-level-12/): Roll and read games: decodable words with a die, Reading Path Level 12. 13 pages, Ages 6 to 8 · 1st and 2nd grade, $0
 - [Roll and Read Level 13](https://sounditoutreading.com/roll-and-read-level-13/): Roll and read games: decodable words with a die, Reading Path Level 13. 13 pages, Ages 7 to 8 · 2nd grade, $0
 - [Add and Subtract to 10](https://sounditoutreading.com/add-and-subtract-to-10/): Addition and subtraction within 10 worksheets with pictures and a number line. 24 pages, Ages 5 to 7 · Kindergarten and 1st grade, $0
-- [Number Bonds to 20](https://sounditoutreading.com/number-bonds-to-20/): Number bond worksheets, bonds 2 to 20. 13 pages, Ages 6 to 8 · 1st grade, $0
-- [Number Bonds Missing Whole](https://sounditoutreading.com/number-bonds-missing-whole/): Number bond worksheets, finding the missing whole. 13 pages, Ages 5 to 7 · Kindergarten and 1st grade, $0
-- [Ten Frames 1 to 5](https://sounditoutreading.com/ten-frames-1-to-5/): Ten frame worksheets, counting 1 to 5. 15 pages, Ages 3 to 5 · Preschool, $0
 - [Ten Frames 1 to 10](https://sounditoutreading.com/ten-frames-1-to-10/): Ten frame worksheets, counting 1 to 10. 15 pages, Ages 4 to 6 · Preschool and Kindergarten, $0
 - [Ten Frames 11 to 20](https://sounditoutreading.com/ten-frames-11-to-20/): Ten frame worksheets, counting 11 to 20. 15 pages, Ages 5 to 6 · Kindergarten, $0
 - [Ten Frames 1 to 20](https://sounditoutreading.com/ten-frames-1-to-20/): Ten frame worksheets, counting 1 to 20. 15 pages, Ages 5 to 7 · Kindergarten and 1st grade, $0
@@ -568,6 +565,10 @@
 - [Number Bonds to 5](https://sounditoutreading.com/number-bonds-to-5/): Number bond worksheets, bonds 2 to 5. 13 pages, Ages 4 to 6 · Preschool and Kindergarten, $0
 - [Number Bonds to 10](https://sounditoutreading.com/number-bonds-to-10/): Number bond worksheets, bonds 2 to 10. 13 pages, Ages 5 to 6 · Kindergarten, $0
 - [Number Bonds of 10](https://sounditoutreading.com/number-bonds-of-10/): Number bond worksheets, bonds of 10. 13 pages, Ages 5 to 6 · Kindergarten, $0
+- [Number Bonds to 20](https://sounditoutreading.com/number-bonds-to-20/): Number bond worksheets, bonds 2 to 20. 13 pages, Ages 6 to 8 · 1st grade, $0
+- [Free Numbers and Counting Starter Pack](https://sounditoutreading.com/free-numbers-and-counting-starter-pack/): Free numbers and counting worksheets: 3 pages from each of 4 packs. 12 pages, Ages 3 to 5 · Preschool, free
+- [Number Bonds Missing Whole](https://sounditoutreading.com/number-bonds-missing-whole/): Number bond worksheets, finding the missing whole. 13 pages, Ages 5 to 7 · Kindergarten and 1st grade, $0
+- [Ten Frames 1 to 5](https://sounditoutreading.com/ten-frames-1-to-5/): Ten frame worksheets, counting 1 to 5. 15 pages, Ages 3 to 5 · Preschool, $0
 
 ## About
 - [About](https://sounditoutreading.com/about/): who makes these printables and why
