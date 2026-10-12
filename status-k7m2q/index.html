@@ -16,62 +16,62 @@ table{border-collapse:collapse;width:100%}td,th{text-align:left;padding:9px 8px;
 .tile.ok{background:#e9f8ee}.tile.ok i{background:#2e9e62}.tile.ok span{color:#1d7a48}.tile.bad{background:#ffe9ec}.tile.bad i{background:#d92d4a}.tile.bad span{color:#b01f38}.tile.late{background:#fff3df}.tile.late i{background:#e08a00}.tile.run{background:#e6f2ff}.tile.run i{background:#2f80d8}
 details{margin:12px 0 0}summary{cursor:pointer;font-weight:800;background:#eef2f6;border:3px solid #1f2a44;border-radius:999px;padding:6px 14px;display:inline-block}details[open] summary{margin-bottom:10px}pre{white-space:pre-wrap;background:#f7fbff;border:2px solid #c9d2d9;border-radius:12px;padding:12px;font-size:13px}
 @media(max-width:560px){body{font-size:16px}.hero b{font-size:23px}.card{padding:14px}.num b{font-size:30px}td,th{font-size:14.5px;padding:8px 5px}}</style></head>
-<body><h1>Sound It Out <i>dashboard</i></h1><div class="when">Checked Mon Oct 12, 12:50 AM Eastern. Remade every hour.</div>
+<body><h1>Sound It Out <i>dashboard</i></h1><div class="when">Checked Mon Oct 12, 01:50 AM Eastern. Remade every hour.</div>
 <div class="tabs" id="tabs"><button data-t="home" class="on">Home</button><button data-t="visitors">Visitors</button><button data-t="orders">Downloads and sales</button><button data-t="jobs">Today’s jobs</button><button data-t="packs">Packs</button><button data-t="videos">Videos and posts</button></div>
 <div class="panel on" id="p-home"><div class="hero bad"><b>Something did not finish</b><span>Claude is dealing with it. Anything for you is in the yellow box.</span></div>
 <div class="card you"><h2>For you to do</h2><ul><li>A new long video is on YouTube as private. Watch it, and make it public when you are happy with it.</li></ul></div>
 <div class="card"><h2>Claude is handling</h2><ul><li><b>One old guide rewritten</b> did not finish today. I am looking at it.</li><li>21 new kind(s) of pack are waiting for Claude to check before they can go on sale. Nothing wrong is on sale.</li><li>The last video did not finish building. I am looking at it.</li></ul></div>
-<div class="card"><h2>Still to come today</h2><ul><li><b>Daily video and shorts are made</b>: late, started again</li><li><b>YouTube uploads</b>: not due yet</li></ul></div>
+<div class="card"><h2>Still to come today</h2><ul><li><b>Daily video and shorts are made</b>: late, started again</li><li><b>New pack designs</b>: not due yet</li></ul></div>
 <div class="nums" id="homenums"></div>
 <div class="go"><button data-go="visitors">See visitors</button><button data-go="orders">See downloads and sales</button><button data-go="jobs">See today’s jobs</button></div></div>
 <div class="panel" id="p-visitors"><div class="card"><h2>Visitors</h2><div class="lbl">When</div><div class="pills" id="when"></div><div class="lbl">From where</div><div class="pills src" id="src"></div><div id="vbody"></div></div></div>
 <div class="panel" id="p-orders"><div class="card"><h2>Downloads and sales</h2><div class="lbl">When</div><div class="pills" id="owhen"></div><div id="obody"></div></div></div>
-<div class="panel" id="p-jobs"><div class="card"><h2>Today’s jobs <small>7 of 10 done</small></h2><div class="tiles"><div class="tile late"><i></i><b>Daily video and shorts are made</b><span>Late, started again</span></div><div class="tile wait"><i></i><b>YouTube uploads</b><span>Not due yet</span></div><div class="tile ok"><i></i><b>New guide for the website</b><span>Done</span></div><div class="tile bad"><i></i><b>One old guide rewritten</b><span>Did not finish</span><em>I will look at this one.</em></div><div class="tile ok"><i></i><b>New pack designs</b><span>Done</span></div><div class="tile ok"><i></i><b>New packs put on sale</b><span>Done</span></div><div class="tile ok"><i></i><b>Daily quality check</b><span>Done</span></div><div class="tile ok"><i></i><b>Morning reel (Facebook and Instagram)</b><span>Done</span></div><div class="tile ok"><i></i><b>Picture post (Facebook and Instagram)</b><span>Done</span></div><div class="tile ok"><i></i><b>Evening reel (Facebook and Instagram)</b><span>Done</span></div></div>
+<div class="panel" id="p-jobs"><div class="card"><h2>Today’s jobs <small>7 of 10 done</small></h2><div class="tiles"><div class="tile late"><i></i><b>Daily video and shorts are made</b><span>Late, started again</span></div><div class="tile ok"><i></i><b>YouTube uploads</b><span>Done</span></div><div class="tile ok"><i></i><b>New guide for the website</b><span>Done</span></div><div class="tile bad"><i></i><b>One old guide rewritten</b><span>Did not finish</span><em>I will look at this one.</em></div><div class="tile wait"><i></i><b>New pack designs</b><span>Not due yet</span></div><div class="tile ok"><i></i><b>New packs put on sale</b><span>Done</span></div><div class="tile ok"><i></i><b>Daily quality check</b><span>Done</span></div><div class="tile ok"><i></i><b>Morning reel (Facebook and Instagram)</b><span>Done</span></div><div class="tile ok"><i></i><b>Picture post (Facebook and Instagram)</b><span>Done</span></div><div class="tile ok"><i></i><b>Evening reel (Facebook and Instagram)</b><span>Done</span></div></div>
 <p class="hint">Green = done. Blue = running now. Gray = not due yet. Orange = late, started again. Red = did not finish.</p></div></div><div class="panel" id="p-packs"><div class="card"><h2>Packs</h2><div class="nums"><div class="num"><b>0</b><span>put on sale today</span></div><div class="num"><b>159</b><span>waiting to go on sale</span></div><div class="num"><b>0</b><span>could not be put on sale</span></div><div class="num"><b>0</b><span>on hold</span></div></div>
 <p><b>Put on sale today:</b> none yet</p>
 <details><summary>More about packs</summary><p><b>Waiting:</b> subtraction-to-20, number-bonds-to-5, number-bonds-to-10, number-bonds-of-10, number-bonds-to-20, number-bonds-missing-whole, ten-frames-1-to-5, ten-frames-1-to-10, ten-frames-11-to-20, ten-frames-1-to-20, ten-frames-draw-the-dots, count-and-color-1-to-5, count-and-color-1-to-10, count-and-color-6-to-10, count-and-color-11-to-20, count-and-color-mixed-1-to-20, number-recognition-1-to-5, number-recognition-1-to-10, number-recognition-11-to-20, number-recognition-21-to-50, number-recognition-51-to-100, numbers-1-to-30, numbers-1-to-50, numbers-51-to-100, numbers-1-to-100, count-back-from-100, color-by-code-addition-to-10, color-by-code-subtraction-to-10, color-by-code-addition-to-20, roll-and-color-numbers-1-to-6, roll-and-color-addition-to-12, comparing-numbers-pictures-1-to-5, comparing-numbers-pictures-1-to-10, comparing-numbers-numerals-1-to-10, comparing-numbers-numerals-1-to-20, comparing-numbers-numerals-1-to-100, count-and-match-1-to-5, count-and-match-1-to-10, count-and-match-6-to-10, count-and-match-11-to-20 ...</p>
 <p><b>Could not be put on sale:</b></p><ul><li>none</li></ul>
 <p><b>On hold after a quality problem:</b> none</p>
 <p><b>Kinds of pack waiting for a person to check them first:</b> beginning-sounds, blends-practice, color-words, comparing-numbers, count-and-color, count-and-match, cvc-read-and-match, cvc-sentence-reading, cvc-word-building, days-and-months, digraph-sort, doubles, ending-sounds, middle-vowel, number-words, numbers-to-100, patterns, rhyming-words, shapes, skip-counting, word-family-houses</p></details></div></div><div class="panel" id="p-videos"><div class="card"><h2>Videos and posts</h2>
-<p><b>Last video made:</b> how to use phonics to teach reading (2026-10-12 04:51) , did not finish: VOICE CHECK FAILED: the narrator does not say these lines as written:
-  &quot;The Sound It Out reading app was built by a mom for her daughter, who found blending ha</p>
+<p><b>Last video made:</b> how to use phonics to teach reading (2026-10-12 07:02) , did not finish: VOICE CHECK FAILED: the narrator does not say these lines as written:
+  &quot;Mistake two. Sounding out so fast that one sound gets lost.&quot; was heard as &quot;Mistake 2, s</p>
 <p><b>On YouTube:</b> long video uploaded, private, waiting for you; shorts uploaded: 2 of 2</p>
 <p><b>Facebook and Instagram, last day:</b> 8 posted, 0 did not post</p>
 <p><b>Last guide run:</b> 2026-10-11 10:52 , added: my-child-knows-sounds-but-cannot-blend</p>
 <details><summary>Last quality note</summary><pre>2026-10-09 14:30  NEEDS A PERSON
 the checker&#x27;s answer could not be read; nothing was marked as checked</pre></details></div></div>
 <script>(function(){var T={
- "made": "2026-10-12T04:40Z",
+ "made": "2026-10-12T05:40Z",
  "orders_note": null,
  "summary": [
-  "TRAFFIC (counter made 2026-10-12 04:40 UTC)",
-  "Today: 296 visits, 316 page views. Last 7 days: 467 visits, 672 page views.",
-  "Top sources, 7 days: direct 316, yt 88, facebook 43, yt-short 10, site 4.",
+  "TRAFFIC (counter made 2026-10-12 05:40 UTC)",
+  "Today: 298 visits, 327 page views. Last 7 days: 469 visits, 683 page views.",
+  "Top sources, 7 days: direct 318, yt 88, facebook 43, yt-short 10, site 4.",
   "Top content pieces, 7 days: easy-way-to-teach-any-child-to-read (yt) 8, how-to-pronounce-phonics-sounds (yt) 8, how-to-teach-phonics-for-kindergarten (yt) 8.",
-  "Top landing pages, 7 days: / 304, /why-cant-my-child-blend-sounds/ 54, /why-cant-my-child-remember-sight-words/ 16.",
-  "Of 467 visits: 109 printed from a maker or opened a check, 57 looked at a plan or bundle, 10 clicked through to checkout.",
+  "Top landing pages, 7 days: / 305, /why-cant-my-child-blend-sounds/ 54, /why-cant-my-child-remember-sight-words/ 16.",
+  "Of 469 visits: 110 printed from a maker or opened a check, 57 looked at a plan or bundle, 11 clicked through to checkout.",
   "Most printed maker, 7 days: /find-the-letter-worksheet-generator/ 1.",
-  "Orders, 7 days: 25 free, 0 paid ($0.00).",
-  "Orders with a known source: 3 of 25 (direct, direct, direct).",
-  "Unknown source: 320 of 467 visits in 7 days. Last hit counted: 2026-10-12 04:20 UTC."
+  "Orders, 7 days: 28 free, 0 paid ($0.00).",
+  "Orders with a known source: 4 of 28 (direct, direct, direct).",
+  "Unknown source: 322 of 469 visits in 7 days. Last hit counted: 2026-10-12 05:31 UTC."
  ],
  "periods": [
   {
    "name": "TODAY",
    "from": "2026-10-12",
    "to": "2026-10-12",
-   "visits": 296,
-   "views": 316,
+   "visits": 298,
+   "views": 327,
    "screens": {
     "tablet": 146,
-    "desktop": 80,
+    "desktop": 82,
     "phone": 70
    },
    "by_source": [
     {
      "source": "direct",
-     "visits": 289,
-     "views": 306
+     "visits": 291,
+     "views": 317
     },
     {
      "source": "yt-short",
@@ -108,13 +108,18 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
    "by_landing_page": [
     {
      "page": "/",
-     "visits": 289,
-     "views": 306
+     "visits": 290,
+     "views": 316
     },
     {
      "page": "/why-cant-my-child-blend-sounds/",
      "visits": 6,
      "views": 9
+    },
+    {
+     "page": "/add-and-subtract-to-10/",
+     "visits": 1,
+     "views": 1
     },
     {
      "page": "/eight-sounds-that-stay-10-day-plan/",
@@ -126,12 +131,17 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     {
      "source": "direct",
      "page": "/",
-     "visits": 289
+     "visits": 290
     },
     {
      "source": "yt-short",
      "page": "/why-cant-my-child-blend-sounds/",
      "visits": 6
+    },
+    {
+     "source": "direct",
+     "page": "/add-and-subtract-to-10/",
+     "visits": 1
     },
     {
      "source": "site",
@@ -143,11 +153,11 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
    "funnel": [
     {
      "source": "direct",
-     "visits": 289,
-     "engaged": 1,
+     "visits": 291,
+     "engaged": 2,
      "offer": 0,
-     "checkout": 1,
-     "free_orders": 1,
+     "checkout": 2,
+     "free_orders": 2,
      "paid_orders": 0
     },
     {
@@ -167,10 +177,43 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "checkout": 0,
      "free_orders": 0,
      "paid_orders": 0
+    },
+    {
+     "source": "unknown",
+     "visits": 0,
+     "engaged": 0,
+     "offer": 0,
+     "checkout": 0,
+     "free_orders": 2,
+     "paid_orders": 0
     }
    ],
    "makers_printed": [],
    "orders": [
+    {
+     "at": "2026-10-12T05:38Z",
+     "product": "Letter Sound Worksheets Level 1",
+     "price": "free",
+     "source": "not recorded",
+     "piece": "",
+     "landing": ""
+    },
+    {
+     "at": "2026-10-12T05:26Z",
+     "product": "Letter Sound Worksheets Level 1",
+     "price": "free",
+     "source": "not recorded",
+     "piece": "",
+     "landing": ""
+    },
+    {
+     "at": "2026-10-12T05:25Z",
+     "product": "Sight Words Practice Worksheets Set 2",
+     "price": "free",
+     "source": "direct",
+     "piece": "",
+     "landing": ""
+    },
     {
      "at": "2026-10-12T04:20Z",
      "product": "Color by Code CVC Words Level 7: Color by Word Mystery Pictures",
@@ -181,10 +224,10 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     }
    ],
    "unknown": {
-    "visits": 290,
-    "of_visits": 296,
-    "orders_without_a_source": 0,
-    "of_orders": 1
+    "visits": 292,
+    "of_visits": 298,
+    "orders_without_a_source": 2,
+    "of_orders": 4
    }
   },
   {
@@ -811,18 +854,18 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
    "name": "LAST 7 DAYS",
    "from": "2026-10-06",
    "to": "2026-10-12",
-   "visits": 467,
-   "views": 672,
+   "visits": 469,
+   "views": 683,
    "screens": {
-    "desktop": 219,
+    "desktop": 221,
     "phone": 102,
     "tablet": 146
    },
    "by_source": [
     {
      "source": "direct",
-     "visits": 316,
-     "views": 462
+     "visits": 318,
+     "views": 473
     },
     {
      "source": "yt",
@@ -1051,8 +1094,8 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
    "by_landing_page": [
     {
      "page": "/",
-     "visits": 304,
-     "views": 456
+     "visits": 305,
+     "views": 466
     },
     {
      "page": "/why-cant-my-child-blend-sounds/",
@@ -1120,6 +1163,11 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "views": 1
     },
     {
+     "page": "/add-and-subtract-to-10/",
+     "visits": 1,
+     "views": 1
+    },
+    {
      "page": "/free-reading-games/",
      "visits": 1,
      "views": 1
@@ -1129,7 +1177,7 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     {
      "source": "direct",
      "page": "/",
-     "visits": 301
+     "visits": 302
     },
     {
      "source": "yt",
@@ -1238,6 +1286,11 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     },
     {
      "source": "direct",
+     "page": "/add-and-subtract-to-10/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
      "page": "/free-reading-games/",
      "visits": 1
     },
@@ -1257,11 +1310,11 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
    "funnel": [
     {
      "source": "direct",
-     "visits": 316,
-     "engaged": 3,
+     "visits": 318,
+     "engaged": 4,
      "offer": 2,
-     "checkout": 10,
-     "free_orders": 3,
+     "checkout": 11,
+     "free_orders": 4,
      "paid_orders": 0
     },
     {
@@ -1342,7 +1395,7 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "engaged": 0,
      "offer": 0,
      "checkout": 0,
-     "free_orders": 22,
+     "free_orders": 24,
      "paid_orders": 0
     }
    ],
@@ -1353,6 +1406,30 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     }
    ],
    "orders": [
+    {
+     "at": "2026-10-12T05:38Z",
+     "product": "Letter Sound Worksheets Level 1",
+     "price": "free",
+     "source": "not recorded",
+     "piece": "",
+     "landing": ""
+    },
+    {
+     "at": "2026-10-12T05:26Z",
+     "product": "Letter Sound Worksheets Level 1",
+     "price": "free",
+     "source": "not recorded",
+     "piece": "",
+     "landing": ""
+    },
+    {
+     "at": "2026-10-12T05:25Z",
+     "product": "Sight Words Practice Worksheets Set 2",
+     "price": "free",
+     "source": "direct",
+     "piece": "",
+     "landing": ""
+    },
     {
      "at": "2026-10-12T04:20Z",
      "product": "Color by Code CVC Words Level 7: Color by Word Mystery Pictures",
@@ -1555,28 +1632,28 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     }
    ],
    "unknown": {
-    "visits": 320,
-    "of_visits": 467,
-    "orders_without_a_source": 22,
-    "of_orders": 25
+    "visits": 322,
+    "of_visits": 469,
+    "orders_without_a_source": 24,
+    "of_orders": 28
    }
   },
   {
    "name": "LAST 30 DAYS",
    "from": "2026-09-13",
    "to": "2026-10-12",
-   "visits": 467,
-   "views": 672,
+   "visits": 469,
+   "views": 683,
    "screens": {
-    "desktop": 219,
+    "desktop": 221,
     "phone": 102,
     "tablet": 146
    },
    "by_source": [
     {
      "source": "direct",
-     "visits": 316,
-     "views": 462
+     "visits": 318,
+     "views": 473
     },
     {
      "source": "yt",
@@ -1805,8 +1882,8 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
    "by_landing_page": [
     {
      "page": "/",
-     "visits": 304,
-     "views": 456
+     "visits": 305,
+     "views": 466
     },
     {
      "page": "/why-cant-my-child-blend-sounds/",
@@ -1874,6 +1951,11 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "views": 1
     },
     {
+     "page": "/add-and-subtract-to-10/",
+     "visits": 1,
+     "views": 1
+    },
+    {
      "page": "/free-reading-games/",
      "visits": 1,
      "views": 1
@@ -1883,7 +1965,7 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     {
      "source": "direct",
      "page": "/",
-     "visits": 301
+     "visits": 302
     },
     {
      "source": "yt",
@@ -1992,6 +2074,11 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     },
     {
      "source": "direct",
+     "page": "/add-and-subtract-to-10/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
      "page": "/free-reading-games/",
      "visits": 1
     },
@@ -2011,11 +2098,11 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
    "funnel": [
     {
      "source": "direct",
-     "visits": 316,
-     "engaged": 3,
+     "visits": 318,
+     "engaged": 4,
      "offer": 2,
-     "checkout": 10,
-     "free_orders": 3,
+     "checkout": 11,
+     "free_orders": 4,
      "paid_orders": 0
     },
     {
@@ -2096,7 +2183,7 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "engaged": 0,
      "offer": 0,
      "checkout": 0,
-     "free_orders": 22,
+     "free_orders": 24,
      "paid_orders": 0
     }
    ],
@@ -2107,6 +2194,30 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     }
    ],
    "orders": [
+    {
+     "at": "2026-10-12T05:38Z",
+     "product": "Letter Sound Worksheets Level 1",
+     "price": "free",
+     "source": "not recorded",
+     "piece": "",
+     "landing": ""
+    },
+    {
+     "at": "2026-10-12T05:26Z",
+     "product": "Letter Sound Worksheets Level 1",
+     "price": "free",
+     "source": "not recorded",
+     "piece": "",
+     "landing": ""
+    },
+    {
+     "at": "2026-10-12T05:25Z",
+     "product": "Sight Words Practice Worksheets Set 2",
+     "price": "free",
+     "source": "direct",
+     "piece": "",
+     "landing": ""
+    },
     {
      "at": "2026-10-12T04:20Z",
      "product": "Color by Code CVC Words Level 7: Color by Word Mystery Pictures",
@@ -2309,10 +2420,10 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     }
    ],
    "unknown": {
-    "visits": 320,
-    "of_visits": 467,
-    "orders_without_a_source": 22,
-    "of_orders": 25
+    "visits": 322,
+    "of_visits": 469,
+    "orders_without_a_source": 24,
+    "of_orders": 28
    }
   }
  ]
