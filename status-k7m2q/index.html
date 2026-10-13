@@ -16,17 +16,17 @@ table{border-collapse:collapse;width:100%}td,th{text-align:left;padding:9px 8px;
 .tile.ok{background:#e9f8ee}.tile.ok i{background:#2e9e62}.tile.ok span{color:#1d7a48}.tile.bad{background:#ffe9ec}.tile.bad i{background:#d92d4a}.tile.bad span{color:#b01f38}.tile.late{background:#fff3df}.tile.late i{background:#e08a00}.tile.run{background:#e6f2ff}.tile.run i{background:#2f80d8}
 details{margin:12px 0 0}summary{cursor:pointer;font-weight:800;background:#eef2f6;border:3px solid #1f2a44;border-radius:999px;padding:6px 14px;display:inline-block}details[open] summary{margin-bottom:10px}pre{white-space:pre-wrap;background:#f7fbff;border:2px solid #c9d2d9;border-radius:12px;padding:12px;font-size:13px}
 @media(max-width:560px){body{font-size:16px}.hero b{font-size:23px}.card{padding:14px}.num b{font-size:30px}td,th{font-size:14.5px;padding:8px 5px}}</style></head>
-<body><h1>Sound It Out <i>dashboard</i></h1><div class="when">Checked Tue Oct 13, 07:50 AM Eastern. Remade every hour.</div>
+<body><h1>Sound It Out <i>dashboard</i></h1><div class="when">Checked Tue Oct 13, 01:50 PM Eastern. Remade every hour.</div>
 <div class="tabs" id="tabs"><button data-t="home" class="on">Home</button><button data-t="visitors">Visitors</button><button data-t="orders">Downloads and sales</button><button data-t="jobs">Today’s jobs</button><button data-t="packs">Packs</button><button data-t="videos">Videos and posts</button></div>
 <div class="panel on" id="p-home"><div class="hero bad"><b>Something did not finish</b><span>Claude is dealing with it. Anything for you is in the yellow box.</span></div>
 <div class="card you"><h2>For you to do</h2><p>Nothing right now.</p></div>
-<div class="card"><h2>Claude is handling</h2><ul><li><b>YouTube uploads</b> did not finish today. I am looking at it.</li><li>29 new kind(s) of pack are waiting for Claude to check before they can go on sale. Nothing wrong is on sale.</li></ul></div>
-<div class="card"><h2>Still to come today</h2><ul><li><b>New packs put on sale</b>: not due yet</li></ul></div>
+<div class="card"><h2>Claude is handling</h2><ul><li><b>New packs put on sale</b> did not finish today. I am looking at it.</li><li>29 new kind(s) of pack are waiting for Claude to check before they can go on sale. Nothing wrong is on sale.</li></ul></div>
+<div class="card"><h2>Still to come today</h2><ul><li><b>YouTube uploads</b>: late, started again</li></ul></div>
 <div class="nums" id="homenums"></div>
 <div class="go"><button data-go="visitors">See visitors</button><button data-go="orders">See downloads and sales</button><button data-go="jobs">See today’s jobs</button></div></div>
 <div class="panel" id="p-visitors"><div class="card"><h2>Visitors</h2><div class="lbl">When</div><div class="pills" id="when"></div><div class="lbl">From where</div><div class="pills src" id="src"></div><div id="vbody"></div></div></div>
 <div class="panel" id="p-orders"><div class="card"><h2>Downloads and sales</h2><div class="lbl">When</div><div class="pills" id="owhen"></div><div id="obody"></div></div></div>
-<div class="panel" id="p-jobs"><div class="card"><h2>Today’s jobs <small>8 of 10 done</small></h2><div class="tiles"><div class="tile ok"><i></i><b>Daily video and shorts are made</b><span>Done</span></div><div class="tile bad"><i></i><b>YouTube uploads</b><span>Did not finish</span><em>I will look at this one.</em></div><div class="tile ok"><i></i><b>New guide for the website</b><span>Done</span></div><div class="tile ok"><i></i><b>One old guide rewritten</b><span>Done</span></div><div class="tile ok"><i></i><b>New pack designs</b><span>Done</span></div><div class="tile wait"><i></i><b>New packs put on sale</b><span>Not due yet</span></div><div class="tile ok"><i></i><b>Daily quality check</b><span>Done</span></div><div class="tile ok"><i></i><b>Morning reel (Facebook and Instagram)</b><span>Done</span></div><div class="tile ok"><i></i><b>Picture post (Facebook and Instagram)</b><span>Done</span></div><div class="tile ok"><i></i><b>Evening reel (Facebook and Instagram)</b><span>Done</span></div></div>
+<div class="panel" id="p-jobs"><div class="card"><h2>Today’s jobs <small>8 of 10 done</small></h2><div class="tiles"><div class="tile ok"><i></i><b>Daily video and shorts are made</b><span>Done</span></div><div class="tile late"><i></i><b>YouTube uploads</b><span>Late, started again</span></div><div class="tile ok"><i></i><b>New guide for the website</b><span>Done</span></div><div class="tile ok"><i></i><b>One old guide rewritten</b><span>Done</span></div><div class="tile ok"><i></i><b>New pack designs</b><span>Done</span></div><div class="tile bad"><i></i><b>New packs put on sale</b><span>Did not finish</span><em>I will look at this one.</em></div><div class="tile ok"><i></i><b>Daily quality check</b><span>Done</span></div><div class="tile ok"><i></i><b>Morning reel (Facebook and Instagram)</b><span>Done</span></div><div class="tile ok"><i></i><b>Picture post (Facebook and Instagram)</b><span>Done</span></div><div class="tile ok"><i></i><b>Evening reel (Facebook and Instagram)</b><span>Done</span></div></div>
 <p class="hint">Green = done. Blue = running now. Gray = not due yet. Orange = late, started again. Red = did not finish.</p></div></div><div class="panel" id="p-packs"><div class="card"><h2>Packs</h2><div class="nums"><div class="num"><b>0</b><span>put on sale today</span></div><div class="num"><b>189</b><span>waiting to go on sale</span></div><div class="num"><b>0</b><span>could not be put on sale</span></div><div class="num"><b>0</b><span>on hold</span></div></div>
 <p><b>Put on sale today:</b> none yet</p>
 <details><summary>More about packs</summary><p><b>Waiting:</b> ten-frames-draw-the-dots, count-and-color-1-to-5, count-and-color-1-to-10, count-and-color-6-to-10, count-and-color-11-to-20, count-and-color-mixed-1-to-20, number-recognition-1-to-5, number-recognition-1-to-10, number-recognition-11-to-20, number-recognition-21-to-50, number-recognition-51-to-100, numbers-1-to-30, numbers-1-to-50, numbers-51-to-100, numbers-1-to-100, count-back-from-100, color-by-code-addition-to-10, color-by-code-subtraction-to-10, color-by-code-addition-to-20, roll-and-color-numbers-1-to-6, roll-and-color-addition-to-12, comparing-numbers-pictures-1-to-5, comparing-numbers-pictures-1-to-10, comparing-numbers-numerals-1-to-10, comparing-numbers-numerals-1-to-20, comparing-numbers-numerals-1-to-100, count-and-match-1-to-5, count-and-match-1-to-10, count-and-match-6-to-10, count-and-match-11-to-20, count-and-match-mixed-1-to-20, counting-coins-pennies, counting-coins-pennies-nickels, counting-coins-up-to-dimes, counting-coins-up-to-quarters, counting-coins-mixed-dollar, telling-time-oclock, telling-time-half-past, telling-time-quarter-hours, telling-time-five-minutes ...</p>
@@ -35,51 +35,58 @@ details{margin:12px 0 0}summary{cursor:pointer;font-weight:800;background:#eef2f
 <p><b>Kinds of pack waiting for a person to check them first:</b> alphabet-order, beginning-sounds, blending-buildup, blends-practice, color-words, compare-equations, comparing-numbers, count-and-color, count-and-match, cv-blending, cvc-read-and-match, cvc-sentence-reading, cvc-word-building, days-and-months, digraph-sort, doubles, ending-sounds, math-fact-drills, middle-vowel, number-words, numbers-to-100, patterns, rhyming-words, shapes, skip-counting, subitize-numbers, syllable-count, word-family-houses, word-ladders</p></details></div></div><div class="panel" id="p-videos"><div class="card"><h2>Videos and posts</h2>
 <p><b>Last video made:</b> how to teach phonics to children (2026-10-13 04:55) , made</p>
 <p><b>On YouTube:</b> long video not uploaded yet; shorts uploaded: 0 of 2</p>
-<p><b>Facebook and Instagram, last day:</b> 18 posted, 0 did not post</p>
+<p><b>Facebook and Instagram, last day:</b> 22 posted, 0 did not post</p>
 <p><b>Last guide run:</b> 2026-10-13 09:19 , added: my-child-mixes-up-b-and-d</p>
-<details><summary>Last quality note</summary><pre>2026-10-09 14:30  NEEDS A PERSON
-the checker&#x27;s answer could not be read; nothing was marked as checked</pre></details></div></div>
+<details><summary>Last quality note</summary><pre>2026-10-13 14:32  NEEDS A PERSON
+- lesson:how-to-teach-phonics-to-children | mistakes[0] &#x27;Vowel name, not sound&#x27; — bad: &quot;e sounds like \&quot;ee\&quot;&quot;, good: &quot;e sounds like \&quot;eh\&quot;&quot; | These fields are narrator speech (not an &#x27;ear&#x27;/&#x27;letters&#x27; drill), so the narrator would have to say the single letter &quot;e&quot; by itself, which a text-to-speech/voice track cannot reliably render as the intended short sound — it risks being read as the letter name instead of demonstrating the sound.
+- lesson:how-to-teach-phonics-to-children | mistakes[1] &#x27;Rushing the vowel sound&#x27; — bad: &quot;h-t&quot;, good: &quot;h-a-t&quot; | These fields are n</pre></details></div></div>
 <script>(function(){var T={
- "made": "2026-10-13T11:40Z",
+ "made": "2026-10-13T17:40Z",
  "orders_note": null,
  "summary": [
-  "TRAFFIC (counter made 2026-10-13 11:40 UTC)",
-  "Today: 35 visits, 311 page views. Last 7 days: 553 visits, 1178 page views.",
-  "Top sources, 7 days: direct 352, yt 106, facebook 60, yt-short 14, site 9.",
+  "TRAFFIC (counter made 2026-10-13 17:40 UTC)",
+  "Today: 51 visits, 366 page views. Last 7 days: 569 visits, 1233 page views.",
+  "Top sources, 7 days: direct 365, yt 106, facebook 62, yt-short 14, site 9.",
   "Top content pieces, 7 days: easy-way-to-teach-any-child-to-read (yt) 8, how-to-pronounce-phonics-sounds (yt) 8, how-to-teach-a-child-to-read (yt) 8.",
-  "Top landing pages, 7 days: / 314, /why-cant-my-child-blend-sounds/ 74, /free-decodable-reading-sampler/ 24.",
-  "Of 553 visits: 149 printed from a maker or opened a check, 83 looked at a plan or bundle, 20 clicked through to checkout.",
+  "Top landing pages, 7 days: / 318, /why-cant-my-child-blend-sounds/ 76, /free-decodable-reading-sampler/ 26.",
+  "Of 569 visits: 154 printed from a maker or opened a check, 85 looked at a plan or bundle, 21 clicked through to checkout.",
   "Most printed maker, 7 days: /find-the-letter-worksheet-generator/ 1, /lined-paper-generator/ 1.",
-  "Orders, 7 days: 43 free, 0 paid ($0.00).",
-  "Orders with a known source: 11 of 43 (direct, direct, direct).",
-  "Unknown source: 361 of 553 visits in 7 days. Last hit counted: 2026-10-13 11:32 UTC."
+  "Orders, 7 days: 44 free, 0 paid ($0.00).",
+  "Orders with a known source: 12 of 44 (direct, direct, direct).",
+  "Unknown source: 374 of 569 visits in 7 days. Last hit counted: 2026-10-13 17:14 UTC."
  ],
  "periods": [
   {
    "name": "TODAY",
    "from": "2026-10-13",
    "to": "2026-10-13",
-   "visits": 35,
-   "views": 311,
+   "visits": 51,
+   "views": 366,
    "screens": {
-    "desktop": 31,
-    "phone": 4
+    "desktop": 45,
+    "phone": 5,
+    "tablet": 1
    },
    "by_source": [
+    {
+     "source": "direct",
+     "visits": 27,
+     "views": 332
+    },
     {
      "source": "yt",
      "visits": 16,
      "views": 24
     },
     {
-     "source": "direct",
-     "visits": 14,
-     "views": 280
+     "source": "google",
+     "visits": 4,
+     "views": 5
     },
     {
-     "source": "google",
-     "visits": 3,
-     "views": 4
+     "source": "facebook",
+     "visits": 2,
+     "views": 2
     },
     {
      "source": "pdf",
@@ -104,14 +111,30 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "piece": "how-to-teach-sight-words",
      "visits": 8,
      "views": 12
+    },
+    {
+     "source": "facebook",
+     "piece": "how-to-teach-phonics-to-children-short-mistake",
+     "visits": 2,
+     "views": 2
     }
    ],
-   "visits_with_a_source_but_no_piece": 4,
+   "visits_with_a_source_but_no_piece": 5,
    "by_landing_page": [
     {
+     "page": "/",
+     "visits": 6,
+     "views": 13
+    },
+    {
      "page": "/the-one-sheet/",
-     "visits": 4,
-     "views": 98
+     "visits": 5,
+     "views": 100
+    },
+    {
+     "page": "/free-decodable-reading-sampler/",
+     "visits": 5,
+     "views": 8
     },
     {
      "page": "/free-blending-game/",
@@ -129,6 +152,16 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "views": 6
     },
     {
+     "page": "/why-cant-my-child-blend-sounds/",
+     "visits": 4,
+     "views": 5
+    },
+    {
+     "page": "/my-child-is-behind-in-reading/",
+     "visits": 3,
+     "views": 17
+    },
+    {
      "page": "/eight-sounds-that-stay-10-day-plan/",
      "visits": 3,
      "views": 16
@@ -137,21 +170,6 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "page": "/free-addition-within-10-worksheets/",
      "visits": 3,
      "views": 4
-    },
-    {
-     "page": "/free-decodable-reading-sampler/",
-     "visits": 3,
-     "views": 3
-    },
-    {
-     "page": "/",
-     "visits": 2,
-     "views": 6
-    },
-    {
-     "page": "/why-cant-my-child-blend-sounds/",
-     "visits": 2,
-     "views": 3
     },
     {
      "page": "/why-cant-my-child-remember-sight-words/",
@@ -169,21 +187,51 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "views": 69
     },
     {
+     "page": "/10-day-plans/",
+     "visits": 1,
+     "views": 7
+    },
+    {
+     "page": "/ears-first-10-day-listening-plan/",
+     "visits": 1,
+     "views": 7
+    },
+    {
+     "page": "/look-at-every-letter-10-day-plan/",
+     "visits": 1,
+     "views": 5
+    },
+    {
+     "page": "/the-one-sheet-math/",
+     "visits": 1,
+     "views": 4
+    },
+    {
      "page": "/how-to-help-my-child-with-handwriting/",
      "visits": 1,
      "views": 2
     },
     {
-     "page": "/my-child-is-behind-in-reading/",
+     "page": "/research-sight-words-memorize-or-sound-out/",
      "visits": 1,
-     "views": 2
+     "views": 1
     }
    ],
    "by_source_and_landing_page": [
     {
      "source": "direct",
+     "page": "/",
+     "visits": 6
+    },
+    {
+     "source": "direct",
      "page": "/the-one-sheet/",
-     "visits": 4
+     "visits": 5
+    },
+    {
+     "source": "direct",
+     "page": "/free-decodable-reading-sampler/",
+     "visits": 5
     },
     {
      "source": "yt",
@@ -201,23 +249,18 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "visits": 4
     },
     {
+     "source": "direct",
+     "page": "/my-child-is-behind-in-reading/",
+     "visits": 3
+    },
+    {
      "source": "google",
      "page": "/free-addition-within-10-worksheets/",
      "visits": 3
     },
     {
      "source": "direct",
-     "page": "/free-decodable-reading-sampler/",
-     "visits": 3
-    },
-    {
-     "source": "direct",
      "page": "/eight-sounds-that-stay-10-day-plan/",
-     "visits": 2
-    },
-    {
-     "source": "direct",
-     "page": "/",
      "visits": 2
     },
     {
@@ -228,6 +271,11 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     {
      "source": "yt",
      "page": "/why-cant-my-child-remember-sight-words/",
+     "visits": 2
+    },
+    {
+     "source": "facebook",
+     "page": "/why-cant-my-child-blend-sounds/",
      "visits": 2
     },
     {
@@ -242,12 +290,32 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     },
     {
      "source": "direct",
-     "page": "/my-child-is-behind-in-reading/",
+     "page": "/10-day-plans/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/ears-first-10-day-listening-plan/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/look-at-every-letter-10-day-plan/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/the-one-sheet-math/",
      "visits": 1
     },
     {
      "source": "pdf",
      "page": "/how-to-help-my-child-with-handwriting/",
+     "visits": 1
+    },
+    {
+     "source": "google",
+     "page": "/research-sight-words-memorize-or-sound-out/",
      "visits": 1
     },
     {
@@ -259,6 +327,15 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
    "makers_printed_by_source": [],
    "funnel": [
     {
+     "source": "direct",
+     "visits": 27,
+     "engaged": 7,
+     "offer": 9,
+     "checkout": 4,
+     "free_orders": 2,
+     "paid_orders": 0
+    },
+    {
      "source": "yt",
      "visits": 16,
      "engaged": 8,
@@ -268,18 +345,18 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "paid_orders": 0
     },
     {
-     "source": "direct",
-     "visits": 14,
-     "engaged": 4,
-     "offer": 7,
-     "checkout": 3,
-     "free_orders": 1,
+     "source": "google",
+     "visits": 4,
+     "engaged": 0,
+     "offer": 0,
+     "checkout": 0,
+     "free_orders": 0,
      "paid_orders": 0
     },
     {
-     "source": "google",
-     "visits": 3,
-     "engaged": 0,
+     "source": "facebook",
+     "visits": 2,
+     "engaged": 2,
      "offer": 0,
      "checkout": 0,
      "free_orders": 0,
@@ -316,6 +393,14 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
    "makers_printed": [],
    "orders": [
     {
+     "at": "2026-10-13T14:55Z",
+     "product": "Free Decodable Reading Sampler",
+     "price": "free",
+     "source": "direct",
+     "piece": "",
+     "landing": ""
+    },
+    {
      "at": "2026-10-13T00:53Z",
      "product": "Alphabet Tracing Worksheets A to Z",
      "price": "free",
@@ -333,10 +418,10 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     }
    ],
    "unknown": {
-    "visits": 15,
-    "of_visits": 35,
+    "visits": 28,
+    "of_visits": 51,
     "orders_without_a_source": 1,
-    "of_orders": 2
+    "of_orders": 3
    }
   },
   {
@@ -894,18 +979,18 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
    "name": "LAST 7 DAYS",
    "from": "2026-10-07",
    "to": "2026-10-13",
-   "visits": 553,
-   "views": 1178,
+   "visits": 569,
+   "views": 1233,
    "screens": {
-    "desktop": 283,
-    "phone": 123,
-    "tablet": 147
+    "desktop": 297,
+    "phone": 124,
+    "tablet": 148
    },
    "by_source": [
     {
      "source": "direct",
-     "visits": 352,
-     "views": 897
+     "visits": 365,
+     "views": 949
     },
     {
      "source": "yt",
@@ -914,8 +999,8 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     },
     {
      "source": "facebook",
-     "visits": 60,
-     "views": 60
+     "visits": 62,
+     "views": 62
     },
     {
      "source": "yt-short",
@@ -928,14 +1013,14 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "views": 23
     },
     {
-     "source": "pdf",
+     "source": "google",
      "visits": 4,
      "views": 5
     },
     {
-     "source": "google",
-     "visits": 3,
-     "views": 4
+     "source": "pdf",
+     "visits": 4,
+     "views": 5
     },
     {
      "source": "bing",
@@ -1135,22 +1220,22 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "views": 3
     }
    ],
-   "visits_with_a_source_but_no_piece": 25,
+   "visits_with_a_source_but_no_piece": 26,
    "by_landing_page": [
     {
      "page": "/",
-     "visits": 314,
-     "views": 516
+     "visits": 318,
+     "views": 523
     },
     {
      "page": "/why-cant-my-child-blend-sounds/",
-     "visits": 74,
-     "views": 95
+     "visits": 76,
+     "views": 97
     },
     {
      "page": "/free-decodable-reading-sampler/",
-     "visits": 24,
-     "views": 48
+     "visits": 26,
+     "views": 53
     },
     {
      "page": "/free-blending-game/",
@@ -1174,8 +1259,8 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     },
     {
      "page": "/my-child-is-behind-in-reading/",
-     "visits": 14,
-     "views": 18
+     "visits": 16,
+     "views": 33
     },
     {
      "page": "/why-cant-my-child-remember-letter-sounds/",
@@ -1184,8 +1269,8 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     },
     {
      "page": "/the-one-sheet/",
-     "visits": 9,
-     "views": 159
+     "visits": 10,
+     "views": 161
     },
     {
      "page": "/eight-sounds-that-stay-10-day-plan/",
@@ -1218,9 +1303,29 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "views": 93
     },
     {
+     "page": "/10-day-plans/",
+     "visits": 1,
+     "views": 7
+    },
+    {
+     "page": "/ears-first-10-day-listening-plan/",
+     "visits": 1,
+     "views": 7
+    },
+    {
      "page": "/learning-path/",
      "visits": 1,
      "views": 5
+    },
+    {
+     "page": "/look-at-every-letter-10-day-plan/",
+     "visits": 1,
+     "views": 5
+    },
+    {
+     "page": "/the-one-sheet-math/",
+     "visits": 1,
+     "views": 4
     },
     {
      "page": "/how-to-help-my-child-with-handwriting/",
@@ -1258,12 +1363,12 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "views": 1
     },
     {
-     "page": "/sight-word-worksheet-generator/",
+     "page": "/research-sight-words-memorize-or-sound-out/",
      "visits": 1,
      "views": 1
     },
     {
-     "page": "/thank-you/",
+     "page": "/sight-word-worksheet-generator/",
      "visits": 1,
      "views": 1
     }
@@ -1272,7 +1377,12 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     {
      "source": "direct",
      "page": "/",
-     "visits": 308
+     "visits": 312
+    },
+    {
+     "source": "facebook",
+     "page": "/why-cant-my-child-blend-sounds/",
+     "visits": 34
     },
     {
      "source": "yt",
@@ -1280,14 +1390,9 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "visits": 32
     },
     {
-     "source": "facebook",
-     "page": "/why-cant-my-child-blend-sounds/",
-     "visits": 32
-    },
-    {
      "source": "direct",
      "page": "/free-decodable-reading-sampler/",
-     "visits": 23
+     "visits": 25
     },
     {
      "source": "yt",
@@ -1305,6 +1410,11 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "visits": 18
     },
     {
+     "source": "direct",
+     "page": "/the-one-sheet/",
+     "visits": 10
+    },
+    {
      "source": "yt-short",
      "page": "/why-cant-my-child-blend-sounds/",
      "visits": 10
@@ -1313,11 +1423,6 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "source": "facebook",
      "page": "/why-cant-my-child-remember-sight-words/",
      "visits": 10
-    },
-    {
-     "source": "direct",
-     "page": "/the-one-sheet/",
-     "visits": 9
     },
     {
      "source": "yt",
@@ -1360,6 +1465,11 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "visits": 4
     },
     {
+     "source": "direct",
+     "page": "/my-child-is-behind-in-reading/",
+     "visits": 3
+    },
+    {
      "source": "google",
      "page": "/free-addition-within-10-worksheets/",
      "visits": 3
@@ -1400,6 +1510,16 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "visits": 1
     },
     {
+     "source": "direct",
+     "page": "/10-day-plans/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/ears-first-10-day-listening-plan/",
+     "visits": 1
+    },
+    {
      "source": "bing",
      "page": "/",
      "visits": 1
@@ -1421,7 +1541,12 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     },
     {
      "source": "direct",
-     "page": "/my-child-is-behind-in-reading/",
+     "page": "/look-at-every-letter-10-day-plan/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/the-one-sheet-math/",
      "visits": 1
     },
     {
@@ -1470,6 +1595,11 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "visits": 1
     },
     {
+     "source": "google",
+     "page": "/research-sight-words-memorize-or-sound-out/",
+     "visits": 1
+    },
+    {
      "source": "gumroad.com",
      "page": "/",
      "visits": 1
@@ -1505,11 +1635,11 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
    "funnel": [
     {
      "source": "direct",
-     "visits": 352,
-     "engaged": 12,
-     "offer": 14,
-     "checkout": 19,
-     "free_orders": 10,
+     "visits": 365,
+     "engaged": 15,
+     "offer": 16,
+     "checkout": 20,
+     "free_orders": 11,
      "paid_orders": 0
     },
     {
@@ -1523,8 +1653,8 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     },
     {
      "source": "facebook",
-     "visits": 60,
-     "engaged": 51,
+     "visits": 62,
+     "engaged": 53,
      "offer": 0,
      "checkout": 0,
      "free_orders": 0,
@@ -1549,19 +1679,19 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "paid_orders": 0
     },
     {
-     "source": "pdf",
+     "source": "google",
      "visits": 4,
-     "engaged": 1,
-     "offer": 4,
+     "engaged": 0,
+     "offer": 0,
      "checkout": 0,
      "free_orders": 0,
      "paid_orders": 0
     },
     {
-     "source": "google",
-     "visits": 3,
-     "engaged": 0,
-     "offer": 0,
+     "source": "pdf",
+     "visits": 4,
+     "engaged": 1,
+     "offer": 4,
      "checkout": 0,
      "free_orders": 0,
      "paid_orders": 0
@@ -1622,6 +1752,14 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     }
    ],
    "orders": [
+    {
+     "at": "2026-10-13T14:55Z",
+     "product": "Free Decodable Reading Sampler",
+     "price": "free",
+     "source": "direct",
+     "piece": "",
+     "landing": ""
+    },
     {
      "at": "2026-10-13T00:53Z",
      "product": "Alphabet Tracing Worksheets A to Z",
@@ -1968,28 +2106,28 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     }
    ],
    "unknown": {
-    "visits": 361,
-    "of_visits": 553,
+    "visits": 374,
+    "of_visits": 569,
     "orders_without_a_source": 32,
-    "of_orders": 43
+    "of_orders": 44
    }
   },
   {
    "name": "LAST 30 DAYS",
    "from": "2026-09-14",
    "to": "2026-10-13",
-   "visits": 553,
-   "views": 1178,
+   "visits": 569,
+   "views": 1233,
    "screens": {
-    "desktop": 283,
-    "phone": 123,
-    "tablet": 147
+    "desktop": 297,
+    "phone": 124,
+    "tablet": 148
    },
    "by_source": [
     {
      "source": "direct",
-     "visits": 352,
-     "views": 897
+     "visits": 365,
+     "views": 949
     },
     {
      "source": "yt",
@@ -1998,8 +2136,8 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     },
     {
      "source": "facebook",
-     "visits": 60,
-     "views": 60
+     "visits": 62,
+     "views": 62
     },
     {
      "source": "yt-short",
@@ -2012,14 +2150,14 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "views": 23
     },
     {
-     "source": "pdf",
+     "source": "google",
      "visits": 4,
      "views": 5
     },
     {
-     "source": "google",
-     "visits": 3,
-     "views": 4
+     "source": "pdf",
+     "visits": 4,
+     "views": 5
     },
     {
      "source": "bing",
@@ -2219,22 +2357,22 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "views": 3
     }
    ],
-   "visits_with_a_source_but_no_piece": 25,
+   "visits_with_a_source_but_no_piece": 26,
    "by_landing_page": [
     {
      "page": "/",
-     "visits": 314,
-     "views": 516
+     "visits": 318,
+     "views": 523
     },
     {
      "page": "/why-cant-my-child-blend-sounds/",
-     "visits": 74,
-     "views": 95
+     "visits": 76,
+     "views": 97
     },
     {
      "page": "/free-decodable-reading-sampler/",
-     "visits": 24,
-     "views": 48
+     "visits": 26,
+     "views": 53
     },
     {
      "page": "/free-blending-game/",
@@ -2258,8 +2396,8 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     },
     {
      "page": "/my-child-is-behind-in-reading/",
-     "visits": 14,
-     "views": 18
+     "visits": 16,
+     "views": 33
     },
     {
      "page": "/why-cant-my-child-remember-letter-sounds/",
@@ -2268,8 +2406,8 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     },
     {
      "page": "/the-one-sheet/",
-     "visits": 9,
-     "views": 159
+     "visits": 10,
+     "views": 161
     },
     {
      "page": "/eight-sounds-that-stay-10-day-plan/",
@@ -2302,9 +2440,29 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "views": 93
     },
     {
+     "page": "/10-day-plans/",
+     "visits": 1,
+     "views": 7
+    },
+    {
+     "page": "/ears-first-10-day-listening-plan/",
+     "visits": 1,
+     "views": 7
+    },
+    {
      "page": "/learning-path/",
      "visits": 1,
      "views": 5
+    },
+    {
+     "page": "/look-at-every-letter-10-day-plan/",
+     "visits": 1,
+     "views": 5
+    },
+    {
+     "page": "/the-one-sheet-math/",
+     "visits": 1,
+     "views": 4
     },
     {
      "page": "/how-to-help-my-child-with-handwriting/",
@@ -2342,12 +2500,12 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "views": 1
     },
     {
-     "page": "/sight-word-worksheet-generator/",
+     "page": "/research-sight-words-memorize-or-sound-out/",
      "visits": 1,
      "views": 1
     },
     {
-     "page": "/thank-you/",
+     "page": "/sight-word-worksheet-generator/",
      "visits": 1,
      "views": 1
     }
@@ -2356,7 +2514,12 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     {
      "source": "direct",
      "page": "/",
-     "visits": 308
+     "visits": 312
+    },
+    {
+     "source": "facebook",
+     "page": "/why-cant-my-child-blend-sounds/",
+     "visits": 34
     },
     {
      "source": "yt",
@@ -2364,14 +2527,9 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "visits": 32
     },
     {
-     "source": "facebook",
-     "page": "/why-cant-my-child-blend-sounds/",
-     "visits": 32
-    },
-    {
      "source": "direct",
      "page": "/free-decodable-reading-sampler/",
-     "visits": 23
+     "visits": 25
     },
     {
      "source": "yt",
@@ -2389,6 +2547,11 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "visits": 18
     },
     {
+     "source": "direct",
+     "page": "/the-one-sheet/",
+     "visits": 10
+    },
+    {
      "source": "yt-short",
      "page": "/why-cant-my-child-blend-sounds/",
      "visits": 10
@@ -2397,11 +2560,6 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "source": "facebook",
      "page": "/why-cant-my-child-remember-sight-words/",
      "visits": 10
-    },
-    {
-     "source": "direct",
-     "page": "/the-one-sheet/",
-     "visits": 9
     },
     {
      "source": "yt",
@@ -2444,6 +2602,11 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "visits": 4
     },
     {
+     "source": "direct",
+     "page": "/my-child-is-behind-in-reading/",
+     "visits": 3
+    },
+    {
      "source": "google",
      "page": "/free-addition-within-10-worksheets/",
      "visits": 3
@@ -2484,6 +2647,16 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "visits": 1
     },
     {
+     "source": "direct",
+     "page": "/10-day-plans/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/ears-first-10-day-listening-plan/",
+     "visits": 1
+    },
+    {
      "source": "bing",
      "page": "/",
      "visits": 1
@@ -2505,7 +2678,12 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     },
     {
      "source": "direct",
-     "page": "/my-child-is-behind-in-reading/",
+     "page": "/look-at-every-letter-10-day-plan/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/the-one-sheet-math/",
      "visits": 1
     },
     {
@@ -2554,6 +2732,11 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "visits": 1
     },
     {
+     "source": "google",
+     "page": "/research-sight-words-memorize-or-sound-out/",
+     "visits": 1
+    },
+    {
      "source": "gumroad.com",
      "page": "/",
      "visits": 1
@@ -2589,11 +2772,11 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
    "funnel": [
     {
      "source": "direct",
-     "visits": 352,
-     "engaged": 12,
-     "offer": 14,
-     "checkout": 19,
-     "free_orders": 10,
+     "visits": 365,
+     "engaged": 15,
+     "offer": 16,
+     "checkout": 20,
+     "free_orders": 11,
      "paid_orders": 0
     },
     {
@@ -2607,8 +2790,8 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     },
     {
      "source": "facebook",
-     "visits": 60,
-     "engaged": 51,
+     "visits": 62,
+     "engaged": 53,
      "offer": 0,
      "checkout": 0,
      "free_orders": 0,
@@ -2633,19 +2816,19 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "paid_orders": 0
     },
     {
-     "source": "pdf",
+     "source": "google",
      "visits": 4,
-     "engaged": 1,
-     "offer": 4,
+     "engaged": 0,
+     "offer": 0,
      "checkout": 0,
      "free_orders": 0,
      "paid_orders": 0
     },
     {
-     "source": "google",
-     "visits": 3,
-     "engaged": 0,
-     "offer": 0,
+     "source": "pdf",
+     "visits": 4,
+     "engaged": 1,
+     "offer": 4,
      "checkout": 0,
      "free_orders": 0,
      "paid_orders": 0
@@ -2706,6 +2889,14 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     }
    ],
    "orders": [
+    {
+     "at": "2026-10-13T14:55Z",
+     "product": "Free Decodable Reading Sampler",
+     "price": "free",
+     "source": "direct",
+     "piece": "",
+     "landing": ""
+    },
     {
      "at": "2026-10-13T00:53Z",
      "product": "Alphabet Tracing Worksheets A to Z",
@@ -3052,10 +3243,10 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     }
    ],
    "unknown": {
-    "visits": 361,
-    "of_visits": 553,
+    "visits": 374,
+    "of_visits": 569,
     "orders_without_a_source": 32,
-    "of_orders": 43
+    "of_orders": 44
    }
   }
  ]
