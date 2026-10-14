@@ -6,6 +6,7 @@ const BASE = 'https://sounditoutreading.com';
 const today = new Date().toISOString().slice(0, 10);
 const pins = JSON.parse(readFileSync('pins.json', 'utf8'));
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+const type = (f) => (/\.jpe?g$/i.test(f) ? 'image/jpeg' : 'image/png');      // the pins made by pins_more.mjs are JPEG
 const slug = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 mkdirSync('feeds', { recursive: true });
 const boards = [...new Set(pins.map((p) => p.board))];
@@ -13,7 +14,7 @@ for (const board of boards) {
   const live = pins.filter((p) => p.board === board && p.release <= today).sort((a, b) => (a.release < b.release ? 1 : -1));
   const items = live.map((p) => `<item><title>${esc(p.title)}</title><link>${esc(p.link)}</link><guid isPermaLink="false">${esc(p.file)}</guid>
 <pubDate>${new Date(p.release + 'T12:00:00Z').toUTCString()}</pubDate><description>${esc(p.description)}</description>
-<enclosure url="${BASE}/pins/${esc(p.file)}" type="image/png" length="0"/><media:content url="${BASE}/pins/${esc(p.file)}" medium="image" type="image/png"/></item>`).join('\n');
+<enclosure url="${BASE}/pins/${esc(p.file)}" type="${type(p.file)}" length="0"/><media:content url="${BASE}/pins/${esc(p.file)}" medium="image" type="${type(p.file)}"/></item>`).join('\n');
   writeFileSync(`feeds/${slug(board)}.xml`, `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>${esc(board)}</title><link>${BASE}/</link>
 <description>${esc(board)} from Sound It Out Phonics Printables</description>

@@ -337,7 +337,7 @@
 - [Story Problem Worksheet Maker](https://sounditoutreading.com/story-problem-worksheet-maker/): free tool. A tiny story to read, draw and solve. Made in the browser; nothing typed is sent or stored.
 - [Glyph Maker](https://sounditoutreading.com/read-and-color-glyph-maker/): free tool. Read two sentences, pick the true one, color the shape. Made in the browser; nothing typed is sent or stored.
 - [Pretend Play Printables Maker](https://sounditoutreading.com/pretend-play-printable-maker/): free tool. Signs, price cards and order pads to read while playing. Made in the browser; nothing typed is sent or stored.
-- [Color by Number Generator](https://sounditoutreading.com/color-by-number-generator/): free tool. Color the squares by the key and a picture appears. Made in the browser; nothing typed is sent or stored.
+- [Color by Number Generator](https://sounditoutreading.com/color-by-number-generator/): free tool. Color each part of the picture by the key. Made in the browser; nothing typed is sent or stored.
 - [Printable Mazes for Kids](https://sounditoutreading.com/printable-mazes-for-kids/): free tool. Wide paths, one way through, a new maze every time. Made in the browser; nothing typed is sent or stored.
 - [Number Cut and Paste Worksheets](https://sounditoutreading.com/number-cut-and-paste-worksheets/): free tool. Count, cut, glue: numbers 1 to 20. Made in the browser; nothing typed is sent or stored.
 - [Cut and Paste Shapes Worksheets](https://sounditoutreading.com/cut-and-paste-shapes-worksheets/): free tool. Cut out the shapes, match them, sort them. Made in the browser; nothing typed is sent or stored.
