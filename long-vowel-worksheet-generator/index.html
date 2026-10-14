@@ -881,6 +881,41 @@
 .sht .kw-ff{gap:1mm}.sht .kw-ffl{display:flex;align-items:center;gap:2mm}.sht .kw-ffl b{font-size:18pt}.sht .kw-fbx{width:12mm;height:10mm}
 .sht .kw-ty{gap:4mm}.sht .kw-tyd{width:60%;height:70%;min-height:10mm}
 .sht.bw .kw-dm i{background-color:#111!important}
+/* ROUND 13 MAKERS, BROUGHT UP TO THE OLDER ONES (2026-10-14): the cards show the page's soft brand color, as the older makers do
+   (they were forced white), and our own pictures sit on every sheet. Boxes to write in stay white. */
+.sht .kc[class*="kw-"]:not(.kw-key){background:var(--s,var(--soft))}
+.sht .kw-art{display:block;flex:none}.sht .kw-art img{width:100%;height:100%;object-fit:contain;display:block}
+.sht .kw-hero{display:flex;align-items:center;justify-content:center;gap:5mm;margin:0 0 2.5mm}.sht .kw-herot{font-size:17pt;white-space:normal;text-align:center;max-width:90mm}
+.sht .kw-cbw{display:flex;align-items:flex-start;justify-content:center;gap:4mm}.sht .kw-cbw svg.kw-svg{margin:0}
+.sht .kw-cbs{display:flex;flex-direction:column;align-items:center;gap:3mm;flex:none}.sht .kw-cbs b{font-size:14pt;white-space:normal;text-align:center}
+.sht .kw-mzh{display:flex;align-items:center;justify-content:center;gap:4mm;margin:0 0 3mm}.sht .kw-mzh b{font-size:18pt}
+.sht .kw-mza{display:block;width:30mm;height:0;border-top:2pt dashed #23303b;position:relative}.sht .kw-mza:after{content:"";position:absolute;right:-1mm;top:-2.4mm;border:2.2mm solid transparent;border-left:3mm solid #23303b;border-right:0}
+.sht .kw-shn{display:flex;align-items:center;gap:2mm}
+.sht .kw-lcap{display:flex;align-items:center;justify-content:center;gap:1.5mm}
+.sht .kw-skw{display:flex;align-items:center;gap:3mm}.sht .kw-ska{display:flex;align-items:center;justify-content:center;flex:none}
+.sht .kw-cpn{display:flex;flex-direction:column;align-items:center;gap:1mm;flex:none}.sht .kw-cp0{display:block}
+.sht .kw-sdt{display:flex!important;align-items:center;gap:2mm}
+.sht .kw-trw{display:flex;align-items:center;justify-content:center;gap:3mm}
+.sht .kw-nmlp{width:auto!important;min-width:42mm;gap:2.5mm;padding:0 3mm}
+.sht .kw-nwn{width:45mm}
+.sht .kw-ndt{display:flex;align-items:center;gap:3mm}
+.sht .kw-pti{display:block;flex:none}.sht .kw-pti img{width:100%;height:100%;object-fit:contain;display:block}
+.sht .kw-blk{display:flex;align-items:flex-end;gap:1.2mm;flex:none}.sht .kw-rodc{display:flex;flex-direction:column;gap:0}.sht .kw-ones{margin-left:2mm}
+.sht .kw-rod,.sht .kw-one{display:block}.sht .kw-rod img,.sht .kw-one img{width:100%;height:100%;object-fit:contain;display:block}
+.sht .kw-dm.kw-dmp i{background:none!important;border:0;border-radius:0;display:block}.sht .kw-dm.kw-dmp i img{width:100%;height:100%;object-fit:contain;display:block}
+.sht .kw-ffp{display:flex;align-items:center;gap:2mm}.sht .kw-ffp b{font-size:13pt}
+.sht .kw-tyn{display:flex;flex-direction:column;align-items:center;gap:1mm;flex:none}
+/* the pictures drawn for these makers (2026-10-14): color by number outlines, coins, the doubles ladybug, long and short */
+.sht .kw-cbo{position:relative;flex:none}.sht .kw-cbo>img{width:100%;height:100%;display:block}
+.sht .kw-reg{position:absolute;transform:translate(-50%,-50%);line-height:1;white-space:nowrap;color:#23303b}
+.sht .kw-gat{gap:1.5mm 6mm}.sht .kw-gatt{font-size:11pt;max-width:50mm;white-space:normal;font-weight:700}
+.sht .kw-lb{position:relative;display:block;flex:none;border:0!important;background:none!important}.sht .kw-lb>img{width:100%;height:100%;display:block}
+.sht .kw-dm.kw-lbw{position:absolute;inset:0;display:block;padding:0;min-width:0;min-height:0;border:0}
+.sht .kw-lbw i{position:absolute;transform:translate(-50%,-50%);border-radius:50%;background:#1d1d1f;display:block;box-shadow:0 0 0 .5mm #fff}
+.sht .kw-coin{display:flex;flex-direction:column;align-items:center;gap:.6mm;flex:none}.sht .kw-coinp{display:block}.sht .kw-coinp img{width:100%;height:100%;object-fit:contain;display:block}.sht .kw-cl{font-size:10pt}
+.sht .kw-szc{display:flex;flex-direction:column;align-items:flex-start;justify-content:space-evenly;height:100%;width:100%}.sht .kw-szi img{width:100%;height:100%;object-fit:fill;display:block}
+.sht .kw-ban{margin:0 0 3mm}.sht .kw-ban img{width:100%;height:auto;display:block;border-radius:4mm}
+.sht .kw-ffh{position:relative;display:block;flex:none}.sht .kw-ffh>img{width:100%;height:100%;display:block}.sht .kw-ffh>b{position:absolute;transform:translate(-50%,-50%);line-height:1;color:#23303b}
 
 /* The maker pages around the sheet: search picker (kept from the first makers), the options form, the design picker, the hub gallery. */
 .mkpick{max-width:680px;margin:0 auto;position:relative}.mkpick label{display:block;font-weight:800;font-size:20px;margin:0 0 8px;text-align:center}
