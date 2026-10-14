@@ -226,12 +226,12 @@ h3.cat{font-family:Fredoka,"Comic Sans MS","Trebuchet MS",sans-serif;font-size:c
 .cr-f:hover,.cr-f:focus-visible{transform:translateY(-14px) rotate(0) scale(1.04);z-index:2}
 .cr-f:hover .cr-cover,.cr-f:focus-visible .cr-cover{transform:rotateY(-62deg)}
 .cr-more{display:none}
-.cr-ov{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;padding:16px;background:radial-gradient(ellipse at 50% 40%,rgba(255,240,180,.35),rgba(31,42,68,.72) 70%)}
+.cr-ov{position:fixed;inset:0;z-index:200;display:flex;align-items:flex-start;justify-content:center;padding:28px 16px;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;background:radial-gradient(ellipse at 50% 40%,rgba(255,240,180,.35),rgba(31,42,68,.72) 70%)}
 .cr-ov[hidden]{display:none}
-.cr-file{position:relative;display:grid;grid-template-columns:.8fr 1.2fr;width:min(940px,100%);max-height:calc(100vh - 40px);perspective:1600px;color:#1f2a44}
+.cr-file{position:relative;display:grid;grid-template-columns:.8fr 1.2fr;width:min(940px,100%);margin:auto 0;perspective:1600px;color:#1f2a44}
 .cr-in,.cr-sheet{position:relative;border:5px solid #1f2a44;min-width:0}
 .cr-in{background:var(--s,#fff3c9);border-radius:18px 0 0 18px;border-right-width:2px;padding:26px 22px;display:flex;flex-direction:column;gap:12px;transform-origin:100% 50%;animation:crOpen .7s cubic-bezier(.3,1.1,.4,1) both;backface-visibility:hidden}
-.cr-sheet{background:#fffdf6 repeating-linear-gradient(transparent 0 31px,rgba(47,128,208,.12) 31px 33px);border-radius:0 18px 18px 0;border-left-width:2px;padding:24px 26px;overflow:auto;animation:crIn .5s .25s ease-out both}
+.cr-sheet{background:#fffdf6 repeating-linear-gradient(transparent 0 31px,rgba(47,128,208,.12) 31px 33px);border-radius:0 18px 18px 0;border-left-width:2px;padding:24px 26px;animation:crIn .5s .25s ease-out both}
 @keyframes crOpen{from{transform:rotateY(170deg)}to{transform:rotateY(0)}}
 @keyframes crIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 .cr-big{align-self:flex-start;font:700 22px Fredoka,"Comic Sans MS","Trebuchet MS",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#d23a4c;border:4px solid #d23a4c;border-radius:8px;padding:2px 14px;transform:rotate(-6deg);background:rgba(255,255,255,.6);animation:crStamp .35s .55s cubic-bezier(.3,1.6,.5,1) both}
@@ -253,7 +253,7 @@ h3.cat{font-family:Fredoka,"Comic Sans MS","Trebuchet MS",sans-serif;font-size:c
 @media(max-width:640px){.cr-wall{height:280px}.cr-window{left:12px;top:96px;width:110px;height:104px}.cr-board{right:12px;top:90px;width:190px;height:140px}.cr-pin{font-size:18px;padding:1px 6px}
   .cr-det{width:108px;left:8px}.cr-say{left:112px;bottom:70px;width:170px;font-size:15px}.cr-desk{padding:18px 10px 34px}
   .cr-folders{grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 12px}.cr-f,.cr-f:link,.cr-f:visited{height:172px}.cr-cover h3{font-size:15.5px}.cr-paper{font-size:17px;line-height:23px}
-  .cr-file{grid-template-columns:1fr;overflow:auto}.cr-in{border-radius:18px 18px 0 0;border-right-width:5px;border-bottom-width:2px;transform-origin:50% 100%;animation-name:crOpenUp;padding:18px}.cr-pol{display:none}
+  .cr-file{grid-template-columns:1fr}.cr-in{border-radius:18px 18px 0 0;border-right-width:5px;border-bottom-width:2px;transform-origin:50% 100%;animation-name:crOpenUp;padding:18px}.cr-pol{display:none}
   .cr-sheet{border-radius:0 0 18px 18px;border-left-width:5px;border-top-width:2px;overflow:visible;padding:20px 18px}}
 @keyframes crOpenUp{from{transform:rotateX(-170deg)}to{transform:rotateX(0)}}
 @media(max-width:380px){.cr-folders{grid-template-columns:1fr}}
@@ -266,8 +266,8 @@ var f=ov.querySelector('.cr-file'),n=f.cloneNode(true);f.replaceWith(n);n.style.
 $('crNo').textContent=c.querySelector('.cr-no').textContent+' · '+c.querySelector('.cr-tab').textContent;$('crT').textContent=c.querySelector('h3').textContent;
 $('crQ').textContent=c.querySelector('q').textContent;var w=c.querySelector('.cr-who');$('crWho').textContent=w.textContent;$('crPic').src=w.dataset.pic;
 $('crF').textContent=c.querySelector('.cr-more p').textContent;$('crN').innerHTML=c.querySelector('.cr-more .cr-next').innerHTML;$('crGo').href=a.getAttribute('href');
-n.querySelector('.cr-x').addEventListener('click',shut);ov.hidden=false;n.querySelector('.cr-x').focus()})});
-function shut(){ov.hidden=true;if(last)last.focus()}ov.addEventListener('click',function(e){if(e.target===ov)shut()});
+n.querySelector('.cr-x').addEventListener('click',shut);ov.hidden=false;ov.scrollTop=0;document.documentElement.style.overflow='hidden';n.querySelector('.cr-x').focus()})});
+function shut(){ov.hidden=true;document.documentElement.style.overflow='';if(last)last.focus()}ov.addEventListener('click',function(e){if(e.target===ov)shut()});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!ov.hidden)shut()})})();</script><section class="fnl"><div class="wrap"><div class="fnb one"><div><span class="fnk">Free · 2 minutes</span><h2>Is reading hard for your child, and you are not sure why?</h2>
 <p>“Behind in reading” can mean eleven different things, and each one needs different help. Check off what is true for your child. You will see what to work on first, and what can wait.</p>
 <p class="fnbt" style="margin-top:14px"><a class="fngo" href="../my-child-is-behind-in-reading/">Find where to start</a></p></div></div></div><style>.fnl{padding:46px 0}.fnb{display:grid;grid-template-columns:1.15fr .85fr;gap:26px;align-items:center;background:linear-gradient(135deg,#fff3c9,#ffe3ee 60%,#dff3ff);border:5px solid #1f2a44;border-radius:30px;padding:28px 30px;box-shadow:0 10px 0 #e0527a;max-width:1040px;margin:0 auto}
