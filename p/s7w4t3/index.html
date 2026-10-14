@@ -1,0 +1,145 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive"><title>My First Sentences: your companion</title>
+<style>
+@font-face{font-family:Fredoka;font-style:normal;font-weight:600 900;font-display:swap;src:url(../../fonts/ComicNeue-Bold.ttf) format('truetype')}
+.after{margin:30px 6px 0;color:var(--soft);font-size:16px;text-align:center}.after a{color:var(--ink);font-weight:700}
+:root{--ink:#1f2a44;--soft:#5b6680;--bg:#fff8e7;--card:#fff;--sun:#f2b705;--pink:#e0527a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:18px;line-height:1.5}
+main{max-width:760px;margin:0 auto;padding:22px 16px 60px}
+header{text-align:center;padding:10px 0 6px}header small{display:block;font-weight:800;letter-spacing:.06em;color:var(--pink);text-transform:uppercase;font-size:14px}
+h1{font-family:Fredoka,"Comic Sans MS","Chalkboard SE","Trebuchet MS",sans-serif;font-size:clamp(30px,7vw,44px);line-height:1.08;margin:6px 0 8px}
+header p{margin:0 auto;max-width:560px;color:var(--soft)}
+nav{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:20px 0 6px}
+nav a{display:inline-flex;align-items:center;justify-content:center;min-width:46px;height:46px;padding:0 12px;border-radius:999px;background:var(--card);border:3px solid var(--ink);color:var(--ink);font-weight:800;text-decoration:none}
+nav a.s{background:var(--sun)}
+.day,.box{background:var(--card);border:4px solid var(--ink);border-radius:24px;padding:18px 18px 14px;margin:22px 0;scroll-margin-top:12px}
+.day:target{border-color:var(--pink);box-shadow:0 0 0 6px #ffe3ee}
+.tag{display:inline-block;background:var(--sun);border-radius:999px;padding:2px 14px;font-weight:800;font-size:15px}
+h2{font-family:Fredoka,"Comic Sans MS","Chalkboard SE","Trebuchet MS",sans-serif;font-size:26px;line-height:1.15;margin:8px 0 2px}
+.sub{margin:0 0 12px;color:var(--soft)}.sub span{white-space:nowrap;font-weight:700;color:var(--ink)}
+video{width:100%;height:auto;aspect-ratio:16/9;border-radius:14px;background:#1f2a44;display:block}
+.hw{margin-top:16px;border-top:3px dotted #c9d2d9;padding-top:12px}.hw p{margin:8px 0}.hwready{background:#e4f7e4;border:3px solid #2f9e63;border-radius:14px;padding:10px 12px}
+.hwq span{color:var(--soft);font-size:14px;font-weight:400}.hwb{display:grid;grid-template-columns:1fr 1fr;gap:10px}.hwb button{font:800 18px system-ui,sans-serif;color:var(--ink);background:#fff;border:3px solid var(--ink);border-radius:999px;padding:12px 6px;cursor:pointer}
+.hwb button.on[data-v=ok]{background:#2f9e63;color:#fff}.hwb button.on[data-v=hard]{background:var(--sun)}
+.hwr{border:3px solid var(--ink);border-radius:16px;padding:10px 14px;margin-top:10px;background:#fff8e7}.hwr.ok{background:#e4f7e4}.hwr small{display:block;font-weight:800;text-transform:uppercase;letter-spacing:.06em;font-size:13px;color:var(--pink)}
+.hwsay{background:#dff3ff;border-radius:14px;padding:10px 12px}
+.mk{margin-top:16px;border:3px solid var(--ink);border-radius:16px;padding:12px 14px;background:#fff}.mk>b{display:block;font-size:19px}.mkg{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
+.mkg div{border-radius:14px;padding:10px 12px;font-weight:700}.mkg small{display:block;font-weight:800;text-transform:uppercase;letter-spacing:.05em;font-size:12px}.mkg .no{background:#ffe3e0;border:3px solid #d9534f}.mkg .no small{color:#b3261e}.mkg .yes{background:#e4f7e4;border:3px solid #2f9e63}.mkg .yes small{color:#1c7a47}
+.mk p{margin:6px 0 0}@media(max-width:480px){.mkg{grid-template-columns:1fr}}
+.kid{margin-top:14px;border:3px dashed var(--pink);border-radius:16px;padding:12px 14px;background:#fff6fa}.kid b{display:block}.kid p{margin:4px 0 10px;font-size:15px;color:var(--soft)}.kid audio{width:100%}
+ul{margin:12px 0 2px;padding-left:22px}li{margin:3px 0}
+.snd{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}
+.snd button{font:800 64px Fredoka,"Comic Sans MS","Chalkboard SE","Trebuchet MS",sans-serif;color:var(--ink);background:#fff3c9;border:3px solid var(--ink);border-radius:18px;padding:12px 0;cursor:pointer}
+.snd button:active,.snd button.on{background:var(--sun)}
+.box h2{margin-top:0}.box p{margin:8px 0}
+.rp h3{font-size:19px;margin:20px 0 6px}.nm{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#fff;border:3px solid #c9d2d9;border-radius:14px;padding:8px 14px;margin:8px 0;font-weight:700}
+.nm input{width:70px;font:800 22px system-ui,sans-serif;text-align:center;border:3px solid var(--ink);border-radius:10px;padding:5px;color:var(--ink)}
+.go{display:block;width:100%;margin:20px 0 4px;font:800 21px system-ui,sans-serif;color:#fff;background:var(--pink);border:0;border-radius:999px;padding:15px;cursor:pointer}
+.warn{color:#b3261e;font-weight:700}.res{border:4px solid var(--ink);border-radius:22px;padding:16px 18px;margin-top:16px;background:linear-gradient(135deg,#fff3c9,#ffe3ee)}.res.there{background:linear-gradient(135deg,#e4f7e4,#dff3ff)}
+.res small{display:block;font-weight:800;text-transform:uppercase;letter-spacing:.06em;font-size:13px;color:var(--pink)}.res h3{font-family:Fredoka,"Comic Sans MS","Chalkboard SE",sans-serif;font-size:26px;margin:2px 0 6px}
+.tn{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}.tn>div{background:#fff;border:3px solid var(--ink);border-radius:16px;padding:10px 12px}
+.bar{font-size:14px;margin-top:6px}.bar span{display:block}.bar i{display:block;height:12px;border:2px solid var(--ink);border-radius:9px;overflow:hidden;background:#fff}.bar i b{display:block;height:100%;background:#2f9e63}.bar em{font-style:normal;font-weight:700}
+.hint{color:var(--soft);font-size:15px}@media(max-width:480px){.tn{grid-template-columns:1fr}}
+footer{margin-top:34px;color:var(--soft);font-size:14px;text-align:center}
+</style></head><body><main>
+<header><small>Sound It Out · your companion</small><h1>My First Sentences</h1><p>One short video for you for each day of the plan. Watch it first, then do the page together.</p></header>
+<nav aria-label="Days"><a class="s" href="#d0">Start</a><a href="#d1">1</a><a href="#d2">2</a><a href="#d3">3</a><a href="#d4">4</a><a href="#d5">5</a><a href="#d6">6</a><a href="#d7">7</a><a href="#d8">8</a><a href="#d9">9</a><a href="#d10">10</a><a class="s" href="#report">Report</a></nav>
+<section class="day" id="d0"><div class="tag">Start here</div><h2>Welcome: what to expect</h2><p class="sub">What this plan is, what is inside, and how to use it. <span>1:14 min</span></p>
+<video controls playsinline preload="none" poster="start.jpg"><source src="start.mp4" type="video/mp4"><track kind="captions" src="start.vtt" srclang="en" label="English"></video>
+<ul><li>What the plan is and who it is for.</li><li>What is inside, and how each day works.</li><li>Watch this before day 1.</li></ul><div class="mk"><b>The most common mistake: Fixing the spelling while writing</b><div class="mkg"><div class="no"><small>Not like this</small>Your child writes a sentence. You stop to fix each spelling.</div><div class="yes"><small>Like this</small>You leave the spelling. You ask your child to read it back.</div></div><p><b>What to say:</b> &ldquo;Read it back to me. If I can read it, it is a sentence.&rdquo;</p></div></section>
+<section class="day" id="d1"><div class="tag">Day 1</div><h2>Find the Starting Point</h2><p class="sub">About five minutes. Watch and mark. <span>0:39 min</span></p>
+<video controls playsinline preload="none" poster="day01.jpg"><source src="day01.mp4" type="video/mp4"><track kind="captions" src="day01.vtt" srclang="en" label="English"></video>
+<ul><li>A check, not a lesson.</li><li>Copy a sentence, write one you say, write one about a picture.</li><li>Keep the page for day 10.</li></ul><div class="hw"><p class="hwsay"><b>If your child gets stuck today, say:</b> &ldquo;Do what you can. It is fine to go slowly.&rdquo;</p><p class="hwready"><b>What today&rsquo;s check tells you:</b> Your child fits one line in the box on your page. Stop at the first one. That line tells you which day to start on.</p><div class="hwr hard"><small>If the check was hard to do</small><p>If part A was very hard, stop here. Writing short words comes first: our plan Hear It, Write It. If your child got tired, do part C tomorrow. Do not teach on the check.</p></div></div></section>
+<section class="day" id="d2"><div class="tag">Day 2</div><h2>Say It, Count It</h2><p class="sub">No pencil yet. <span>0:29 min</span></p>
+<video controls playsinline preload="none" poster="day02.jpg"><source src="day02.mp4" type="video/mp4"><track kind="captions" src="day02.vtt" srclang="en" label="English"></video>
+<ul><li>Read each sentence out loud.</li><li>Your child says it back and counts the words on their fingers.</li><li>One dot for each word.</li></ul><div class="hw" data-d="2"><p class="hwsay"><b>If your child gets stuck today, say:</b> &ldquo;Say it again, and put up one finger for each word.&rdquo;</p>
+<p class="hwready"><b>Ready for day 3 when:</b> Your child told you how many words are in two of the sentences at the end, with one finger for each word.</p>
+<p class="hwq"><b>How did today go?</b> <span>Your answer stays in this browser. Nothing is sent anywhere.</span></p>
+<div class="hwb"><button type="button" data-v="ok">Ready</button><button type="button" data-v="hard">Not ready yet</button></div>
+<div class="hwr ok" hidden><small>Tomorrow</small><p><b>Go on to day 3.</b> Watch its video first.</p></div>
+<div class="hwr hard" hidden><small>Tomorrow</small><p><b>Not ready yet. That is useful to know.</b> Do day 2 again, out loud only. Say a short sentence. Your child says it back and puts up one finger for each word. Start with three words: I see a cat. Leave the page for tomorrow.</p></div></div></section>
+<section class="day" id="d3"><div class="tag">Day 3</div><h2>A Capital and a Period</h2><p class="sub">Where a sentence starts and ends. <span>0:27 min</span></p>
+<video controls playsinline preload="none" poster="day03.jpg"><source src="day03.mp4" type="video/mp4"><track kind="captions" src="day03.vtt" srclang="en" label="English"></video>
+<ul><li>How does a sentence start? With a capital.</li><li>How does it end? With a period.</li><li>Fix four sentences, then trace three.</li></ul><div class="hw" data-d="3"><p class="hwsay"><b>If your child gets stuck today, say:</b> &ldquo;How does a sentence start? How does it end?&rdquo;</p>
+<p class="hwready"><b>Ready for day 4 when:</b> Your child showed you a capital at the start and a period at the end of the sentences in job 1.</p>
+<p class="hwq"><b>How did today go?</b> <span>Your answer stays in this browser. Nothing is sent anywhere.</span></p>
+<div class="hwb"><button type="button" data-v="ok">Ready</button><button type="button" data-v="hard">Not ready yet</button></div>
+<div class="hwr ok" hidden><small>Tomorrow</small><p><b>Go on to day 4.</b> Watch its video first.</p></div>
+<div class="hwr hard" hidden><small>Tomorrow</small><p><b>Not ready yet. That is useful to know.</b> Do day 3 again with two sentences only. Point to where the sentence starts and ask: big or small? Point to the end and ask: what goes here? Then your child writes it. Still hard after two tries? Go back to day 2.</p></div></div></section>
+<section class="day" id="d4"><div class="tag">Day 4</div><h2>Finger Spaces</h2><p class="sub">A space between every word. <span>0:28 min</span></p>
+<video controls playsinline preload="none" poster="day04.jpg"><source src="day04.mp4" type="video/mp4"><track kind="captions" src="day04.vtt" srclang="en" label="English"></video>
+<ul><li>Which sentence is easy to read?</li><li>One finger of the other hand after each word.</li><li>Copy three sentences with spaces.</li></ul><div class="hw" data-d="4"><p class="hwsay"><b>If your child gets stuck today, say:</b> &ldquo;One finger after each word. Then the next word.&rdquo;</p>
+<p class="hwready"><b>Ready for day 5 when:</b> Your child showed you finger spaces between the words in the sentences of job 1.</p>
+<p class="hwq"><b>How did today go?</b> <span>Your answer stays in this browser. Nothing is sent anywhere.</span></p>
+<div class="hwb"><button type="button" data-v="ok">Ready</button><button type="button" data-v="hard">Not ready yet</button></div>
+<div class="hwr ok" hidden><small>Tomorrow</small><p><b>Go on to day 5.</b> Watch its video first.</p></div>
+<div class="hwr hard" hidden><small>Tomorrow</small><p><b>Not ready yet. That is useful to know.</b> Do day 4 again with one sentence. Your child puts one finger down after each word before writing the next one. Count the spaces together. Still hard after two tries? Write the words on cards and lay them out with gaps first.</p></div></div></section>
+<section class="day" id="d5"><div class="tag">Day 5</div><h2>Halfway Check</h2><p class="sub">Go on, or go back. <span>0:23 min</span></p>
+<video controls playsinline preload="none" poster="day05.jpg"><source src="day05.mp4" type="video/mp4"><track kind="captions" src="day05.vtt" srclang="en" label="English"></video>
+<ul><li>Say two sentences. Do not spell any word.</li><li>Eight or more marks of ten: go on.</li><li>Fewer: do days 3 and 4 again.</li></ul><div class="hw" data-d="5"><p class="hwsay"><b>If your child gets stuck today, say:</b> &ldquo;Say it. Count it. Then write it.&rdquo;</p>
+<p class="hwready"><b>Ready for day 6 when:</b> Your child got 8 or more of the ten marks on the two sentences you said. Go on to day 6 tomorrow.</p>
+<p class="hwq"><b>How did today go?</b> <span>Your answer stays in this browser. Nothing is sent anywhere.</span></p>
+<div class="hwb"><button type="button" data-v="ok">Ready</button><button type="button" data-v="hard">Not ready yet</button></div>
+<div class="hwr ok" hidden><small>Tomorrow</small><p><b>Go on to day 6.</b> Watch its video first.</p></div>
+<div class="hwr hard" hidden><small>Tomorrow</small><p><b>Not ready yet. That is useful to know.</b> Fewer than 8: do days 3 and 4 again, one a day, then come back to this page. If the game was hard, read each card together and ask: does it start with a capital and end with a period?</p></div></div></section>
+<section class="day" id="d6"><div class="tag">Day 6</div><h2>I See a Cat</h2><p class="sub">A sentence frame: I see a ... <span>0:26 min</span></p>
+<video controls playsinline preload="none" poster="day06.jpg"><source src="day06.mp4" type="video/mp4"><track kind="captions" src="day06.vtt" srclang="en" label="English"></video>
+<ul><li>Say the whole sentence for the picture.</li><li>Your child writes the missing word.</li><li>Then reads the sentence back.</li></ul><div class="hw" data-d="6"><p class="hwsay"><b>If your child gets stuck today, say:</b> &ldquo;Say the whole sentence first. Then write the last word.&rdquo;</p>
+<p class="hwready"><b>Ready for day 7 when:</b> Your child read three of the sentences back to you at the end, with the right word for each picture.</p>
+<p class="hwq"><b>How did today go?</b> <span>Your answer stays in this browser. Nothing is sent anywhere.</span></p>
+<div class="hwb"><button type="button" data-v="ok">Ready</button><button type="button" data-v="hard">Not ready yet</button></div>
+<div class="hwr ok" hidden><small>Tomorrow</small><p><b>Go on to day 7.</b> Watch its video first.</p></div>
+<div class="hwr hard" hidden><small>Tomorrow</small><p><b>Not ready yet. That is useful to know.</b> Do day 6 again with two pictures only. Say the whole sentence together first. Your child writes the last word. If the word is hard to spell, say its sounds slowly together. Still hard after two tries? Go back to day 5.</p></div></div></section>
+<section class="day" id="d7"><div class="tag">Day 7</div><h2>The Cat Is Big</h2><p class="sub">A whole sentence, one line for each word. <span>0:22 min</span></p>
+<video controls playsinline preload="none" poster="day07.jpg"><source src="day07.mp4" type="video/mp4"><track kind="captions" src="day07.vtt" srclang="en" label="English"></video>
+<ul><li>Say it and count it: four words.</li><li>Four lines, then the period.</li><li>Read it back together.</li></ul><div class="hw" data-d="7"><p class="hwsay"><b>If your child gets stuck today, say:</b> &ldquo;Four words, four lines. Then the period.&rdquo;</p>
+<p class="hwready"><b>Ready for day 8 when:</b> Your child read two whole sentences back to you at the end, with four words, spaces and a period.</p>
+<p class="hwq"><b>How did today go?</b> <span>Your answer stays in this browser. Nothing is sent anywhere.</span></p>
+<div class="hwb"><button type="button" data-v="ok">Ready</button><button type="button" data-v="hard">Not ready yet</button></div>
+<div class="hwr ok" hidden><small>Tomorrow</small><p><b>Go on to day 8.</b> Watch its video first.</p></div>
+<div class="hwr hard" hidden><small>Tomorrow</small><p><b>Not ready yet. That is useful to know.</b> Do day 7 again with two pictures only. Count the four words on fingers first. Your child writes one word on each line and the period at the end. Still hard after two tries? Go back to day 6.</p></div></div></section>
+<section class="day" id="d8"><div class="tag">Day 8</div><h2>A Sentence About a Picture</h2><p class="sub">Your child's own idea. <span>0:24 min</span></p>
+<video controls playsinline preload="none" poster="day08.jpg"><source src="day08.mp4" type="video/mp4"><track kind="captions" src="day08.vtt" srclang="en" label="English"></video>
+<ul><li>Your child says a sentence about the picture.</li><li>Count it, draw a line for each word.</li><li>Write it and read it back.</li></ul><div class="hw" data-d="8"><p class="hwsay"><b>If your child gets stuck today, say:</b> &ldquo;Tell me one thing about the picture. Now say it again slowly.&rdquo;</p>
+<p class="hwready"><b>Ready for day 9 when:</b> Your child read a sentence of their own back to you at the end, about one of the pictures.</p>
+<p class="hwq"><b>How did today go?</b> <span>Your answer stays in this browser. Nothing is sent anywhere.</span></p>
+<div class="hwb"><button type="button" data-v="ok">Ready</button><button type="button" data-v="hard">Not ready yet</button></div>
+<div class="hwr ok" hidden><small>Tomorrow</small><p><b>Go on to day 9.</b> Watch its video first.</p></div>
+<div class="hwr hard" hidden><small>Tomorrow</small><p><b>Not ready yet. That is useful to know.</b> Do day 8 again with one picture. Your child says a sentence about it. You say it back once. Draw one line for each word together. Then your child writes it. Still hard after two tries? Go back to day 7.</p></div></div></section>
+<section class="day" id="d9"><div class="tag">Day 9</div><h2>Two Sentences</h2><p class="sub">Two ideas about one picture. <span>0:27 min</span></p>
+<video controls playsinline preload="none" poster="day09.jpg"><source src="day09.mp4" type="video/mp4"><track kind="captions" src="day09.vtt" srclang="en" label="English"></video>
+<ul><li>Build a sentence with the word cards first.</li><li>Two sentences about the big picture.</li><li>Check each one with the checklist.</li></ul><div class="hw" data-d="9"><p class="hwsay"><b>If your child gets stuck today, say:</b> &ldquo;Build it with the cards first. Then write it.&rdquo;</p>
+<p class="hwready"><b>Ready for day 10 when:</b> Your child read two sentences of their own back to you, and checked each one with the checklist.</p>
+<p class="hwq"><b>How did today go?</b> <span>Your answer stays in this browser. Nothing is sent anywhere.</span></p>
+<div class="hwb"><button type="button" data-v="ok">Ready</button><button type="button" data-v="hard">Not ready yet</button></div>
+<div class="hwr ok" hidden><small>Tomorrow</small><p><b>Go on to day 10.</b> Watch its video first.</p></div>
+<div class="hwr hard" hidden><small>Tomorrow</small><p><b>Not ready yet. That is useful to know.</b> Do day 9 again, but only one sentence today. Build it with the word cards first, then write it. Do the second sentence tomorrow. Still hard after two tries? Go back to day 8.</p></div></div></section>
+<section class="day" id="d10"><div class="tag">Day 10</div><h2>The Final Check</h2><p class="sub">A sentence and a picture never seen. <span>0:28 min</span></p>
+<video controls playsinline preload="none" poster="day10.jpg"><source src="day10.mp4" type="video/mp4"><track kind="captions" src="day10.vtt" srclang="en" label="English"></video>
+<ul><li>A check, not a lesson. Do not help.</li><li>Do not spell any word.</li><li>Put this page beside the day 1 page.</li></ul><div class="hw"><p class="hwsay"><b>If your child gets stuck today, say:</b> &ldquo;Say it. Count it. Write it. Then read it back.&rdquo;</p><p class="hwready"><b>The ten days are done when:</b> Your child got 4 or 5 marks on each sentence: capital, spaces, period, every word, read back. Your child writes a sentence. Type your numbers into the report at the bottom of this page.</p><div class="hwr hard"><small>Not there yet</small><p>Writing your sentence was steady but the own one was not: do days 8 and 9 again. Better than day 1, but not there yet: do days 6 to 9 again. The same as day 1: go back to day 2 and take two days for each page.</p></div></div></section>
+
+<section class="box rp" id="report"><h2>Your child’s report</h2><p>After day 10, type in the numbers you wrote on your two check pages. You will see where your child started, where they are now, and what comes next.</p>
+<p style="color:var(--soft);font-size:15px">Nothing you type here is sent anywhere. It stays in this browser, on this phone or computer.</p>
+<h3>From your day 1 page</h3><label class="nm"><span>A: copied sentence, marks</span><span><input type="number" inputmode="numeric" min="0" max="5" id="ra0" aria-label="A: copied sentence, marks"> of 5</span></label><label class="nm"><span>B: sentence you said, marks</span><span><input type="number" inputmode="numeric" min="0" max="5" id="ra1" aria-label="B: sentence you said, marks"> of 5</span></label><label class="nm"><span>C: own sentence, marks</span><span><input type="number" inputmode="numeric" min="0" max="5" id="ra2" aria-label="C: own sentence, marks"> of 5</span></label>
+<h3>From your day 10 page</h3><label class="nm"><span>Sentence you said, marks</span><span><input type="number" inputmode="numeric" min="0" max="5" id="rb0" aria-label="Sentence you said, marks"> of 5</span></label><label class="nm"><span>Own sentence, marks</span><span><input type="number" inputmode="numeric" min="0" max="5" id="rb1" aria-label="Own sentence, marks"> of 5</span></label>
+<button type="button" class="go" id="rpgo">Show the report</button><div id="rpout" aria-live="polite"></div></section>
+<p class="after">When the ten days are done, you can stop there. If you want daily practice to keep going, <a href="https://sounditoutreading.com/the-one-sheet/?src=plan&amp;m=companion&amp;c=s7w4t3">The One Sheet</a> gives your child one sheet a day, made from what you tell us. It starts where this plan ended, so there is no new starting check. It is a separate plan, $9.99 a month, and you can cancel any time.</p>
+<footer>This page belongs to your copy of the plan. Please do not share the link.<br>Letter sounds © elimu.ai, used under the MIT License (github.com/elimu-ai/visemes).</footer>
+</main><script>
+var a=null;document.querySelectorAll('.snd button').forEach(function(b){b.addEventListener('click',function(){if(a)a.pause();a=new Audio('sounds/'+b.dataset.s+'.mp3');b.classList.add('on');a.onended=function(){b.classList.remove('on')};a.play().catch(function(){b.classList.remove('on')})})});
+document.querySelectorAll('video').forEach(function(v){v.addEventListener('play',function(){document.querySelectorAll('video').forEach(function(o){if(o!==v)o.pause()})})});
+(function(){var R={"there":["Your child writes a sentence","A sentence never seen in the book was written with a capital, spaces and a period, and read back.",["Show your child the two pages side by side.","Ask for one sentence a day, then two about the same thing.","Keep spelling separate: if you can read it, it is a sentence."]],"coming":["It is coming","Better than day 1, but not steady yet.",["Writing what you say is steady but the own idea is not? Do days 8 and 9 again.","Otherwise do days 6 to 9 again, one a day.","Then do the day 10 check again and come back here."]],"same":["Slow it down","The numbers have not moved yet. That happens, and it tells you the pace was too fast.",["Go back to day 2, and take two days for each page.","If writing words is hard, the spelling plan Hear It, Write It comes first.","If your child is seven or older, tell the teacher what you saw."]],"a":[["A: copied sentence, marks",5],["B: sentence you said, marks",5],["C: own sentence, marks",5]],"b":[["Sentence you said, marks",5],["Own sentence, marks",5]]},KEYS='sent-report-v1';
+function v(id,max){var x=parseInt(document.getElementById(id).value,10);return isNaN(x)?null:Math.max(0,Math.min(max,x))}
+function e(t){return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+try{var sv=JSON.parse(localStorage.getItem(KEYS)||'null');if(sv){sv.a.forEach(function(x,i){if(x!==null)document.getElementById('ra'+i).value=x});sv.b.forEach(function(x,i){if(x!==null)document.getElementById('rb'+i).value=x})}}catch(x){}
+function rule(a,b){var good=b[0]>=4&&b[1]>=4,better=(b[0]>a[1])||(b[1]>a[2]);return good?'there':better?'coming':'same';}
+document.getElementById('rpgo').addEventListener('click',function(){var a=R.a.map(function(r,i){return v('ra'+i,r[1])}),b=R.b.map(function(r,i){return v('rb'+i,r[1])}),out=document.getElementById('rpout');
+ if(a.concat(b).some(function(x){return x===null})){out.innerHTML='<p class="warn">Type a number in all six boxes first.</p>';return}
+ try{localStorage.setItem(KEYS,JSON.stringify({a:a,b:b}))}catch(x){}
+ var k=rule(a,b),r=R[k],bars=function(rows,vals){return rows.map(function(row,i){return '<div class="bar"><span>'+e(row[0])+'</span><i><b style="width:'+Math.round(100*vals[i]/row[1])+'%"></b></i><em>'+vals[i]+' of '+row[1]+'</em></div>'}).join('')};
+ out.innerHTML='<div class="res '+k+'"><small>Where your child is now</small><h3>'+e(r[0])+'</h3><p>'+e(r[1])+'</p><div class="tn"><div><b>Day 1</b>'+bars(R.a,a)+'</div><div><b>Day 10</b>'+bars(R.b,b)+'</div></div><p><b>What to do next</b></p><ol>'+r[2].map(function(x){return '<li>'+e(x)+'</li>'}).join('')+'</ol><p><b><a href="https://sounditoutreading.com/what-next/?src=plan&amp;m=report&amp;c='+location.pathname.split('/').filter(Boolean).pop()+'">See what comes next for your child</a></b></p><p class="hint">This is a starting point, not a diagnosis.</p></div>';
+ out.scrollIntoView({behavior:'smooth',block:'start'})});})();
+(function(){var K="p-s7w4t3-days-v1",S={};try{S=JSON.parse(localStorage.getItem(K)||'{}')}catch(x){}
+function show(box,v){box.querySelectorAll('.hwb button').forEach(function(b){b.classList.toggle('on',b.dataset.v===v)});box.querySelectorAll('.hwr').forEach(function(r){r.hidden=!r.classList.contains(v)})}
+document.querySelectorAll('.hw[data-d]').forEach(function(box){var d=box.dataset.d;if(S[d])show(box,S[d]);box.querySelectorAll('.hwb button').forEach(function(b){b.addEventListener('click',function(){S[d]=b.dataset.v;try{localStorage.setItem(K,JSON.stringify(S))}catch(x){}show(box,S[d])})})})})();
+</script></body></html>
