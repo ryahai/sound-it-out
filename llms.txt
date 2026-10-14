@@ -1,6 +1,6 @@
 # Sound It Out
 
-> Sound It Out helps parents whose child is stuck in reading (ages 3 to 7: preschool, kindergarten and first grade). Free tools show where to start and point to what may be causing the difficulty. 10-day plans teach one difficulty each, with printable pages, a short video for each day and sound tracks for the child ($19, one payment, 30-day money back). Single printable packs are free to download. Bundles cost $3 or $5.
+> Sound It Out helps parents whose child is stuck in reading (ages 3 to 8: preschool, kindergarten, first grade and the start of second grade). Free tools show where to start and point to what may be causing the difficulty. 10-day plans teach one difficulty each, with printable pages, a short video for each day and sound tracks for the child ($19, one payment, 30-day money back). Single printable packs are free to download. Bundles cost $3 or $5.
 
 ## Start here
 - [Find your child’s reading level](https://sounditoutreading.com/#start): a free level finder with a plan for the week
@@ -316,17 +316,27 @@
 - [Story Problem Worksheet Maker](https://sounditoutreading.com/story-problem-worksheet-maker/): free tool. A tiny story to read, draw and solve. Made in the browser; nothing typed is sent or stored.
 - [Glyph Maker](https://sounditoutreading.com/read-and-color-glyph-maker/): free tool. Read two sentences, pick the true one, color the shape. Made in the browser; nothing typed is sent or stored.
 - [Pretend Play Printables Maker](https://sounditoutreading.com/pretend-play-printable-maker/): free tool. Signs, price cards and order pads to read while playing. Made in the browser; nothing typed is sent or stored.
-- [Color by Number Worksheet Maker](https://sounditoutreading.com/color-by-number-worksheet-maker/): free tool. Color the squares by the key and a picture appears. Made in the browser; nothing typed is sent or stored.
-- [Easy Maze Maker](https://sounditoutreading.com/easy-maze-worksheet-maker/): free tool. Wide paths, one way through, a new maze every time. Made in the browser; nothing typed is sent or stored.
-- [Cut and Paste Number Worksheets](https://sounditoutreading.com/cut-and-paste-number-worksheet-maker/): free tool. Count, cut, glue: numbers 1 to 20. Made in the browser; nothing typed is sent or stored.
-- [Cut and Paste Shapes Worksheets](https://sounditoutreading.com/cut-and-paste-shapes-worksheet-maker/): free tool. Cut out the shapes, match them, sort them. Made in the browser; nothing typed is sent or stored.
-- [Cut and Paste Letter Worksheets](https://sounditoutreading.com/cut-and-paste-letter-worksheet-maker/): free tool. Capitals and small letters, first sounds, ABC order. Made in the browser; nothing typed is sent or stored.
-- [Skip Counting Worksheet Maker](https://sounditoutreading.com/skip-counting-worksheet-maker/): free tool. Count by 2s, 5s and 10s to 100. Made in the browser; nothing typed is sent or stored.
-- [Comparing Numbers Worksheets](https://sounditoutreading.com/comparing-numbers-worksheet-maker/): free tool. More or fewer, bigger or smaller, greater than or less than. Made in the browser; nothing typed is sent or stored.
-- [Shapes Worksheet Maker](https://sounditoutreading.com/shapes-worksheet-maker/): free tool. Trace the shape, trace its name, count its sides. Made in the browser; nothing typed is sent or stored.
-- [Number Words Worksheet Maker](https://sounditoutreading.com/number-words-worksheet-maker/): free tool. One to twenty: match the word, write it, circle it. Made in the browser; nothing typed is sent or stored.
-- [Vowel Team Worksheet Maker](https://sounditoutreading.com/long-vowel-team-worksheet-maker/): free tool. Two letters that make one long vowel sound. Made in the browser; nothing typed is sent or stored.
-- [Cursive Handwriting Worksheet Maker](https://sounditoutreading.com/cursive-handwriting-worksheet-maker/): free tool. Type a name or a sentence. Trace it in cursive, then write it.. Made in the browser; nothing typed is sent or stored.
+- [Color by Number Generator](https://sounditoutreading.com/color-by-number-generator/): free tool. Color the squares by the key and a picture appears. Made in the browser; nothing typed is sent or stored.
+- [Printable Mazes for Kids](https://sounditoutreading.com/printable-mazes-for-kids/): free tool. Wide paths, one way through, a new maze every time. Made in the browser; nothing typed is sent or stored.
+- [Number Cut and Paste Worksheets](https://sounditoutreading.com/number-cut-and-paste-worksheets/): free tool. Count, cut, glue: numbers 1 to 20. Made in the browser; nothing typed is sent or stored.
+- [Cut and Paste Shapes Worksheets](https://sounditoutreading.com/cut-and-paste-shapes-worksheets/): free tool. Cut out the shapes, match them, sort them. Made in the browser; nothing typed is sent or stored.
+- [Cut and Paste Alphabet Worksheets](https://sounditoutreading.com/cut-and-paste-alphabet-worksheets/): free tool. Capitals and small letters, first sounds, ABC order. Made in the browser; nothing typed is sent or stored.
+- [Skip Counting Worksheets](https://sounditoutreading.com/skip-counting-worksheets/): free tool. Count by 2s, 5s and 10s to 100. Made in the browser; nothing typed is sent or stored.
+- [Comparing Numbers Worksheets](https://sounditoutreading.com/comparing-numbers-worksheets/): free tool. More or fewer, bigger or smaller, greater than or less than. Made in the browser; nothing typed is sent or stored.
+- [Shapes Worksheets for Kindergarten](https://sounditoutreading.com/shapes-worksheets-for-kindergarten/): free tool. Trace the shape, trace its name, count its sides. Made in the browser; nothing typed is sent or stored.
+- [Number Words Worksheets](https://sounditoutreading.com/number-words-worksheets/): free tool. One to twenty: match the word, write it, circle it. Made in the browser; nothing typed is sent or stored.
+- [Vowel Team Worksheets](https://sounditoutreading.com/vowel-team-worksheets/): free tool. Two letters that make one long vowel sound. Made in the browser; nothing typed is sent or stored.
+- [Cursive Handwriting Worksheet Generator](https://sounditoutreading.com/cursive-handwriting-worksheet-generator/): free tool. Type a name or a sentence. Trace it in cursive, then write it.. Made in the browser; nothing typed is sent or stored.
+- [Before and After Numbers Worksheets](https://sounditoutreading.com/before-and-after-numbers-worksheets/): free tool. What comes before, what comes after, what comes between. Made in the browser; nothing typed is sent or stored.
+- [Ordinal Numbers Worksheets](https://sounditoutreading.com/ordinal-numbers-worksheets/): free tool. First, second, third: count from the start. Made in the browser; nothing typed is sent or stored.
+- [Number of the Day Worksheet](https://sounditoutreading.com/number-of-the-day-worksheet/): free tool. One number, six ways to show it. Made in the browser; nothing typed is sent or stored.
+- [Telling Time Worksheets](https://sounditoutreading.com/telling-time-worksheets/): free tool. Read the clock, write the time, draw the hands. Made in the browser; nothing typed is sent or stored.
+- [Counting Coins Worksheets](https://sounditoutreading.com/counting-coins-worksheets/): free tool. Pennies, nickels, dimes and quarters. Made in the browser; nothing typed is sent or stored.
+- [Noun Worksheets for Kindergarten](https://sounditoutreading.com/noun-worksheets-for-kindergarten/): free tool. A naming word names a person, an animal, a place or a thing. Made in the browser; nothing typed is sent or stored.
+- [Verb Worksheets for Kindergarten](https://sounditoutreading.com/verb-worksheets-for-kindergarten/): free tool. An action word tells what someone does. Made in the browser; nothing typed is sent or stored.
+- [Singular and Plural Worksheets](https://sounditoutreading.com/singular-and-plural-worksheets/): free tool. One cat, three cats. One box, three boxes.. Made in the browser; nothing typed is sent or stored.
+- [Two Letter Words Worksheets](https://sounditoutreading.com/two-letter-words-worksheets/): free tool. The first words a child can sound out. Made in the browser; nothing typed is sent or stored.
+- [Kindergarten Summer Packet](https://sounditoutreading.com/kindergarten-summer-packet/): free tool. Mixed practice: reading, writing and math on a few pages. Made in the browser; nothing typed is sent or stored.
 - [What Works in Teaching Reading? What the Research Says](https://sounditoutreading.com/research-what-works-in-teaching-reading/): research summary. Two large U.S. reviews point the same way. Here is what they found and how strong the evidence is. Every finding names its source.
 - [Does Phonics Work? What the Research Says](https://sounditoutreading.com/research-does-phonics-work/): research summary. Eighteen studies met the standards of a U.S. review. Here is what they showed, and what they did not test. Every finding names its source.
 - [Hearing Sounds in Words: What the Research Says](https://sounditoutreading.com/research-hearing-the-sounds-in-words/): research summary. Seventeen studies met the standards of a U.S. review, and all seventeen found positive effects. Every finding names its source.

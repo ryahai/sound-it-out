@@ -4,6 +4,7 @@
    (from a page in a folder: src="../helper.js"). Links are built from the folder this file is served from.
 
    EVERYTHING YOU MAY WANT TO CHANGE IS IN "DATA" BELOW. The code under the line "LOGIC" never needs editing.
+   The paid pages it can name: the ten 10-day plans, the bundles (teacher path) and The One Sheet (parent path only).
    A page is always written as its address without slashes, for example 'cvc-word-generator'.
    After any change run:  node test.mjs            (checks every page against the sitemap)
                           node test.mjs --tree     (writes TREE.md again from this file)            */
@@ -30,6 +31,11 @@ var SIOH_DATA = {
     checkEnd: 'The check points to the likely reason, so you know where to start.',
     nextLead: 'If the check agrees, the next step is',
     planEnd: 'a 10-day plan. $19, one payment, 30-day money back. No need to decide now.',
+    dailyLead: 'For practice every day, there is',
+    dailyEnd: '$9.99 a month, cancel any time.',
+    sheetTag: '$9.99 a month · Cancel any time',
+    sheetTry: 'The page has a box where you can see it work first, free.',
+    sheetKind: '$9.99 a month',
     freeLead: 'Or try this, free',
     alsoLead: 'Also useful',
     paidLead: 'Want it all in one file?',
@@ -72,6 +78,15 @@ var SIOH_DATA = {
     hand: { check: 'how-to-help-my-child-with-handwriting', ask: 'How can I help my child with handwriting?', plan: 'start-at-the-top-10-day-handwriting-plan', name: 'Start at the Top' }
   },
 
+  /* ---------- The One Sheet: one sheet a day, $9.99 a month for each subject (names and prices as on those three pages) ---------- */
+  sheets: {
+    read: { p: 'the-one-sheet', name: 'The One Sheet: Reading' },
+    math: { p: 'the-one-sheet-math', name: 'The One Sheet: Math' },
+    gram: { p: 'the-one-sheet-grammar', name: 'The One Sheet: Grammar' }
+  },
+  /* one quiet line under every named 10-day plan (text.dailyLead, the link, text.dailyEnd). skip: the plans that do not get it (there is no handwriting sheet). */
+  daily: { sheet: 'read', label: 'The One Sheet', skip: ['hand'] },
+
   /* ---------- parent path ---------- */
   /* list: the "worksheets by age" page offered at the end.  start: the free pack for a child who is just starting. */
   ages: [
@@ -82,7 +97,8 @@ var SIOH_DATA = {
   ],
 
   /* plan: one of the ten above (the answer leads to its free check first, never straight to the plan).
-     main: used instead when no plan fits.   free: the free alternative.   note: an extra line for one age, by the age id. */
+     main: used instead when no plan fits.   sheet: one of The One Sheet pages above, for a parent who asks for daily practice, math or grammar.
+     free: the free alternative.   note: an extra line for one age, by the age id. */
   problems: [
     { id: 'ltrs', label: 'Does not know the letter sounds yet', plan: 'ltrs',
       why: 'A child cannot sound out a word until the sounds come right away.',
@@ -111,6 +127,18 @@ var SIOH_DATA = {
     { id: 'start', label: 'Just starting. No problem', main: 'what-next', mainLabel: 'Find my child’s reading level', mainTag: 'Free · A few minutes · No sign-up',
       why: 'Answer a few quick questions. You get your child’s reading level and a plan for this week.',
       free: 'AGE', also: ['learning-path'] },
+    { id: 'daily', label: 'No single problem. I want practice every day, chosen for me', sheet: 'read',
+      why: 'One reading sheet a day, made for your child from what you tell us. You never have to work out what comes next.',
+      free: { p: 'what-next', why: 'Answer a few quick questions. You get your child’s reading level and a plan for this week.' },
+      note: { a34: 'The One Sheet is for children of 4 to 8.' } },
+    { id: 'math', label: 'Not reading: I want help with math', sheet: 'math',
+      why: 'One math sheet a day, made for your child from what you tell us. It goes from counting to 5 up to adding and taking away within 100.',
+      free: { p: 'free-addition-and-subtraction-starter-pack', why: 'A free pack: three pages from each of our five addition and subtraction packs.' },
+      note: { a34: 'The One Sheet is for children of 4 to 8.' } },
+    { id: 'gram', label: 'Not reading: I want help with grammar and writing sentences', sheet: 'gram',
+      why: 'One grammar sheet a day, made for your child from what you tell us. It goes from capital letters and periods to words like ran and went.',
+      free: { p: 'fix-the-sentence-worksheet-maker', why: 'A free maker: a short sentence printed with no capital letter and no end mark, and a line to write it right.' },
+      note: { a34: 'The grammar sheets are for children of 5 to 8.' } },
     { id: 'unsure', label: 'I am not sure', main: 'my-child-is-behind-in-reading', mainLabel: 'Free finder: where do I start?', mainTag: 'Free · 2 minutes · No sign-up',
       why: 'Check off what is true for your child. You will see the one thing to work on first, and what can wait.',
       free: { p: 'what-next', why: 'If nothing is hard yet, find your child’s reading level here.' } },
@@ -215,7 +243,7 @@ var SIOH_DATA = {
      packs: each one also has a "free-" page of sample pages, added by the code, unless its address ends with "!". */
   pages: {
     /*PAGES-START*/
-    makers: 'name-tracing-worksheet-generator;handwriting-worksheet-maker;tracing-worksheet-generator;word-tracing-worksheet-generator;number-tracing-generator;lined-paper-generator;worksheet-generator:Worksheet generator: build your own;cvc-word-generator;sight-word-worksheet-generator;beginning-sounds-worksheet-generator;decodable-sentence-generator;sentence-scramble-generator;matching-worksheet-maker;spelling-worksheet-generator;word-search-maker-for-kids;flashcard-maker-printable:Flashcard maker;bingo-card-generator;number-line-generator;ten-frame-generator;addition-worksheet-generator:Addition and subtraction worksheet generator;reward-chart-maker;roll-and-read-worksheet-generator;word-sort-generator;number-bonds-worksheet-generator;decodable-text-generator:Decodable text generator: story sheets;reading-passage-generator:Reading passage generator with questions;fluency-passage-generator;mini-book-maker:Mini book maker: fold-up books;word-ladder-generator;heart-word-worksheet-generator;color-by-sight-word-generator;dot-marker-letter-maker:Dot marker letter and word maker;sight-word-board-game-maker;name-and-word-mat-maker;playdough-mat-maker:Playdough letter mat maker;clip-card-maker;letter-sound-puzzle-maker;word-building-mat-maker;find-the-letter-worksheet-generator;journal-page-maker;sentence-writing-paper-generator;scissor-skills-worksheet-generator;pre-writing-worksheet-generator:Pre-writing worksheet generator;morning-work-generator;letter-sound-checklist-maker;sight-word-checklist-maker;reading-log-maker;bookmark-maker;phonics-flashcard-maker;alphabet-chart-maker;task-card-maker;i-spy-worksheet-generator:I Spy worksheet generator;word-family-flip-book-maker;write-the-room-maker;read-the-room-maker;sentence-building-cards-maker;phonics-poster-maker;letter-crown-maker;interactive-notebook-page-maker;phonemic-awareness-card-maker;letter-scavenger-hunt-maker;make-the-letter-task-card-maker;zap-word-game-maker:Zap! word game maker;story-map-maker;beginning-sound-mat-maker;bubble-letter-template-maker;alphabet-matching-worksheet-maker;picture-sort-maker;calendar-page-maker;spelling-list-maker;picture-crossword-maker;name-tag-maker;reading-certificate-maker;go-fish-word-card-maker:Go Fish word card maker;memory-match-game-maker;old-maid-word-card-maker:Old Maid word card maker;i-have-who-has-game-maker:I have, who has game maker;word-dominoes-maker;word-family-spoons-card-game;tumbling-tower-word-labels;cup-stacking-word-labels;alphabet-mini-book-maker;decodable-book-maker;foldable-word-book-maker;word-slider-maker;word-wheel-maker;lift-the-flap-page-maker;class-book-page-maker;lapbook-template-maker;color-path-game-word-cards;color-match-word-card-game;swat-the-word-game-maker;word-fishing-game-maker;category-sorting-mat-maker;roll-and-write-worksheet-maker;race-to-the-top-letter-game;roll-and-cover-game-maker;bump-game-maker;spin-and-read-game-maker;four-in-a-row-word-game-maker;connect-the-path-word-game;tic-tac-toe-word-game-maker:Tic-tac-toe word game maker;cover-up-letter-mat-maker:Cover-up letter mat maker;sound-box-mat-maker;word-mapping-mat-maker;blending-slide-mat-maker;drive-and-blend-mat-maker;sight-word-playdough-mat-maker;alphabet-poster-maker;phonics-sound-chart-maker;vowel-chart-maker;word-family-chart-maker;word-wall-card-maker;picture-word-bank-maker;color-word-card-maker;sight-word-list-poster-maker;personal-word-wall-maker;mini-office-maker;desk-helper-strip-maker;letter-formation-chart-maker;reading-strategy-poster-maker;weekly-focus-board-maker;learning-placemat-maker;digraph-worksheet-generator;consonant-blends-worksheet-generator;long-vowel-worksheet-generator;vowel-worksheet-generator;missing-letter-worksheet-generator;alphabet-maze-maker;letter-of-the-week-worksheet-maker;alphabet-tracing-card-maker;number-word-tracing-worksheet-generator;alphabet-coloring-page-maker;free-worksheet-maker',
+    makers: 'name-tracing-worksheet-generator;handwriting-worksheet-maker;tracing-worksheet-generator;word-tracing-worksheet-generator;number-tracing-generator;lined-paper-generator;worksheet-generator:Worksheet generator: build your own;cvc-word-generator;sight-word-worksheet-generator;beginning-sounds-worksheet-generator;decodable-sentence-generator;sentence-scramble-generator;matching-worksheet-maker;spelling-worksheet-generator;word-search-maker-for-kids;flashcard-maker-printable:Flashcard maker;bingo-card-generator;number-line-generator;ten-frame-generator;addition-worksheet-generator:Addition and subtraction worksheet generator;reward-chart-maker;roll-and-read-worksheet-generator;word-sort-generator;number-bonds-worksheet-generator;decodable-text-generator:Decodable text generator: story sheets;reading-passage-generator:Reading passage generator with questions;fluency-passage-generator;mini-book-maker:Mini book maker: fold-up books;word-ladder-generator;heart-word-worksheet-generator;color-by-sight-word-generator;dot-marker-letter-maker:Dot marker letter and word maker;sight-word-board-game-maker;name-and-word-mat-maker;playdough-mat-maker:Playdough letter mat maker;clip-card-maker;letter-sound-puzzle-maker;word-building-mat-maker;find-the-letter-worksheet-generator;journal-page-maker;sentence-writing-paper-generator;scissor-skills-worksheet-generator;pre-writing-worksheet-generator:Pre-writing worksheet generator;morning-work-generator;letter-sound-checklist-maker;sight-word-checklist-maker;reading-log-maker;bookmark-maker;phonics-flashcard-maker;alphabet-chart-maker;task-card-maker;i-spy-worksheet-generator:I Spy worksheet generator;word-family-flip-book-maker;write-the-room-maker;read-the-room-maker;sentence-building-cards-maker;phonics-poster-maker;letter-crown-maker;interactive-notebook-page-maker;phonemic-awareness-card-maker;letter-scavenger-hunt-maker;make-the-letter-task-card-maker;zap-word-game-maker:Zap! word game maker;story-map-maker;beginning-sound-mat-maker;bubble-letter-template-maker;alphabet-matching-worksheet-maker;picture-sort-maker;calendar-page-maker;spelling-list-maker;picture-crossword-maker;name-tag-maker;reading-certificate-maker;go-fish-word-card-maker:Go Fish word card maker;memory-match-game-maker;old-maid-word-card-maker:Old Maid word card maker;i-have-who-has-game-maker:I have, who has game maker;word-dominoes-maker;word-family-spoons-card-game;tumbling-tower-word-labels;cup-stacking-word-labels;alphabet-mini-book-maker;decodable-book-maker;foldable-word-book-maker;word-slider-maker;word-wheel-maker;lift-the-flap-page-maker;class-book-page-maker;lapbook-template-maker;color-path-game-word-cards;color-match-word-card-game;swat-the-word-game-maker;word-fishing-game-maker;category-sorting-mat-maker;roll-and-write-worksheet-maker;race-to-the-top-letter-game;roll-and-cover-game-maker;bump-game-maker;spin-and-read-game-maker;four-in-a-row-word-game-maker;connect-the-path-word-game;tic-tac-toe-word-game-maker:Tic-tac-toe word game maker;cover-up-letter-mat-maker:Cover-up letter mat maker;sound-box-mat-maker;word-mapping-mat-maker;blending-slide-mat-maker;drive-and-blend-mat-maker;sight-word-playdough-mat-maker;alphabet-poster-maker;phonics-sound-chart-maker;vowel-chart-maker;word-family-chart-maker;word-wall-card-maker;picture-word-bank-maker;color-word-card-maker;sight-word-list-poster-maker;personal-word-wall-maker;mini-office-maker;desk-helper-strip-maker;letter-formation-chart-maker;reading-strategy-poster-maker;weekly-focus-board-maker;learning-placemat-maker;digraph-worksheet-generator;consonant-blends-worksheet-generator;long-vowel-worksheet-generator;vowel-worksheet-generator;missing-letter-worksheet-generator;alphabet-maze-maker;letter-of-the-week-worksheet-maker;alphabet-tracing-card-maker;number-word-tracing-worksheet-generator;alphabet-coloring-page-maker;fix-the-sentence-worksheet-maker;free-worksheet-maker',
     packs: 'free-decodable-reading-sampler!:Free Decodable Reading Sampler;sound-it-out-decodable-phonics-practice!:Sound It Out;decodable-reading-passages-with-questions!:Read It, Get It;alphabet-tracing-worksheets:Alphabet Tracing;number-tracing-and-counting-1-to-20:Numbers 1 to 20;addition-within-10-worksheets:Addition to 10;subtraction-within-10-worksheets:Subtraction to 10;addition-to-5;subtraction-to-5;addition-to-20;sight-words-set-1:Sight Words Set 1;sight-words-set-2:Sight Words Set 2;short-vowel-a-words:Short A Words;cvc-cut-and-paste:CVC Cut and Paste;short-vowel-e-words:Short E Words;short-vowel-i-words:Short I Words;short-vowel-o-words:Short O Words;letter-sounds-level-1:Letter Sounds Level 1;letter-sounds-level-3:Letter Sounds Level 3;letter-sounds-level-5:Letter Sounds Level 5;letter-sounds-level-6:Letter Sounds Level 6;short-vowel-u-words:Short U Words;letter-sounds-level-2:Letter Sounds Level 2;letter-sounds-level-4:Letter Sounds Level 4;letter-sounds-level-7:Letter Sounds Level 7;free-addition-and-subtraction-starter-pack!:Free Addition and Subtraction Starter Pack;read-and-match-level-4:Read and Match Level 4;read-and-match-level-6:Read and Match Level 6;read-and-match-level-7:Read and Match Level 7;read-and-match-level-3:Read and Match Level 3;read-and-match-level-5:Read and Match Level 5;color-by-word-level-2:Color by Word Level 2;color-by-word-level-3:Color by Word Level 3;color-by-word-level-4:Color by Word Level 4;color-by-word-level-6:Color by Word Level 6;color-by-word-level-7:Color by Word Level 7;cvc-word-cards-set-2:CVC Word Cards Set 2;cvc-word-cards-set-1:CVC Word Cards Set 1;color-by-word-level-5:Color by Word Level 5;cvc-word-search-level-4:CVC Word Search Level 4;cvc-word-search-level-5:CVC Word Search Level 5;cvc-word-search-level-6:CVC Word Search Level 6;cvc-word-search-level-7:CVC Word Search Level 7;dab-and-blend-level-3:Dab and Blend Level 3;dab-and-blend-level-4:Dab and Blend Level 4;dab-and-blend-level-5:Dab and Blend Level 5;dab-and-blend-level-6:Dab and Blend Level 6;free-learn-to-read-starter-pack!:Free Learn to Read Starter Pack;free-games-charts-and-activities-starter-pack!:Free Games, Charts and Activities Starter Pack',
     bundles: 'read-and-match-level-bundle:Read and Match Level Bundle;letter-sounds-level-bundle:Letter Sounds Level Bundle;short-vowel-words-bundle:Short Vowel Words Bundle;learn-to-read-complete-bundle:Complete Learn to Read Bundle;complete-kindergarten-bundle:Complete Kindergarten Bundle;color-by-word-level-bundle:Color By Word Level Bundle;complete-first-grade-bundle:Complete First Grade Bundle;cvc-word-search-level-bundle:CVC Word Search Level Bundle;dab-and-blend-level-bundle:Dab and Blend Level Bundle',
     games: 'free-reading-games:Free Reading Games;free-blending-game:Free Blending Game;free-word-building-game:Free Word Building Game;free-cvc-word-reading-game:Free CVC Word Reading Game;free-word-chains-game:Free Word Chains Game;free-sentence-reading-game:Free Sentence Reading Game;free-decodable-story-game:Free Decodable Story Game;app:Free reading app',
@@ -246,6 +274,7 @@ var SIOH_DATA = {
       add(D.plans[id].check, 'Free check: ' + D.plans[id].ask, 'Free check');
       add(D.plans[id].plan, D.plans[id].name + ': 10-day plan', '10-day plan · $19');
     }
+    for (id in D.sheets) if (D.sheets.hasOwnProperty(id)) add(D.sheets[id].p, D.sheets[id].name, T.sheetKind);
     for (k in D.pages) if (D.pages.hasOwnProperty(k)) {
       parts = D.pages[k].split(';');
       for (i = 0; i < parts.length; i++) {
@@ -272,7 +301,9 @@ var SIOH_DATA = {
         pl = D.plans[q.plan];
         r.main = { p: pl.check, label: 'Free check: ' + pl.ask, tag: T.checkTag, why: q.why + ' ' + T.checkEnd };
         r.next = { p: pl.plan, label: pl.name };
-      } else r.main = { p: q.main, label: q.mainLabel, tag: q.mainTag, why: q.why };
+        if (D.daily && D.daily.skip.indexOf(q.plan) < 0) r.daily = { p: D.sheets[D.daily.sheet].p, label: D.daily.label };
+      } else if (q.sheet) { r.sheet = q.sheet; r.main = { p: D.sheets[q.sheet].p, label: D.sheets[q.sheet].name, tag: T.sheetTag, why: q.why + ' ' + T.sheetTry }; }
+      else r.main = { p: q.main, label: q.mainLabel, tag: q.mainTag, why: q.why };
       r.free = q.free === 'AGE' ? { p: a.start, why: a.startWhy } : { p: q.free.p, why: q.free.why };
       if (q.note && q.note[a.id]) r.notes.push({ t: q.note[a.id], p: q.noteLink && q.noteLink[a.id] });
       r.also = (q.also || []).concat([a.list]);
@@ -417,7 +448,8 @@ var SIOH_DATA = {
     }
     if (r.main) {
       h += '<div class="sioh-card sioh-main" id="sioh-ask" tabindex="-1"><span class="sioh-k">' + esc(T.startHere + ' · ' + r.main.tag) + '</span>' + link(r.main.p, r.main.label, 'sioh-go') + '<p>' + esc(r.main.why) + '</p>' +
-        (r.next ? '<p class="sioh-small">' + esc(T.nextLead) + ' ' + link(r.next.p, r.next.label) + ', ' + esc(T.planEnd) + '</p>' : '') + '</div>';
+        (r.next ? '<p class="sioh-small">' + esc(T.nextLead) + ' ' + link(r.next.p, r.next.label) + ', ' + esc(T.planEnd) + '</p>' : '') +
+        (r.daily ? '<p class="sioh-small">' + esc(T.dailyLead) + ' ' + link(r.daily.p, r.daily.label) + '. ' + esc(T.dailyEnd) + '</p>' : '') + '</div>';
       h += '<div class="sioh-card"><span class="sioh-k">' + esc(T.freeLead) + '</span>' + link(r.free.p, nameOf(r.free.p), 'sioh-go sioh-alt') + '<p class="sioh-small">' + esc(r.free.why) + '</p></div>';
     } else {
       h += '<div class="sioh-card sioh-main" id="sioh-ask" tabindex="-1"><span class="sioh-k">' + esc(T.picksLead) + '</span><p>' + esc(r.why) + '</p>' + rows(r.picks) + '</div>';
