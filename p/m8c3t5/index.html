@@ -1,0 +1,145 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive"><title>Count It Up: your companion</title>
+<style>
+@font-face{font-family:Fredoka;font-style:normal;font-weight:600 900;font-display:swap;src:url(../../fonts/ComicNeue-Bold.ttf) format('truetype')}
+.after{margin:30px 6px 0;color:var(--soft);font-size:16px;text-align:center}.after a{color:var(--ink);font-weight:700}
+:root{--ink:#1f2a44;--soft:#5b6680;--bg:#fff8e7;--card:#fff;--sun:#f2b705;--pink:#e0527a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:18px;line-height:1.5}
+main{max-width:760px;margin:0 auto;padding:22px 16px 60px}
+header{text-align:center;padding:10px 0 6px}header small{display:block;font-weight:800;letter-spacing:.06em;color:var(--pink);text-transform:uppercase;font-size:14px}
+h1{font-family:Fredoka,"Comic Sans MS","Chalkboard SE","Trebuchet MS",sans-serif;font-size:clamp(30px,7vw,44px);line-height:1.08;margin:6px 0 8px}
+header p{margin:0 auto;max-width:560px;color:var(--soft)}
+nav{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:20px 0 6px}
+nav a{display:inline-flex;align-items:center;justify-content:center;min-width:46px;height:46px;padding:0 12px;border-radius:999px;background:var(--card);border:3px solid var(--ink);color:var(--ink);font-weight:800;text-decoration:none}
+nav a.s{background:var(--sun)}
+.day,.box{background:var(--card);border:4px solid var(--ink);border-radius:24px;padding:18px 18px 14px;margin:22px 0;scroll-margin-top:12px}
+.day:target{border-color:var(--pink);box-shadow:0 0 0 6px #ffe3ee}
+.tag{display:inline-block;background:var(--sun);border-radius:999px;padding:2px 14px;font-weight:800;font-size:15px}
+h2{font-family:Fredoka,"Comic Sans MS","Chalkboard SE","Trebuchet MS",sans-serif;font-size:26px;line-height:1.15;margin:8px 0 2px}
+.sub{margin:0 0 12px;color:var(--soft)}.sub span{white-space:nowrap;font-weight:700;color:var(--ink)}
+video{width:100%;height:auto;aspect-ratio:16/9;border-radius:14px;background:#1f2a44;display:block}
+.hw{margin-top:16px;border-top:3px dotted #c9d2d9;padding-top:12px}.hw p{margin:8px 0}.hwready{background:#e4f7e4;border:3px solid #2f9e63;border-radius:14px;padding:10px 12px}
+.hwq span{color:var(--soft);font-size:14px;font-weight:400}.hwb{display:grid;grid-template-columns:1fr 1fr;gap:10px}.hwb button{font:800 18px system-ui,sans-serif;color:var(--ink);background:#fff;border:3px solid var(--ink);border-radius:999px;padding:12px 6px;cursor:pointer}
+.hwb button.on[data-v=ok]{background:#2f9e63;color:#fff}.hwb button.on[data-v=hard]{background:var(--sun)}
+.hwr{border:3px solid var(--ink);border-radius:16px;padding:10px 14px;margin-top:10px;background:#fff8e7}.hwr.ok{background:#e4f7e4}.hwr small{display:block;font-weight:800;text-transform:uppercase;letter-spacing:.06em;font-size:13px;color:var(--pink)}
+.hwsay{background:#dff3ff;border-radius:14px;padding:10px 12px}
+.mk{margin-top:16px;border:3px solid var(--ink);border-radius:16px;padding:12px 14px;background:#fff}.mk>b{display:block;font-size:19px}.mkg{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
+.mkg div{border-radius:14px;padding:10px 12px;font-weight:700}.mkg small{display:block;font-weight:800;text-transform:uppercase;letter-spacing:.05em;font-size:12px}.mkg .no{background:#ffe3e0;border:3px solid #d9534f}.mkg .no small{color:#b3261e}.mkg .yes{background:#e4f7e4;border:3px solid #2f9e63}.mkg .yes small{color:#1c7a47}
+.mk p{margin:6px 0 0}@media(max-width:480px){.mkg{grid-template-columns:1fr}}
+.kid{margin-top:14px;border:3px dashed var(--pink);border-radius:16px;padding:12px 14px;background:#fff6fa}.kid b{display:block}.kid p{margin:4px 0 10px;font-size:15px;color:var(--soft)}.kid audio{width:100%}
+ul{margin:12px 0 2px;padding-left:22px}li{margin:3px 0}
+.snd{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}
+.snd button{font:800 64px Fredoka,"Comic Sans MS","Chalkboard SE","Trebuchet MS",sans-serif;color:var(--ink);background:#fff3c9;border:3px solid var(--ink);border-radius:18px;padding:12px 0;cursor:pointer}
+.snd button:active,.snd button.on{background:var(--sun)}
+.box h2{margin-top:0}.box p{margin:8px 0}
+.rp h3{font-size:19px;margin:20px 0 6px}.nm{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#fff;border:3px solid #c9d2d9;border-radius:14px;padding:8px 14px;margin:8px 0;font-weight:700}
+.nm input{width:70px;font:800 22px system-ui,sans-serif;text-align:center;border:3px solid var(--ink);border-radius:10px;padding:5px;color:var(--ink)}
+.go{display:block;width:100%;margin:20px 0 4px;font:800 21px system-ui,sans-serif;color:#fff;background:var(--pink);border:0;border-radius:999px;padding:15px;cursor:pointer}
+.warn{color:#b3261e;font-weight:700}.res{border:4px solid var(--ink);border-radius:22px;padding:16px 18px;margin-top:16px;background:linear-gradient(135deg,#fff3c9,#ffe3ee)}.res.there{background:linear-gradient(135deg,#e4f7e4,#dff3ff)}
+.res small{display:block;font-weight:800;text-transform:uppercase;letter-spacing:.06em;font-size:13px;color:var(--pink)}.res h3{font-family:Fredoka,"Comic Sans MS","Chalkboard SE",sans-serif;font-size:26px;margin:2px 0 6px}
+.tn{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}.tn>div{background:#fff;border:3px solid var(--ink);border-radius:16px;padding:10px 12px}
+.bar{font-size:14px;margin-top:6px}.bar span{display:block}.bar i{display:block;height:12px;border:2px solid var(--ink);border-radius:9px;overflow:hidden;background:#fff}.bar i b{display:block;height:100%;background:#2f9e63}.bar em{font-style:normal;font-weight:700}
+.hint{color:var(--soft);font-size:15px}@media(max-width:480px){.tn{grid-template-columns:1fr}}
+footer{margin-top:34px;color:var(--soft);font-size:14px;text-align:center}
+</style></head><body><main>
+<header><small>Sound It Out · your companion</small><h1>Count It Up</h1><p>One short video for you for each day of the plan. Watch it first, then do the page together, with real things on the table.</p></header>
+<nav aria-label="Days"><a class="s" href="#d0">Start</a><a href="#d1">1</a><a href="#d2">2</a><a href="#d3">3</a><a href="#d4">4</a><a href="#d5">5</a><a href="#d6">6</a><a href="#d7">7</a><a href="#d8">8</a><a href="#d9">9</a><a href="#d10">10</a><a class="s" href="#report">Report</a></nav>
+<section class="day" id="d0"><div class="tag">Start here</div><h2>Welcome: what to expect</h2><p class="sub">What this plan is, what is inside, and how to use it. <span>2:06 min</span></p>
+<video controls playsinline preload="none" poster="start.jpg"><source src="start.mp4" type="video/mp4"><track kind="captions" src="start.vtt" srclang="en" label="English"></video>
+<ul><li>What the plan is and who it is for.</li><li>What is inside, and how each day works.</li><li>Watch this before day 1.</li></ul><div class="mk"><b>The most common mistake: Counting for your child</b><div class="mkg"><div class="no"><small>Not like this</small>One thing is counted twice. You count them again for your child.</div><div class="yes"><small>Like this</small>You do not count for your child. You say two words, then wait.</div></div><p><b>What to say:</b> &ldquo;Touch and move. Touch each one once, and move it to the side.&rdquo;</p></div></section>
+<section class="day" id="d1"><div class="tag">Day 1</div><h2>Find the Starting Point</h2><p class="sub">About four minutes. Watch and mark. <span>0:56 min</span></p>
+<video controls playsinline preload="none" poster="day01.jpg"><source src="day01.mp4" type="video/mp4"><track kind="captions" src="day01.vtt" srclang="en" label="English"></video>
+<ul><li>A check, not a lesson: watch and mark.</li><li>Counting, the numbers, more and less, and putting together.</li><li>Keep the page for day 10.</li></ul><div class="hw"><p class="hwsay"><b>If your child gets stuck today, say:</b> &ldquo;Do what you can. It is fine to go slowly.&rdquo;</p><p class="hwready"><b>What today&rsquo;s check tells you:</b> Your child fits one line in the box on your page. Stop at the first one. That line tells you which day to start on.</p><div class="hwr hard"><small>If the check was hard to do</small><p>If your child got tired, stop and do parts C and D tomorrow. Real things on the table are allowed for part D. Do not teach on the check.</p></div></div></section>
+<section class="day" id="d2"><div class="tag">Day 2</div><h2>Touch and Count</h2><p class="sub">The three rules of counting. <span>0:57 min</span></p>
+<video controls playsinline preload="none" poster="day02.jpg"><source src="day02.mp4" type="video/mp4"><track kind="captions" src="day02.vtt" srclang="en" label="English"></video>
+<ul><li>Real things first: three, then five.</li><li>Touch each one once, and move it aside.</li><li>The last number tells how many.</li></ul><div class="hw" data-d="2"><p class="hwsay"><b>If your child gets stuck today, say:</b> &ldquo;Touch and move. What was the last number you said? That is how many.&rdquo;</p>
+<p class="hwready"><b>Ready for day 3 when:</b> Your child counted 3 balls, 5 socks and 4 cars for you at the end, touching each one once, and said how many.</p>
+<p class="hwq"><b>How did today go?</b> <span>Your answer stays in this browser. Nothing is sent anywhere.</span></p>
+<div class="hwb"><button type="button" data-v="ok">Ready</button><button type="button" data-v="hard">Not ready yet</button></div>
+<div class="hwr ok" hidden><small>Tomorrow</small><p><b>Go on to day 3.</b> Watch its video first.</p></div>
+<div class="hwr hard" hidden><small>Tomorrow</small><p><b>Not ready yet. That is useful to know.</b> Do day 2 again with real things only, and no page. Three things, then four, then five. Your child moves each one aside while counting. Then do job 1. Still hard after two tries? Count to 3 only for a few days.</p></div></div></section>
+<section class="day" id="d3"><div class="tag">Day 3</div><h2>Counting to Ten With a Ten Frame</h2><p class="sub">Five, and some more. <span>0:48 min</span></p>
+<video controls playsinline preload="none" poster="day03.jpg"><source src="day03.mp4" type="video/mp4"><track kind="captions" src="day03.vtt" srclang="en" label="English"></video>
+<ul><li>Cut out the number cards first.</li><li>A full row is five. A full frame is ten.</li><li>Seven is five and two more.</li></ul><div class="hw" data-d="3"><p class="hwsay"><b>If your child gets stuck today, say:</b> &ldquo;A full row is five. Five, and how many more?&rdquo;</p>
+<p class="hwready"><b>Ready for day 4 when:</b> Your child showed you 8 eggs, 10 stars and 7 frogs in the ten frames, and said five and some more without counting each one.</p>
+<p class="hwq"><b>How did today go?</b> <span>Your answer stays in this browser. Nothing is sent anywhere.</span></p>
+<div class="hwb"><button type="button" data-v="ok">Ready</button><button type="button" data-v="hard">Not ready yet</button></div>
+<div class="hwr ok" hidden><small>Tomorrow</small><p><b>Go on to day 4.</b> Watch its video first.</p></div>
+<div class="hwr hard" hidden><small>Tomorrow</small><p><b>Not ready yet. That is useful to know.</b> Do day 3 again with the ten frame mat and real things. Fill the top row first: five. Then add one more at a time and say the number. Leave job 2. Still hard after two tries? Go back to day 2.</p></div></div></section>
+<section class="day" id="d4"><div class="tag">Day 4</div><h2>More and Less</h2><p class="sub">Line them up, and look. <span>0:39 min</span></p>
+<video controls playsinline preload="none" poster="day04.jpg"><source src="day04.mp4" type="video/mp4"><track kind="captions" src="day04.vtt" srclang="en" label="English"></video>
+<ul><li>Two rows of real things, lined up.</li><li>The row with things left over has more.</li><li>One more is the next number.</li></ul><div class="hw" data-d="4"><p class="hwsay"><b>If your child gets stuck today, say:</b> &ldquo;Line them up. Which row has things left over?&rdquo;</p>
+<p class="hwready"><b>Ready for day 5 when:</b> Your child told you which is more in all three pairs at the end, and drew one more and wrote the new number.</p>
+<p class="hwq"><b>How did today go?</b> <span>Your answer stays in this browser. Nothing is sent anywhere.</span></p>
+<div class="hwb"><button type="button" data-v="ok">Ready</button><button type="button" data-v="hard">Not ready yet</button></div>
+<div class="hwr ok" hidden><small>Tomorrow</small><p><b>Go on to day 5.</b> Watch its video first.</p></div>
+<div class="hwr hard" hidden><small>Tomorrow</small><p><b>Not ready yet. That is useful to know.</b> Do day 4 again with real things. Make two rows, one under the other, lined up. Your child points to the things with no partner. That row has more. Leave job 2. Still hard after two tries? Go back to day 3.</p></div></div></section>
+<section class="day" id="d5"><div class="tag">Day 5</div><h2>Halfway Check</h2><p class="sub">Go on, or go back. <span>0:28 min</span></p>
+<video controls playsinline preload="none" poster="day05.jpg"><source src="day05.mp4" type="video/mp4"><track kind="captions" src="day05.vtt" srclang="en" label="English"></video>
+<ul><li>Seven things on one page. Do not help.</li><li>Six or seven right: go on to day 6.</li><li>Fewer: do days 2, 3 and 4 again.</li></ul><div class="hw" data-d="5"><p class="hwsay"><b>If your child gets stuck today, say:</b> &ldquo;Take your time. Touch each one once.&rdquo;</p>
+<p class="hwready"><b>Ready for day 6 when:</b> Your child got 6 or 7 of the seven things on the halfway check right. Go on to day 6 tomorrow.</p>
+<p class="hwq"><b>How did today go?</b> <span>Your answer stays in this browser. Nothing is sent anywhere.</span></p>
+<div class="hwb"><button type="button" data-v="ok">Ready</button><button type="button" data-v="hard">Not ready yet</button></div>
+<div class="hwr ok" hidden><small>Tomorrow</small><p><b>Go on to day 6.</b> Watch its video first.</p></div>
+<div class="hwr hard" hidden><small>Tomorrow</small><p><b>Not ready yet. That is useful to know.</b> Fewer than 6: do days 2, 3 and 4 again, one a day, with real things first, then come back to this page. If the number path was hard, fill in the missing numbers together.</p></div></div></section>
+<section class="day" id="d6"><div class="tag">Day 6</div><h2>The Parts of Five</h2><p class="sub">Two parts make one whole. <span>0:34 min</span></p>
+<video controls playsinline preload="none" poster="day06.jpg"><source src="day06.mp4" type="video/mp4"><track kind="captions" src="day06.vtt" srclang="en" label="English"></video>
+<ul><li>Five things in a row.</li><li>Push three to one side and two to the other.</li><li>Three and two make five.</li></ul><div class="hw" data-d="6"><p class="hwsay"><b>If your child gets stuck today, say:</b> &ldquo;Count this side. Count that side. Together they make 5.&rdquo;</p>
+<p class="hwready"><b>Ready for day 7 when:</b> Your child told you three ways to make 5 at the end, like 3 and 2, and wrote the parts on the page.</p>
+<p class="hwq"><b>How did today go?</b> <span>Your answer stays in this browser. Nothing is sent anywhere.</span></p>
+<div class="hwb"><button type="button" data-v="ok">Ready</button><button type="button" data-v="hard">Not ready yet</button></div>
+<div class="hwr ok" hidden><small>Tomorrow</small><p><b>Go on to day 7.</b> Watch its video first.</p></div>
+<div class="hwr hard" hidden><small>Tomorrow</small><p><b>Not ready yet. That is useful to know.</b> Do day 6 again with five real things and no page. Push some to one side and the rest to the other. Your child counts each side and says: 3 and 2 make 5. Then do the first two rows of job 1.</p></div></div></section>
+<section class="day" id="d7"><div class="tag">Day 7</div><h2>Putting Together</h2><p class="sub">Adding up to five. <span>0:36 min</span></p>
+<video controls playsinline preload="none" poster="day07.jpg"><source src="day07.mp4" type="video/mp4"><track kind="captions" src="day07.vtt" srclang="en" label="English"></video>
+<ul><li>Two things in one hand, one in the other.</li><li>Put them together and count them all.</li><li>Plus means put together.</li></ul><div class="hw" data-d="7"><p class="hwsay"><b>If your child gets stuck today, say:</b> &ldquo;Put them together. Now count them all.&rdquo;</p>
+<p class="hwready"><b>Ready for day 8 when:</b> Your child told you 2 and 1, 3 and 2, and 2 and 2 in all at the end, putting the groups together.</p>
+<p class="hwq"><b>How did today go?</b> <span>Your answer stays in this browser. Nothing is sent anywhere.</span></p>
+<div class="hwb"><button type="button" data-v="ok">Ready</button><button type="button" data-v="hard">Not ready yet</button></div>
+<div class="hwr ok" hidden><small>Tomorrow</small><p><b>Go on to day 8.</b> Watch its video first.</p></div>
+<div class="hwr hard" hidden><small>Tomorrow</small><p><b>Not ready yet. That is useful to know.</b> Do day 7 again with real things in two hands. Your child opens both hands, puts them together on the table and counts them all. Then the first two rows of job 1. Leave the story. Still hard after two tries? Go back to day 6.</p></div></div></section>
+<section class="day" id="d8"><div class="tag">Day 8</div><h2>The Partners of Ten</h2><p class="sub">Every number has a partner. <span>0:36 min</span></p>
+<video controls playsinline preload="none" poster="day08.jpg"><source src="day08.mp4" type="video/mp4"><track kind="captions" src="day08.vtt" srclang="en" label="English"></video>
+<ul><li>Fill the ten frame with two kinds of things.</li><li>Seven and three make ten.</li><li>Three is the partner of seven.</li></ul><div class="hw" data-d="8"><p class="hwsay"><b>If your child gets stuck today, say:</b> &ldquo;How many empty boxes are left? That is the partner.&rdquo;</p>
+<p class="hwready"><b>Ready for day 9 when:</b> Your child said the partner of 7, 6 and 9 at the end, the number that makes 10.</p>
+<p class="hwq"><b>How did today go?</b> <span>Your answer stays in this browser. Nothing is sent anywhere.</span></p>
+<div class="hwb"><button type="button" data-v="ok">Ready</button><button type="button" data-v="hard">Not ready yet</button></div>
+<div class="hwr ok" hidden><small>Tomorrow</small><p><b>Go on to day 9.</b> Watch its video first.</p></div>
+<div class="hwr hard" hidden><small>Tomorrow</small><p><b>Not ready yet. That is useful to know.</b> Do day 8 again with the ten frame mat and real things of two kinds. Fill it with 7 of one kind, then fill the empty boxes with the other kind and count them. Do three of these. Then job 1.</p></div></div></section>
+<section class="day" id="d9"><div class="tag">Day 9</div><h2>Counting On</h2><p class="sub">Keep the big number in your head. <span>0:41 min</span></p>
+<video controls playsinline preload="none" poster="day09.jpg"><source src="day09.mp4" type="video/mp4"><track kind="captions" src="day09.vtt" srclang="en" label="English"></video>
+<ul><li>Six things in a cup, two next to it.</li><li>Keep six in your head. Count on: seven, eight.</li><li>Tip the cup out and count to check.</li></ul><div class="hw" data-d="9"><p class="hwsay"><b>If your child gets stuck today, say:</b> &ldquo;Keep the big number in your head. Now count on.&rdquo;</p>
+<p class="hwready"><b>Ready for day 10 when:</b> Your child told you 6 and 2, 5 and 3, and 4 and 4 in all at the end, starting from the bigger number and counting on.</p>
+<p class="hwq"><b>How did today go?</b> <span>Your answer stays in this browser. Nothing is sent anywhere.</span></p>
+<div class="hwb"><button type="button" data-v="ok">Ready</button><button type="button" data-v="hard">Not ready yet</button></div>
+<div class="hwr ok" hidden><small>Tomorrow</small><p><b>Go on to day 10.</b> Watch its video first.</p></div>
+<div class="hwr hard" hidden><small>Tomorrow</small><p><b>Not ready yet. That is useful to know.</b> Do day 9 again with a cup. Put the bigger number in the cup and say it. Your child touches the others and counts on. Tip the cup out and count all to check. Then the first two rows of job 1. Still hard after two tries? Go back to day 7.</p></div></div></section>
+<section class="day" id="d10"><div class="tag">Day 10</div><h2>The Final Check</h2><p class="sub">Two pages side by side. <span>0:45 min</span></p>
+<video controls playsinline preload="none" poster="day10.jpg"><source src="day10.mp4" type="video/mp4"><track kind="captions" src="day10.vtt" srclang="en" label="English"></video>
+<ul><li>A check, not a lesson. Do not help.</li><li>Nothing on it is in the book before today.</li><li>Put this page beside the day 1 page.</li></ul><div class="hw"><p class="hwsay"><b>If your child gets stuck today, say:</b> &ldquo;Take your time. Fingers are fine.&rdquo;</p><p class="hwready"><b>The ten days are done when:</b> Your child got 9 of 9 on the check: two groups counted, two pairs compared, four sums and the story sum. Your child counts and adds within 10. Type your numbers into the report at the bottom of this page.</p><div class="hwr hard"><small>Not there yet</small><p>Counting right but sums not yet: do days 7 and 9 again with the extra sums page. Better than day 1, but not there yet: do days 3 to 9 again. The same as day 1: go back to day 2 and take two days for each page.</p></div></div></section>
+
+<section class="box rp" id="report"><h2>Your child’s report</h2><p>After day 10, type in the numbers you wrote on your two check pages. You will see where your child started, where they are now, and what comes next.</p>
+<p style="color:var(--soft);font-size:15px">Nothing you type here is sent anywhere. It stays in this browser, on this phone or computer.</p>
+<h3>From your day 1 page</h3><label class="nm"><span>A: groups counted right</span><span><input type="number" inputmode="numeric" min="0" max="4" id="ra0" aria-label="A: groups counted right"> of 4</span></label><label class="nm"><span>B: numbers said right</span><span><input type="number" inputmode="numeric" min="0" max="6" id="ra1" aria-label="B: numbers said right"> of 6</span></label><label class="nm"><span>C: more and less right</span><span><input type="number" inputmode="numeric" min="0" max="3" id="ra2" aria-label="C: more and less right"> of 3</span></label><label class="nm"><span>D: sums right</span><span><input type="number" inputmode="numeric" min="0" max="4" id="ra3" aria-label="D: sums right"> of 4</span></label>
+<h3>From your day 10 page</h3><label class="nm"><span>Groups counted right</span><span><input type="number" inputmode="numeric" min="0" max="2" id="rb0" aria-label="Groups counted right"> of 2</span></label><label class="nm"><span>More and less right</span><span><input type="number" inputmode="numeric" min="0" max="2" id="rb1" aria-label="More and less right"> of 2</span></label><label class="nm"><span>Sums right</span><span><input type="number" inputmode="numeric" min="0" max="4" id="rb2" aria-label="Sums right"> of 4</span></label><label class="nm"><span>Story sum right</span><span><input type="number" inputmode="numeric" min="0" max="1" id="rb3" aria-label="Story sum right"> of 1</span></label>
+<button type="button" class="go" id="rpgo">Show the report</button><div id="rpout" aria-live="polite"></div></section>
+<p class="after">When the ten days are done, you can stop there. If you want daily practice to keep going, <a href="https://sounditoutreading.com/the-one-sheet/?src=plan&amp;m=companion&amp;c=m8c3t5">The One Sheet</a> gives your child one sheet a day, made from what you tell us. It starts where this plan ended, so there is no new starting check. It is a separate plan, $9.99 a month, and you can cancel any time.</p>
+<footer>This page belongs to your copy of the plan. Please do not share the link.<br>Letter sounds © elimu.ai, used under the MIT License (github.com/elimu-ai/visemes).</footer>
+</main><script>
+var a=null;document.querySelectorAll('.snd button').forEach(function(b){b.addEventListener('click',function(){if(a)a.pause();a=new Audio('sounds/'+b.dataset.s+'.mp3');b.classList.add('on');a.onended=function(){b.classList.remove('on')};a.play().catch(function(){b.classList.remove('on')})})});
+document.querySelectorAll('video').forEach(function(v){v.addEventListener('play',function(){document.querySelectorAll('video').forEach(function(o){if(o!==v)o.pause()})})});
+(function(){var R={"there":["Your child counts, compares and adds within 10","Groups, pairs and sums your child had never seen in the book were done right.",["Show your child the two pages side by side.","Keep counting real things every day: stairs, spoons, cars.","Next on the path: taking away, in The One Sheet for Math."]],"coming":["It is coming","Better than day 1, but not steady yet. A second round is the next step.",["Counting right but sums not yet? Do days 7 and 9 again, with real things, and the extra sums page.","Otherwise do days 3 to 9 again, one a day.","Then do the day 10 check again and come back here."]],"same":["Slow it down: two days for each page","The numbers have not moved yet. That happens, and it tells you the pace was too fast.",["Go back to day 2. Take two days for each page, always with real things first.","Keep each sitting short, and stop while it is still going well.","If your child is six or older, tell the teacher what you saw."]],"a":[["A: groups counted right",4],["B: numbers said right",6],["C: more and less right",3],["D: sums right",4]],"b":[["Groups counted right",2],["More and less right",2],["Sums right",4],["Story sum right",1]]},KEYS='math-report-v1';
+function v(id,max){var x=parseInt(document.getElementById(id).value,10);return isNaN(x)?null:Math.max(0,Math.min(max,x))}
+function e(t){return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+try{var sv=JSON.parse(localStorage.getItem(KEYS)||'null');if(sv){sv.a.forEach(function(x,i){if(x!==null)document.getElementById('ra'+i).value=x});sv.b.forEach(function(x,i){if(x!==null)document.getElementById('rb'+i).value=x})}}catch(x){}
+function rule(a,b){var good=b[0]+b[1]+b[2]+b[3]>=9,better=(b[2]>a[3])||(b[0]+b[1]>=4&&a[0]<=2);return good?'there':better?'coming':'same';}
+document.getElementById('rpgo').addEventListener('click',function(){var a=R.a.map(function(r,i){return v('ra'+i,r[1])}),b=R.b.map(function(r,i){return v('rb'+i,r[1])}),out=document.getElementById('rpout');
+ if(a.concat(b).some(function(x){return x===null})){out.innerHTML='<p class="warn">Type a number in all six boxes first.</p>';return}
+ try{localStorage.setItem(KEYS,JSON.stringify({a:a,b:b}))}catch(x){}
+ var k=rule(a,b),r=R[k],bars=function(rows,vals){return rows.map(function(row,i){return '<div class="bar"><span>'+e(row[0])+'</span><i><b style="width:'+Math.round(100*vals[i]/row[1])+'%"></b></i><em>'+vals[i]+' of '+row[1]+'</em></div>'}).join('')};
+ out.innerHTML='<div class="res '+k+'"><small>Where your child is now</small><h3>'+e(r[0])+'</h3><p>'+e(r[1])+'</p><div class="tn"><div><b>Day 1</b>'+bars(R.a,a)+'</div><div><b>Day 10</b>'+bars(R.b,b)+'</div></div><p><b>What to do next</b></p><ol>'+r[2].map(function(x){return '<li>'+e(x)+'</li>'}).join('')+'</ol><p><b><a href="https://sounditoutreading.com/what-next/?src=plan&amp;m=report&amp;c='+location.pathname.split('/').filter(Boolean).pop()+'">See what comes next for your child</a></b></p><p class="hint">This is a starting point, not a diagnosis.</p></div>';
+ out.scrollIntoView({behavior:'smooth',block:'start'})});})();
+(function(){var K="p-m8c3t5-days-v1",S={};try{S=JSON.parse(localStorage.getItem(K)||'{}')}catch(x){}
+function show(box,v){box.querySelectorAll('.hwb button').forEach(function(b){b.classList.toggle('on',b.dataset.v===v)});box.querySelectorAll('.hwr').forEach(function(r){r.hidden=!r.classList.contains(v)})}
+document.querySelectorAll('.hw[data-d]').forEach(function(box){var d=box.dataset.d;if(S[d])show(box,S[d]);box.querySelectorAll('.hwb button').forEach(function(b){b.addEventListener('click',function(){S[d]=b.dataset.v;try{localStorage.setItem(K,JSON.stringify(S))}catch(x){}show(box,S[d])})})})})();
+</script></body></html>
