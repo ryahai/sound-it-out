@@ -1,11 +1,13 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow,noarchive"><title>Hear It, Write It: your companion</title>
 <style>
+@font-face{font-family:Fredoka;font-style:normal;font-weight:600 900;font-display:swap;src:url(../../fonts/ComicNeue-Bold.ttf) format('truetype')}
+.after{margin:30px 6px 0;color:var(--soft);font-size:16px;text-align:center}.after a{color:var(--ink);font-weight:700}
 :root{--ink:#1f2a44;--soft:#5b6680;--bg:#fff8e7;--card:#fff;--sun:#f2b705;--pink:#e0527a}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:18px;line-height:1.5}
 main{max-width:760px;margin:0 auto;padding:22px 16px 60px}
 header{text-align:center;padding:10px 0 6px}header small{display:block;font-weight:800;letter-spacing:.06em;color:var(--pink);text-transform:uppercase;font-size:14px}
-h1{font-family:"Comic Sans MS","Chalkboard SE","Trebuchet MS",sans-serif;font-size:clamp(30px,7vw,44px);line-height:1.08;margin:6px 0 8px}
+h1{font-family:Fredoka,"Comic Sans MS","Chalkboard SE","Trebuchet MS",sans-serif;font-size:clamp(30px,7vw,44px);line-height:1.08;margin:6px 0 8px}
 header p{margin:0 auto;max-width:560px;color:var(--soft)}
 nav{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:20px 0 6px}
 nav a{display:inline-flex;align-items:center;justify-content:center;min-width:46px;height:46px;padding:0 12px;border-radius:999px;background:var(--card);border:3px solid var(--ink);color:var(--ink);font-weight:800;text-decoration:none}
@@ -13,7 +15,7 @@ nav a.s{background:var(--sun)}
 .day,.box{background:var(--card);border:4px solid var(--ink);border-radius:24px;padding:18px 18px 14px;margin:22px 0;scroll-margin-top:12px}
 .day:target{border-color:var(--pink);box-shadow:0 0 0 6px #ffe3ee}
 .tag{display:inline-block;background:var(--sun);border-radius:999px;padding:2px 14px;font-weight:800;font-size:15px}
-h2{font-family:"Comic Sans MS","Chalkboard SE","Trebuchet MS",sans-serif;font-size:26px;line-height:1.15;margin:8px 0 2px}
+h2{font-family:Fredoka,"Comic Sans MS","Chalkboard SE","Trebuchet MS",sans-serif;font-size:26px;line-height:1.15;margin:8px 0 2px}
 .sub{margin:0 0 12px;color:var(--soft)}.sub span{white-space:nowrap;font-weight:700;color:var(--ink)}
 video{width:100%;height:auto;aspect-ratio:16/9;border-radius:14px;background:#1f2a44;display:block}
 .hw{margin-top:16px;border-top:3px dotted #c9d2d9;padding-top:12px}.hw p{margin:8px 0}.hwready{background:#e4f7e4;border:3px solid #2f9e63;border-radius:14px;padding:10px 12px}
@@ -27,14 +29,14 @@ video{width:100%;height:auto;aspect-ratio:16/9;border-radius:14px;background:#1f
 .kid{margin-top:14px;border:3px dashed var(--pink);border-radius:16px;padding:12px 14px;background:#fff6fa}.kid b{display:block}.kid p{margin:4px 0 10px;font-size:15px;color:var(--soft)}.kid audio{width:100%}
 ul{margin:12px 0 2px;padding-left:22px}li{margin:3px 0}
 .snd{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px}
-.snd button{font:800 34px "Comic Sans MS","Chalkboard SE","Trebuchet MS",sans-serif;color:var(--ink);background:#fff3c9;border:3px solid var(--ink);border-radius:18px;padding:12px 0;cursor:pointer}
+.snd button{font:800 34px Fredoka,"Comic Sans MS","Chalkboard SE","Trebuchet MS",sans-serif;color:var(--ink);background:#fff3c9;border:3px solid var(--ink);border-radius:18px;padding:12px 0;cursor:pointer}
 .snd button:active,.snd button.on{background:var(--sun)}
 .box h2{margin-top:0}.box p{margin:8px 0}
 .rp h3{font-size:19px;margin:20px 0 6px}.nm{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#fff;border:3px solid #c9d2d9;border-radius:14px;padding:8px 14px;margin:8px 0;font-weight:700}
 .nm input{width:70px;font:800 22px system-ui,sans-serif;text-align:center;border:3px solid var(--ink);border-radius:10px;padding:5px;color:var(--ink)}
 .go{display:block;width:100%;margin:20px 0 4px;font:800 21px system-ui,sans-serif;color:#fff;background:var(--pink);border:0;border-radius:999px;padding:15px;cursor:pointer}
 .warn{color:#b3261e;font-weight:700}.res{border:4px solid var(--ink);border-radius:22px;padding:16px 18px;margin-top:16px;background:linear-gradient(135deg,#fff3c9,#ffe3ee)}.res.there{background:linear-gradient(135deg,#e4f7e4,#dff3ff)}
-.res small{display:block;font-weight:800;text-transform:uppercase;letter-spacing:.06em;font-size:13px;color:var(--pink)}.res h3{font-family:"Comic Sans MS","Chalkboard SE",sans-serif;font-size:26px;margin:2px 0 6px}
+.res small{display:block;font-weight:800;text-transform:uppercase;letter-spacing:.06em;font-size:13px;color:var(--pink)}.res h3{font-family:Fredoka,"Comic Sans MS","Chalkboard SE",sans-serif;font-size:26px;margin:2px 0 6px}
 .tn{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}.tn>div{background:#fff;border:3px solid var(--ink);border-radius:16px;padding:10px 12px}
 .bar{font-size:14px;margin-top:6px}.bar span{display:block}.bar i{display:block;height:12px;border:2px solid var(--ink);border-radius:9px;overflow:hidden;background:#fff}.bar i b{display:block;height:100%;background:#2f9e63}.bar em{font-style:normal;font-weight:700}
 .hint{color:var(--soft);font-size:15px}@media(max-width:480px){.tn{grid-template-columns:1fr}}
@@ -122,6 +124,7 @@ footer{margin-top:34px;color:var(--soft);font-size:14px;text-align:center}
 <h3>From your day 1 page</h3><label class="nm"><span>Sounds heard</span><span><input type="number" inputmode="numeric" min="0" max="6" id="ra0" aria-label="Sounds heard"> of 6</span></label><label class="nm"><span>Letters written</span><span><input type="number" inputmode="numeric" min="0" max="8" id="ra1" aria-label="Letters written"> of 8</span></label><label class="nm"><span>Words written</span><span><input type="number" inputmode="numeric" min="0" max="8" id="ra2" aria-label="Words written"> of 8</span></label>
 <h3>From your day 10 page</h3><label class="nm"><span>Sounds heard</span><span><input type="number" inputmode="numeric" min="0" max="6" id="rb0" aria-label="Sounds heard"> of 6</span></label><label class="nm"><span>Letters written</span><span><input type="number" inputmode="numeric" min="0" max="8" id="rb1" aria-label="Letters written"> of 8</span></label><label class="nm"><span>New words written</span><span><input type="number" inputmode="numeric" min="0" max="8" id="rb2" aria-label="New words written"> of 8</span></label>
 <button type="button" class="go" id="rpgo">Show the report</button><div id="rpout" aria-live="polite"></div></section>
+<p class="after">When the ten days are done, you can stop there. If you want daily practice to keep going, <a href="https://sounditoutreading.com/the-one-sheet/?src=plan&amp;m=companion&amp;c=s4p9l2">The One Sheet</a> gives your child one sheet a day, made from what you tell us. It starts where this plan ended, so there is no new starting check. It is a separate plan, $9.99 a month, and you can cancel any time.</p>
 <footer>This page belongs to your copy of the plan. Please do not share the link.<br>Letter sounds © elimu.ai, used under the MIT License (github.com/elimu-ai/visemes).</footer>
 </main><script>
 var a=null;document.querySelectorAll('.snd button').forEach(function(b){b.addEventListener('click',function(){if(a)a.pause();a=new Audio('sounds/'+b.dataset.s+'.mp3');b.classList.add('on');a.onended=function(){b.classList.remove('on')};a.play().catch(function(){b.classList.remove('on')})})});
