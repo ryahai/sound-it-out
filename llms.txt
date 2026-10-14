@@ -457,7 +457,6 @@
 - [Free Ten Frames 1 to 10 Worksheets](https://sounditoutreading.com/free-ten-frames-1-to-10/): 3 free printable pages. Ten frame worksheets, counting 1 to 10
 - [Free Ten Frames 11 to 20 Worksheets](https://sounditoutreading.com/free-ten-frames-11-to-20/): 3 free printable pages. Ten frame worksheets, counting 11 to 20
 - [Free Ten Frames 1 to 20 Worksheets](https://sounditoutreading.com/free-ten-frames-1-to-20/): 3 free printable pages. Ten frame worksheets, counting 1 to 20
-- [Free Find the Numbers 21 to 50 Worksheets](https://sounditoutreading.com/free-number-recognition-21-to-50/): 3 free printable pages. Number recognition worksheets, circle the numbers 21 to 50
 - [Free Find the Numbers 51 to 100 Worksheets](https://sounditoutreading.com/free-number-recognition-51-to-100/): 3 free printable pages. Number recognition worksheets, circle the numbers 51 to 100
 - [Free Ten Frames Draw the Dots Worksheets](https://sounditoutreading.com/free-ten-frames-draw-the-dots/): 3 free printable pages. Ten frame worksheets, draw the dots for numbers 1 to 10
 - [Free Color by Code Addition to 10 Worksheets](https://sounditoutreading.com/free-color-by-code-addition-to-10/): 3 free printable pages. Color by code addition: work out the answer, color the square, find the picture
@@ -467,6 +466,7 @@
 - [Free Find the Numbers 1 to 5 Worksheets](https://sounditoutreading.com/free-number-recognition-1-to-5/): 3 free printable pages. Number recognition worksheets, circle the numbers 1 to 5
 - [Free Find the Numbers 1 to 10 Worksheets](https://sounditoutreading.com/free-number-recognition-1-to-10/): 3 free printable pages. Number recognition worksheets, circle the numbers 1 to 10
 - [Free Find the Numbers 11 to 20 Worksheets](https://sounditoutreading.com/free-number-recognition-11-to-20/): 3 free printable pages. Number recognition worksheets, circle the numbers 11 to 20
+- [Free Find the Numbers 21 to 50 Worksheets](https://sounditoutreading.com/free-number-recognition-21-to-50/): 3 free printable pages. Number recognition worksheets, circle the numbers 21 to 50
 
 ## Guides
 - [My Child Memorizes Books Instead of Reading Them](https://sounditoutreading.com/guide-child-memorizes-books-instead-of-reading/): Learn why children memorize books instead of sounding them out, and four steps to help your child read any book, not just favorites.
@@ -620,7 +620,6 @@
 - [Ten Frames 11 to 20](https://sounditoutreading.com/ten-frames-11-to-20/): Ten frame worksheets, counting 11 to 20. 15 pages, Ages 5 to 6 · Kindergarten, free
 - [Ten Frames 1 to 20](https://sounditoutreading.com/ten-frames-1-to-20/): Ten frame worksheets, counting 1 to 20. 15 pages, Ages 5 to 7 · Kindergarten and 1st grade, free
 - [Complete Addition and Subtraction Bundle](https://sounditoutreading.com/addition-and-subtraction-complete-bundle/): 7 addition and subtraction worksheet packs in one download. 113 pages, Ages 5 to 7 · Kindergarten and 1st grade, $3
-- [Find the Numbers 21 to 50](https://sounditoutreading.com/number-recognition-21-to-50/): Number recognition worksheets, circle the numbers 21 to 50. 13 pages, Ages 6 to 7 · 1st grade, free
 - [Find the Numbers 51 to 100](https://sounditoutreading.com/number-recognition-51-to-100/): Number recognition worksheets, circle the numbers 51 to 100. 13 pages, Ages 7 to 8 · 1st and 2nd grade, free
 - [Number Recognition Bundle](https://sounditoutreading.com/number-recognition-bundle/): All 5 number recognition worksheet packs in one download. 65 pages, Ages 3 to 4 · Preschool, $3
 - [Ten Frames Draw the Dots](https://sounditoutreading.com/ten-frames-draw-the-dots/): Ten frame worksheets, draw the dots for numbers 1 to 10. 15 pages, Ages 4 to 6 · Preschool and Kindergarten, free
@@ -631,6 +630,7 @@
 - [Find the Numbers 1 to 5](https://sounditoutreading.com/number-recognition-1-to-5/): Number recognition worksheets, circle the numbers 1 to 5. 13 pages, Ages 3 to 4 · Preschool, free
 - [Find the Numbers 1 to 10](https://sounditoutreading.com/number-recognition-1-to-10/): Number recognition worksheets, circle the numbers 1 to 10. 13 pages, Ages 4 to 5 · Preschool and Kindergarten, free
 - [Find the Numbers 11 to 20](https://sounditoutreading.com/number-recognition-11-to-20/): Number recognition worksheets, circle the numbers 11 to 20. 13 pages, Ages 5 to 6 · Kindergarten, free
+- [Find the Numbers 21 to 50](https://sounditoutreading.com/number-recognition-21-to-50/): Number recognition worksheets, circle the numbers 21 to 50. 13 pages, Ages 6 to 7 · 1st grade, free
 
 ## About
 - [About](https://sounditoutreading.com/about/): who makes these printables and why
