@@ -14,7 +14,7 @@ for (const board of boards) {
   const live = pins.filter((p) => p.board === board && p.release <= today).sort((a, b) => (a.release < b.release ? 1 : -1));
   const items = live.map((p) => `<item><title>${esc(p.title)}</title><link>${esc(p.link)}</link><guid isPermaLink="false">${esc(p.file)}</guid>
 <pubDate>${new Date(p.release + 'T12:00:00Z').toUTCString()}</pubDate><description>${esc(p.description)}</description>
-<enclosure url="${BASE}/pins/${esc(p.file)}" type="${type(p.file)}" length="0"/><media:content url="${BASE}/pins/${esc(p.file)}" medium="image" type="${type(p.file)}"/></item>`).join('\n');
+<enclosure url="${BASE}/pins/${esc(p.file)}" type="${type(p.file)}" length="0"/><media:content url="${BASE}/pins/${esc(p.file)}" medium="image" type="${type(p.file)}"><media:description type="plain">${esc(p.alt || p.title)}</media:description></media:content></item>`).join('\n');
   writeFileSync(`feeds/${slug(board)}.xml`, `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>${esc(board)}</title><link>${BASE}/</link>
 <description>${esc(board)} from Sound It Out Phonics Printables</description>
