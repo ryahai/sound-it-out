@@ -51,3 +51,4 @@ Allow: /
 Disallow: /review/
 
 Sitemap: https://sounditoutreading.com/sitemap.xml
+Sitemap: https://sounditoutreading.com/sitemap-images.xml
