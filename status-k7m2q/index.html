@@ -16,62 +16,1439 @@ table{border-collapse:collapse;width:100%}td,th{text-align:left;padding:9px 8px;
 .tile.ok{background:#e9f8ee}.tile.ok i{background:#2e9e62}.tile.ok span{color:#1d7a48}.tile.bad{background:#ffe9ec}.tile.bad i{background:#d92d4a}.tile.bad span{color:#b01f38}.tile.late{background:#fff3df}.tile.late i{background:#e08a00}.tile.run{background:#e6f2ff}.tile.run i{background:#2f80d8}
 details{margin:12px 0 0}summary{cursor:pointer;font-weight:800;background:#eef2f6;border:3px solid #1f2a44;border-radius:999px;padding:6px 14px;display:inline-block}details[open] summary{margin-bottom:10px}pre{white-space:pre-wrap;background:#f7fbff;border:2px solid #c9d2d9;border-radius:12px;padding:12px;font-size:13px}
 @media(max-width:560px){body{font-size:16px}.hero b{font-size:23px}.card{padding:14px}.num b{font-size:30px}td,th{font-size:14.5px;padding:8px 5px}}</style></head>
-<body><h1>Sound It Out <i>dashboard</i></h1><div class="when">Checked Thu Oct 15, 07:50 PM Eastern. Remade every hour.</div>
+<body><h1>Sound It Out <i>dashboard</i></h1><div class="when">Checked Thu Oct 15, 09:50 PM Eastern. Remade every hour.</div>
 <div class="tabs" id="tabs"><button data-t="home" class="on">Home</button><button data-t="visitors">Visitors</button><button data-t="orders">Downloads and sales</button><button data-t="jobs">Today’s jobs</button><button data-t="packs">Packs</button><button data-t="videos">Videos and posts</button></div>
 <div class="panel on" id="p-home"><div class="hero bad"><b>Something did not finish</b><span>Claude is dealing with it. Anything for you is in the yellow box.</span></div>
 <div class="card you"><h2>For you to do</h2><ul><li>A new long video is on YouTube as private. Watch it, and make it public when you are happy with it.</li></ul></div>
 <div class="card"><h2>Claude is handling</h2><ul><li><b>Daily quality check</b> did not finish today. I am looking at it.</li><li><b>airetest</b> did not finish today. I am looking at it.</li><li>15 new kind(s) of pack are waiting for Claude to check before they can go on sale. Nothing wrong is on sale.</li></ul></div>
-<div class="card"><h2>Still to come today</h2><ul><li><b>YouTube uploads</b>: late, will try again</li><li><b>Bundles</b>: not due yet</li><li><b>Search coverage report (weekly)</b>: not due yet</li><li><b>Video pins file (weekly)</b>: not due yet</li><li><b>Pinterest report (weekly)</b>: not due yet</li><li><b>Google report (weekly)</b>: not due yet</li><li><b>Two Amazon books (weekly)</b>: not due yet</li><li><b>Instagram report (weekly)</b>: not due yet</li><li><b>TikTok weekly batch</b>: not due yet</li><li><b>YouTube report (weekly)</b>: not due yet</li><li><b>keywords</b>: not due yet</li></ul></div>
+<div class="card"><h2>Still to come today</h2><ul><li><b>Search coverage report (weekly)</b>: not due yet</li><li><b>Video pins file (weekly)</b>: not due yet</li><li><b>Pinterest report (weekly)</b>: not due yet</li><li><b>Google report (weekly)</b>: not due yet</li><li><b>Two Amazon books (weekly)</b>: not due yet</li><li><b>Instagram report (weekly)</b>: not due yet</li><li><b>TikTok weekly batch</b>: not due yet</li><li><b>YouTube report (weekly)</b>: not due yet</li><li><b>keywords</b>: not due yet</li></ul></div>
 <div class="nums" id="homenums"></div>
 <div class="go"><button data-go="visitors">See visitors</button><button data-go="orders">See downloads and sales</button><button data-go="jobs">See today’s jobs</button></div></div>
 <div class="panel" id="p-visitors"><div class="card"><h2>Visitors</h2><div class="lbl">When</div><div class="pills" id="when"></div><div class="lbl">From where</div><div class="pills src" id="src"></div><div id="vbody"></div></div></div>
 <div class="panel" id="p-orders"><div class="card"><h2>Downloads and sales</h2><div class="lbl">When</div><div class="pills" id="owhen"></div><div id="obody"></div></div></div>
-<div class="panel" id="p-jobs"><div class="card"><h2>Today’s jobs <small>18 of 34 done</small></h2><div class="tiles"><div class="tile ok"><i></i><b>Daily video and shorts are made</b><span>Done</span></div><div class="tile late"><i></i><b>YouTube uploads</b><span>Late, will try again</span></div><div class="tile ok"><i></i><b>New guide for the website</b><span>Done</span></div><div class="tile ok"><i></i><b>One old guide rewritten</b><span>Done</span></div><div class="tile ok"><i></i><b>New pack designs</b><span>Done</span></div><div class="tile ok"><i></i><b>New packs put on sale</b><span>Done</span></div><div class="tile bad"><i></i><b>Daily quality check</b><span>Did not finish</span><em>I will look at this one.</em></div><div class="tile wait"><i></i><b>Morning reel (Facebook and Instagram)</b><span>Switched off on purpose</span></div><div class="tile ok"><i></i><b>Picture post (Facebook and Instagram)</b><span>Done</span></div><div class="tile ok"><i></i><b>Swipe post (Facebook and Instagram)</b><span>Done</span></div><div class="tile ok"><i></i><b>Sheet reel (Facebook and Instagram)</b><span>Done</span></div><div class="tile wait"><i></i><b>Evening reel (Facebook and Instagram)</b><span>Switched off on purpose</span></div><div class="tile ok"><i></i><b>Pinterest pins and board feeds</b><span>Done</span></div><div class="tile wait"><i></i><b>Bundles</b><span>Not due yet</span></div><div class="tile ok"><i></i><b>New worksheet ideas (weekly)</b><span>Done</span></div><div class="tile wait"><i></i><b>Search coverage report (weekly)</b><span>Not due yet</span></div><div class="tile wait"><i></i><b>Video pins file (weekly)</b><span>Not due yet</span></div><div class="tile wait"><i></i><b>Pinterest report (weekly)</b><span>Not due yet</span></div><div class="tile wait"><i></i><b>Google report (weekly)</b><span>Not due yet</span></div><div class="tile wait"><i></i><b>Two Amazon books (weekly)</b><span>Not due yet</span></div><div class="tile ok"><i></i><b>TikTok videos made ready</b><span>Done</span></div><div class="tile wait"><i></i><b>TikTok post</b><span>Switched off on purpose</span></div><div class="tile wait"><i></i><b>Instagram report (weekly)</b><span>Not due yet</span></div><div class="tile wait"><i></i><b>TikTok weekly batch</b><span>Not due yet</span></div><div class="tile wait"><i></i><b>YouTube report (weekly)</b><span>Not due yet</span></div><div class="tile wait"><i></i><b>keywords</b><span>Not due yet</span></div><div class="tile ok"><i></i><b>Comment replies</b><span>Done</span></div><div class="tile ok"><i></i><b>New videos onto the site</b><span>Done</span></div><div class="tile ok"><i></i><b>Tell search engines</b><span>Done</span></div><div class="tile ok"><i></i><b>Traffic report</b><span>Done</span></div><div class="tile ok"><i></i><b>Website publish</b><span>Done</span></div><div class="tile ok"><i></i><b>Server disk space</b><span>Done</span></div><div class="tile ok"><i></i><b>Morning self-test</b><span>Done</span></div><div class="tile bad"><i></i><b>airetest</b><span>Did not finish</span><em>I will look at this one.</em></div></div>
-<p class="hint">Green = done. Blue = running now. Gray = not due yet. Orange = late, started again. Red = did not finish.</p></div></div><div class="panel" id="p-packs"><div class="card"><h2>Packs</h2><div class="nums"><div class="num"><b>10</b><span>put on sale today</span></div><div class="num"><b>213</b><span>waiting to go on sale</span></div><div class="num"><b>0</b><span>could not be put on sale</span></div><div class="num"><b>0</b><span>on hold</span></div></div>
-<p><b>Put on sale today:</b> rhyming-words-short-a, rhyming-words-short-e, rhyming-words-short-i, rhyming-words-short-o, rhyming-words-short-u, rhyming-words-mixed, word-family-houses-short-a, word-family-houses-short-e, word-family-houses-short-i, word-family-houses-short-o</p>
+<div class="panel" id="p-jobs"><div class="card"><h2>Today’s jobs <small>20 of 34 done</small></h2><div class="tiles"><div class="tile ok"><i></i><b>Daily video and shorts are made</b><span>Done</span></div><div class="tile ok"><i></i><b>YouTube uploads</b><span>Done</span></div><div class="tile ok"><i></i><b>New guide for the website</b><span>Done</span></div><div class="tile ok"><i></i><b>One old guide rewritten</b><span>Done</span></div><div class="tile ok"><i></i><b>New pack designs</b><span>Done</span></div><div class="tile ok"><i></i><b>New packs put on sale</b><span>Done</span></div><div class="tile bad"><i></i><b>Daily quality check</b><span>Did not finish</span><em>I will look at this one.</em></div><div class="tile wait"><i></i><b>Morning reel (Facebook and Instagram)</b><span>Switched off on purpose</span></div><div class="tile ok"><i></i><b>Picture post (Facebook and Instagram)</b><span>Done</span></div><div class="tile ok"><i></i><b>Swipe post (Facebook and Instagram)</b><span>Done</span></div><div class="tile ok"><i></i><b>Sheet reel (Facebook and Instagram)</b><span>Done</span></div><div class="tile wait"><i></i><b>Evening reel (Facebook and Instagram)</b><span>Switched off on purpose</span></div><div class="tile ok"><i></i><b>Pinterest pins and board feeds</b><span>Done</span></div><div class="tile ok"><i></i><b>Bundles</b><span>Done</span></div><div class="tile ok"><i></i><b>New worksheet ideas (weekly)</b><span>Done</span></div><div class="tile wait"><i></i><b>Search coverage report (weekly)</b><span>Not due yet</span></div><div class="tile wait"><i></i><b>Video pins file (weekly)</b><span>Not due yet</span></div><div class="tile wait"><i></i><b>Pinterest report (weekly)</b><span>Not due yet</span></div><div class="tile wait"><i></i><b>Google report (weekly)</b><span>Not due yet</span></div><div class="tile wait"><i></i><b>Two Amazon books (weekly)</b><span>Not due yet</span></div><div class="tile ok"><i></i><b>TikTok videos made ready</b><span>Done</span></div><div class="tile wait"><i></i><b>TikTok post</b><span>Switched off on purpose</span></div><div class="tile wait"><i></i><b>Instagram report (weekly)</b><span>Not due yet</span></div><div class="tile wait"><i></i><b>TikTok weekly batch</b><span>Not due yet</span></div><div class="tile wait"><i></i><b>YouTube report (weekly)</b><span>Not due yet</span></div><div class="tile wait"><i></i><b>keywords</b><span>Not due yet</span></div><div class="tile ok"><i></i><b>Comment replies</b><span>Done</span></div><div class="tile ok"><i></i><b>New videos onto the site</b><span>Done</span></div><div class="tile ok"><i></i><b>Tell search engines</b><span>Done</span></div><div class="tile ok"><i></i><b>Traffic report</b><span>Done</span></div><div class="tile ok"><i></i><b>Website publish</b><span>Done</span></div><div class="tile ok"><i></i><b>Server disk space</b><span>Done</span></div><div class="tile ok"><i></i><b>Morning self-test</b><span>Done</span></div><div class="tile bad"><i></i><b>airetest</b><span>Did not finish</span><em>I will look at this one.</em></div></div>
+<p class="hint">Green = done. Blue = running now. Gray = not due yet. Orange = late, started again. Red = did not finish.</p></div></div><div class="panel" id="p-packs"><div class="card"><h2>Packs</h2><div class="nums"><div class="num"><b>0</b><span>put on sale today</span></div><div class="num"><b>213</b><span>waiting to go on sale</span></div><div class="num"><b>0</b><span>could not be put on sale</span></div><div class="num"><b>0</b><span>on hold</span></div></div>
+<p><b>Put on sale today:</b> none yet</p>
 <details><summary>More about packs</summary><p><b>Waiting:</b> roll-and-color-addition-to-12, missing-numbers-count-by-2s, missing-numbers-count-by-5s-10s, more-or-less-numbers-to-10, more-or-less-numbers-to-20, more-or-less-numbers-to-100, more-or-less-dots-to-10, more-or-less-order-to-20, telling-time-oclock, telling-time-half-past, telling-time-quarter-hours, telling-time-five-minutes, telling-time-mixed, counting-coins-pennies, counting-coins-pennies-nickels, counting-coins-up-to-dimes, counting-coins-up-to-quarters, counting-coins-mixed-dollar, missing-numbers-1-to-20, missing-numbers-1-to-50, missing-numbers-1-to-100, missing-numbers-backwards-from-20, missing-letters-upper-one, missing-letters-lower-one, missing-letters-upper-two, missing-letters-lower-two, missing-letters-next, missing-letters-before, shapes-name-the-shape, shapes-count-sides, shapes-count-corners, shapes-find-the-shape, shapes-patterns, skip-counting-by-2s, skip-counting-by-5s, skip-counting-by-10s, skip-counting-by-3s, skip-counting-mixed, number-words-1-to-5, number-words-6-to-10 ...</p>
 <p><b>Could not be put on sale:</b></p><ul><li>none</li></ul>
 <p><b>On hold after a quality problem:</b> none</p>
 <p><b>Kinds of pack waiting for a person to check them first:</b> capital-and-period, compare-equations, count-and-color, count-and-match, days-and-months, doubles, fluency-grid, math-fact-drills, numbers-to-100, patterns, sentence-scramble, sight-word-search, sight-word-sentences, subitize-numbers, word-family-sort</p></details></div></div><div class="panel" id="p-videos"><div class="card"><h2>Videos and posts</h2>
 <p><b>Last video made:</b> how to teach reading for 5 years old (2026-10-15 09:07) , made</p>
 <p><b>On YouTube:</b> long video uploaded, private, waiting for you; shorts uploaded: 1 of 2</p>
-<p><b>Facebook and Instagram, last day:</b> 12 posted, 3 did not post</p>
+<p><b>Facebook and Instagram, last day:</b> 6 posted, 3 did not post</p>
 <p><b>Last guide run:</b> 2026-10-15 08:44 , added: child-counts-fingers-every-addition-problem</p>
 <details><summary>Last quality note</summary><pre>2026-10-15 16:50  NEEDS A PERSON
 the checker&#x27;s answer could not be read; nothing was marked as checked</pre></details></div></div>
 <script>(function(){var T={
- "made": "2026-10-15T23:40Z",
+ "made": "2026-10-16T01:40Z",
  "orders_note": null,
  "summary": [
-  "TRAFFIC (counter made 2026-10-15 23:40 UTC)",
-  "Today: 104 visits, 247 page views. Last 7 days: 707 visits, 1738 page views.",
-  "Top sources, 7 days: direct 406, yt 129, facebook 91, site 23, yt-short 20.",
+  "TRAFFIC (counter made 2026-10-16 01:40 UTC)",
+  "Today: 247 visits, 256 page views. Last 7 days: 954 visits, 1995 page views.",
+  "Top sources, 7 days: direct 651, yt 129, facebook 91, site 23, yt-short 20.",
   "Top content pieces, 7 days: how-to-teach-a-child-to-read (yt) 10, how-to-teach-my-child-to-read-sh-and-ch (yt) 10, how-to-teach-sight-words (yt) 10.",
-  "Top landing pages, 7 days: / 349, /why-cant-my-child-blend-sounds/ 100, /free-decodable-reading-sampler/ 37.",
-  "Of 707 visits: 206 printed from a maker or opened a check, 116 looked at a plan or bundle, 32 clicked through to checkout.",
+  "Top landing pages, 7 days: / 350, /why-cant-my-child-blend-sounds/ 101, /free-decodable-reading-sampler/ 39.",
+  "Of 954 visits: 220 printed from a maker or opened a check, 150 looked at a plan or bundle, 32 clicked through to checkout.",
   "Facebook, 7 days, by kind of post: lesson reel 50 visits/0 Buy clicks/0 orders, picture post 15 visits/0 Buy clicks/0 orders, social 14 visits/0 Buy clicks/0 orders, sheet reel 9 visits/0 Buy clicks/0 orders, swipe post 3 visits/0 Buy clicks/0 orders.",
   "Most printed maker, 7 days: /number-tracing-generator/ 2, /find-the-letter-worksheet-generator/ 1.",
-  "Orders, 7 days: 46 free, 0 paid ($0.00).",
-  "Orders with a known source: 18 of 46 (direct, direct, direct).",
-  "Unknown source: 429 of 707 visits in 7 days. Last hit counted: 2026-10-15 23:31 UTC."
+  "Orders, 7 days: 40 free, 0 paid ($0.00).",
+  "Orders with a known source: 18 of 40 (direct, direct, direct).",
+  "Unknown source: 674 of 954 visits in 7 days. Last hit counted: 2026-10-16 01:40 UTC."
  ],
  "periods": [
   {
    "name": "TODAY",
+   "from": "2026-10-16",
+   "to": "2026-10-16",
+   "visits": 247,
+   "views": 256,
+   "screens": {
+    "desktop": 246,
+    "phone": 1
+   },
+   "by_source": [
+    {
+     "source": "direct",
+     "visits": 244,
+     "views": 244
+    },
+    {
+     "source": "site",
+     "visits": 1,
+     "views": 6
+    },
+    {
+     "source": "google",
+     "visits": 1,
+     "views": 5
+    },
+    {
+     "source": "yandex.com.tr",
+     "visits": 1,
+     "views": 1
+    }
+   ],
+   "by_source_and_piece": [],
+   "visits_with_a_source_but_no_piece": 2,
+   "by_landing_page": [
+    {
+     "page": "/learn-to-read-printables/",
+     "visits": 3,
+     "views": 7
+    },
+    {
+     "page": "/ordering-numbers-worksheets/",
+     "visits": 3,
+     "views": 3
+    },
+    {
+     "page": "/count-it-up-10-day-math-plan/",
+     "visits": 2,
+     "views": 2
+    },
+    {
+     "page": "/cvc-word-cards-set-2/",
+     "visits": 2,
+     "views": 2
+    },
+    {
+     "page": "/cvc-word-cards-worksheets/",
+     "visits": 2,
+     "views": 2
+    },
+    {
+     "page": "/dab-and-blend-level-4/",
+     "visits": 2,
+     "views": 2
+    },
+    {
+     "page": "/decodable-mini-books-level-worksheets/",
+     "visits": 2,
+     "views": 2
+    },
+    {
+     "page": "/eight-sounds-that-stay-10-day-plan/",
+     "visits": 2,
+     "views": 2
+    },
+    {
+     "page": "/free-decodable-reading-sampler/",
+     "visits": 2,
+     "views": 2
+    },
+    {
+     "page": "/free-games-charts-and-activities-starter-pack/",
+     "visits": 2,
+     "views": 2
+    },
+    {
+     "page": "/free-learn-to-read-starter-pack/",
+     "visits": 2,
+     "views": 2
+    },
+    {
+     "page": "/free-reading-checks/",
+     "visits": 2,
+     "views": 2
+    },
+    {
+     "page": "/my-child-can-read-but-cant-spell/",
+     "visits": 2,
+     "views": 2
+    },
+    {
+     "page": "/my-child-is-behind-in-reading/",
+     "visits": 2,
+     "views": 2
+    },
+    {
+     "page": "/name-tracing-worksheet-generator/",
+     "visits": 2,
+     "views": 2
+    },
+    {
+     "page": "/number-recognition-bundle/",
+     "visits": 2,
+     "views": 2
+    },
+    {
+     "page": "/numbers-and-counting-complete-bundle/",
+     "visits": 2,
+     "views": 2
+    },
+    {
+     "page": "/skills/",
+     "visits": 2,
+     "views": 2
+    },
+    {
+     "page": "/worksheets-for-7-year-olds/",
+     "visits": 2,
+     "views": 2
+    },
+    {
+     "page": "/guide-how-to-teach-place-value/",
+     "visits": 1,
+     "views": 6
+    },
+    {
+     "page": "/",
+     "visits": 1,
+     "views": 1
+    },
+    {
+     "page": "/4th-of-july-worksheets-for-kindergarten/",
+     "visits": 1,
+     "views": 1
+    },
+    {
+     "page": "/about/",
+     "visits": 1,
+     "views": 1
+    },
+    {
+     "page": "/addition-and-subtraction-complete-bundle/",
+     "visits": 1,
+     "views": 1
+    },
+    {
+     "page": "/addition-and-subtraction-worksheets/",
+     "visits": 1,
+     "views": 1
+    },
+    {
+     "page": "/addition-to-20/",
+     "visits": 1,
+     "views": 1
+    },
+    {
+     "page": "/addition-to-5/",
+     "visits": 1,
+     "views": 1
+    },
+    {
+     "page": "/addition-within-10-worksheets/",
+     "visits": 1,
+     "views": 1
+    },
+    {
+     "page": "/addition-worksheets/",
+     "visits": 1,
+     "views": 1
+    },
+    {
+     "page": "/alphabet-and-handwriting-worksheets/",
+     "visits": 1,
+     "views": 1
+    }
+   ],
+   "by_source_and_landing_page": [
+    {
+     "source": "direct",
+     "page": "/count-it-up-10-day-math-plan/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/cvc-word-cards-set-2/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/cvc-word-cards-worksheets/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/dab-and-blend-level-4/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/decodable-mini-books-level-worksheets/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/eight-sounds-that-stay-10-day-plan/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/free-decodable-reading-sampler/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/free-games-charts-and-activities-starter-pack/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/free-learn-to-read-starter-pack/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/free-reading-checks/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/learn-to-read-printables/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/my-child-can-read-but-cant-spell/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/my-child-is-behind-in-reading/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/name-tracing-worksheet-generator/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/number-recognition-bundle/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/numbers-and-counting-complete-bundle/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/ordering-numbers-worksheets/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/skills/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/worksheets-for-7-year-olds/",
+     "visits": 2
+    },
+    {
+     "source": "site",
+     "page": "/guide-how-to-teach-place-value/",
+     "visits": 1
+    },
+    {
+     "source": "google",
+     "page": "/learn-to-read-printables/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/4th-of-july-worksheets-for-kindergarten/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/about/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/addition-and-subtraction-complete-bundle/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/addition-and-subtraction-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/addition-to-20/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/addition-to-5/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/addition-within-10-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/addition-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/alphabet-and-handwriting-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/alphabet-tracing-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/beginning-sounds-worksheet-generator/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/bingo-card-generator/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/bundles/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/cap-to-cape-silent-e-10-day-plan/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/color-by-code-addition-to-10/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/color-by-code-addition-to-20/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/color-by-code-subtraction-to-10/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/color-by-number-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/color-by-word-level-2/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/color-by-word-level-3/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/color-by-word-level-4/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/color-by-word-level-5/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/color-by-word-level-6/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/color-by-word-level-7/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/color-by-word-level-bundle/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/complete-first-grade-bundle/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/complete-kindergarten-bundle/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/contact/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/cvc-cut-and-paste/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/cvc-word-cards-set-1/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/cvc-word-search-level-4/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/cvc-word-search-level-5/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/cvc-word-search-level-6/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/cvc-word-search-level-7/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/cvc-word-search-level-bundle/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/cvc-word-search-level-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/dab-and-blend-level-3/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/dab-and-blend-level-5/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/dab-and-blend-level-6/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/dab-and-blend-level-7/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/dab-and-blend-level-bundle/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/decodable-mini-books-level-4/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/decodable-mini-books-level-5/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/decodable-mini-books-level-6/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/decodable-mini-books-level-bundle/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/decodable-reading-passages-with-questions/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/decodable-sentence-generator/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/ears-first-10-day-listening-plan/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/first-grade-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/flashcard-maker-printable/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/free-addition-and-subtraction-starter-pack/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/free-blending-game/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/free-cvc-cut-and-paste/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/free-cvc-word-reading-game/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/free-number-bonds-to-20/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/free-number-recognition-51-to-100/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/free-numbers-and-counting-starter-pack/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/free-printable-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/free-roll-and-read-level-11/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/free-roll-and-read-level-12/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/free-roll-and-read-level-13/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/free-short-vowel-a-words/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/free-word-building-game/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/free-worksheet-maker/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/from-sounds-to-words-blending-plan/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/games-charts-and-activities/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/glossary/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/guide-does-phonics-help-with-speech-delay/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/guide-handwriting-help-for-kids-with-dysgraphia/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/guide-how-to-find-your-childs-reading-level/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/guide-how-to-help-a-child-with-adhd-with-reading/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/guide-how-to-help-a-struggling-reader-at-home/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/guide-how-to-improve-reading-comprehension-at-home/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/guide-how-to-teach-a-child-to-write-their-name/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/guide-how-to-teach-a-left-handed-child-to-write/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/guide-how-to-teach-number-bonds-to-kindergarten/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/guide-how-to-teach-sight-words-to-kindergarten/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/guide-my-child-cannot-remember-sight-words/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/guide-my-child-hates-reading/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/guide-my-child-struggles-with-fine-motor-skills/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/guide-what-is-a-sight-word/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/guides/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/handwriting-worksheet-maker/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/hear-it-write-it-10-day-spelling-plan/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/help/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/how-it-works/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/how-to-help-a-child-struggling-with-math/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/how-to-help-my-child-with-handwriting/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/how-to-help-struggling-reader-2nd-grade/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/how-to-teach-blends/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/how-to-teach-two-syllable-words/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/how-to-teach-vowel-teams/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/how-we-make-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/hundreds-chart-maker/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/kindergarten-addition-and-subtraction-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/kindergarten-games-charts-and-activities-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/kindergarten-numbers-and-counting-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/kindergarten-sight-words-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/know-every-letter-10-day-letter-recognition-plan/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/learn-to-read-complete-bundle/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/learning-path/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/letter-reversal-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/letter-sounds-level-1/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/letter-sounds-level-2/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/letter-sounds-level-3/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/letter-sounds-level-4/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/letter-sounds-level-5/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/letter-sounds-level-6/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/letter-sounds-level-7/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/letter-sounds-level-bundle/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/letter-sounds-level-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/look-at-every-letter-10-day-plan/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/my-child-can-read-but-does-not-understand/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/my-child-cant-read-silent-e-words/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/my-child-cant-write-a-sentence/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/my-child-doesnt-know-letters/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/my-first-sentences-10-day-sentence-writing-plan/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/number-bonds-bundle/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/number-bonds-missing-whole/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/number-bonds-of-10/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/number-bonds-to-10/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/number-bonds-to-20/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/number-bonds-to-5/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/number-recognition-1-to-10/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/number-recognition-1-to-5/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/number-recognition-11-to-20/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/number-recognition-21-to-50/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/number-tracing-and-counting-1-to-20/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/numbers-and-counting-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/preschool-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/printables/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/rabbit-and-sunset-two-syllable-words-10-day-plan/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/read-and-match-level-3/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/read-and-match-level-5/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/read-and-match-level-6/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/read-and-match-level-7/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/read-and-match-level-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/read-it-see-it-10-day-plan/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/reading-certificate-maker/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/reading-passage-generator/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/reading-pointer-maker/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/reading-program-for-struggling-readers/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/reading-research/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/research-handwriting-practice/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/research-reading-comprehension/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/research-sight-words-memorize-or-sound-out/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/research-vocabulary-and-talking/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-color-numbers-1-to-6/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-10/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-11/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-12/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-13/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-2/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-3/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-4/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-5/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-6/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-7/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-8/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-9/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-bundle/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/search/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/short-vowel-a-words/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/short-vowel-e-words/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/short-vowel-i-words/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/short-vowel-o-words/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/short-vowel-u-words/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/short-vowel-words-bundle/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/short-vowel-words-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/sight-words-set-1/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/sight-words-set-2/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/signs-of-dyslexia-in-kids/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/smooth-reading-10-day-plan/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/sound-it-out-decodable-phonics-practice/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/stars-and-clouds-vowel-teams-10-day-plan/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/stop-and-jump-consonant-blends-10-day-plan/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/subtraction-to-20/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/subtraction-within-10-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/tell-b-from-d-10-day-plan/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/ten-frames-1-to-20/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/ten-frames-1-to-5/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/ten-frames-11-to-20/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/ten-frames-draw-the-dots/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/terms-of-use/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/the-one-sheet-grammar/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/the-one-sheet-math/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/the-one-sheet/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/tracing-worksheet-generator/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/what-next/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/which-digraphs-to-teach-first/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/why-cant-my-child-blend-sounds/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/why-cant-my-child-hear-the-sounds-in-words/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/why-cant-my-child-remember-letter-sounds/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/why-cant-my-child-remember-sight-words/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/why-does-my-child-guess-words-when-reading/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/why-does-my-child-mix-up-b-and-d/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/why-does-my-child-read-so-slowly/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/word-tracing-worksheet-generator/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/words-that-stick-sight-words-10-day-plan/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/worksheets-for-3-year-olds/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/worksheets-for-4-year-olds/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/worksheets-for-5-year-olds/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/worksheets-for-6-year-olds/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/worksheets-for-8-year-olds/",
+     "visits": 1
+    },
+    {
+     "source": "yandex.com.tr",
+     "page": "/ordering-numbers-worksheets/",
+     "visits": 1
+    }
+   ],
+   "makers_printed_by_source": [],
+   "funnel": [
+    {
+     "source": "direct",
+     "visits": 244,
+     "engaged": 14,
+     "offer": 34,
+     "checkout": 0,
+     "free_orders": 0,
+     "paid_orders": 0
+    },
+    {
+     "source": "site",
+     "visits": 1,
+     "engaged": 0,
+     "offer": 0,
+     "checkout": 0,
+     "free_orders": 0,
+     "paid_orders": 0
+    },
+    {
+     "source": "google",
+     "visits": 1,
+     "engaged": 0,
+     "offer": 0,
+     "checkout": 0,
+     "free_orders": 0,
+     "paid_orders": 0
+    },
+    {
+     "source": "yandex.com.tr",
+     "visits": 1,
+     "engaged": 0,
+     "offer": 0,
+     "checkout": 0,
+     "free_orders": 0,
+     "paid_orders": 0
+    }
+   ],
+   "social_by_kind": [],
+   "makers_printed": [],
+   "orders": [],
+   "unknown": {
+    "visits": 245,
+    "of_visits": 247,
+    "orders_without_a_source": 0,
+    "of_orders": 0
+   }
+  },
+  {
+   "name": "YESTERDAY",
    "from": "2026-10-15",
    "to": "2026-10-15",
-   "visits": 104,
-   "views": 247,
+   "visits": 105,
+   "views": 248,
    "screens": {
-    "desktop": 72,
+    "desktop": 73,
     "phone": 31,
     "tablet": 1
    },
    "by_source": [
     {
      "source": "direct",
-     "visits": 24,
-     "views": 120
+     "visits": 25,
+     "views": 121
     },
     {
      "source": "yt",
@@ -283,6 +1660,11 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "views": 1
     },
     {
+     "page": "/guide-my-child-hates-reading/",
+     "visits": 1,
+     "views": 1
+    },
+    {
      "page": "/guide-should-a-kindergartener-be-able-to-read/",
      "visits": 1,
      "views": 1
@@ -461,6 +1843,11 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     },
     {
      "source": "direct",
+     "page": "/guide-my-child-hates-reading/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
      "page": "/guide-should-a-kindergartener-be-able-to-read/",
      "visits": 1
     },
@@ -530,7 +1917,7 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
    "funnel": [
     {
      "source": "direct",
-     "visits": 24,
+     "visits": 25,
      "engaged": 4,
      "offer": 2,
      "checkout": 9,
@@ -718,243 +2105,28 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     }
    ],
    "unknown": {
-    "visits": 37,
-    "of_visits": 104,
+    "visits": 38,
+    "of_visits": 105,
     "orders_without_a_source": 0,
     "of_orders": 6
    }
   },
   {
-   "name": "YESTERDAY",
-   "from": "2026-10-14",
-   "to": "2026-10-14",
-   "visits": 28,
-   "views": 212,
-   "screens": {
-    "desktop": 18,
-    "phone": 9,
-    "tablet": 1
-   },
-   "by_source": [
-    {
-     "source": "direct",
-     "visits": 16,
-     "views": 200
-    },
-    {
-     "source": "facebook",
-     "visits": 11,
-     "views": 11
-    },
-    {
-     "source": "bing",
-     "visits": 1,
-     "views": 1
-    }
-   ],
-   "by_source_and_piece": [
-    {
-     "source": "facebook",
-     "piece": "how-to-teach-my-child-to-read-sh-and-ch-short-mistake",
-     "visits": 5,
-     "views": 5
-    },
-    {
-     "source": "facebook",
-     "piece": "how-to-teach-my-child-to-read-sh-and-ch-post-mistake",
-     "visits": 3,
-     "views": 3
-    },
-    {
-     "source": "facebook",
-     "piece": "how-to-teach-my-child-to-read-sh-and-ch-short-game",
-     "visits": 3,
-     "views": 3
-    }
-   ],
-   "visits_with_a_source_but_no_piece": 1,
-   "by_landing_page": [
-    {
-     "page": "/why-cant-my-child-blend-sounds/",
-     "visits": 11,
-     "views": 11
-    },
-    {
-     "page": "/",
-     "visits": 9,
-     "views": 186
-    },
-    {
-     "page": "/guide-when-should-a-child-know-all-letters/",
-     "visits": 2,
-     "views": 2
-    },
-    {
-     "page": "/my-child-is-behind-in-reading/",
-     "visits": 1,
-     "views": 5
-    },
-    {
-     "page": "/free-reading-games/",
-     "visits": 1,
-     "views": 2
-    },
-    {
-     "page": "/free-short-vowel-e-words/",
-     "visits": 1,
-     "views": 2
-    },
-    {
-     "page": "/name-tracing-worksheet-generator/",
-     "visits": 1,
-     "views": 2
-    },
-    {
-     "page": "/cvc-word-generator/",
-     "visits": 1,
-     "views": 1
-    },
-    {
-     "page": "/free-short-vowel-a-words/",
-     "visits": 1,
-     "views": 1
-    }
-   ],
-   "by_source_and_landing_page": [
-    {
-     "source": "facebook",
-     "page": "/why-cant-my-child-blend-sounds/",
-     "visits": 11
-    },
-    {
-     "source": "direct",
-     "page": "/",
-     "visits": 9
-    },
-    {
-     "source": "direct",
-     "page": "/guide-when-should-a-child-know-all-letters/",
-     "visits": 2
-    },
-    {
-     "source": "direct",
-     "page": "/my-child-is-behind-in-reading/",
-     "visits": 1
-    },
-    {
-     "source": "direct",
-     "page": "/free-reading-games/",
-     "visits": 1
-    },
-    {
-     "source": "direct",
-     "page": "/free-short-vowel-e-words/",
-     "visits": 1
-    },
-    {
-     "source": "direct",
-     "page": "/name-tracing-worksheet-generator/",
-     "visits": 1
-    },
-    {
-     "source": "bing",
-     "page": "/cvc-word-generator/",
-     "visits": 1
-    },
-    {
-     "source": "direct",
-     "page": "/free-short-vowel-a-words/",
-     "visits": 1
-    }
-   ],
-   "makers_printed_by_source": [
-    {
-     "source": "direct",
-     "page": "/name-tracing-worksheet-generator/",
-     "prints": 1
-    }
-   ],
-   "funnel": [
-    {
-     "source": "direct",
-     "visits": 16,
-     "engaged": 5,
-     "offer": 2,
-     "checkout": 0,
-     "free_orders": 0,
-     "paid_orders": 0
-    },
-    {
-     "source": "facebook",
-     "visits": 11,
-     "engaged": 11,
-     "offer": 0,
-     "checkout": 0,
-     "free_orders": 0,
-     "paid_orders": 0
-    },
-    {
-     "source": "bing",
-     "visits": 1,
-     "engaged": 0,
-     "offer": 0,
-     "checkout": 0,
-     "free_orders": 0,
-     "paid_orders": 0
-    }
-   ],
-   "social_by_kind": [
-    {
-     "source": "facebook",
-     "kind": "lesson reel",
-     "visits": 8,
-     "engaged": 8,
-     "offer": 0,
-     "checkout": 0,
-     "orders": 0,
-     "paid": 0
-    },
-    {
-     "source": "facebook",
-     "kind": "picture post",
-     "visits": 3,
-     "engaged": 3,
-     "offer": 0,
-     "checkout": 0,
-     "orders": 0,
-     "paid": 0
-    }
-   ],
-   "makers_printed": [
-    {
-     "page": "/name-tracing-worksheet-generator/",
-     "prints": 1
-    }
-   ],
-   "orders": [],
-   "unknown": {
-    "visits": 16,
-    "of_visits": 28,
-    "orders_without_a_source": 0,
-    "of_orders": 0
-   }
-  },
-  {
    "name": "LAST 7 DAYS",
-   "from": "2026-10-09",
-   "to": "2026-10-15",
-   "visits": 707,
-   "views": 1738,
+   "from": "2026-10-10",
+   "to": "2026-10-16",
+   "visits": 954,
+   "views": 1995,
    "screens": {
-    "desktop": 390,
-    "phone": 167,
+    "desktop": 636,
+    "phone": 168,
     "tablet": 150
    },
    "by_source": [
     {
      "source": "direct",
-     "visits": 406,
-     "views": 1310
+     "visits": 651,
+     "views": 1555
     },
     {
      "source": "yt",
@@ -969,7 +2141,7 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     {
      "source": "site",
      "visits": 23,
-     "views": 40
+     "views": 46
     },
     {
      "source": "yt-short",
@@ -987,14 +2159,14 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "views": 23
     },
     {
+     "source": "google",
+     "visits": 6,
+     "views": 11
+    },
+    {
      "source": "pdf",
      "visits": 5,
      "views": 7
-    },
-    {
-     "source": "google",
-     "visits": 5,
-     "views": 6
     },
     {
      "source": "instagram",
@@ -1008,6 +2180,11 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     },
     {
      "source": "yahoo",
+     "visits": 1,
+     "views": 1
+    },
+    {
+     "source": "yandex.com.tr",
      "visits": 1,
      "views": 1
     }
@@ -1194,62 +2371,62 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "views": 3
     }
    ],
-   "visits_with_a_source_but_no_piece": 57,
+   "visits_with_a_source_but_no_piece": 59,
    "by_landing_page": [
     {
      "page": "/",
-     "visits": 349,
-     "views": 883
+     "visits": 350,
+     "views": 884
     },
     {
      "page": "/why-cant-my-child-blend-sounds/",
-     "visits": 100,
-     "views": 127
+     "visits": 101,
+     "views": 128
     },
     {
      "page": "/free-decodable-reading-sampler/",
-     "visits": 37,
-     "views": 71
-    },
-    {
-     "page": "/free-blending-game/",
-     "visits": 22,
-     "views": 33
-    },
-    {
-     "page": "/free-printable-worksheets/",
-     "visits": 22,
-     "views": 33
-    },
-    {
-     "page": "/what-next/",
-     "visits": 22,
-     "views": 33
+     "visits": 39,
+     "views": 73
     },
     {
      "page": "/my-child-is-behind-in-reading/",
-     "visits": 21,
-     "views": 44
+     "visits": 23,
+     "views": 46
+    },
+    {
+     "page": "/free-blending-game/",
+     "visits": 23,
+     "views": 34
+    },
+    {
+     "page": "/free-printable-worksheets/",
+     "visits": 23,
+     "views": 34
+    },
+    {
+     "page": "/what-next/",
+     "visits": 23,
+     "views": 34
     },
     {
      "page": "/why-cant-my-child-remember-sight-words/",
-     "visits": 20,
-     "views": 25
+     "visits": 21,
+     "views": 26
     },
     {
      "page": "/why-cant-my-child-remember-letter-sounds/",
-     "visits": 17,
-     "views": 23
-    },
-    {
-     "page": "/eight-sounds-that-stay-10-day-plan/",
-     "visits": 11,
+     "visits": 18,
      "views": 24
     },
     {
+     "page": "/eight-sounds-that-stay-10-day-plan/",
+     "visits": 13,
+     "views": 26
+    },
+    {
      "page": "/the-one-sheet/",
-     "visits": 10,
-     "views": 161
+     "visits": 11,
+     "views": 162
     },
     {
      "page": "/free-reading-games/",
@@ -1258,18 +2435,28 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     },
     {
      "page": "/printables/",
-     "visits": 7,
-     "views": 81
+     "visits": 8,
+     "views": 82
     },
     {
      "page": "/know-every-letter-10-day-letter-recognition-plan/",
-     "visits": 5,
-     "views": 5
+     "visits": 6,
+     "views": 6
     },
     {
      "page": "/from-sounds-to-words-blending-plan/",
-     "visits": 4,
-     "views": 8
+     "visits": 5,
+     "views": 9
+    },
+    {
+     "page": "/name-tracing-worksheet-generator/",
+     "visits": 5,
+     "views": 6
+    },
+    {
+     "page": "/free-worksheet-maker/",
+     "visits": 5,
+     "views": 5
     },
     {
      "page": "/alphabet-coloring-page-maker/",
@@ -1277,17 +2464,22 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "views": 4
     },
     {
-     "page": "/free-worksheet-maker/",
+     "page": "/ordering-numbers-worksheets/",
      "visits": 4,
      "views": 4
     },
     {
-     "page": "/free-addition-within-10-worksheets/",
+     "page": "/ears-first-10-day-listening-plan/",
      "visits": 3,
-     "views": 4
+     "views": 9
     },
     {
-     "page": "/name-tracing-worksheet-generator/",
+     "page": "/learn-to-read-printables/",
+     "visits": 3,
+     "views": 7
+    },
+    {
+     "page": "/free-addition-within-10-worksheets/",
      "visits": 3,
      "views": 4
     },
@@ -1297,61 +2489,46 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "views": 3
     },
     {
+     "page": "/reading-research/",
+     "visits": 2,
+     "views": 94
+    },
+    {
      "page": "/10-day-plans/",
      "visits": 2,
      "views": 8
     },
     {
-     "page": "/ears-first-10-day-listening-plan/",
+     "page": "/learning-path/",
      "visits": 2,
-     "views": 8
+     "views": 6
+    },
+    {
+     "page": "/look-at-every-letter-10-day-plan/",
+     "visits": 2,
+     "views": 6
+    },
+    {
+     "page": "/the-one-sheet-math/",
+     "visits": 2,
+     "views": 5
+    },
+    {
+     "page": "/how-to-help-my-child-with-handwriting/",
+     "visits": 2,
+     "views": 3
     },
     {
      "page": "/worksheet-generator/",
      "visits": 2,
      "views": 3
-    },
-    {
-     "page": "/cvc-word-generator/",
-     "visits": 2,
-     "views": 2
-    },
-    {
-     "page": "/lined-paper-generator/",
-     "visits": 2,
-     "views": 2
-    },
-    {
-     "page": "/sight-word-worksheet-generator/",
-     "visits": 2,
-     "views": 2
-    },
-    {
-     "page": "/reading-research/",
-     "visits": 1,
-     "views": 93
-    },
-    {
-     "page": "/learning-path/",
-     "visits": 1,
-     "views": 5
-    },
-    {
-     "page": "/look-at-every-letter-10-day-plan/",
-     "visits": 1,
-     "views": 5
-    },
-    {
-     "page": "/the-one-sheet-math/",
-     "visits": 1,
-     "views": 4
     }
    ],
    "by_source_and_landing_page": [
     {
      "source": "direct",
      "page": "/",
-     "visits": 335
+     "visits": 336
     },
     {
      "source": "facebook",
@@ -1366,7 +2543,7 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     {
      "source": "direct",
      "page": "/free-decodable-reading-sampler/",
-     "visits": 31
+     "visits": 33
     },
     {
      "source": "yt",
@@ -1391,7 +2568,7 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     {
      "source": "direct",
      "page": "/the-one-sheet/",
-     "visits": 10
+     "visits": 11
     },
     {
      "source": "facebook",
@@ -1419,6 +2596,11 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "visits": 7
     },
     {
+     "source": "direct",
+     "page": "/my-child-is-behind-in-reading/",
+     "visits": 6
+    },
+    {
      "source": "yt",
      "page": "/why-cant-my-child-remember-sight-words/",
      "visits": 6
@@ -1445,12 +2627,17 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     },
     {
      "source": "direct",
-     "page": "/my-child-is-behind-in-reading/",
+     "page": "/eight-sounds-that-stay-10-day-plan/",
      "visits": 4
     },
     {
      "source": "yt-short",
      "page": "/why-cant-my-child-remember-sight-words/",
+     "visits": 4
+    },
+    {
+     "source": "direct",
+     "page": "/name-tracing-worksheet-generator/",
      "visits": 4
     },
     {
@@ -1484,9 +2671,24 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "visits": 3
     },
     {
+     "source": "direct",
+     "page": "/ordering-numbers-worksheets/",
+     "visits": 3
+    },
+    {
      "source": "pdf",
      "page": "/from-sounds-to-words-blending-plan/",
      "visits": 3
+    },
+    {
+     "source": "direct",
+     "page": "/reading-research/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/printables/",
+     "visits": 2
     },
     {
      "source": "bing",
@@ -1494,13 +2696,13 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "visits": 2
     },
     {
-     "source": "direct",
-     "page": "/eight-sounds-that-stay-10-day-plan/",
+     "source": "chatgpt.com",
+     "page": "/",
      "visits": 2
     },
     {
-     "source": "chatgpt.com",
-     "page": "/",
+     "source": "direct",
+     "page": "/ears-first-10-day-listening-plan/",
      "visits": 2
     },
     {
@@ -1510,12 +2712,27 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     },
     {
      "source": "direct",
-     "page": "/free-reading-games/",
+     "page": "/from-sounds-to-words-blending-plan/",
      "visits": 2
     },
     {
      "source": "direct",
-     "page": "/name-tracing-worksheet-generator/",
+     "page": "/learning-path/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/look-at-every-letter-10-day-plan/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/the-one-sheet-math/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/free-reading-games/",
      "visits": 2
     },
     {
@@ -1550,23 +2767,98 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     },
     {
      "source": "direct",
+     "page": "/count-it-up-10-day-math-plan/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/cvc-word-cards-set-2/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/cvc-word-cards-worksheets/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/dab-and-blend-level-4/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/decodable-mini-books-level-worksheets/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/free-games-charts-and-activities-starter-pack/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/free-learn-to-read-starter-pack/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/free-reading-checks/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/free-short-vowel-a-words/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/guide-how-to-teach-a-child-to-write-their-name/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/guide-my-child-hates-reading/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
      "page": "/guide-when-should-a-child-know-all-letters/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/learn-to-read-printables/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/my-child-can-read-but-cant-spell/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/number-recognition-bundle/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/numbers-and-counting-complete-bundle/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/skills/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/worksheets-for-7-year-olds/",
      "visits": 2
     },
     {
      "source": "instagram",
      "page": "/",
      "visits": 2
-    },
-    {
-     "source": "direct",
-     "page": "/reading-research/",
-     "visits": 1
-    },
-    {
-     "source": "direct",
-     "page": "/printables/",
-     "visits": 1
     },
     {
      "source": "site",
@@ -1579,28 +2871,13 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "visits": 1
     },
     {
-     "source": "direct",
-     "page": "/ears-first-10-day-listening-plan/",
+     "source": "site",
+     "page": "/guide-how-to-teach-place-value/",
      "visits": 1
     },
     {
-     "source": "direct",
-     "page": "/from-sounds-to-words-blending-plan/",
-     "visits": 1
-    },
-    {
-     "source": "direct",
-     "page": "/learning-path/",
-     "visits": 1
-    },
-    {
-     "source": "direct",
-     "page": "/look-at-every-letter-10-day-plan/",
-     "visits": 1
-    },
-    {
-     "source": "direct",
-     "page": "/the-one-sheet-math/",
+     "source": "google",
+     "page": "/learn-to-read-printables/",
      "visits": 1
     },
     {
@@ -1640,7 +2917,157 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     },
     {
      "source": "direct",
+     "page": "/4th-of-july-worksheets-for-kindergarten/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/about/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
      "page": "/add-and-subtract-to-10/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/addition-and-subtraction-complete-bundle/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/addition-and-subtraction-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/addition-to-20/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/addition-to-5/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/addition-within-10-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/addition-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/alphabet-and-handwriting-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/alphabet-tracing-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/beginning-sounds-worksheet-generator/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/bingo-card-generator/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/bundles/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/cap-to-cape-silent-e-10-day-plan/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/color-by-code-addition-to-10/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/color-by-code-addition-to-20/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/color-by-code-subtraction-to-10/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/color-by-number-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/color-by-word-level-2/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/color-by-word-level-3/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/color-by-word-level-4/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/color-by-word-level-5/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/color-by-word-level-6/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/color-by-word-level-7/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/color-by-word-level-bundle/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/complete-first-grade-bundle/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/complete-kindergarten-bundle/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/contact/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/cvc-cut-and-paste/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/cvc-word-cards-set-1/",
      "visits": 1
     },
     {
@@ -1650,17 +3077,232 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     },
     {
      "source": "direct",
+     "page": "/cvc-word-search-level-4/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/cvc-word-search-level-5/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/cvc-word-search-level-6/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/cvc-word-search-level-7/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/cvc-word-search-level-bundle/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/cvc-word-search-level-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/dab-and-blend-level-3/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/dab-and-blend-level-5/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/dab-and-blend-level-6/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/dab-and-blend-level-7/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/dab-and-blend-level-bundle/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/decodable-mini-books-level-4/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/decodable-mini-books-level-5/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/decodable-mini-books-level-6/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/decodable-mini-books-level-bundle/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/decodable-reading-passages-with-questions/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/decodable-sentence-generator/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
      "page": "/decodable-text-generator/",
      "visits": 1
     },
     {
      "source": "direct",
-     "page": "/free-short-vowel-a-words/",
+     "page": "/first-grade-worksheets/",
      "visits": 1
     },
     {
      "source": "direct",
-     "page": "/guide-how-to-teach-a-child-to-write-their-name/",
+     "page": "/flashcard-maker-printable/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/free-addition-and-subtraction-starter-pack/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/free-blending-game/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/free-cvc-cut-and-paste/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/free-cvc-word-reading-game/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/free-number-bonds-to-20/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/free-number-recognition-51-to-100/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/free-numbers-and-counting-starter-pack/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/free-printable-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/free-roll-and-read-level-11/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/free-roll-and-read-level-12/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/free-roll-and-read-level-13/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/free-word-building-game/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/free-worksheet-maker/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/games-charts-and-activities/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/glossary/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/guide-does-phonics-help-with-speech-delay/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/guide-handwriting-help-for-kids-with-dysgraphia/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/guide-how-to-find-your-childs-reading-level/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/guide-how-to-help-a-child-with-adhd-with-reading/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/guide-how-to-help-a-struggling-reader-at-home/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/guide-how-to-improve-reading-comprehension-at-home/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/guide-how-to-teach-a-left-handed-child-to-write/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/guide-how-to-teach-number-bonds-to-kindergarten/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/guide-how-to-teach-sight-words-to-kindergarten/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/guide-my-child-cannot-remember-sight-words/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/guide-my-child-struggles-with-fine-motor-skills/",
      "visits": 1
     },
     {
@@ -1670,12 +3312,602 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     },
     {
      "source": "direct",
-     "page": "/ordering-numbers-worksheets/",
+     "page": "/guide-what-is-a-sight-word/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/guides/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/handwriting-worksheet-maker/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/hear-it-write-it-10-day-spelling-plan/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/help/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/how-it-works/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/how-to-help-a-child-struggling-with-math/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/how-to-help-my-child-with-handwriting/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/how-to-help-struggling-reader-2nd-grade/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/how-to-teach-blends/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/how-to-teach-two-syllable-words/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/how-to-teach-vowel-teams/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/how-we-make-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/hundreds-chart-maker/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/kindergarten-addition-and-subtraction-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/kindergarten-games-charts-and-activities-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/kindergarten-numbers-and-counting-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/kindergarten-sight-words-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/know-every-letter-10-day-letter-recognition-plan/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/learn-to-read-complete-bundle/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/letter-reversal-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/letter-sounds-level-1/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/letter-sounds-level-2/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/letter-sounds-level-3/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/letter-sounds-level-4/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/letter-sounds-level-5/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/letter-sounds-level-6/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/letter-sounds-level-7/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/letter-sounds-level-bundle/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/letter-sounds-level-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/my-child-can-read-but-does-not-understand/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/my-child-cant-read-silent-e-words/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/my-child-cant-write-a-sentence/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/my-child-doesnt-know-letters/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/my-first-sentences-10-day-sentence-writing-plan/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/number-bonds-bundle/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/number-bonds-missing-whole/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/number-bonds-of-10/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/number-bonds-to-10/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/number-bonds-to-20/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/number-bonds-to-5/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/number-recognition-1-to-10/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/number-recognition-1-to-5/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/number-recognition-11-to-20/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/number-recognition-21-to-50/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/number-tracing-and-counting-1-to-20/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/numbers-and-counting-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/preschool-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/rabbit-and-sunset-two-syllable-words-10-day-plan/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/read-and-match-level-3/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/read-and-match-level-5/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/read-and-match-level-6/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/read-and-match-level-7/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/read-and-match-level-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/read-it-see-it-10-day-plan/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/reading-certificate-maker/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/reading-passage-generator/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/reading-pointer-maker/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/reading-program-for-struggling-readers/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/research-handwriting-practice/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/research-reading-comprehension/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/research-sight-words-memorize-or-sound-out/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/research-vocabulary-and-talking/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-color-numbers-1-to-6/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-10/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-11/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-12/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-13/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-2/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-3/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-4/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-5/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-6/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-7/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-8/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-9/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-bundle/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/search/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/short-vowel-a-words/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/short-vowel-e-words/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/short-vowel-i-words/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/short-vowel-o-words/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/short-vowel-u-words/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/short-vowel-words-bundle/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/short-vowel-words-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/sight-words-set-1/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/sight-words-set-2/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/signs-of-dyslexia-in-kids/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/smooth-reading-10-day-plan/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/sound-it-out-decodable-phonics-practice/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/stars-and-clouds-vowel-teams-10-day-plan/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/stop-and-jump-consonant-blends-10-day-plan/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/subtraction-to-20/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/subtraction-within-10-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/tell-b-from-d-10-day-plan/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/ten-frames-1-to-20/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/ten-frames-1-to-5/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/ten-frames-11-to-20/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/ten-frames-draw-the-dots/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/terms-of-use/",
      "visits": 1
     },
     {
      "source": "direct",
      "page": "/thank-you/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/the-one-sheet-grammar/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/tracing-worksheet-generator/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/what-next/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/which-digraphs-to-teach-first/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/why-cant-my-child-blend-sounds/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/why-cant-my-child-hear-the-sounds-in-words/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/why-cant-my-child-remember-letter-sounds/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/why-cant-my-child-remember-sight-words/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/why-does-my-child-guess-words-when-reading/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/why-does-my-child-mix-up-b-and-d/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/why-does-my-child-read-so-slowly/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/word-tracing-worksheet-generator/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/words-that-stick-sight-words-10-day-plan/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/worksheets-for-3-year-olds/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/worksheets-for-4-year-olds/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/worksheets-for-5-year-olds/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/worksheets-for-6-year-olds/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/worksheets-for-8-year-olds/",
      "visits": 1
     },
     {
@@ -1720,11 +3952,6 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     },
     {
      "source": "site",
-     "page": "/guide-how-to-teach-place-value/",
-     "visits": 1
-    },
-    {
-     "source": "site",
      "page": "/name-tracing-worksheet-generator/",
      "visits": 1
     },
@@ -1736,6 +3963,11 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     {
      "source": "yahoo",
      "page": "/number-tracing-generator/",
+     "visits": 1
+    },
+    {
+     "source": "yandex.com.tr",
+     "page": "/ordering-numbers-worksheets/",
      "visits": 1
     }
    ],
@@ -1779,9 +4011,9 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
    "funnel": [
     {
      "source": "direct",
-     "visits": 406,
-     "engaged": 24,
-     "offer": 19,
+     "visits": 651,
+     "engaged": 38,
+     "offer": 53,
      "checkout": 29,
      "free_orders": 16,
      "paid_orders": 0
@@ -1841,19 +4073,19 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "paid_orders": 0
     },
     {
-     "source": "pdf",
-     "visits": 5,
-     "engaged": 2,
-     "offer": 4,
+     "source": "google",
+     "visits": 6,
+     "engaged": 0,
+     "offer": 0,
      "checkout": 0,
      "free_orders": 0,
      "paid_orders": 0
     },
     {
-     "source": "google",
+     "source": "pdf",
      "visits": 5,
-     "engaged": 0,
-     "offer": 0,
+     "engaged": 2,
+     "offer": 4,
      "checkout": 0,
      "free_orders": 0,
      "paid_orders": 0
@@ -1886,12 +4118,21 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "paid_orders": 0
     },
     {
+     "source": "yandex.com.tr",
+     "visits": 1,
+     "engaged": 0,
+     "offer": 0,
+     "checkout": 0,
+     "free_orders": 0,
+     "paid_orders": 0
+    },
+    {
      "source": "unknown",
      "visits": 0,
      "engaged": 0,
      "offer": 0,
      "checkout": 0,
-     "free_orders": 28,
+     "free_orders": 22,
      "paid_orders": 0
     }
    ],
@@ -2307,79 +4548,31 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "source": "not recorded",
      "piece": "",
      "landing": ""
-    },
-    {
-     "at": "2026-10-09T21:54Z",
-     "product": "Free Decodable Reading Sampler",
-     "price": "free",
-     "source": "not recorded",
-     "piece": "",
-     "landing": ""
-    },
-    {
-     "at": "2026-10-09T20:47Z",
-     "product": "Free Decodable Reading Sampler",
-     "price": "free",
-     "source": "not recorded",
-     "piece": "",
-     "landing": ""
-    },
-    {
-     "at": "2026-10-09T12:59Z",
-     "product": "Free Decodable Reading Sampler",
-     "price": "free",
-     "source": "not recorded",
-     "piece": "",
-     "landing": ""
-    },
-    {
-     "at": "2026-10-09T08:21Z",
-     "product": "Free Decodable Reading Sampler",
-     "price": "free",
-     "source": "not recorded",
-     "piece": "",
-     "landing": ""
-    },
-    {
-     "at": "2026-10-09T07:32Z",
-     "product": "Free Decodable Reading Sampler",
-     "price": "free",
-     "source": "not recorded",
-     "piece": "",
-     "landing": ""
-    },
-    {
-     "at": "2026-10-09T04:23Z",
-     "product": "Free Decodable Reading Sampler",
-     "price": "free",
-     "source": "not recorded",
-     "piece": "",
-     "landing": ""
     }
    ],
    "unknown": {
-    "visits": 429,
-    "of_visits": 707,
-    "orders_without_a_source": 28,
-    "of_orders": 46
+    "visits": 674,
+    "of_visits": 954,
+    "orders_without_a_source": 22,
+    "of_orders": 40
    }
   },
   {
    "name": "LAST 30 DAYS",
-   "from": "2026-09-16",
-   "to": "2026-10-15",
-   "visits": 707,
-   "views": 1738,
+   "from": "2026-09-17",
+   "to": "2026-10-16",
+   "visits": 954,
+   "views": 1995,
    "screens": {
-    "desktop": 390,
-    "phone": 167,
+    "desktop": 636,
+    "phone": 168,
     "tablet": 150
    },
    "by_source": [
     {
      "source": "direct",
-     "visits": 406,
-     "views": 1310
+     "visits": 651,
+     "views": 1555
     },
     {
      "source": "yt",
@@ -2394,7 +4587,7 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     {
      "source": "site",
      "visits": 23,
-     "views": 40
+     "views": 46
     },
     {
      "source": "yt-short",
@@ -2412,14 +4605,14 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "views": 23
     },
     {
+     "source": "google",
+     "visits": 6,
+     "views": 11
+    },
+    {
      "source": "pdf",
      "visits": 5,
      "views": 7
-    },
-    {
-     "source": "google",
-     "visits": 5,
-     "views": 6
     },
     {
      "source": "instagram",
@@ -2433,6 +4626,11 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     },
     {
      "source": "yahoo",
+     "visits": 1,
+     "views": 1
+    },
+    {
+     "source": "yandex.com.tr",
      "visits": 1,
      "views": 1
     }
@@ -2619,62 +4817,62 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "views": 3
     }
    ],
-   "visits_with_a_source_but_no_piece": 57,
+   "visits_with_a_source_but_no_piece": 59,
    "by_landing_page": [
     {
      "page": "/",
-     "visits": 349,
-     "views": 883
+     "visits": 350,
+     "views": 884
     },
     {
      "page": "/why-cant-my-child-blend-sounds/",
-     "visits": 100,
-     "views": 127
+     "visits": 101,
+     "views": 128
     },
     {
      "page": "/free-decodable-reading-sampler/",
-     "visits": 37,
-     "views": 71
-    },
-    {
-     "page": "/free-blending-game/",
-     "visits": 22,
-     "views": 33
-    },
-    {
-     "page": "/free-printable-worksheets/",
-     "visits": 22,
-     "views": 33
-    },
-    {
-     "page": "/what-next/",
-     "visits": 22,
-     "views": 33
+     "visits": 39,
+     "views": 73
     },
     {
      "page": "/my-child-is-behind-in-reading/",
-     "visits": 21,
-     "views": 44
+     "visits": 23,
+     "views": 46
+    },
+    {
+     "page": "/free-blending-game/",
+     "visits": 23,
+     "views": 34
+    },
+    {
+     "page": "/free-printable-worksheets/",
+     "visits": 23,
+     "views": 34
+    },
+    {
+     "page": "/what-next/",
+     "visits": 23,
+     "views": 34
     },
     {
      "page": "/why-cant-my-child-remember-sight-words/",
-     "visits": 20,
-     "views": 25
+     "visits": 21,
+     "views": 26
     },
     {
      "page": "/why-cant-my-child-remember-letter-sounds/",
-     "visits": 17,
-     "views": 23
-    },
-    {
-     "page": "/eight-sounds-that-stay-10-day-plan/",
-     "visits": 11,
+     "visits": 18,
      "views": 24
     },
     {
+     "page": "/eight-sounds-that-stay-10-day-plan/",
+     "visits": 13,
+     "views": 26
+    },
+    {
      "page": "/the-one-sheet/",
-     "visits": 10,
-     "views": 161
+     "visits": 11,
+     "views": 162
     },
     {
      "page": "/free-reading-games/",
@@ -2683,18 +4881,28 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     },
     {
      "page": "/printables/",
-     "visits": 7,
-     "views": 81
+     "visits": 8,
+     "views": 82
     },
     {
      "page": "/know-every-letter-10-day-letter-recognition-plan/",
-     "visits": 5,
-     "views": 5
+     "visits": 6,
+     "views": 6
     },
     {
      "page": "/from-sounds-to-words-blending-plan/",
-     "visits": 4,
-     "views": 8
+     "visits": 5,
+     "views": 9
+    },
+    {
+     "page": "/name-tracing-worksheet-generator/",
+     "visits": 5,
+     "views": 6
+    },
+    {
+     "page": "/free-worksheet-maker/",
+     "visits": 5,
+     "views": 5
     },
     {
      "page": "/alphabet-coloring-page-maker/",
@@ -2702,17 +4910,22 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "views": 4
     },
     {
-     "page": "/free-worksheet-maker/",
+     "page": "/ordering-numbers-worksheets/",
      "visits": 4,
      "views": 4
     },
     {
-     "page": "/free-addition-within-10-worksheets/",
+     "page": "/ears-first-10-day-listening-plan/",
      "visits": 3,
-     "views": 4
+     "views": 9
     },
     {
-     "page": "/name-tracing-worksheet-generator/",
+     "page": "/learn-to-read-printables/",
+     "visits": 3,
+     "views": 7
+    },
+    {
+     "page": "/free-addition-within-10-worksheets/",
      "visits": 3,
      "views": 4
     },
@@ -2722,61 +4935,46 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "views": 3
     },
     {
+     "page": "/reading-research/",
+     "visits": 2,
+     "views": 94
+    },
+    {
      "page": "/10-day-plans/",
      "visits": 2,
      "views": 8
     },
     {
-     "page": "/ears-first-10-day-listening-plan/",
+     "page": "/learning-path/",
      "visits": 2,
-     "views": 8
+     "views": 6
+    },
+    {
+     "page": "/look-at-every-letter-10-day-plan/",
+     "visits": 2,
+     "views": 6
+    },
+    {
+     "page": "/the-one-sheet-math/",
+     "visits": 2,
+     "views": 5
+    },
+    {
+     "page": "/how-to-help-my-child-with-handwriting/",
+     "visits": 2,
+     "views": 3
     },
     {
      "page": "/worksheet-generator/",
      "visits": 2,
      "views": 3
-    },
-    {
-     "page": "/cvc-word-generator/",
-     "visits": 2,
-     "views": 2
-    },
-    {
-     "page": "/lined-paper-generator/",
-     "visits": 2,
-     "views": 2
-    },
-    {
-     "page": "/sight-word-worksheet-generator/",
-     "visits": 2,
-     "views": 2
-    },
-    {
-     "page": "/reading-research/",
-     "visits": 1,
-     "views": 93
-    },
-    {
-     "page": "/learning-path/",
-     "visits": 1,
-     "views": 5
-    },
-    {
-     "page": "/look-at-every-letter-10-day-plan/",
-     "visits": 1,
-     "views": 5
-    },
-    {
-     "page": "/the-one-sheet-math/",
-     "visits": 1,
-     "views": 4
     }
    ],
    "by_source_and_landing_page": [
     {
      "source": "direct",
      "page": "/",
-     "visits": 335
+     "visits": 336
     },
     {
      "source": "facebook",
@@ -2791,7 +4989,7 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     {
      "source": "direct",
      "page": "/free-decodable-reading-sampler/",
-     "visits": 31
+     "visits": 33
     },
     {
      "source": "yt",
@@ -2816,7 +5014,7 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     {
      "source": "direct",
      "page": "/the-one-sheet/",
-     "visits": 10
+     "visits": 11
     },
     {
      "source": "facebook",
@@ -2844,6 +5042,11 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "visits": 7
     },
     {
+     "source": "direct",
+     "page": "/my-child-is-behind-in-reading/",
+     "visits": 6
+    },
+    {
      "source": "yt",
      "page": "/why-cant-my-child-remember-sight-words/",
      "visits": 6
@@ -2870,12 +5073,17 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     },
     {
      "source": "direct",
-     "page": "/my-child-is-behind-in-reading/",
+     "page": "/eight-sounds-that-stay-10-day-plan/",
      "visits": 4
     },
     {
      "source": "yt-short",
      "page": "/why-cant-my-child-remember-sight-words/",
+     "visits": 4
+    },
+    {
+     "source": "direct",
+     "page": "/name-tracing-worksheet-generator/",
      "visits": 4
     },
     {
@@ -2909,9 +5117,24 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "visits": 3
     },
     {
+     "source": "direct",
+     "page": "/ordering-numbers-worksheets/",
+     "visits": 3
+    },
+    {
      "source": "pdf",
      "page": "/from-sounds-to-words-blending-plan/",
      "visits": 3
+    },
+    {
+     "source": "direct",
+     "page": "/reading-research/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/printables/",
+     "visits": 2
     },
     {
      "source": "bing",
@@ -2919,13 +5142,13 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "visits": 2
     },
     {
-     "source": "direct",
-     "page": "/eight-sounds-that-stay-10-day-plan/",
+     "source": "chatgpt.com",
+     "page": "/",
      "visits": 2
     },
     {
-     "source": "chatgpt.com",
-     "page": "/",
+     "source": "direct",
+     "page": "/ears-first-10-day-listening-plan/",
      "visits": 2
     },
     {
@@ -2935,12 +5158,27 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     },
     {
      "source": "direct",
-     "page": "/free-reading-games/",
+     "page": "/from-sounds-to-words-blending-plan/",
      "visits": 2
     },
     {
      "source": "direct",
-     "page": "/name-tracing-worksheet-generator/",
+     "page": "/learning-path/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/look-at-every-letter-10-day-plan/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/the-one-sheet-math/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/free-reading-games/",
      "visits": 2
     },
     {
@@ -2975,23 +5213,98 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     },
     {
      "source": "direct",
+     "page": "/count-it-up-10-day-math-plan/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/cvc-word-cards-set-2/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/cvc-word-cards-worksheets/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/dab-and-blend-level-4/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/decodable-mini-books-level-worksheets/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/free-games-charts-and-activities-starter-pack/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/free-learn-to-read-starter-pack/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/free-reading-checks/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/free-short-vowel-a-words/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/guide-how-to-teach-a-child-to-write-their-name/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/guide-my-child-hates-reading/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
      "page": "/guide-when-should-a-child-know-all-letters/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/learn-to-read-printables/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/my-child-can-read-but-cant-spell/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/number-recognition-bundle/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/numbers-and-counting-complete-bundle/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/skills/",
+     "visits": 2
+    },
+    {
+     "source": "direct",
+     "page": "/worksheets-for-7-year-olds/",
      "visits": 2
     },
     {
      "source": "instagram",
      "page": "/",
      "visits": 2
-    },
-    {
-     "source": "direct",
-     "page": "/reading-research/",
-     "visits": 1
-    },
-    {
-     "source": "direct",
-     "page": "/printables/",
-     "visits": 1
     },
     {
      "source": "site",
@@ -3004,28 +5317,13 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "visits": 1
     },
     {
-     "source": "direct",
-     "page": "/ears-first-10-day-listening-plan/",
+     "source": "site",
+     "page": "/guide-how-to-teach-place-value/",
      "visits": 1
     },
     {
-     "source": "direct",
-     "page": "/from-sounds-to-words-blending-plan/",
-     "visits": 1
-    },
-    {
-     "source": "direct",
-     "page": "/learning-path/",
-     "visits": 1
-    },
-    {
-     "source": "direct",
-     "page": "/look-at-every-letter-10-day-plan/",
-     "visits": 1
-    },
-    {
-     "source": "direct",
-     "page": "/the-one-sheet-math/",
+     "source": "google",
+     "page": "/learn-to-read-printables/",
      "visits": 1
     },
     {
@@ -3065,7 +5363,157 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     },
     {
      "source": "direct",
+     "page": "/4th-of-july-worksheets-for-kindergarten/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/about/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
      "page": "/add-and-subtract-to-10/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/addition-and-subtraction-complete-bundle/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/addition-and-subtraction-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/addition-to-20/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/addition-to-5/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/addition-within-10-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/addition-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/alphabet-and-handwriting-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/alphabet-tracing-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/beginning-sounds-worksheet-generator/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/bingo-card-generator/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/bundles/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/cap-to-cape-silent-e-10-day-plan/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/color-by-code-addition-to-10/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/color-by-code-addition-to-20/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/color-by-code-subtraction-to-10/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/color-by-number-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/color-by-word-level-2/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/color-by-word-level-3/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/color-by-word-level-4/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/color-by-word-level-5/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/color-by-word-level-6/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/color-by-word-level-7/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/color-by-word-level-bundle/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/complete-first-grade-bundle/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/complete-kindergarten-bundle/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/contact/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/cvc-cut-and-paste/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/cvc-word-cards-set-1/",
      "visits": 1
     },
     {
@@ -3075,17 +5523,232 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     },
     {
      "source": "direct",
+     "page": "/cvc-word-search-level-4/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/cvc-word-search-level-5/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/cvc-word-search-level-6/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/cvc-word-search-level-7/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/cvc-word-search-level-bundle/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/cvc-word-search-level-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/dab-and-blend-level-3/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/dab-and-blend-level-5/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/dab-and-blend-level-6/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/dab-and-blend-level-7/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/dab-and-blend-level-bundle/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/decodable-mini-books-level-4/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/decodable-mini-books-level-5/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/decodable-mini-books-level-6/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/decodable-mini-books-level-bundle/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/decodable-reading-passages-with-questions/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/decodable-sentence-generator/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
      "page": "/decodable-text-generator/",
      "visits": 1
     },
     {
      "source": "direct",
-     "page": "/free-short-vowel-a-words/",
+     "page": "/first-grade-worksheets/",
      "visits": 1
     },
     {
      "source": "direct",
-     "page": "/guide-how-to-teach-a-child-to-write-their-name/",
+     "page": "/flashcard-maker-printable/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/free-addition-and-subtraction-starter-pack/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/free-blending-game/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/free-cvc-cut-and-paste/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/free-cvc-word-reading-game/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/free-number-bonds-to-20/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/free-number-recognition-51-to-100/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/free-numbers-and-counting-starter-pack/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/free-printable-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/free-roll-and-read-level-11/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/free-roll-and-read-level-12/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/free-roll-and-read-level-13/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/free-word-building-game/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/free-worksheet-maker/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/games-charts-and-activities/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/glossary/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/guide-does-phonics-help-with-speech-delay/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/guide-handwriting-help-for-kids-with-dysgraphia/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/guide-how-to-find-your-childs-reading-level/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/guide-how-to-help-a-child-with-adhd-with-reading/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/guide-how-to-help-a-struggling-reader-at-home/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/guide-how-to-improve-reading-comprehension-at-home/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/guide-how-to-teach-a-left-handed-child-to-write/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/guide-how-to-teach-number-bonds-to-kindergarten/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/guide-how-to-teach-sight-words-to-kindergarten/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/guide-my-child-cannot-remember-sight-words/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/guide-my-child-struggles-with-fine-motor-skills/",
      "visits": 1
     },
     {
@@ -3095,12 +5758,602 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     },
     {
      "source": "direct",
-     "page": "/ordering-numbers-worksheets/",
+     "page": "/guide-what-is-a-sight-word/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/guides/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/handwriting-worksheet-maker/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/hear-it-write-it-10-day-spelling-plan/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/help/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/how-it-works/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/how-to-help-a-child-struggling-with-math/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/how-to-help-my-child-with-handwriting/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/how-to-help-struggling-reader-2nd-grade/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/how-to-teach-blends/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/how-to-teach-two-syllable-words/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/how-to-teach-vowel-teams/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/how-we-make-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/hundreds-chart-maker/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/kindergarten-addition-and-subtraction-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/kindergarten-games-charts-and-activities-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/kindergarten-numbers-and-counting-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/kindergarten-sight-words-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/know-every-letter-10-day-letter-recognition-plan/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/learn-to-read-complete-bundle/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/letter-reversal-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/letter-sounds-level-1/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/letter-sounds-level-2/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/letter-sounds-level-3/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/letter-sounds-level-4/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/letter-sounds-level-5/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/letter-sounds-level-6/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/letter-sounds-level-7/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/letter-sounds-level-bundle/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/letter-sounds-level-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/my-child-can-read-but-does-not-understand/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/my-child-cant-read-silent-e-words/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/my-child-cant-write-a-sentence/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/my-child-doesnt-know-letters/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/my-first-sentences-10-day-sentence-writing-plan/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/number-bonds-bundle/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/number-bonds-missing-whole/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/number-bonds-of-10/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/number-bonds-to-10/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/number-bonds-to-20/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/number-bonds-to-5/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/number-recognition-1-to-10/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/number-recognition-1-to-5/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/number-recognition-11-to-20/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/number-recognition-21-to-50/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/number-tracing-and-counting-1-to-20/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/numbers-and-counting-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/preschool-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/rabbit-and-sunset-two-syllable-words-10-day-plan/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/read-and-match-level-3/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/read-and-match-level-5/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/read-and-match-level-6/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/read-and-match-level-7/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/read-and-match-level-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/read-it-see-it-10-day-plan/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/reading-certificate-maker/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/reading-passage-generator/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/reading-pointer-maker/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/reading-program-for-struggling-readers/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/research-handwriting-practice/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/research-reading-comprehension/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/research-sight-words-memorize-or-sound-out/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/research-vocabulary-and-talking/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-color-numbers-1-to-6/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-10/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-11/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-12/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-13/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-2/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-3/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-4/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-5/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-6/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-7/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-8/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-9/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-bundle/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/roll-and-read-level-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/search/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/short-vowel-a-words/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/short-vowel-e-words/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/short-vowel-i-words/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/short-vowel-o-words/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/short-vowel-u-words/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/short-vowel-words-bundle/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/short-vowel-words-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/sight-words-set-1/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/sight-words-set-2/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/signs-of-dyslexia-in-kids/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/smooth-reading-10-day-plan/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/sound-it-out-decodable-phonics-practice/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/stars-and-clouds-vowel-teams-10-day-plan/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/stop-and-jump-consonant-blends-10-day-plan/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/subtraction-to-20/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/subtraction-within-10-worksheets/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/tell-b-from-d-10-day-plan/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/ten-frames-1-to-20/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/ten-frames-1-to-5/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/ten-frames-11-to-20/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/ten-frames-draw-the-dots/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/terms-of-use/",
      "visits": 1
     },
     {
      "source": "direct",
      "page": "/thank-you/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/the-one-sheet-grammar/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/tracing-worksheet-generator/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/what-next/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/which-digraphs-to-teach-first/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/why-cant-my-child-blend-sounds/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/why-cant-my-child-hear-the-sounds-in-words/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/why-cant-my-child-remember-letter-sounds/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/why-cant-my-child-remember-sight-words/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/why-does-my-child-guess-words-when-reading/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/why-does-my-child-mix-up-b-and-d/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/why-does-my-child-read-so-slowly/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/word-tracing-worksheet-generator/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/words-that-stick-sight-words-10-day-plan/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/worksheets-for-3-year-olds/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/worksheets-for-4-year-olds/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/worksheets-for-5-year-olds/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/worksheets-for-6-year-olds/",
+     "visits": 1
+    },
+    {
+     "source": "direct",
+     "page": "/worksheets-for-8-year-olds/",
      "visits": 1
     },
     {
@@ -3145,11 +6398,6 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     },
     {
      "source": "site",
-     "page": "/guide-how-to-teach-place-value/",
-     "visits": 1
-    },
-    {
-     "source": "site",
      "page": "/name-tracing-worksheet-generator/",
      "visits": 1
     },
@@ -3161,6 +6409,11 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     {
      "source": "yahoo",
      "page": "/number-tracing-generator/",
+     "visits": 1
+    },
+    {
+     "source": "yandex.com.tr",
+     "page": "/ordering-numbers-worksheets/",
      "visits": 1
     }
    ],
@@ -3204,9 +6457,9 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
    "funnel": [
     {
      "source": "direct",
-     "visits": 406,
-     "engaged": 24,
-     "offer": 19,
+     "visits": 651,
+     "engaged": 38,
+     "offer": 53,
      "checkout": 29,
      "free_orders": 16,
      "paid_orders": 0
@@ -3266,19 +6519,19 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "paid_orders": 0
     },
     {
-     "source": "pdf",
-     "visits": 5,
-     "engaged": 2,
-     "offer": 4,
+     "source": "google",
+     "visits": 6,
+     "engaged": 0,
+     "offer": 0,
      "checkout": 0,
      "free_orders": 0,
      "paid_orders": 0
     },
     {
-     "source": "google",
+     "source": "pdf",
      "visits": 5,
-     "engaged": 0,
-     "offer": 0,
+     "engaged": 2,
+     "offer": 4,
      "checkout": 0,
      "free_orders": 0,
      "paid_orders": 0
@@ -3305,6 +6558,15 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
      "source": "yahoo",
      "visits": 1,
      "engaged": 1,
+     "offer": 0,
+     "checkout": 0,
+     "free_orders": 0,
+     "paid_orders": 0
+    },
+    {
+     "source": "yandex.com.tr",
+     "visits": 1,
+     "engaged": 0,
      "offer": 0,
      "checkout": 0,
      "free_orders": 0,
@@ -3815,14 +7077,14 @@ the checker&#x27;s answer could not be read; nothing was marked as checked</pre>
     }
    ],
    "unknown": {
-    "visits": 429,
-    "of_visits": 707,
+    "visits": 674,
+    "of_visits": 954,
     "orders_without_a_source": 32,
     "of_orders": 50
    }
   }
  ]
-},JOBS="18 of 34";
+},JOBS="20 of 34";
 function $(i){return document.getElementById(i)}function esc(x){return String(x==null?'':x).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 function show(t){[].forEach.call(document.querySelectorAll('.panel'),function(p){p.className='panel'+(p.id==='p-'+t?' on':'')});[].forEach.call($('tabs').children,function(b){b.className=b.getAttribute('data-t')===t?'on':''});try{history.replaceState(null,'','#'+t)}catch(e){}window.scrollTo(0,0)}
 $('tabs').addEventListener('click',function(e){var t=e.target.getAttribute('data-t');if(t)show(t)});document.addEventListener('click',function(e){var g=e.target.getAttribute&&e.target.getAttribute('data-go');if(g)show(g)});
