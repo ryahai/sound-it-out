@@ -56,9 +56,9 @@ if (!(N.sendBeacon && N.sendBeacon(TO + '/h', j))) new Image().src = TO + '/h?d=
 };
 var deco = function (a) {
 try {
-if (a.hostname.indexOf('polar.sh') < 0 || a.search.indexOf('utm_source=') >= 0) return;
+if (a.hostname !== 'buy.polar.sh' || a.search.indexOf('utm_source=') >= 0) return;
 var add = 'utm_source=' + enc(st.s) + '&utm_medium=' + enc(st.m);
-if (st.c) add += '&utm_content=' + enc(st.c); if (st.k) add += '&utm_campaign=' + enc(st.k);
+if (st.c) add += '&utm_content=' + enc(st.c); if (st.k) add += '&utm_campaign=' + enc(st.k); if (st.v) add += '&reference_id=' + enc(st.v);
 a.search = (a.search ? a.search + '&' : '?') + add;
 } catch (x) {}
 };
@@ -73,7 +73,13 @@ if (b) return send(has(b, 'sioh-btn') ? 'helper_open' : b.id === 'mk-again' ? 'm
 var a = up(t, function (x) { return x.tagName === 'A' && x.href; });
 if (!a || !/^https?:$/.test(a.protocol)) return;
 var h = a.hostname, p = a.pathname;
-if (h.indexOf('polar.sh') >= 0) { deco(a); return send('checkout', h); }
+if (h.indexOf('polar.sh') >= 0) {
+if (h === 'buy.polar.sh') { deco(a); return send('checkout', h); }
+if (/\/portal/.test(p)) return send('portal', h);
+var s1 = a.querySelector('span'), fn = ((s1 && s1.firstChild && s1.firstChild.nodeValue) || a.textContent || '').replace(/\s+/g, ' ').trim();
+return send('download', 'polar ' + dec((/[?&]item=([^&]+)/.exec(L.search) || [])[1] || '-') + ' ' + fn);
+}
+if (/\.(pdf|zip)$/i.test(p) || a.hasAttribute('download')) return send('download', (h === L.hostname ? '' : h) + p);
 if (h !== L.hostname) return send('outbound', h.replace(/^www\./, ''));
 if (up(a, function (x) { return has(x, 'sioh'); })) return send('helper_pick', (a.textContent || '').replace(/\s+/g, ' '));
 if (p === L.pathname) return;

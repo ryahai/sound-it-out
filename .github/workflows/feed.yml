@@ -1,7 +1,5 @@
 name: Release today's pins
 on:
-  schedule:
-    - cron: "5 11 * * *"
   workflow_dispatch:
 permissions:
   contents: write
