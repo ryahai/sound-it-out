@@ -4,6 +4,7 @@
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 const BASE = 'https://sounditoutreading.com';
 const today = new Date().toISOString().slice(0, 10);
+const since = new Date(Date.now() - 864e5).toISOString().slice(0, 10);      // yesterday
 const pins = JSON.parse(readFileSync('pins.json', 'utf8'));
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const type = (f) => (/\.jpe?g$/i.test(f) ? 'image/jpeg' : 'image/png');      // the pins made by pins_more.mjs are JPEG
@@ -12,7 +13,9 @@ mkdirSync('feeds', { recursive: true });
 const BOARDLIST = (() => { try { return JSON.parse(readFileSync('/home/millionagent/MillionAgent/products/site/pin_boards.json', 'utf8')).boards.map((b) => b.name); } catch { return []; } })();
 const boards = [...new Set([...pins.map((p) => p.board), ...BOARDLIST])];      // every board gets its feed rewritten, so a feed never keeps an old item
 for (const board of boards) {
-  const live = pins.filter((p) => p.board === board && p.release <= today && (p.seo === 'passed' || p.release < '2026-10-16'))      // THE PINTEREST SEO GATE: only a pin that passed it (pin_seo.mjs gatePins) is published; pins out before the gate stay.sort((a, b) => (a.release < b.release ? 1 : -1));
+  // ONLY THE LAST 2 DAYS (2026-10-19): Pinterest re-pinned old items each time a feed changed (one item became 9 pins) and then
+  // blocked the domain as spam. Each pin is in its feed for its release day and the next day only, then never again.
+  const live = pins.filter((p) => p.board === board && p.release <= today && p.release >= since && p.seo === 'passed')      // THE PINTEREST SEO GATE: only a pin that passed it (pin_seo.mjs gatePins) is published; pins out before the gate stay.sort((a, b) => (a.release < b.release ? 1 : -1));
   const items = live.map((p) => `<item><title>${esc(p.title)}</title><link>${esc(p.link)}</link><guid isPermaLink="false">${esc(p.file)}</guid>
 <pubDate>${new Date(p.release + 'T12:00:00Z').toUTCString()}</pubDate><description>${esc(p.description)}</description>
 <enclosure url="${BASE}/pins/${esc(p.file)}" type="${type(p.file)}" length="0"/><media:content url="${BASE}/pins/${esc(p.file)}" medium="image" type="${type(p.file)}"><media:description type="plain">${esc(p.alt || p.title)}</media:description></media:content></item>`).join('\n');
