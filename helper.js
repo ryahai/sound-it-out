@@ -171,19 +171,19 @@ var SIOH_DATA = {
   /* shown on every 2nd grade answer */
   gradeNote: { g2: 'Our printed packs stop at first grade. Many of the makers take your own words, so they still fit a 2nd grade group.' },
 
-  /* the paid bundles: [name, how many packs, pages, price] (from the bundle pages) */
+  /* the bundles, free like every pack since 2026-10-20: [name, how many packs, pages, "Free"] (from the bundle pages) */
   bundles: {
-    'letter-sounds-level-bundle': ['Letter Sounds Level Bundle', 7, 91, '$3'],
-    'short-vowel-words-bundle': ['Short Vowel Words Bundle', 5, 65, '$3'],
-    'read-and-match-level-bundle': ['Read and Match Level Bundle', 5, 65, '$3'],
-    'color-by-word-level-bundle': ['Color By Word Level Bundle', 6, 84, '$3'],
-    'cvc-word-search-level-bundle': ['CVC Word Search Level Bundle', 4, 56, '$3'],
-    'dab-and-blend-level-bundle': ['Dab and Blend Level Bundle', 4, 52, '$3'],
-    'learn-to-read-complete-bundle': ['Complete Learn to Read Bundle', 18, 236, '$3'],
-    'complete-kindergarten-bundle': ['Complete Kindergarten Bundle', 26, 426, '$3'],
-    'complete-first-grade-bundle': ['Complete First Grade Bundle', 21, 328, '$3']
+    'letter-sounds-level-bundle': ['Letter Sounds Level Bundle', 7, 91, 'Free'],
+    'short-vowel-words-bundle': ['Short Vowel Words Bundle', 5, 65, 'Free'],
+    'read-and-match-level-bundle': ['Read and Match Level Bundle', 5, 65, 'Free'],
+    'color-by-word-level-bundle': ['Color By Word Level Bundle', 6, 84, 'Free'],
+    'cvc-word-search-level-bundle': ['CVC Word Search Level Bundle', 4, 56, 'Free'],
+    'dab-and-blend-level-bundle': ['Dab and Blend Level Bundle', 4, 52, 'Free'],
+    'learn-to-read-complete-bundle': ['Complete Learn to Read Bundle', 18, 236, 'Free'],
+    'complete-kindergarten-bundle': ['Complete Kindergarten Bundle', 26, 426, 'Free'],
+    'complete-first-grade-bundle': ['Complete First Grade Bundle', 21, 328, 'Free']
   },
-  bundleLine: 'All {n} packs in one file, in order, with a start-here page, a progress chart and a certificate. {pages} pages. {price} once. Print it for your own class as often as you like.',
+  bundleLine: 'All {n} packs in one file, in order, with a start-here page, a progress chart and a certificate. {pages} pages. Free to download. Print it for your own class as often as you like.',
 
   /* for each need and each grade: three pages (picks), the reason line (why), and the bundle (paid) when one fits. No paid line means none fits. */
   needs: [
