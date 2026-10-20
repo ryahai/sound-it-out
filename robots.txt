@@ -42,7 +42,27 @@ User-agent: Applebot-Extended
 Allow: /
 Disallow: /review/
 
+User-agent: Applebot
+Allow: /
+Disallow: /review/
+
 User-agent: Bingbot
+Allow: /
+Disallow: /review/
+
+User-agent: DuckAssistBot
+Allow: /
+Disallow: /review/
+
+User-agent: MistralAI-User
+Allow: /
+Disallow: /review/
+
+User-agent: Amazonbot
+Allow: /
+Disallow: /review/
+
+User-agent: meta-externalagent
 Allow: /
 Disallow: /review/
 

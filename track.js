@@ -4,6 +4,7 @@ try {
 var W = window, D = document, N = navigator, L = location, i;
 var sc = D.currentScript || D.querySelector('script[data-to]');
 if (!sc || L.protocol === 'file:') return;
+try { if (W.top !== W) return; } catch (e) { return; }
 var TO = sc.getAttribute('data-to'), TEST = sc.getAttribute('data-test') === '1';
 if (!TO) return;
 if (!TEST && (N.webdriver || L.hostname !== 'sounditoutreading.com')) return;
@@ -90,6 +91,7 @@ if (k) send(k, p);
 };
 D.addEventListener('click', click, true);
 D.addEventListener('auxclick', click, true);
+D.addEventListener('sio:pack', function (ev) { try { send('pack_make', String(ev.detail || '').slice(0, 60)); } catch (x) {} });
 D.addEventListener('play', function (ev) {
 try { var t = ev.target; if (t && t.tagName === 'VIDEO' && !t._sio) { t._sio = 1; send('video_play', (t.currentSrc || t.poster || '').split(/[?#]/)[0].split('/').slice(-2).join('/')); } } catch (x) {}
 }, true);
