@@ -1618,7 +1618,7 @@ function krFit(root){
     var best='',s=fit(),t;if(W/H>1.6&&z.children.length>1){z.style.flexDirection='row';z.style.columnGap='4mm';t=fit();if(t>s*1.12){s=t;best='row'}z.style.flexDirection='';z.style.columnGap=''}
     if(W/H<1.5){z.classList.add('stack');t=fit();if(t>s*1.12){s=t;best='stack'}z.classList.remove('stack')}
     if(best==='row'){z.style.flexDirection='row';z.style.columnGap='4mm'}else if(best==='stack')z.classList.add('stack');s=fit();
-    z.style.zoom=Math.max(0.35,Math.min(s,mx)).toFixed(3)})}
+    z.style.zoom=(Math.floor(Math.max(0.2,Math.min(s*0.98,mx))*1000)/1000).toFixed(3)})}
 function krTs(t,pics){var n=String(t).length,room=pics?16:22;return n<=room?34:Math.max(17,Math.floor(34*room/n))}
 
 // KRES SKILLS: one entry per kindergarten standard. Every resource-type maker (m-kres-formats.js) takes the standard as a setting and
