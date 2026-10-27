@@ -73,6 +73,7 @@
 .obnav{display:flex;align-items:center;justify-content:center;gap:12px;margin:20px 0 0}
 .obnav button{font:700 16px/1 Fredoka,"Comic Sans MS","Trebuchet MS",sans-serif;background:#fff;color:#1f2a44;border:3px solid #1f2a44;border-radius:999px;padding:10px 16px;box-shadow:0 4px 0 #1f2a44;cursor:pointer}
 .obnav button:disabled{opacity:.35;cursor:default}.obnav span{font-weight:800;font-size:15px;min-width:92px;text-align:center}
+.ob.land .obook{aspect-ratio:2200/850}.ob.land .obgrid{grid-template-columns:minmax(0,1.9fr) minmax(0,1fr)}@media(max-width:760px){.ob.land .obook{aspect-ratio:1100/850}.ob.land .obgrid{grid-template-columns:1fr}}
 .obinfo h2{margin:2px 48px 6px 0;text-align:left;font-size:clamp(23px,2.6vw,30px);line-height:1.15}
 .obmeta{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}.obmeta span{background:#fff;border:2px solid #1f2a44;border-radius:999px;padding:3px 10px;font-weight:800;font-size:14px}
 .obinfo p{margin:0 0 12px;font-size:17px}
@@ -321,7 +322,7 @@ function opts(){ var h='<a class="opt home" href="'+e(b.buy)+'"><b>Print it at h
  if(b.az)h+='<a class="opt mail" href="'+e(b.az.url)+'" rel="noopener"><b>Printed copy on Amazon</b><span class="pr">'+(b.az.price?'$'+e(b.az.price):'')+'</span><small>A printed paperback, sold and shipped by Amazon.</small><i>See it on Amazon</i></a>';return h}
 function open(i,from){b=D[i];P=pages();k=0;busy=0;opener=from;var ob=q('.ob');ob.style.setProperty('--c',b.c);
  q('#bkdt').textContent=b.n;q('.obmeta').innerHTML='<span>'+b.p+' pages</span><span>'+e(b.a)+'</span><span>'+(b.f?'Free':e(b.pr))+'</span>';
- q('.obl').textContent=b.t;q('.opts').innerHTML=opts();q('.obmore').innerHTML='<a href="../'+e(b.s)+'/">See everything inside this book →</a>';
+ q('.obl').textContent=b.t;q('.opts').innerHTML=opts();q('.obmore').innerHTML=b.m===0?'':'<a href="../'+e(b.s)+'/">See everything inside this book →</a>';ob.classList.toggle('land',!!b.ld);
  leaf.className='olf';show();dlg.showModal();if(!still)setTimeout(function(){if(dlg.open&&k===0)turn(1)},700)}
 document.querySelectorAll('.bk').forEach(function(x){x.addEventListener('click',function(){open(+x.getAttribute('data-b'),x)})});
 next.addEventListener('click',function(){turn(1)});prev.addEventListener('click',function(){turn(-1)});
