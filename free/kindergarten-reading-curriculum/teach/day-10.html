@@ -303,6 +303,16 @@ body{background:linear-gradient(160deg,#f6f3ff 0%,#fdf8f3 48%,#edf5ff 100%) fixe
 .press{animation:press .32s var(--ease)}
 @keyframes press{40%{transform:scale(.93);filter:brightness(1.08)}}
 body.play{cursor:none}
+body.play #app{height:calc(100dvh - 84px)}
+body.play .card.tip{display:none}
+.cc{position:fixed;left:0;right:0;bottom:0;height:84px;display:flex;align-items:center;justify-content:center;background:rgba(22,36,92,.88);z-index:50}
+.cc span{color:#fff;font-family:var(--font);font-weight:700;font-size:32px}
+#logo{position:fixed;inset:0;z-index:60;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:linear-gradient(160deg,#f6f3ff,#fdf8f3 48%,#edf5ff);transition:opacity .6s var(--ease)}
+#logo[hidden]{display:none}
+body.play #logo[hidden]{display:flex}
+#logo i{width:150px;height:150px;border-radius:34px;background:#ffe066;display:grid;place-items:center;color:#e0527a;font-style:normal;font-size:104px;font-weight:800;font-family:"Trebuchet MS",Arial,sans-serif;box-shadow:0 30px 60px -24px rgba(224,82,122,.45)}
+#logo b{font-family:var(--font);font-size:64px}
+#logo.off{opacity:0;pointer-events:none}
 body.play *{cursor:none!important}
 
 /* laptop / tablet */
@@ -360,6 +370,7 @@ body.play *{cursor:none!important}
 <aside class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetH"></aside>
 <div class="modal" id="modal" role="dialog" aria-modal="true"><button class="x" id="modalX" aria-label="Close">&times;</button><div class="mbox" id="mbox"></div></div>
 <canvas id="confetti"></canvas>
+<div id="logo" hidden><i>S</i><b><span style="color:#e0527a">S</span><span style="color:#ef8a2b">o</span><span style="color:#f6b20c">u</span><span style="color:#2f9e63">n</span><span style="color:#2f80d0">d</span> <span style="color:#8a5cd0">I</span><span style="color:#e0527a">t</span> <span style="color:#ef8a2b">O</span><span style="color:#f6b20c">u</span><span style="color:#2f9e63">t</span></b></div>
 <script>
 const D = {"day":10,"title":"Day 10: Super Sounds Celebration: a m s t","fullTitle":"Super Sounds Celebration: a m s t","target":null,"goal":"I can say the sounds for a m s t and put a word back together from two parts.","tip":"Celebrate effort, not speed: tell your child one thing they did well this week. At home, give the Friday Check at the start of the sitting, before the letter drill; in class, one child at a time during the day, never straight after the drill.","materials":[{"text":"Print: Friday Check: Week 2","sheets":["friday-check-week-2"],"kit":null},{"text":"Print: Handwriting: My Name with a Capital, day 10","sheets":["handwriting-day-10"],"kit":null},{"text":"Print: Super Sounds! award","sheets":["award-super-sounds"],"kit":null},{"text":"Reuse: a m s t letter cards (from the kit) and Happy, Happy Home (day 8 copy)","sheets":[],"kit":"../worksheets/kindergarten-reading-kit-print-once-color.pdf"},{"text":"Pencil, yellow highlighter, crayons","sheets":[],"kit":null}],"parts":[{"name":"Sound Games: Two-Part Words","short":"Sound Games","sub":"Two-Part Words","minutes":10,"kind":"sound games","goal":"Hear a spoken word in two parts (first sound, then the rest) and put it back together.","friend":"dolphin","friendName":"Splash","color":"sky","steps":[{"say":["I can say a word in two parts. Listen: /m/ ... at.","Hands apart, then I clap them together: mat!","Again: /s/ ... un. Clap: sun! Two parts make one word."],"do":["One hand out for the first sound, the other hand for the rest; clap the word.","Hold /m/ and /s/ long; keep /t/ quick and whispered, with no 'uh' after it."]},{"say":["Our turn. Hands out. /s/ ... at. Clap together: sat!","/t/ ... op. Clap: top! /m/ ... ap. Clap: map!","/s/ ... am. Clap together: Sam!"],"do":["Say the parts with the child, hands apart, then clap at the same time.","Pause one second between the parts so the child hears two clear pieces."]},{"say":["Your turn. I say two parts; you clap and say the word.","/t/ ... en. /m/ ... op. /s/ ... ock.","/m/ ... oon. /t/ ... ent. /s/ ... eal."],"do":["Say each pair once, with a one-second gap; the child claps and says the word alone.","Praise each one; repeat any miss at the end of the round."]}],"stuck":["Child repeats the parts: 'My turn: /t/ ... en. Ten!' Clap. 'Our turn.' Then 'Your turn.'","You hear 'suh' or 'tuh': model the pure sound, /s/ long, /t/ whispered, no 'uh.'"],"film":null,"letters":[],"sound":null},{"name":"Letter Drill: a m s t","short":"Letter Drill","sub":"a m s t","minutes":3,"kind":"letter drill","goal":"Say the name, sound and key picture for a m s t, small and capital, quickly. Give the Friday Check first: at home, at the start of the sitting, before this drill; in class, one child at a time during the day, never straight after this drill.","friend":"owl","friendName":"Hoot","color":"orange","steps":[{"say":["This is the letter m. It says /m/, like map.","Here is capital M. Same sound: /m/.","Big or small, the sound stays the same."],"do":["Hold up the kit m card; touch the letter, then the map picture.","Show the capital M card and say /m/ again."]},{"say":["With me: letter a, /a/, apple. Letter s, /s/, sun.","Letter t, /t/, top. Quick and whispered!","Now capitals: A, M, S, T. Name and sound together."],"do":["Say name, sound and key picture together for each card.","Keep /a/, /m/ and /s/ smooth and long; make /t/ short."]},{"say":["Your turn, fast. I flash, you say the name and the sound.","Whisper for small letters. Big voice for capitals!"],"do":["Shuffle all 8 cards, small and capital; flash each for about 2 seconds.","Put any slow card back in the pile for one more go."]}],"stuck":["Child says 'muh': 'My turn: /m/, lips closed, no uh. Our turn. Your turn.'","Missed card: say name, sound and picture; child repeats; slip it back in the pile."],"film":null,"letters":[],"sound":null},{"name":"Super Sounds Celebration: Hop to the Sound","short":"Super Sounds Celebration","sub":"Hop to the Sound","minutes":20,"kind":"new skill","goal":"Hear the first sound in a spoken word, match it to the a m s t letter card, and celebrate with the award.","friend":"fox","friendName":"Rusty","color":"pink","steps":[{"say":["Today is a party for our four letters! Each card gets its own spot.","Listen: mmmoose. The first sound is /m/. I hop to the m card.","Tiger. That one is quick: /t/. I hop to the t card."],"do":["Lay the four small-letter kit cards in four spots a few steps apart.","Say the word, then its first sound; hop to that card, touch it, say the sound again."]},{"say":["Hop with me. Sssofa. First sound together: /s/. Hop to the s card!","Alligator. /a/ /a/ alligator. Together: /a/. Hop!","Tummy. Quick and whispered: /t/. Hop together!"],"do":["Hop side by side; say the first sound together before you move.","Do 4 more the same way: mitten, salad, ambulance, tooth."]},{"say":["Your turn alone. I say a word; you hop, touch the card, say its sound.","Monkey. Sandcastle. Astronaut. Toothbrush. Milk. Seal. Ant. Ten.","Party finish! Color your award and say /a/, /m/, /s/, /t/ as you go."],"do":["Say the 8 words in mixed order; the child moves alone; cheer each right hop.","The child colors a m s t on the award; write the name together."]}],"stuck":["Wrong card: 'My turn. Mmmonkey, /m/. I hop to m. Our turn.' Then 'Your turn: monkey.'","Letter name instead: 'That's its name. What sound does it make?' Model it, then retry."],"film":null,"letters":[],"sound":null},{"name":"Reading Together: Happy, Happy Home","short":"Reading Together","sub":"Happy, Happy Home","minutes":7,"kind":"reading together","goal":"Follow print left to right and top to bottom, one tap per word, and find known letters in a real book.","friend":"unicorn","friendName":"Comet","color":"purple","steps":[{"say":["I start at the top, on the left. Watch my finger.","One word, one tap. Spaces show where a word ends.","At the end of a line, I sweep back to the next line."],"do":["Read 2 pages aloud, tapping under each word.","Make a big, slow sweep back at the end of each line."]},{"say":["Put your finger on mine. We tap each word together.","The cover says Happy, Happy Home. Three words, three taps.","Where do we start on this page? Show me."],"do":["The child's finger rides on yours; read 3 pages, tapping together.","Count the words on one line with taps."]},{"say":["Your turn. I read; you tap under each word.","Find a letter we know: a, m, s or t. Tell me its name.","Spoken words are written with letters. You found one!"],"do":["Read 3 more pages slowly; the child taps alone under each word.","On the last page, the child points to one known letter and names it."]}],"stuck":["Taps run ahead: 'My turn.' Reread the line, one tap per word. 'Our turn. Your turn.'","Starts on the right: 'Words start on the left.' Place their finger on the first word."],"film":null,"letters":[],"sound":null},{"name":"Handwriting: My Name with a Capital","short":"Handwriting","sub":"My Name with a Capital","minutes":10,"kind":"handwriting","goal":"Write my first name with a capital first letter, then small letters; form A M S T, each from its starting point.","friend":"chick","friendName":"Pip","color":"green","steps":[{"say":["A name starts with a capital. A: Start at the top line. Slant down left.","Back to the top, slant down right. Slide right across the middle.","S: Start just below the top line. Curve back, then curve forward, like a snake."],"do":["Write the child's first name in highlighter on rows 1 and 2, capital first.","On row 3, write A and S big, saying each path aloud."]},{"say":["Trace your name with me. Pinch and flip. M: Start at the top line. Pull down.","Back to the top: slant down, slant up, pull down.","T: Start at the top line. Pull straight down. Back to the top: slide right across."],"do":["The child traces the row 1 name with you, saying each letter name.","Trace M and T on row 3 together, saying each path as the pencil moves."]},{"say":["Your turn. Trace your name, then write it. Capital first, then small letters.","Now A, M, S, T from the green dot. Say each path quietly.","Point to your best capital. Tell me why it is your best."],"do":["The child writes the name on row 2, then traces and writes A M S T alone.","Check: capital starts at the top line, the rest are small, pinch and flip grip."]}],"stuck":["Starts at the bottom: 'My turn, from the top line.' Trace together: 'Our turn.' Then 'Your turn.'","All capitals: point to letter 2. 'Only the first letter is big.' Write it small together."],"film":null,"letters":[{"l":"a","path":"Start just below the middle line. Circle back all the way around. Push up to the middle line and pull straight down.","svg":"\u003csvg viewBox=\"-40 -30 200 260\" role=\"img\" aria-label=\"small a\">\u003cpath d=\"M-40,0 H160 M-40,200 H160\" stroke=\"#4a90d9\" stroke-width=\"5\" fill=\"none\" opacity=\".55\"/>\u003cpath d=\"M-40,100 H160\" stroke=\"#e0527a\" stroke-width=\"5\" stroke-dasharray=\"18 13\" fill=\"none\" opacity=\".6\"/>\u003cpath d=\"M95.4,114.6 A50,50 0 0,0 24.6,185.4 A50,50 0 0,0 95.4,114.6\" fill=\"none\" stroke=\"#1f2a44\" stroke-width=\"46\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\u003cpath d=\"M110,100 L110,200\" fill=\"none\" stroke=\"#1f2a44\" stroke-width=\"46\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\u003cpath d=\"M95.4,114.6 A50,50 0 0,0 24.6,185.4 A50,50 0 0,0 95.4,114.6\" fill=\"none\" stroke=\"#2f9e63\" stroke-width=\"34\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\u003cpath d=\"M110,100 L110,200\" fill=\"none\" stroke=\"#2f9e63\" stroke-width=\"34\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\u003c/svg>"}],"sound":null}],"check":{"items":["Give the Friday Check: Week 2 (at home before the letter drill; in class never straight after it): point to a m s t A M S T and ask, 'What sound?'","Say 'soup' and ask, 'What is the first sound?' (/s/), then do the same with 'mud' (/m/).","Tick each right answer and write the total out of 10: about 2 minutes per child, plus about 1 minute to record."],"got_it":"9 or 10: on Tuesday start blending am and at on pace; for a challenge, find first sounds in friends' names.","nearly":"7 or 8: anything not ticked goes in Tuesday's 3-minute letter drill, plus 3 extra minutes daily with index cards you write by hand for just those letters.","not_yet":"0 to 6: anything not ticked goes in Tuesday's 3-minute letter drill, plus 5 extra minutes daily (small group in class; at home, just you and your child), 2 letters at a time."},"sheets":[{"slug":"friday-check-week-2","pdf":"day-10/10-1-friday-check-week-2-color.pdf","bw":"day-10/10-1-friday-check-week-2-bw.pdf","img":"day-10/10-1-friday-check-week-2.webp","name":"Friday Check: Week 2","used":true},{"slug":"handwriting-day-10","pdf":"day-10/10-2-handwriting-day-10-color.pdf","bw":"day-10/10-2-handwriting-day-10-bw.pdf","img":"day-10/10-2-handwriting-day-10.webp","name":"Handwriting: My Name with a Capital","used":true},{"slug":"award-super-sounds","pdf":"day-10/10-3-award-super-sounds-color.pdf","bw":"day-10/10-3-award-super-sounds-bw.pdf","img":"day-10/10-3-award-super-sounds.webp","name":"Super Sounds! award","used":true},{"slug":"roll-and-cover-amst-2","pdf":"day-10/10-4-roll-and-cover-amst-2-color.pdf","bw":"day-10/10-4-roll-and-cover-amst-2-bw.pdf","img":"day-10/10-4-roll-and-cover-amst-2.webp","name":"Roll and cover a m s t 2 (extra)","used":false}],"films":{},"packet":{"color":"../worksheets/kindergarten-reading-day-10-worksheets-color.pdf","bw":"../worksheets/kindergarten-reading-day-10-worksheets-bw.pdf"}};
 const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -760,7 +771,7 @@ function showHint() {
 }
 
 /* ---------- auto-play (?play=1): a hands-free tour for a screen recording ---------- */
-const PLAY_STEP = 3000;
+const PLAY_STEP = 6500;
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 // events for the recorder: it lays the approved sound clip and the music under the film at these moments
 window.__ev = [];
@@ -773,26 +784,43 @@ async function soundCue(l) {
   b.classList.remove('on'); setTimeout(() => b.remove(), 500);
 }
 async function tap(el) { if (!el) return; el.classList.remove('press'); void el.offsetWidth; el.classList.add('press'); await sleep(260); el.click(); }
+// the narrator (window.__NARR, set by the recorder: {key: {text, sec}}): say() logs the line for the recorder, shows it as
+// captions a few words at a time in their own strip, and waits for it; without narration the old fixed pace is used
+const NARR = window.__NARR || {};
+const chunks = (t) => { const parts = t.match(/[^,.!?]+[,.!?]*/g).map((x) => x.trim()).filter(Boolean), out = [];
+  for (const p of parts) { const w = p.split(' '); if (w.length <= 7) out.push(p); else { const h = Math.ceil(w.length / 2); out.push(w.slice(0, h).join(' '), w.slice(h).join(' ')); } } return out; };
+async function say(key, min = 0) {
+  const b = NARR[key]; const t0 = Date.now();
+  if (b) { ev('voice', key); const cs = chunks(b.text), tot = cs.reduce((a, c) => a + c.length, 0), cc = $('#cc');
+    for (const c of cs) { cc.textContent = c; ev('cap', c); await sleep(b.sec * 1000 * c.length / tot); }
+    ev('capend'); cc.textContent = ''; await sleep(250); }
+  const left = min - (Date.now() - t0); if (left > 0) await sleep(left);
+}
 async function autoplay() {
   try { localStorage.clear(); } catch (e) {}
+  const cc = document.createElement('div'); cc.className = 'cc'; cc.innerHTML = '<span id="cc"></span>'; document.body.appendChild(cc);
   S = { screen: 'start', part: 0, step: 0 }; render('u'); progress();
-  ev('start');
-  await sleep(1300);
-  for (const box of document.querySelectorAll('.need input')) { box.checked = true; box.dispatchEvent(new Event('change')); await sleep(330); }
-  await sleep(700); await tap($('#nextBtn'));
+  ev('start'); await sleep(1700); $('#logo').classList.add('off'); await sleep(600);
+  await say('intro0', 1200);
+  const ticking = (async () => { for (const box of document.querySelectorAll('.need input')) { await sleep(330); box.checked = true; box.dispatchEvent(new Event('change')); } })();
+  await say('intro1', 1800); await ticking; await sleep(300);
+  await tap($('#nextBtn'));
+  const whatPart = Math.max(0, D.parts.findIndex((p) => p.kind === 'new skill')), stuckPart = Math.min(3, D.parts.length - 1);
   for (let p = 0; p < D.parts.length; p++) {
-    await sleep(500); startTimer();
+    await sleep(350); startTimer();
     for (let s = 0; s < 3; s++) {
-      if (D.parts[p].sound && s < 2) { await sleep(700); await soundCue(D.parts[p].sound); await sleep(PLAY_STEP - 500 * (s === 0) - 700 + 400); }
-      else await sleep(PLAY_STEP - 500 * (s === 0));
-      if (p === 2 && s === 0) { await tap($('.slide.cur [data-what]')); await sleep(2300); closeSheet(); await sleep(500); }
-      if (p === 3 && s === 2) { await tap($('#stuckBtn')); await sleep(2300); closeSheet(); await sleep(500); }
+      await say(`p${p}s${s}`, 2200);
+      if (D.parts[p].sound && s < 2) { await say(`p${p}snd${s}`); await soundCue(D.parts[p].sound); await sleep(300); }
+      if (p === whatPart && s === 0) { await tap($('.slide.cur [data-what]')); await say('what', 2300); closeSheet(); await sleep(500); }
+      if (p === stuckPart && s === 2) { await tap($('#stuckBtn')); await say('stuck', 2300); closeSheet(); await sleep(500); }
       await tap($('#nextBtn'));
     }
   }
-  await sleep(1200);
-  for (const it of document.querySelectorAll('.item')) { await tap(it); await sleep(450); }
-  await sleep(2400); await tap($('#nextBtn'));
+  await sleep(900);
+  const checking = (async () => { await sleep(1200); for (const it of document.querySelectorAll('.item')) { await tap(it); await sleep(500); } })();
+  await say('check0', 2000); await checking; await sleep(1200);
+  await tap($('#nextBtn'));
+  await sleep(600); await say('end', 2500); await sleep(800);
   ev('end');
 }
 

@@ -303,6 +303,16 @@ body{background:linear-gradient(160deg,#f6f3ff 0%,#fdf8f3 48%,#edf5ff 100%) fixe
 .press{animation:press .32s var(--ease)}
 @keyframes press{40%{transform:scale(.93);filter:brightness(1.08)}}
 body.play{cursor:none}
+body.play #app{height:calc(100dvh - 84px)}
+body.play .card.tip{display:none}
+.cc{position:fixed;left:0;right:0;bottom:0;height:84px;display:flex;align-items:center;justify-content:center;background:rgba(22,36,92,.88);z-index:50}
+.cc span{color:#fff;font-family:var(--font);font-weight:700;font-size:32px}
+#logo{position:fixed;inset:0;z-index:60;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:linear-gradient(160deg,#f6f3ff,#fdf8f3 48%,#edf5ff);transition:opacity .6s var(--ease)}
+#logo[hidden]{display:none}
+body.play #logo[hidden]{display:flex}
+#logo i{width:150px;height:150px;border-radius:34px;background:#ffe066;display:grid;place-items:center;color:#e0527a;font-style:normal;font-size:104px;font-weight:800;font-family:"Trebuchet MS",Arial,sans-serif;box-shadow:0 30px 60px -24px rgba(224,82,122,.45)}
+#logo b{font-family:var(--font);font-size:64px}
+#logo.off{opacity:0;pointer-events:none}
 body.play *{cursor:none!important}
 
 /* laptop / tablet */
@@ -360,6 +370,7 @@ body.play *{cursor:none!important}
 <aside class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetH"></aside>
 <div class="modal" id="modal" role="dialog" aria-modal="true"><button class="x" id="modalX" aria-label="Close">&times;</button><div class="mbox" id="mbox"></div></div>
 <canvas id="confetti"></canvas>
+<div id="logo" hidden><i>S</i><b><span style="color:#e0527a">S</span><span style="color:#ef8a2b">o</span><span style="color:#f6b20c">u</span><span style="color:#2f9e63">n</span><span style="color:#2f80d0">d</span> <span style="color:#8a5cd0">I</span><span style="color:#e0527a">t</span> <span style="color:#ef8a2b">O</span><span style="color:#f6b20c">u</span><span style="color:#2f9e63">t</span></b></div>
 <script>
 const D = {"day":7,"title":"Day 7: Start-of-Year Check 2: Letter Sounds and First Sounds","fullTitle":"Start-of-Year Check 2: Letter Sounds and First Sounds","target":null,"goal":"I show the letter sounds I know, and I listen for the first sound in a word.","tip":"In class, give both checks one child at a time across the day, 5 to 8 minutes each, while others reuse the trace pages, find-the-letter pages and Roll and Cover from days 1-5; at home it is one sitting of about 20 minutes. Never teach or correct during a check, and praise effort, not answers.","materials":[{"text":"Print: Sound Check: First Sound","sheets":["sound-check-first-sound"],"kit":null},{"text":"Print: Class Tracker","sheets":["class-tracker"],"kit":null},{"text":"Print: How to Read the Check","sheets":["how-to-read-the-check"],"kit":null},{"text":"Small-letter card and record sheet from day 6 (reuse, do not reprint)","sheets":[],"kit":null},{"text":"Pencil and a picture book","sheets":[],"kit":null}],"parts":[{"name":"Warm-up: Jump or Sit","short":"Warm-up","sub":"Jump or Sit","minutes":5,"kind":"sound games","goal":"Relax and wake up the ears with an unscored rhyme game. No letters and no letter drill today.","friend":"dolphin","friendName":"Splash","color":"sky","steps":[{"say":["Let's wake up our ears. This is just for fun.","Mat, sat. Same end. They rhyme, so I jump!","Top, sun. Different ends. No rhyme, so I sit."],"do":["Stand facing the child. Jump on a rhyme pair. Sit down on a no-rhyme pair.","Say each word slowly and lean on the end a little: maaat, saaat."]},{"say":["Jump with me if they rhyme. Sam, ham.","Sit with me if they don't. Map, sock.","Am, jam. Jump or sit?"],"do":["Jump or sit together on each pair.","Smile and keep it quick. Nothing is written down in this part."]},{"say":["Your turn alone. Mat, hat.","Map, sun.","Top, mop."],"do":["The child jumps or sits alone. Praise effort: \"Great listening!\"","After 3 pairs, sit side by side at the table for the check."]}],"stuck":["Say: \"My turn: mat, hat. Same end. Jump! Our turn: jump. Your turn: mat, hat.\"","Keep it light. No notes and no marks."],"film":null,"letters":[],"sound":null},{"name":"Letter-Sound Check","short":"Letter-Sound Check","sub":"","minutes":15,"kind":"check","goal":"Find out which of the 26 small-letter sounds the child knows, without teaching. Score out of 26. In class: one child at a time, 5 to 8 minutes each, spread across the day; the others work on pages from days 1 to 5.","friend":"turtle","friendName":"Tilly","color":"sky","steps":[{"say":["I point to a letter. You tell me the sound it makes, like /sh/.","/sh/, the baby is sleeping. Not the letter name, just /sh/.","Some you know, some you will learn soon. That is just fine."],"do":["Sit side by side. Day 6 small-letter card faces the child; record sheet on your lap.","Explain with /sh/ only. Do not point to or say any letter on the card."]},{"say":["Make a train sound with me: /ch/ /ch/ /ch/.","Tell me the sound, like /ch/. You can say \"pass\" any time.","Ready? Here is the first one."],"do":["Make the train sound together, arms chugging, then sit still and ready.","Put your pointer finger under the first letter on the card."]},{"say":["What sound does this letter make?","Thank you. Next one.","You worked so hard. High five!"],"do":["Point to each letter in card order. Wait 3 seconds. Tick each right sound.","c: /k/ or /s/. g: /g/ or /j/. Vowels: count the short sound (/a/ as in apple)."]}],"stuck":["Letter name instead (ay)? Say once: \"That is its name. What sound does it make?\" Wrong or no answer: no tick, no correction, \"Thanks, next one.\"","Count stop sounds like /b/ or /d/ even with a small \"uh\": they are hard to say alone."],"film":null,"letters":[],"sound":null},{"name":"First-Sound Check","short":"First-Sound Check","sub":"","minutes":10,"kind":"check","goal":"Find out if the child can hear and say the first sound in a spoken word. Score out of 5.","friend":"turtle","friendName":"Tilly","color":"sky","steps":[{"say":["Now a listening game. I say a word, you tell me its first sound.","Listen: van. /v/ /v/ van. The first sound in van is /v/."],"do":["Hold the Sound Check: First Sound sheet so only you see it. The child sees no letters.","Hold the /v/ a little: vvv. No \"uh\" after it."]},{"say":["Say key together. What is the first sound? /k/.","Yes, /k/."],"do":["Say key together, then the sound together. Practice words are never scored.","Still unsure? Model key once more, then start the scored words."]},{"say":["Your turn alone. Pizza. What is the first sound?","Next word: nose. What is the first sound?","All done! Super listening ears."],"do":["Then ask the same way for leg, web and gate. Say each word at most twice.","Tick right sounds: /p/, /n/, /l/, /w/, /g/. Write the total out of 5."]}],"stuck":["Letter name instead? Ask once: \"What sound?\" Count /g/ even with a small \"uh\".","Wrong or no answer: no tick, no teaching. Say \"Thanks!\" and give the next word."],"film":null,"letters":[],"sound":null},{"name":"Story Time: Where Do I Read?","short":"Story Time","sub":"Where Do I Read?","minutes":10,"kind":"reading together","goal":"Enjoy a thank-you story and show that we read left to right, top to bottom.","friend":"unicorn","friendName":"Comet","color":"purple","steps":[{"say":["You worked so hard. You pick the book, I read!","I read left to right. At the end of a line, I sweep back and down."],"do":["Child picks any picture book. Run your finger under each line as you read.","At each line's end, sweep your finger back to the left, one line down."]},{"say":["Put your finger on mine. Let's sweep together.","Where do I start on this page?"],"do":["Read two pages with both fingers moving under the words.","Pause at the top of a new page and let the child point to the start."]},{"say":["Show me where I start reading.","Show me where I go after this line.","Which page do I read next: this one or that one?"],"do":["The child points; you read on. Do this on 3 or 4 pages, not every page.","In class, read to the whole group and invite 2 or 3 children up to point."]}],"stuck":["Say: \"My turn: I start here, top left. Our turn: point with me. Your turn: show me.\"","At a line's end: \"My turn: back and down. Our turn. Your turn.\""],"film":null,"letters":[],"sound":null},{"name":"Record and Plan","short":"Record and Plan","sub":"","minutes":10,"kind":"check","goal":"Put both days' totals on the Class Tracker and choose each child's help with one band table.","friend":"turtle","friendName":"Tilly","color":"sky","steps":[{"say":["Thank you for working so hard today. I'm writing a note to help me teach."],"do":["Copy totals to the Class Tracker: Capitals, Small, Sounds, Rhyme, Syllables, First sound.","Find each total's band on How to Read the Check: Got it, Nearly or Not yet."]},{"say":["Tell me your favorite part of today while I write."],"do":["Let the child chat or look at the book while you work.","Use the band of the lowest part to choose the help. Write it in the Group column."]},{"say":["Tomorrow we play a new listening game. See you then!"],"do":["Follow the Got it / Nearly / Not yet boxes below to choose each child's help.","In class, sort the tracker into three groups by band before tomorrow's lesson."]}],"stuck":["A total looks odd (tired, upset, shy)? Recheck just that part on another day, kindly and briefly.","Never share scores in front of the child; praise effort only."],"film":null,"letters":[],"sound":null}],"check":{"items":["Letter sounds: the child says the sound of each small letter on the day 6 card, out of 26 (Got it 18 to 26, Nearly 8 to 17, Not yet 0 to 7).","First sound: pizza, nose, leg, web, gate after practice with van and key, out of 5 (Got it 4 or 5, Nearly 2 or 3, Not yet 0 or 1).","Copy all six totals from days 6 and 7 onto the Class Tracker and use the band of the lowest part to choose the help."],"got_it":"Lowest part in Got it: Keeps pace with the daily lessons. On review days, give a challenge: read am and at early, or find the first sound in friends’ names.","nearly":"Lowest part in Nearly: Daily lessons plus 3 extra minutes with index cards (on a ring) of only the letters and sounds the child missed: say each one, then its key picture.","not_yet":"Lowest part in Not yet: Daily lessons plus 5 extra minutes (in class a small group; at home just you and your child): 2 or 3 letters at a time, name, sound and key picture, with sound games. Check again in 4 weeks."},"sheets":[{"slug":"sound-check-first-sound","pdf":"day-07/07-1-sound-check-first-sound-color.pdf","bw":"day-07/07-1-sound-check-first-sound-bw.pdf","img":"day-07/07-1-sound-check-first-sound.webp","name":"Sound Check: First Sound","used":true},{"slug":"class-tracker","pdf":"day-07/07-2-class-tracker-color.pdf","bw":"day-07/07-2-class-tracker-bw.pdf","img":"day-07/07-2-class-tracker.webp","name":"Class Tracker","used":true},{"slug":"how-to-read-the-check","pdf":"day-07/07-3-how-to-read-the-check-color.pdf","bw":"day-07/07-3-how-to-read-the-check-bw.pdf","img":"day-07/07-3-how-to-read-the-check.webp","name":"How to Read the Check","used":true}],"films":{},"packet":{"color":"../worksheets/kindergarten-reading-day-07-worksheets-color.pdf","bw":"../worksheets/kindergarten-reading-day-07-worksheets-bw.pdf"}};
 const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -760,7 +771,7 @@ function showHint() {
 }
 
 /* ---------- auto-play (?play=1): a hands-free tour for a screen recording ---------- */
-const PLAY_STEP = 3000;
+const PLAY_STEP = 6500;
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 // events for the recorder: it lays the approved sound clip and the music under the film at these moments
 window.__ev = [];
@@ -773,26 +784,43 @@ async function soundCue(l) {
   b.classList.remove('on'); setTimeout(() => b.remove(), 500);
 }
 async function tap(el) { if (!el) return; el.classList.remove('press'); void el.offsetWidth; el.classList.add('press'); await sleep(260); el.click(); }
+// the narrator (window.__NARR, set by the recorder: {key: {text, sec}}): say() logs the line for the recorder, shows it as
+// captions a few words at a time in their own strip, and waits for it; without narration the old fixed pace is used
+const NARR = window.__NARR || {};
+const chunks = (t) => { const parts = t.match(/[^,.!?]+[,.!?]*/g).map((x) => x.trim()).filter(Boolean), out = [];
+  for (const p of parts) { const w = p.split(' '); if (w.length <= 7) out.push(p); else { const h = Math.ceil(w.length / 2); out.push(w.slice(0, h).join(' '), w.slice(h).join(' ')); } } return out; };
+async function say(key, min = 0) {
+  const b = NARR[key]; const t0 = Date.now();
+  if (b) { ev('voice', key); const cs = chunks(b.text), tot = cs.reduce((a, c) => a + c.length, 0), cc = $('#cc');
+    for (const c of cs) { cc.textContent = c; ev('cap', c); await sleep(b.sec * 1000 * c.length / tot); }
+    ev('capend'); cc.textContent = ''; await sleep(250); }
+  const left = min - (Date.now() - t0); if (left > 0) await sleep(left);
+}
 async function autoplay() {
   try { localStorage.clear(); } catch (e) {}
+  const cc = document.createElement('div'); cc.className = 'cc'; cc.innerHTML = '<span id="cc"></span>'; document.body.appendChild(cc);
   S = { screen: 'start', part: 0, step: 0 }; render('u'); progress();
-  ev('start');
-  await sleep(1300);
-  for (const box of document.querySelectorAll('.need input')) { box.checked = true; box.dispatchEvent(new Event('change')); await sleep(330); }
-  await sleep(700); await tap($('#nextBtn'));
+  ev('start'); await sleep(1700); $('#logo').classList.add('off'); await sleep(600);
+  await say('intro0', 1200);
+  const ticking = (async () => { for (const box of document.querySelectorAll('.need input')) { await sleep(330); box.checked = true; box.dispatchEvent(new Event('change')); } })();
+  await say('intro1', 1800); await ticking; await sleep(300);
+  await tap($('#nextBtn'));
+  const whatPart = Math.max(0, D.parts.findIndex((p) => p.kind === 'new skill')), stuckPart = Math.min(3, D.parts.length - 1);
   for (let p = 0; p < D.parts.length; p++) {
-    await sleep(500); startTimer();
+    await sleep(350); startTimer();
     for (let s = 0; s < 3; s++) {
-      if (D.parts[p].sound && s < 2) { await sleep(700); await soundCue(D.parts[p].sound); await sleep(PLAY_STEP - 500 * (s === 0) - 700 + 400); }
-      else await sleep(PLAY_STEP - 500 * (s === 0));
-      if (p === 2 && s === 0) { await tap($('.slide.cur [data-what]')); await sleep(2300); closeSheet(); await sleep(500); }
-      if (p === 3 && s === 2) { await tap($('#stuckBtn')); await sleep(2300); closeSheet(); await sleep(500); }
+      await say(`p${p}s${s}`, 2200);
+      if (D.parts[p].sound && s < 2) { await say(`p${p}snd${s}`); await soundCue(D.parts[p].sound); await sleep(300); }
+      if (p === whatPart && s === 0) { await tap($('.slide.cur [data-what]')); await say('what', 2300); closeSheet(); await sleep(500); }
+      if (p === stuckPart && s === 2) { await tap($('#stuckBtn')); await say('stuck', 2300); closeSheet(); await sleep(500); }
       await tap($('#nextBtn'));
     }
   }
-  await sleep(1200);
-  for (const it of document.querySelectorAll('.item')) { await tap(it); await sleep(450); }
-  await sleep(2400); await tap($('#nextBtn'));
+  await sleep(900);
+  const checking = (async () => { await sleep(1200); for (const it of document.querySelectorAll('.item')) { await tap(it); await sleep(500); } })();
+  await say('check0', 2000); await checking; await sleep(1200);
+  await tap($('#nextBtn'));
+  await sleep(600); await say('end', 2500); await sleep(800);
   ev('end');
 }
 

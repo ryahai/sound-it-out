@@ -303,6 +303,16 @@ body{background:linear-gradient(160deg,#f6f3ff 0%,#fdf8f3 48%,#edf5ff 100%) fixe
 .press{animation:press .32s var(--ease)}
 @keyframes press{40%{transform:scale(.93);filter:brightness(1.08)}}
 body.play{cursor:none}
+body.play #app{height:calc(100dvh - 84px)}
+body.play .card.tip{display:none}
+.cc{position:fixed;left:0;right:0;bottom:0;height:84px;display:flex;align-items:center;justify-content:center;background:rgba(22,36,92,.88);z-index:50}
+.cc span{color:#fff;font-family:var(--font);font-weight:700;font-size:32px}
+#logo{position:fixed;inset:0;z-index:60;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:linear-gradient(160deg,#f6f3ff,#fdf8f3 48%,#edf5ff);transition:opacity .6s var(--ease)}
+#logo[hidden]{display:none}
+body.play #logo[hidden]{display:flex}
+#logo i{width:150px;height:150px;border-radius:34px;background:#ffe066;display:grid;place-items:center;color:#e0527a;font-style:normal;font-size:104px;font-weight:800;font-family:"Trebuchet MS",Arial,sans-serif;box-shadow:0 30px 60px -24px rgba(224,82,122,.45)}
+#logo b{font-family:var(--font);font-size:64px}
+#logo.off{opacity:0;pointer-events:none}
 body.play *{cursor:none!important}
 
 /* laptop / tablet */
@@ -360,6 +370,7 @@ body.play *{cursor:none!important}
 <aside class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetH"></aside>
 <div class="modal" id="modal" role="dialog" aria-modal="true"><button class="x" id="modalX" aria-label="Close">&times;</button><div class="mbox" id="mbox"></div></div>
 <canvas id="confetti"></canvas>
+<div id="logo" hidden><i>S</i><b><span style="color:#e0527a">S</span><span style="color:#ef8a2b">o</span><span style="color:#f6b20c">u</span><span style="color:#2f9e63">n</span><span style="color:#2f80d0">d</span> <span style="color:#8a5cd0">I</span><span style="color:#e0527a">t</span> <span style="color:#ef8a2b">O</span><span style="color:#f6b20c">u</span><span style="color:#2f9e63">t</span></b></div>
 <script>
 const D = {"day":5,"title":"Day 5: a m s t Review","fullTitle":"a m s t Review: Roll and Cover","target":null,"goal":"I can say the sounds for a, m, s and t and find pictures that start with them.","tip":"Give the Friday Check before the letter drill (in class, one child at a time, never straight after the drill), and only tick during it; any sound not ticked goes first in Wednesday's letter drill. Keep the kit letter cards in an envelope; you will use them for all 3 weeks.","materials":[{"text":"Print: Roll and Cover: a m s t","sheets":["roll-and-cover-amst"],"kit":null},{"text":"Print: Friday Check: Week 1","sheets":["friday-check-week-1"],"kit":null},{"text":"Print: Handwriting: t and My Name, day 5","sheets":["handwriting-day-05"],"kit":null},{"text":"From the kit: a m s t letter cards, T t trace page; Hello, School! from day 1","sheets":[],"kit":"../worksheets/kindergarten-reading-kit-print-once-color.pdf"},{"text":"One die, 16 counters in 2 colors (coins or cereal), pencil, highlighter","sheets":[],"kit":null}],"parts":[{"name":"Sound games: words in a sentence","short":"Sound games","sub":"words in a sentence","minutes":10,"kind":"sound games","goal":"Hear that a spoken sentence is made of separate words, and count them.","friend":"dolphin","friendName":"Splash","color":"sky","steps":[{"say":["Listen. Sam sat. Sam... sat. One finger for each word.","Two words! Now: Sam sat on a mat.","Sam, sat, on, a, mat. Five fingers. Five words!"],"do":["Say each sentence at normal speed, then slowly, lifting one finger per word.","Ears only: no letters, no paper."]},{"say":["Our turn. Stand up. One step for each word.","I see the sun. I, see, the, sun. Four steps!","Mom has a map. Step it with me. How many?"],"do":["Step forward together, saying each word as you step; count the steps aloud.","Keep sentences short: 2 to 5 words."]},{"say":["Your turn. Step each word, then tell me how many.","Sam ate an apple. Six seals swim. The sun is hot."],"do":["Answers: 4, 3, 4. Apple is one word, even with two claps.","Time left? The child makes up a sentence; you step it together."]}],"stuck":["Two steps for apple: 'Apple is one word. My turn... Our turn... Your turn.'","Steps drift from words: step it slowly (My turn), hold hands (Our turn), then Your turn."],"film":null,"letters":[],"sound":null},{"name":"Letter drill: a m s t","short":"Letter drill","sub":"a m s t","minutes":3,"kind":"letter drill","goal":"Say the name, sound and key picture for a, m, s and t, small and capital, quickly.","friend":"owl","friendName":"Hoot","color":"orange","steps":[{"say":["Watch me. a, /a/, apple. m, /m/, map.","s, /s/, sun. t, /t/, top.","/t/ is quick and quiet. No 'uh'."],"do":["Hold up the small letter cards first, then the capital cards: name, sound, key picture.","Hold /m/ like a hum and /s/ like a hiss; whisper /t/ once."]},{"say":["Say it with me: name, sound, picture.","Now the capital cards. A, /a/, apple."],"do":["Say all three together for a m s t, then repeat with the capital cards.","Keep a brisk beat, about 5 seconds a card."]},{"say":["Your turn. I'll mix them up. Name, sound, picture."],"do":["Shuffle and show all 8 cards in a new order; the child answers alone.","A card the child stalls on goes back in the pile twice more."]}],"stuck":["'tuh' or 'muh': 'My turn: /t/, quick, no tail. Our turn: /t/. Your turn.'","Wrong name or sound: 'This is m. It says /m/, like map. Say it with me... Your turn.'"],"film":null,"letters":[],"sound":null},{"name":"Review game: Roll and Cover","short":"Review game","sub":"Roll and Cover","minutes":20,"kind":"new skill","goal":"Roll, say the letter's sound, and cover a picture that starts with that sound.","friend":"fox","friendName":"Rusty","color":"pink","steps":[{"say":["Watch me. I rolled 3. Three is s. s says /s/.","Sun: /s/... sun. Sun starts with /s/. I cover the sun.","Roll 6? Roll again. Roll 5? I pick any letter."],"do":["Point to the dice key on Roll and Cover, then the sun; put a counter on it.","Stretch the first sound as you check a picture: /m/... oon, moon."]},{"say":["Our turn. You roll. Two is m. What sound?","/m/. Which picture starts with /m/? Moon? Map? Mouse? Mop?","Say it with me: /m/... map. Cover it!"],"do":["Take 2 or 3 shared turns: roll, say the sound, say the picture, cover.","If a letter's four pictures are all covered, that roll is a free turn."]},{"say":["Your turn. Roll, say the sound, say the picture, cover it.","We take turns until every picture is covered."],"do":["Take turns, each with one counter color; say your own sound and picture aloud as a model.","When all 16 are covered, count who covered more; play again if time is left."]}],"stuck":["Wrong picture (tent for /s/): 'Listen: /t/... ent. Tent starts with /t/. Find one with /s/.'","Says the letter name: 'That's its name. My turn: /s/. Our turn: /s/. Your turn.'"],"film":null,"letters":[],"sound":null},{"name":"Reading together: Hello, School!","short":"Reading together","sub":"Hello, School!","minutes":7,"kind":"reading together","goal":"Start at the top left, go left to right and top to bottom, and point to each word as the grown-up reads.","friend":"unicorn","friendName":"Comet","color":"purple","steps":[{"say":["Watch my finger. I start here, at the top, on the left.","One tap for each word I read. Then back and down.","Hello, School! Two words. See the space between them?"],"do":["Tap under 'Hello', then 'School' on the cover; read 2 pages, tapping each word.","At each line's end, sweep your finger back to the left and down."]},{"say":["Put your finger on mine. We tap each word together.","End of the line. Where do we go? Back and down!"],"do":["Read 3 more pages; the child's finger rides on yours, one tap per word.","At each page turn, ask 'Which page comes next?' The child turns it."]},{"say":["Your turn to be the pointer. Show me where to start.","I'll read. You tap one word each time I say one.","Can you find a letter you know: a, m, s or t?"],"do":["Read the last pages slowly as the child points alone; pause if taps and voice drift.","The child points to one a, m, s or t and says its name."]}],"stuck":["Starts on the right: 'My turn: top, left, here.' Guide their finger, then they try alone.","Taps run ahead: 'One tap, one word. Our turn' (hand over hand), then reread the line."],"film":null,"letters":[],"sound":null},{"name":"Handwriting: t, T and my name","short":"Handwriting","sub":"t, T and my name","minutes":10,"kind":"handwriting","goal":"Form small t and capital T from the top, and write my first name with a capital first.","friend":"chick","friendName":"Pip","color":"green","steps":[{"say":["Pinch and flip. Sit tall. Watch me write small t, then capital T.","Start near the top line. Pull straight down. Cross at the middle line: slide right.","Start at the top line. Pull straight down. Back to the top: slide right across."],"do":["Air-write both big, then write one of each on the kit T t trace page.","Start small t near the top line; say each path as you write."]},{"say":["Write it in the air with me, big. Say the path.","Start near the top line. Pull straight down. Cross at the middle line: slide right.","Now we trace the first t and T together."],"do":["Hand over hand, trace the first t and T on today's handwriting page, saying each path.","Air-write capital T together too, saying its path from the trace page."]},{"say":["Your turn. Trace 3, then write one alone from the green dot.","Say the path while you write.","Last row: trace your name, then write it. Capital first."],"do":["Before the name row, write the child's first name in highlighter, capital first.","Praise one exact thing: 'Your t started at the top.'"]}],"stuck":["Starts at the bottom: 'Tops first. My turn' (write, saying the path), 'Our turn' (hand over hand), 'Your turn.'","Cross on small t too high or low: point to the middle line: 'The cross sits here.'"],"film":null,"letters":[{"l":"t","path":"Start near the top line. Pull straight down. Cross at the middle line: slide right.","svg":"\u003csvg viewBox=\"-40 -30 162 260\" role=\"img\" aria-label=\"small t\">\u003cpath d=\"M-40,0 H122 M-40,200 H122\" stroke=\"#4a90d9\" stroke-width=\"5\" fill=\"none\" opacity=\".55\"/>\u003cpath d=\"M-40,100 H122\" stroke=\"#e0527a\" stroke-width=\"5\" stroke-dasharray=\"18 13\" fill=\"none\" opacity=\".6\"/>\u003cpath d=\"M42,20 L42,200\" fill=\"none\" stroke=\"#1f2a44\" stroke-width=\"46\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\u003cpath d=\"M8,100 L76,100\" fill=\"none\" stroke=\"#1f2a44\" stroke-width=\"46\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\u003cpath d=\"M42,20 L42,200\" fill=\"none\" stroke=\"#2f9e63\" stroke-width=\"34\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\u003cpath d=\"M8,100 L76,100\" fill=\"none\" stroke=\"#2f9e63\" stroke-width=\"34\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\u003c/svg>"},{"l":"T","path":"Start at the top line. Pull straight down. Back to the top: slide right across.","svg":"\u003csvg viewBox=\"-40 -30 230 260\" role=\"img\" aria-label=\"capital T\">\u003cpath d=\"M-40,0 H190 M-40,200 H190\" stroke=\"#4a90d9\" stroke-width=\"5\" fill=\"none\" opacity=\".55\"/>\u003cpath d=\"M-40,100 H190\" stroke=\"#e0527a\" stroke-width=\"5\" stroke-dasharray=\"18 13\" fill=\"none\" opacity=\".6\"/>\u003cpath d=\"M75,0 L75,200\" fill=\"none\" stroke=\"#1f2a44\" stroke-width=\"46\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\u003cpath d=\"M10,0 L140,0\" fill=\"none\" stroke=\"#1f2a44\" stroke-width=\"46\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\u003cpath d=\"M75,0 L75,200\" fill=\"none\" stroke=\"#2f9e63\" stroke-width=\"34\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\u003cpath d=\"M10,0 L140,0\" fill=\"none\" stroke=\"#2f9e63\" stroke-width=\"34\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\u003c/svg>"}],"sound":null}],"check":{"items":["Give Friday Check: Week 1 at home at the start of the sitting, before the letter drill, and in class one child at a time during the day, never straight after the letter drill.","Point to a, m, s, t, A, M, S, T in a mixed order and ask 'What sound?' for each (about 2 minutes per child).","Then take about 1 minute to record: tick each right sound on the child's row, write the total out of 8, and say only 'Thank you.'"],"got_it":"8: Next week runs as planned: the start-of-year check first, then lesson 6 on Wednesday.","nearly":"6 or 7: Put each sound not ticked first in Wednesday's 3-minute letter drill, with its key picture.","not_yet":"0 to 5: Same as Nearly, plus 3 extra minutes a day from Wednesday on the missed sounds, 2 at a time (in class a small group; at home just you and your child)."},"sheets":[{"slug":"roll-and-cover-amst","pdf":"day-05/05-1-roll-and-cover-amst-color.pdf","bw":"day-05/05-1-roll-and-cover-amst-bw.pdf","img":"day-05/05-1-roll-and-cover-amst.webp","name":"Roll and Cover: a m s t","used":true},{"slug":"friday-check-week-1","pdf":"day-05/05-2-friday-check-week-1-color.pdf","bw":"day-05/05-2-friday-check-week-1-bw.pdf","img":"day-05/05-2-friday-check-week-1.webp","name":"Friday Check: Week 1","used":true},{"slug":"handwriting-day-05","pdf":"day-05/05-3-handwriting-day-05-color.pdf","bw":"day-05/05-3-handwriting-day-05-bw.pdf","img":"day-05/05-3-handwriting-day-05.webp","name":"Handwriting: t and My Name","used":true}],"films":{},"packet":{"color":"../worksheets/kindergarten-reading-day-05-worksheets-color.pdf","bw":"../worksheets/kindergarten-reading-day-05-worksheets-bw.pdf"}};
 const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -760,7 +771,7 @@ function showHint() {
 }
 
 /* ---------- auto-play (?play=1): a hands-free tour for a screen recording ---------- */
-const PLAY_STEP = 3000;
+const PLAY_STEP = 6500;
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 // events for the recorder: it lays the approved sound clip and the music under the film at these moments
 window.__ev = [];
@@ -773,26 +784,43 @@ async function soundCue(l) {
   b.classList.remove('on'); setTimeout(() => b.remove(), 500);
 }
 async function tap(el) { if (!el) return; el.classList.remove('press'); void el.offsetWidth; el.classList.add('press'); await sleep(260); el.click(); }
+// the narrator (window.__NARR, set by the recorder: {key: {text, sec}}): say() logs the line for the recorder, shows it as
+// captions a few words at a time in their own strip, and waits for it; without narration the old fixed pace is used
+const NARR = window.__NARR || {};
+const chunks = (t) => { const parts = t.match(/[^,.!?]+[,.!?]*/g).map((x) => x.trim()).filter(Boolean), out = [];
+  for (const p of parts) { const w = p.split(' '); if (w.length <= 7) out.push(p); else { const h = Math.ceil(w.length / 2); out.push(w.slice(0, h).join(' '), w.slice(h).join(' ')); } } return out; };
+async function say(key, min = 0) {
+  const b = NARR[key]; const t0 = Date.now();
+  if (b) { ev('voice', key); const cs = chunks(b.text), tot = cs.reduce((a, c) => a + c.length, 0), cc = $('#cc');
+    for (const c of cs) { cc.textContent = c; ev('cap', c); await sleep(b.sec * 1000 * c.length / tot); }
+    ev('capend'); cc.textContent = ''; await sleep(250); }
+  const left = min - (Date.now() - t0); if (left > 0) await sleep(left);
+}
 async function autoplay() {
   try { localStorage.clear(); } catch (e) {}
+  const cc = document.createElement('div'); cc.className = 'cc'; cc.innerHTML = '<span id="cc"></span>'; document.body.appendChild(cc);
   S = { screen: 'start', part: 0, step: 0 }; render('u'); progress();
-  ev('start');
-  await sleep(1300);
-  for (const box of document.querySelectorAll('.need input')) { box.checked = true; box.dispatchEvent(new Event('change')); await sleep(330); }
-  await sleep(700); await tap($('#nextBtn'));
+  ev('start'); await sleep(1700); $('#logo').classList.add('off'); await sleep(600);
+  await say('intro0', 1200);
+  const ticking = (async () => { for (const box of document.querySelectorAll('.need input')) { await sleep(330); box.checked = true; box.dispatchEvent(new Event('change')); } })();
+  await say('intro1', 1800); await ticking; await sleep(300);
+  await tap($('#nextBtn'));
+  const whatPart = Math.max(0, D.parts.findIndex((p) => p.kind === 'new skill')), stuckPart = Math.min(3, D.parts.length - 1);
   for (let p = 0; p < D.parts.length; p++) {
-    await sleep(500); startTimer();
+    await sleep(350); startTimer();
     for (let s = 0; s < 3; s++) {
-      if (D.parts[p].sound && s < 2) { await sleep(700); await soundCue(D.parts[p].sound); await sleep(PLAY_STEP - 500 * (s === 0) - 700 + 400); }
-      else await sleep(PLAY_STEP - 500 * (s === 0));
-      if (p === 2 && s === 0) { await tap($('.slide.cur [data-what]')); await sleep(2300); closeSheet(); await sleep(500); }
-      if (p === 3 && s === 2) { await tap($('#stuckBtn')); await sleep(2300); closeSheet(); await sleep(500); }
+      await say(`p${p}s${s}`, 2200);
+      if (D.parts[p].sound && s < 2) { await say(`p${p}snd${s}`); await soundCue(D.parts[p].sound); await sleep(300); }
+      if (p === whatPart && s === 0) { await tap($('.slide.cur [data-what]')); await say('what', 2300); closeSheet(); await sleep(500); }
+      if (p === stuckPart && s === 2) { await tap($('#stuckBtn')); await say('stuck', 2300); closeSheet(); await sleep(500); }
       await tap($('#nextBtn'));
     }
   }
-  await sleep(1200);
-  for (const it of document.querySelectorAll('.item')) { await tap(it); await sleep(450); }
-  await sleep(2400); await tap($('#nextBtn'));
+  await sleep(900);
+  const checking = (async () => { await sleep(1200); for (const it of document.querySelectorAll('.item')) { await tap(it); await sleep(500); } })();
+  await say('check0', 2000); await checking; await sleep(1200);
+  await tap($('#nextBtn'));
+  await sleep(600); await say('end', 2500); await sleep(800);
   ev('end');
 }
 

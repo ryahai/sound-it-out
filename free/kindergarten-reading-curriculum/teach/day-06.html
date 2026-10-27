@@ -303,6 +303,16 @@ body{background:linear-gradient(160deg,#f6f3ff 0%,#fdf8f3 48%,#edf5ff 100%) fixe
 .press{animation:press .32s var(--ease)}
 @keyframes press{40%{transform:scale(.93);filter:brightness(1.08)}}
 body.play{cursor:none}
+body.play #app{height:calc(100dvh - 84px)}
+body.play .card.tip{display:none}
+.cc{position:fixed;left:0;right:0;bottom:0;height:84px;display:flex;align-items:center;justify-content:center;background:rgba(22,36,92,.88);z-index:50}
+.cc span{color:#fff;font-family:var(--font);font-weight:700;font-size:32px}
+#logo{position:fixed;inset:0;z-index:60;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:linear-gradient(160deg,#f6f3ff,#fdf8f3 48%,#edf5ff);transition:opacity .6s var(--ease)}
+#logo[hidden]{display:none}
+body.play #logo[hidden]{display:flex}
+#logo i{width:150px;height:150px;border-radius:34px;background:#ffe066;display:grid;place-items:center;color:#e0527a;font-style:normal;font-size:104px;font-weight:800;font-family:"Trebuchet MS",Arial,sans-serif;box-shadow:0 30px 60px -24px rgba(224,82,122,.45)}
+#logo b{font-family:var(--font);font-size:64px}
+#logo.off{opacity:0;pointer-events:none}
 body.play *{cursor:none!important}
 
 /* laptop / tablet */
@@ -360,6 +370,7 @@ body.play *{cursor:none!important}
 <aside class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetH"></aside>
 <div class="modal" id="modal" role="dialog" aria-modal="true"><button class="x" id="modalX" aria-label="Close">&times;</button><div class="mbox" id="mbox"></div></div>
 <canvas id="confetti"></canvas>
+<div id="logo" hidden><i>S</i><b><span style="color:#e0527a">S</span><span style="color:#ef8a2b">o</span><span style="color:#f6b20c">u</span><span style="color:#2f9e63">n</span><span style="color:#2f80d0">d</span> <span style="color:#8a5cd0">I</span><span style="color:#e0527a">t</span> <span style="color:#ef8a2b">O</span><span style="color:#f6b20c">u</span><span style="color:#2f9e63">t</span></b></div>
 <script>
 const D = {"day":6,"title":"Day 6: Start-of-Year Check 1: Letter Names and Sound Games","fullTitle":"Start-of-Year Check 1: Letter Names and Sound Games","target":null,"goal":"I show what I know: letter names, rhymes, word claps, and my name.","tip":"Never teach or correct during a check; a calm Thanks! after every answer keeps it a game. At home it is one 15-minute sitting; in class, give each child a 5-8 minute slot across the day while the others work on trace, find and Roll and Cover pages from days 1 to 5.","materials":[{"text":"Print: Letter Check: Capitals + Letter Check: Small Letters","sheets":["letter-check-card-capitals","letter-check-card-small"],"kit":null},{"text":"Print: Letter Check Record + Handwriting: My Name (start of year), day 6","sheets":["letter-check-record","my-name-start-of-year"],"kit":null},{"text":"Print: Sound Check: Rhyme + Sound Check: Syllables","sheets":["sound-check-rhyme","sound-check-syllables"],"kit":null},{"text":"Pencil and crayons","sheets":[],"kit":null},{"text":"Any picture book","sheets":[],"kit":null}],"parts":[{"name":"Sound Check: Rhyme and Syllables","short":"Sound Check","sub":"Rhyme and Syllables","minutes":10,"kind":"check","goal":"Find out if the child can hear rhymes and clap word parts. Spoken words only, no letters.","friend":"turtle","friendName":"Tilly","color":"sky","steps":[{"say":["Listen: fan, pan. They sound the same at the end: -an. Thumb up!","Listen: fan, dog. Different endings. No rhyme. Thumb down.","Listen: monkey. Mon-key. I clap 2 times. Monkey has 2 parts."],"do":["One child at a time, side table. Model each practice item with a thumb or claps.","Practice words are never scored."]},{"say":["Now you: fan, pan? Fan, dog? Show me your thumb.","Clap pencil with me: pen-cil. How many claps? 2!"],"do":["The child shows a thumb for each practice pair.","Clap pencil together slowly, then count the claps out loud together."]},{"say":["Rhyme or no rhyme? Cat, hat. Fish, cake. Goat, boat. Sun, bed. King, ring.","Clap the parts and tell me how many: house, rabbit, zebra, butterfly, fox.","Thank you! Your ears worked so hard."],"do":["Say each item once, slowly; repeat at most twice. Tick right answers only.","Write Rhyme __/5 and Syllables __/5 on the two Sound Check pages."]}],"stuck":["On a scored item, do not correct. Say Thanks! in the same calm voice and go on.","On practice only: My turn (fan, pan, thumb up). Our turn. Your turn. Then begin scoring."],"film":null,"letters":[],"sound":null},{"name":"Warm-up: The Key Picture (not scored)","short":"Warm-up","sub":"The Key Picture (not scored)","minutes":3,"kind":"check","goal":"Teach how the letter check works, using the practice picture only. No letters are drilled.","friend":"turtle","friendName":"Tilly","color":"sky","steps":[{"say":["Here is our practice picture. I point, then I say it: key.","If I don't know one, I say pass. That's okay!"],"do":["Lay Letter Check: Capitals flat. Point only to the key picture at the top.","Model a cheerful pass so not knowing feels safe."]},{"say":["Point to the key with me. What is it? Key!","Let's say pass together: pass!"],"do":["Your finger and the child's finger touch the key together."]},{"say":["Your turn: point to the picture and tell me what it is.","Show me your pass voice. Great!"],"do":["The child points and names the key alone. Nothing is ticked."]}],"stuck":["If the child names something else, smile: It's a key. Say key. Practice can be taught."],"film":null,"letters":[],"sound":null},{"name":"Letter Check: Capitals, then Small Letters","short":"Letter Check","sub":"Capitals, then Small Letters","minutes":20,"kind":"check","goal":"Record which of the 26 capital and 26 small letter names the child knows today. In class: one child at a time, 5 to 8 minutes each, spread across the day; the others work on trace, find and Roll and Cover pages from days 1 to 5.","friend":"turtle","friendName":"Tilly","color":"sky","steps":[{"say":["Now letters. I point to one. You tell me its name.","Some are new. That's fine. Say pass, and we go on."],"do":["Hold Letter Check Record on your clipboard, out of the child's sight.","Point under each letter, row by row, left to right. Wait about 3 seconds."]},{"say":["Put your finger next to mine. We go this way, row by row."],"do":["Slide both fingers along the top row without saying any names; just show the path."]},{"say":["What is this letter?","Great work! Now the small letters. What is this letter?","All done! Give me a high five."],"do":["Tick each correct name; jot what the child said above a miss. Then use Letter Check: Small Letters.","Write Capitals __/26 and Small letters __/26. A short break between cards is fine."]}],"stuck":["Never correct or show the answer. Say Thanks! and point to the next letter.","If the child gives a sound, ask once: What is its name? Tick only a name."],"film":null,"letters":[],"sound":null},{"name":"Reading Together (not scored)","short":"Reading Together (not scored)","sub":"","minutes":7,"kind":"reading together","goal":"Enjoy a book and show where reading starts and which way the words go.","friend":"unicorn","friendName":"Comet","color":"purple","steps":[{"say":["Story time! I start here, at the top left.","My finger goes this way, word by word."],"do":["Read the first page of any picture book aloud. Sweep your finger under the words."]},{"say":["Where do I start? Show me with your finger.","Which way do I go? Let's sweep together."],"do":["Guide the child's finger under one line as you read it."]},{"say":["Your turn: point where I start this page.","Now point where I go when this line ends."],"do":["The child points; you read. Nothing is ticked. Just enjoy the story."]}],"stuck":["My turn: I start here, top left. Our turn: point together. Your turn: show me."],"film":null,"letters":[],"sound":null},{"name":"Handwriting: My Name, Start of Year","short":"Handwriting","sub":"My Name, Start of Year","minutes":10,"kind":"handwriting","goal":"Capture how the child writes their name and draws themself today, with no help.","friend":"chick","friendName":"Pip","color":"green","steps":[{"say":["This page shows your name today. We'll do it again in January and May.","Watch me: pinch and flip. My capital starts at the top."],"do":["Show pinch and flip with a pencil. Air-write your own first name big, capital first."]},{"say":["Pinch and flip with me. Sit tall, feet flat.","Point to where your name goes. Now point to your drawing box."],"do":["Check grip and sitting tall together. No letters are practiced."]},{"say":["Write your name your own way. Then draw yourself.","Show me when you're done. I love it!"],"do":["No dots, tracing, erasing or help: this is the true start-of-year sample.","Add the date if it is missing. File the page for January and May."]}],"stuck":["Do not fix letters today. Say: That's your August name! and keep it.","If the child fists the pencil, show pinch and flip once, then let them write."],"film":null,"letters":[],"sound":null}],"check":{"items":["Letter names: count the ticks on the Letter Check Record, capitals out of 26 and small letters out of 26.","Rhyme: count right thumbs on Sound Check: Rhyme, out of 5.","Syllables: count right clap numbers on Sound Check: Syllables, out of 5.","If parts fall in different bands, use the band of the lowest part (as on day 7)."],"got_it":"Capitals 22 to 26, small letters 22 to 26, rhyme 4 or 5, syllables 4 or 5. Tomorrow: Check 2 as planned. From day 8: Keeps pace with the daily lessons. On review days, give a challenge: read am and at early, or find the first sound in friends’ names.","nearly":"Capitals or small letters 12 to 21, or rhyme or syllables 2 or 3. Tomorrow: Check 2 as planned. From day 8: Daily lessons plus 3 extra minutes with index cards (on a ring) of only the letters and sounds the child missed: say each one, then its key picture.","not_yet":"Capitals or small letters 0 to 11, or rhyme or syllables 0 or 1. Tomorrow: Check 2 as planned. From day 8: Daily lessons plus 5 extra minutes (in class a small group; at home just you and your child): 2 or 3 letters at a time, name, sound and key picture, with sound games. Check again in 4 weeks."},"sheets":[{"slug":"letter-check-card-capitals","pdf":"day-06/06-1-letter-check-card-capitals-color.pdf","bw":"day-06/06-1-letter-check-card-capitals-bw.pdf","img":"day-06/06-1-letter-check-card-capitals.webp","name":"Letter Check: Capitals","used":true},{"slug":"letter-check-card-small","pdf":"day-06/06-2-letter-check-card-small-color.pdf","bw":"day-06/06-2-letter-check-card-small-bw.pdf","img":"day-06/06-2-letter-check-card-small.webp","name":"Letter Check: Small Letters","used":true},{"slug":"letter-check-record","pdf":"day-06/06-3-letter-check-record-color.pdf","bw":"day-06/06-3-letter-check-record-bw.pdf","img":"day-06/06-3-letter-check-record.webp","name":"Letter Check Record","used":true},{"slug":"sound-check-rhyme","pdf":"day-06/06-4-sound-check-rhyme-color.pdf","bw":"day-06/06-4-sound-check-rhyme-bw.pdf","img":"day-06/06-4-sound-check-rhyme.webp","name":"Sound Check: Rhyme","used":true},{"slug":"sound-check-syllables","pdf":"day-06/06-5-sound-check-syllables-color.pdf","bw":"day-06/06-5-sound-check-syllables-bw.pdf","img":"day-06/06-5-sound-check-syllables.webp","name":"Sound Check: Syllables","used":true},{"slug":"my-name-start-of-year","pdf":"day-06/06-6-my-name-start-of-year-color.pdf","bw":"day-06/06-6-my-name-start-of-year-bw.pdf","img":"day-06/06-6-my-name-start-of-year.webp","name":"Handwriting: My Name","used":true}],"films":{},"packet":{"color":"../worksheets/kindergarten-reading-day-06-worksheets-color.pdf","bw":"../worksheets/kindergarten-reading-day-06-worksheets-bw.pdf"}};
 const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -760,7 +771,7 @@ function showHint() {
 }
 
 /* ---------- auto-play (?play=1): a hands-free tour for a screen recording ---------- */
-const PLAY_STEP = 3000;
+const PLAY_STEP = 6500;
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 // events for the recorder: it lays the approved sound clip and the music under the film at these moments
 window.__ev = [];
@@ -773,26 +784,43 @@ async function soundCue(l) {
   b.classList.remove('on'); setTimeout(() => b.remove(), 500);
 }
 async function tap(el) { if (!el) return; el.classList.remove('press'); void el.offsetWidth; el.classList.add('press'); await sleep(260); el.click(); }
+// the narrator (window.__NARR, set by the recorder: {key: {text, sec}}): say() logs the line for the recorder, shows it as
+// captions a few words at a time in their own strip, and waits for it; without narration the old fixed pace is used
+const NARR = window.__NARR || {};
+const chunks = (t) => { const parts = t.match(/[^,.!?]+[,.!?]*/g).map((x) => x.trim()).filter(Boolean), out = [];
+  for (const p of parts) { const w = p.split(' '); if (w.length <= 7) out.push(p); else { const h = Math.ceil(w.length / 2); out.push(w.slice(0, h).join(' '), w.slice(h).join(' ')); } } return out; };
+async function say(key, min = 0) {
+  const b = NARR[key]; const t0 = Date.now();
+  if (b) { ev('voice', key); const cs = chunks(b.text), tot = cs.reduce((a, c) => a + c.length, 0), cc = $('#cc');
+    for (const c of cs) { cc.textContent = c; ev('cap', c); await sleep(b.sec * 1000 * c.length / tot); }
+    ev('capend'); cc.textContent = ''; await sleep(250); }
+  const left = min - (Date.now() - t0); if (left > 0) await sleep(left);
+}
 async function autoplay() {
   try { localStorage.clear(); } catch (e) {}
+  const cc = document.createElement('div'); cc.className = 'cc'; cc.innerHTML = '<span id="cc"></span>'; document.body.appendChild(cc);
   S = { screen: 'start', part: 0, step: 0 }; render('u'); progress();
-  ev('start');
-  await sleep(1300);
-  for (const box of document.querySelectorAll('.need input')) { box.checked = true; box.dispatchEvent(new Event('change')); await sleep(330); }
-  await sleep(700); await tap($('#nextBtn'));
+  ev('start'); await sleep(1700); $('#logo').classList.add('off'); await sleep(600);
+  await say('intro0', 1200);
+  const ticking = (async () => { for (const box of document.querySelectorAll('.need input')) { await sleep(330); box.checked = true; box.dispatchEvent(new Event('change')); } })();
+  await say('intro1', 1800); await ticking; await sleep(300);
+  await tap($('#nextBtn'));
+  const whatPart = Math.max(0, D.parts.findIndex((p) => p.kind === 'new skill')), stuckPart = Math.min(3, D.parts.length - 1);
   for (let p = 0; p < D.parts.length; p++) {
-    await sleep(500); startTimer();
+    await sleep(350); startTimer();
     for (let s = 0; s < 3; s++) {
-      if (D.parts[p].sound && s < 2) { await sleep(700); await soundCue(D.parts[p].sound); await sleep(PLAY_STEP - 500 * (s === 0) - 700 + 400); }
-      else await sleep(PLAY_STEP - 500 * (s === 0));
-      if (p === 2 && s === 0) { await tap($('.slide.cur [data-what]')); await sleep(2300); closeSheet(); await sleep(500); }
-      if (p === 3 && s === 2) { await tap($('#stuckBtn')); await sleep(2300); closeSheet(); await sleep(500); }
+      await say(`p${p}s${s}`, 2200);
+      if (D.parts[p].sound && s < 2) { await say(`p${p}snd${s}`); await soundCue(D.parts[p].sound); await sleep(300); }
+      if (p === whatPart && s === 0) { await tap($('.slide.cur [data-what]')); await say('what', 2300); closeSheet(); await sleep(500); }
+      if (p === stuckPart && s === 2) { await tap($('#stuckBtn')); await say('stuck', 2300); closeSheet(); await sleep(500); }
       await tap($('#nextBtn'));
     }
   }
-  await sleep(1200);
-  for (const it of document.querySelectorAll('.item')) { await tap(it); await sleep(450); }
-  await sleep(2400); await tap($('#nextBtn'));
+  await sleep(900);
+  const checking = (async () => { await sleep(1200); for (const it of document.querySelectorAll('.item')) { await tap(it); await sleep(500); } })();
+  await say('check0', 2000); await checking; await sleep(1200);
+  await tap($('#nextBtn'));
+  await sleep(600); await say('end', 2500); await sleep(800);
   ev('end');
 }
 
